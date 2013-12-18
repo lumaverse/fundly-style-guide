@@ -1,6 +1,16 @@
 {
-  "name": "activities-assets",
-  "version": "0.0.0",
+  "name": "fundly-style-guide",
+  "version": "0.0.1",
+  "description": "Core styles and documentation for Fundly platform",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fundly/style-guide.git"
+  },
+  "author": "James Nicol <james@fundly.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fundly/style-guide/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",

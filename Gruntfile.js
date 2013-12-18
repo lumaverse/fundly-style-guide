@@ -10,6 +10,17 @@ module.exports = function (grunt) {
       app: 'app',
       dist: 'dist'
     },
+    pkg: grunt.file.readJSON('package.json'),
+    meta: {
+      version: '<%= pkg.version %>',
+      banner:
+        '//     Fundly Style Guide v<%= pkg.version %>\n' +
+        '//     Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
+        '//     <%= pkg.author %>\n' +
+        '//     Distributed under MIT license\n' +
+        '//     <%= pkg.repository.url %>\n' +
+        '\n\n'
+    },
     watch: {
       compass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
@@ -102,7 +113,8 @@ module.exports = function (grunt) {
         httpGeneratedImagesPath: '/images/generated',
         httpFontsPath: '/styles/fonts',
         relativeAssets: false,
-        assetCacheBuster: false
+        assetCacheBuster: false,
+        banner: '<%= meta.banner %>'
       },
       dist: {
         options: {
@@ -111,7 +123,8 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          debugInfo: false
+          debugInfo: false,
+          specify: ['<%= yeoman.app %>/styles/fundly-style.sass']
         }
       }
     },
