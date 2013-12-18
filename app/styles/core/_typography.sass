@@ -1,0 +1,91 @@
+// Import the base font
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed')
+
+// Import FontAwesome
+@import "font-awesome/scss/font-awesome"
+
+// Set some global variables, overridding the Bootstrap ones
+$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif
+$font-family-serif:       Georgia, "Times New Roman", Times, serif
+$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace
+$font-family-base:        $font-family-sans-serif
+
+// Font Sizes
+$font-size-base: 14px
+
+.f-fs-xsmall
+  font-size: round($font-size-base * 0.75)
+.f-fs-small
+  font-size: round($font-size-base * 0.85)
+.f-fs-regular
+  font-size: $font-size-base
+.f-fs-large
+  font-size: ceil($font-size-base * 1.5)
+.f-fs-xlarge
+  font-size: ceil($font-size-base * 2)
+.f-fs-xxlarge
+  font-size: ceil($font-size-base * 2.5)
+
+
+// Font Weights
+.f-fw-thin
+  font-weight: 100
+.f-fw-normal
+  font-weight: 300
+.f-fw-medium
+  font-weight: 500
+.f-fw-bold
+  font-weight: 700
+.f-fw-ultrabold
+  font-weight: 900
+
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  font-weight: 700
+h1, .h1
+  font-size: round($font-size-base * 2.5)
+h2, .h2
+  font-size: round($font-size-base * 2)
+h3, .h3
+  font-size: round($font-size-base * 1.75)
+h4, .h4
+  font-size: round($font-size-base * 1.25)
+h5, .h5
+  font-size: $font-size-base
+h6, .h6
+  font-size: round($font-size-base * 0.85)
+
+
+// Font Reset
+html
+  font-size: 100%
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+body
+  font-family: $font-family-base
+  font-size: $font-size-base
+  line-height: $line-height-base
+
+input,
+button,
+select,
+textarea
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+
+// Links
+a
+  color: $link-color
+  text-decoration: none
+
+  &:hover,
+  &:focus
+    color: $link-hover-color
+    text-decoration: underline
+
+  &:focus
+    @include tab-focus()
