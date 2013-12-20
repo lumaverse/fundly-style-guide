@@ -4,11 +4,13 @@
 // Import FontAwesome
 @import "font-awesome/scss/font-awesome"
 
+
 // Set some global variables, overridding the Bootstrap ones
 $font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif
 $font-family-serif:       Georgia, "Times New Roman", Times, serif
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace
 $font-family-base:        $font-family-sans-serif
+
 
 // Font Sizes
 $font-size-base: 14px
@@ -79,12 +81,10 @@ textarea
 
 // Links
 a
-  color: $link-color
   text-decoration: none
 
   &:hover,
   &:focus
-    color: $link-hover-color
     text-decoration: underline
 
   &:focus
@@ -110,3 +110,5 @@ a
   text-transform: uppercase
 .f-lower
   text-transform: lowercase
+.f-normal-caps
+  text-transform: none

@@ -1,0 +1,78 @@
+// Colour Swatch
+$swatch-one: #59CAE9
+$swatch-two: #CEE8C5
+$swatch-three: #FF9666
+$swatch-four: #777F83
+$swatch-five: #252B2C
+
+// Color reset
+body
+  color: #333
+a
+  color: $link-color
+
+  &:hover,
+  &:focus
+    color: $link-hover-color
+
+
+// Font Colors
+.f-fc-grey-light
+  color: #eee
+.f-fc-grey-medium
+  color: #888
+.f-fc-grey-dark
+  color: #333
+.f-fc-white
+  color: #fff
+.f-fc-black
+  color: #000
+
+
+// Font Hover Colors
+.f-fc-hover-grey-dark:hover
+  color: #333
+.f-fc-hover-black:hover
+  color: #000
+
+
+// Backgrounds
+.f-bg-dark
+  background-color: $swatch-five
+.f-bg-light-grey
+  background-color: #eee
+.f-bg-grey
+  background-color: #ccc
+.f-bg-white
+  background-color: white
+.f-bg-transparent
+  background-color: transparent
+
+
+// Borders
+.f-bc-white, .f-bc-light, .f-bc-medium, .f-bc-dark
+  border:
+    style: solid
+    width: 1px
+.f-bc-white
+  border-color: white
+.f-bc-light
+  border-color: #eee
+.f-bc-medium
+  border-color: #888
+.f-bc-dark
+  border-color: #333
+
+
+// Textures
+
+
+// Opacity
+.f-opacity-25
+  +opacity(0.25)
+.f-opacity-50
+  +opacity(0.5)
+.f-opacity-75
+  +opacity(0.75)
+.f-opacity-1
+  +opacity(1)
