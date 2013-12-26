@@ -118,13 +118,14 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+          generatedImagesDir: '<%= yeoman.dist %>/images/generated',
+          specify: '<%= yeoman.app %>/styles/fundly-style.sass'
         }
       },
       server: {
         options: {
           debugInfo: false,
-          specify: ['<%= yeoman.app %>/styles/fundly-style.sass']
+          specify: '<%= yeoman.app %>/styles/fundly-style.sass'
         }
       }
     },
@@ -213,85 +214,85 @@ module.exports = function (grunt) {
         }]
       }
     },
-        // Put files not handled in other tasks here
-        copy: {
-            dist: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>',
-                    dest: '<%= yeoman.dist %>',
-                    src: [
-                        '*.{ico,png,txt}',
-                        '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
-                        'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
-                    ]
-                }]
-            },
-            styles: {
-                expand: true,
-                dot: true,
-                cwd: '<%= yeoman.app %>/styles',
-                dest: '.tmp/styles/',
-                src: '{,*/}*.css'
-            }
-        },
-        modernizr: {
-            devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-            outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
-            files: [
-                '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                '<%= yeoman.dist %>/styles/{,*/}*.css',
-                '!<%= yeoman.dist %>/scripts/vendor/*'
-            ],
-            uglify: true
-        },
-        concurrent: {
-            server: [
-                'compass',
-                'copy:styles'
-            ],
-            test: [
-                'copy:styles'
-            ],
-            dist: [
-                'compass',
-                'copy:styles',
-                'imagemin',
-                'svgmin',
-                'htmlmin'
-            ]
-        }
-    });
+    // Put files not handled in other tasks here
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            'images/{,*/}*.{webp,gif}',
+            'styles/fonts/{,*/}*.*',
+            'bower_components/sass-bootstrap/fonts/*.*'
+          ]
+        }]
+      },
+      styles: {
+        expand: true,
+        dot: true,
+        cwd: '<%= yeoman.app %>/styles',
+        dest: '.tmp/styles/',
+        src: '{,*/}*.css'
+      }
+    },
+    modernizr: {
+      devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
+      outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+      files: [
+        '<%= yeoman.dist %>/scripts/{,*/}*.js',
+        '<%= yeoman.dist %>/styles/{,*/}*.css',
+        '!<%= yeoman.dist %>/scripts/vendor/*'
+      ],
+      uglify: true
+    },
+    concurrent: {
+      server: [
+        'compass',
+        'copy:styles'
+      ],
+      test: [
+        'copy:styles'
+      ],
+      dist: [
+        'compass',
+        'copy:styles',
+        'imagemin',
+        'svgmin',
+        'htmlmin'
+      ]
+    }
+  });
 
-    grunt.registerTask('serve', function (target) {
-        if (target === 'dist') {
-            return grunt.task.run(['build', 'connect:dist:keepalive']);
-        }
+  grunt.registerTask('serve', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    }
 
-        grunt.task.run([
-            'clean:server',
-            'concurrent:server',
-            'autoprefixer',
-            'connect:livereload',
-            'watch'
-        ]);
-    });
-
-    grunt.registerTask('server', function () {
-        grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-        grunt.task.run(['serve']);
-    });
-
-    grunt.registerTask('test', [
-        'clean:server',
-        'concurrent:test',
-        'autoprefixer',
-        'connect:test',
-        'mocha'
+    grunt.task.run([
+      'clean:server',
+      'concurrent:server',
+      'autoprefixer',
+      'connect:livereload',
+      'watch'
     ]);
+  });
+
+  grunt.registerTask('server', function () {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve']);
+  });
+
+  grunt.registerTask('test', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
+    'mocha'
+  ]);
 
   grunt.registerTask('build', [
     'clean:dist',

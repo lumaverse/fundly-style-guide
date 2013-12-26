@@ -14,70 +14,35 @@
   z-index: 1010
 
 
-// Margins
-.f-margin-half
-  margin: $font-size-base/2
-.f-margin-one
-  margin: $font-size-base
-.f-margin-two
-  margin: $font-size-base * 2
-.f-margin-t-half
-  margin-top: $font-size-base/2
-.f-margin-b-half
-  margin-bottom: $font-size-base/2
-.f-margin-l-half
-  margin-left: $font-size-base/2
-.f-margin-r-half
-  margin-right: $font-size-base/2
-.f-margin-t-one
-  margin-top: $font-size-base
-.f-margin-b-one
-  margin-bottom: $font-size-base
-.f-margin-l-one
-  margin-left: $font-size-base
-.f-margin-r-one
-  margin-right: $font-size-base
-.f-margin-t-two
-  margin-top: $font-size-base * 2
-.f-margin-b-two
-  margin-bottom: $font-size-base * 2
-.f-margin-l-two
-  margin-left: $font-size-base * 2
-.f-margin-r-two
-  margin-right: $font-size-base * 2
+@mixin make-margin-padding-set($set, $dimension)
+  .f-margin-#{$set}
+    margin: $dimension
+  .f-margin-l-#{$set}
+    margin-left: $dimension
+  .f-margin-r-#{$set}
+    margin-right: $dimension
+  .f-margin-t-#{$set}
+    margin-top: $dimension
+  .f-margin-b-#{$set}
+    margin-bottom: $dimension
+  .f-padding-#{$set}
+    padding: $dimension
+  .f-padding-l-#{$set}
+    padding-left: $dimension
+  .f-padding-r-#{$set}
+    padding-right: $dimension
+  .f-padding-t-#{$set}
+    padding-top: $dimension
+  .f-padding-b-#{$set}
+    padding-bottom: $dimension
 
 
-// Padding
-.f-padding-half
-  padding: $font-size-base/2
-.f-padding-one
-  padding: $font-size-base
-.f-padding-two
-  padding: $font-size-base * 2
-.f-padding-t-half
-  padding-top: $font-size-base/2
-.f-padding-b-half
-  padding-bottom: $font-size-base/2
-.f-padding-l-half
-  padding-left: $font-size-base/2
-.f-padding-r-half
-  padding-right: $font-size-base/2
-.f-padding-t-one
-  padding-top: $font-size-base
-.f-padding-b-one
-  padding-bottom: $font-size-base
-.f-padding-l-one
-  padding-left: $font-size-base
-.f-padding-r-one
-  padding-right: $font-size-base
-.f-padding-t-two
-  padding-top: $font-size-base * 2
-.f-padding-b-two
-  padding-bottom: $font-size-base * 2
-.f-padding-l-two
-  padding-left: $font-size-base * 2
-.f-padding-r-two
-  padding-right: $font-size-base * 2
+// Margins and Padding Sets
++make-margin-padding-set(small, $font-size-base/2)
++make-margin-padding-set(regular, $font-size-base)
++make-margin-padding-set(large, $font-size-base * 1.5)
++make-margin-padding-set(xlarge, $font-size-base * 2)
++make-margin-padding-set(xxlarge, $font-size-base * 3)
 
 
 // Position
@@ -114,3 +79,22 @@
   position: absolute
   bottom: 0
   left: 0
+
+
+// Floats
+.f-fl
+  float: left
+.f-fr
+  float: right
+.f-fn
+  float: none
+
+
+
+
+
+// Misc.
+.f-width-100
+  width: 100%
+.f-ilb
+  +inline-block

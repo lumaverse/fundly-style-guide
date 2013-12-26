@@ -9,7 +9,23 @@
 $font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif
 $font-family-serif:       Georgia, "Times New Roman", Times, serif
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace
+$font-family-condensed:   "Roboto Condensed", Helvetica, Arial, sans-serif
 $font-family-base:        $font-family-sans-serif
+
+// Reset
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p
+  padding: 0
+  margin: 0
+
+// Font Families
+.f-font-main
+  font-family: $font-family-base
+.f-font-condensed
+  font-family: $font-family-condensed
+.f-font-monospace
+  font-family: $font-family-monospace
 
 
 // Font Sizes
@@ -58,6 +74,17 @@ h5, .h5
   font-size: $font-size-base
 h6, .h6
   font-size: round($font-size-base * 0.85)
+
+
+// Line Heights
+.f-lh-regular
+  line-height: 1.4em
+.f-lh-large
+  line-height: 2em
+.f-lh-xlarge
+  line-height: 2.5em
+.f-lh-xxlarge
+  line-height: 3em
 
 
 // Font Reset
