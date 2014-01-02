@@ -1,4 +1,6 @@
-// Grid
+$f-grid-columns: 12
+
+// Grid mixins
 @mixin make-grid($columns:12)
   $list: ''
 
@@ -11,6 +13,14 @@
     float: left
     min-height: 1px
 
+@mixin make-grid-offsets($columns:12)
+  @for $i from 1 through ($columns - 1)
+    .f-grid-#{$i}of#{$columns}-offset
+      margin-left: percentage($i/$columns)
+
+
+// Grid elements
 .f-grid-row
   +clearfix
-+make-grid(12)
++make-grid($f-grid-columns)
++make-grid-offsets($f-grid-columns)

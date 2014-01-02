@@ -13,12 +13,12 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <header class="f-pos-fix f-padding-large f-bg-white f-width-100 f-z-appribbon f-opacity-090 f-bc-light f-b-b">
+    <header class="f-pos-fix f-padding-large f-bg-white f-width-100 f-z-appribbon f-opacity-dark f-b-light f-b-b">
       <h1>Fundly Style Guide</h1>
     </header>
 
-    <div class="row f-padding-large" style="padding-top: 100px">
-      <ul class="col-md-4">
+    <div class="f-grid-row f-padding-large" style="padding-top: 100px">
+      <ul class="f-grid-4of12">
         <li><a href="#core">Core</a>
           <ul>
             <li><a href="#color">Color</a></li>
@@ -31,22 +31,24 @@
         <li><a href="#components">Components</a>
           <ul>
             <li><a href="#popups">Popups</a></li>
-            <li><a href="#core/"></a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#buttons">Buttons</a></li>
           </ul>
         </li>
-        <li><a href="#utilities">Utilities</a>
-          <ul>
-            <li><a href="#utilities/"></a></li>
-            <li><a href="#utilities/popups">Popups</a></li>
-          </ul>
-        </li>
+        <li><a href="#utilities">Utilities</a></li>
       </ul>
 
-      <div class="col-md-8">
+      <div class="f-grid-8of12">
         <section id="color">
-          <h2>Color</h2>
-          <div class="row">
-            <div class="f-ilb f-bc-light f-br-medium f-of-hidden">
+          <h2>
+            <span class="fa-stack">
+              <i class="fa fa-square fa-stack-2x f-fc-medium"></i>
+              <i class="fa fa-font fa-stack-1x f-fc-white"></i>
+            </span>
+            Color
+          </h2>
+          <div class="f-grid-row">
+            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
               <div class="f-bg-swatchone f-padding-xlarge"></div>
               <p class="f-padding-regular f-tc">
                 <strong>#59CAE9</strong>
@@ -54,7 +56,7 @@
                 <span class="f-fs-xsmall">.f-bg-swatchone</span>
               </p>
             </div>
-            <div class="f-ilb f-bc-light f-br-medium f-of-hidden">
+            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
               <div class="f-bg-swatchtwo f-padding-xlarge"></div>
               <p class="f-padding-regular f-tc">
                 <strong>#CEE8C5</strong>
@@ -62,7 +64,7 @@
                 <span class="f-fs-xsmall">.f-bg-swatchtwo</span>
               </p>
             </div>
-            <div class="f-ilb f-bc-light f-br-medium f-of-hidden">
+            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
               <div class="f-bg-swatchthree f-padding-xlarge"></div>
               <p class="f-padding-regular f-tc">
                 <strong>#FF9666</strong>
@@ -70,7 +72,7 @@
                 <span class="f-fs-xsmall">.f-bg-swatchthree</span>
               </p>
             </div>
-            <div class="f-ilb f-bc-light f-br-medium f-of-hidden">
+            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
               <div class="f-bg-swatchfour f-padding-xlarge"></div>
               <p class="f-padding-regular f-tc">
                 <strong>#777F83</strong>
@@ -78,7 +80,7 @@
                 <span class="f-fs-xsmall">.f-bg-swatchfour</span>
               </p>
             </div>
-            <div class="f-ilb f-bc-light f-br-medium f-of-hidden">
+            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
               <div class="f-bg-swatchfive f-padding-xlarge"></div>
               <p class="f-padding-regular f-tc">
                 <strong>#252B2C</strong>
@@ -90,10 +92,16 @@
         </section>
 
         <section id="typography" class="f-margin-t-xlarge">
-          <h2>Typography</h2>
-          <div class="row f-margin-large">
-            <h3 class="col-md-4">Headings</h3>
-            <div class="col-md-7">
+          <h2>
+            <span class="fa-stack">
+              <i class="fa fa-square fa-stack-2x f-fc-medium"></i>
+              <i class="fa fa-font fa-stack-1x f-fc-white"></i>
+            </span>
+            Typography
+          </h2>
+          <div class="f-grid-row f-margin-t-large">
+            <h3 class="f-grid-4of12">Headings</h3>
+            <div class="f-grid-8of12">
               <h1>Heading1</h1>
               <h2>Heading2</h2>
               <h3>Heading3</h3>
@@ -102,9 +110,9 @@
               <h6>Heading6</h6>
             </div>
           </div>
-          <div class="row f-margin-large">
-            <h3 class="col-md-4">Weights</h3>
-            <div class="col-md-7">
+          <div class="f-grid-row f-margin-t-large">
+            <h3 class="f-grid-4of12">Weights</h3>
+            <div class="f-grid-8of12">
               <p class="f-fw-thin">Thin</p>
               <p class="f-fw-normal">Normal</p>
               <p class="f-fw-medium">Medium</p>
