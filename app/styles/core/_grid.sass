@@ -1,0 +1,16 @@
+// Grid
+@mixin make-grid($columns:12)
+  $list: ''
+
+  @for $i from 1 through $columns
+    $list: ".f-grid-#{$i}of#{$columns}, #{$list}"
+    .f-grid-#{$i}of#{$columns}
+      width: percentage($i/$columns)
+
+  #{$list}
+    float: left
+    min-height: 1px
+
+.f-grid-row
+  +clearfix
++make-grid(12)
