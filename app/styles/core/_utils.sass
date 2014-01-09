@@ -1,6 +1,11 @@
 // Overflow
 .f-of-hidden
   overflow: hidden
+.f-of-hidden-x
+  overflow-x: hidden
+.f-of-hidden-y
+  overflow-x: hidden
+
 
 // Border radius
 .f-br-small
@@ -18,3 +23,14 @@
   cursor: pointer
 .f-draggable
   cursor: move
+
+
+// Hover show
+// - need to place this class both on the component you want to hide/show and
+//   on its parent
+.f-hover-show
+  .f-hover-show
+    display: none
+.f-hover-show:hover
+  .f-hover-show
+    display: block

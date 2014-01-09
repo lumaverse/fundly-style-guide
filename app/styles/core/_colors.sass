@@ -48,14 +48,16 @@ a
 
 
 // Backgrounds
-.f-bg-dark
-  background-color: $swatch-five
-.f-bg-light-grey
-  background-color: #eee
-.f-bg-grey
-  background-color: #ccc
+.f-bg-black
+  background-color: black
 .f-bg-white
   background-color: white
+.f-bg-light
+  background-color: #f1f1f2
+.f-bg-medium
+  background-color: #888
+.f-bg-dark
+  background-color: #444
 .f-bg-transparent
   background-color: transparent
 .f-bg-swatchone
@@ -68,6 +70,10 @@ a
   background-color: $swatch-four
 .f-bg-swatchfive
   background-color: $swatch-five
+
+// Set lighter text colour for dark backgrounds
+.f-bg-swatchfour, .f-bg-swatchfive, .f-bg-dark
+  @extend .f-fc-light
 
 
 // Borders

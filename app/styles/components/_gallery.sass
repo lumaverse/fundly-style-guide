@@ -1,0 +1,23 @@
+// Gallery
+.f-gallery-leftarea, .f-gallery-rightarea
+  position: absolute
+  top: 0
+  bottom: 0
+  margin: auto 0
+  @extend .fa
+  @extend .f-bg-dark
+  padding: 0 20px
+  font-size: 4em
+  height: 80px
+  line-height: 80px
+  cursor: pointer
+
+.f-gallery-leftarea
+  left: 0
+  +border-radius(0 3px 3px 0)
+  @extend .fa-angle-left
+
+.f-gallery-rightarea
+  right: 0
+  +border-radius(3px 0 0 3px)
+  @extend .fa-angle-right
