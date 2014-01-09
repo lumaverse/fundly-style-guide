@@ -1,16 +1,13 @@
 @mixin spinner-circle($color, $width:0.3em, $alpha:0.25, $rotation:20s)
-  position: relative
   background: transparent
   box-shadow: inset $width 0 0 rgba($color, $alpha), inset 0 $width 0 rgba($color, $alpha), inset (-1 * $width) 0 0 rgba($color, $alpha), inset 0 (-1 * $width) 0 rgba($color, $alpha)
   border-radius: 100%
-  -webkit-animation: spinner-rotate $rotation linear 0s infinite
-  -moz-animation: spinner-rotate $rotation linear 0s infinite
-  animation: spinner-rotate $rotation linear 0s infinite
+  -webkit-animation: f-spinner-rotate $rotation linear 0s infinite
+  -moz-animation: f-spinner-rotate $rotation linear 0s infinite
+  animation: f-spinner-rotate $rotation linear 0s infinite
 
 
 @mixin colour-wheel($top:#eee, $bottom:#eee, $left:#bbb, $right:#bbb, $rotation:20s, $border:0.2em)
-  position: relative
-
   border-width: $border
   border-style: solid
   border-top-color: $top
@@ -22,17 +19,55 @@
   width: 1em
   +border-radius(100%)
 
-  -webkit-animation: spinner-rotate $rotation linear 0s infinite
-  -moz-animation: spinner-rotate $rotation linear 0s infinite
-  animation: spinner-rotate $rotation linear 0s infinite
+  -webkit-animation: f-spinner-rotate $rotation linear 0s infinite
+  -moz-animation: f-spinner-rotate $rotation linear 0s infinite
+  animation: f-spinner-rotate $rotation linear 0s infinite
 
 
-@-webkit-keyframes spinner-rotate
+@-webkit-keyframes f-spinner-rotate
   100%
     -webkit-transform: rotateZ(3600deg) translateZ(0)
-@-moz-keyframes spinner-rotate
+@-moz-keyframes f-spinner-rotate
   100%
     -moz-transform: rotateZ(3600deg) translateZ(0)
-@keyframes spinner-rotate
+@keyframes f-spinner-rotate
   100%
     transform: rotateZ(3600deg) translateZ(0)
+
+
+@-webkit-keyframes f-spinner-circles
+  0%, 80%, 100%
+    -webkit-transform: scale(0.0)
+  40%
+    -webkit-transform: scale(1.0)
+
+.f-spinner-circles:before, .f-spinner-circles:after
+  -webkit-animation: f-spinner-circles 1.4s infinite ease-in-out
+  animation: f-spinner-circles 1.4s infinite ease-in-out
+
+.f-spinner-circles
+  position: relative
+  height: 1em
+  width: 1em
+  margin: 0 1.5em
+  +border-radius(100%)
+
+  &:after, &:before
+    position: absolute
+    content: ''
+    height: 1em
+    width: 1em
+    +border-radius(100%)
+  &:before
+    left: -150%
+    background-color: inherit
+    -webkit-animation-delay: -0.16s
+    animation-delay: -0.16s
+  &:after
+    right: -150%
+    background-color: inherit
+    -webkit-animation-delay: -0.32s
+    animation-delay: -0.32s
+
+.f-spinner-lifepreserver
+  +colour-wheel
