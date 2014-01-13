@@ -71,7 +71,9 @@ a
 .f-bg-swatchfive
   background-color: $swatch-five
 
-// Set lighter text colour for dark backgrounds
+// Set appropriate text colour for the background
+.f-bg-white, .f-bg-light, .f-bg-swatchone, .f-bg-swatchtwo, .f-bg-swatchthree
+  @extend .f-fc-dark
 .f-bg-swatchfour, .f-bg-swatchfive, .f-bg-dark
   @extend .f-fc-light
 

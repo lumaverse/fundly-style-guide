@@ -13,88 +13,119 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <header class="f-pos-fix f-padding-large f-bg-white f-width-100 f-z-appribbon f-opacity-dark f-b-light f-b-b">
-      <h1>Fundly Style Guide</h1>
-    </header>
-
-    <div class="f-grid-row f-padding-large" style="padding-top: 100px">
-      <ul class="f-grid-4of12">
-        <li><a href="#core">Core</a>
-          <ul>
-            <li><a href="#color">Color</a></li>
-            <li><a href="#typography">Typography</a></li>
-            <li><a href="#icons">Icons</a></li>
-            <li><a href="#grid">Grid</a></li>
-            <li><a href="#spacing">Spacing</a></li>
-          </ul>
-        </li>
-        <li><a href="#components">Components</a>
-          <ul>
-            <li><a href="#popups">Popups</a></li>
-            <li><a href="#forms">Forms</a></li>
-            <li><a href="#buttons">Buttons</a></li>
-          </ul>
-        </li>
+    <header class="f-appribbon">
+      <div class="f-appribbon-brand">
+        <iframe src="https://d2wwhrh9otv6z9.cloudfront.net/logo.html" frameborder="0"></iframe>
+      </div>
+<!--       <div class="f-appribbon-center">
+        <h1>Fundly Style Guide</h1>
+      </div>
+      <ul class="f-appribbon-menu">
+        <li><a href="#color">Color</a></li>
+        <li><a href="#tyopgraphy">Typopgraphy</a></li>
+        <li><a href="#layout">Layout</a></li>
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#components">Components</a></li>
         <li><a href="#utilities">Utilities</a></li>
       </ul>
+ -->    </header>
+    <div class="f-appribbon-padding"></div>
+
+    <section id="spinners" class="f-padding-xlarge f-tc">
+      <h2>Spinners</h2>
+      <div class="f-grid-row f-margin-t-large">
+        <div class="f-spinner-circles f-ilb f-fs-small f-bg-dark"></div>
+        <div class="f-spinner-lifepreserver f-fs-large f-ilb f-margin-l-large"></div>
+        <div class="f-spinner-bars f-fs-large f-margin-left f-ilb"></div>
+      </div>
+    </section>
+
+    <section id="color" class="f-padding-xxlarge f-tc f-bg-dark">
+      <h2>Color</h2>
+      <p>We use a 5 color swatch along with a range of greys.</p>
+      <div class="f-grid-row f-margin-t-large">
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchone f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#59CAE9</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-swatchone</span>
+          </p>
+        </div>
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchtwo f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#CEE8C5</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-swatchtwo</span>
+          </p>
+        </div>
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchthree f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#FF9666</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-swatchthree</span>
+          </p>
+        </div>
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchfour f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#777F83</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-swatchfour</span>
+          </p>
+        </div>
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchfive f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#252B2C</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-swatchfive</span>
+          </p>
+        </div>
+      </div>
+      <div class="f-grid-row f-margin-t-xxlarge">
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-white f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#FFFFFF</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-white</span>
+          </p>
+        </div>
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-light f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#F1F1F2</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-light</span>
+          </p>
+        </div>
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-medium f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#888888</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-medium</span>
+          </p>
+        </div>
+        <div class="f-ilb f-b-light f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-dark f-padding-xlarge" style="height: 100px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#444444</strong>
+            <br />
+            <span class="f-fs-xsmall">.f-bg-dark</span>
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+    <div class="f-grid-row f-padding-large" style="padding-top: 100px">
 
       <div class="f-grid-8of12">
-        <section id="spinners" class="f-margin-t-xlarge">
-          <h2>Spinners</h2>
-          <div class="f-grid-row f-margin-t-large">
-            <div class="f-spinner-circles f-ilb f-fs-small f-bg-dark"></div>
-            <div class="f-spinner-lifepreserver f-fs-large f-ilb f-margin-l-large"></div>
-            <div class="f-spinner-bars f-fs-large f-margin-left f-ilb"></div>
-          </div>
-        </section>
 
-        <section id="color" class="f-margin-t-large">
-          <h2>
-            Color
-          </h2>
-          <div class="f-grid-row">
-            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
-              <div class="f-bg-swatchone f-padding-xlarge"></div>
-              <p class="f-padding-regular f-tc">
-                <strong>#59CAE9</strong>
-                <br />
-                <span class="f-fs-xsmall">.f-bg-swatchone</span>
-              </p>
-            </div>
-            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
-              <div class="f-bg-swatchtwo f-padding-xlarge"></div>
-              <p class="f-padding-regular f-tc">
-                <strong>#CEE8C5</strong>
-                <br />
-                <span class="f-fs-xsmall">.f-bg-swatchtwo</span>
-              </p>
-            </div>
-            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
-              <div class="f-bg-swatchthree f-padding-xlarge"></div>
-              <p class="f-padding-regular f-tc">
-                <strong>#FF9666</strong>
-                <br />
-                <span class="f-fs-xsmall">.f-bg-swatchthree</span>
-              </p>
-            </div>
-            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
-              <div class="f-bg-swatchfour f-padding-xlarge"></div>
-              <p class="f-padding-regular f-tc">
-                <strong>#777F83</strong>
-                <br />
-                <span class="f-fs-xsmall">.f-bg-swatchfour</span>
-              </p>
-            </div>
-            <div class="f-ilb f-b-light f-br-medium f-of-hidden">
-              <div class="f-bg-swatchfive f-padding-xlarge"></div>
-              <p class="f-padding-regular f-tc">
-                <strong>#252B2C</strong>
-                <br />
-                <span class="f-fs-xsmall">.f-bg-swatchfive</span>
-              </p>
-            </div>
-          </div>
-        </section>
 
         <section id="typography" class="f-margin-t-xlarge">
           <h2>
