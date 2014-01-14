@@ -40,9 +40,20 @@
     -webkit-transform: scale(0.0)
   40%
     -webkit-transform: scale(1.0)
+@-moz-keyframes f-spinner-circles
+  0%, 80%, 100%
+    -moz-transform: scale(0.0)
+  40%
+    -moz-transform: scale(1.0)
+@keyframes f-spinner-circles
+  0%, 80%, 100%
+    transform: scale(0.0)
+  40%
+    transform: scale(1.0)
 
 .f-spinner-circles:before, .f-spinner-circles:after
   -webkit-animation: f-spinner-circles 1.4s infinite ease-in-out
+  -moz-animation: f-spinner-circles 1.4s infinite ease-in-out
   animation: f-spinner-circles 1.4s infinite ease-in-out
 
 .f-spinner-circles
