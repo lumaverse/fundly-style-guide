@@ -1,11 +1,10 @@
+$f-icon-sprite: sprite-map('categories/*.png')
+
 .f-icon
   +inline-block
   height: 30px
   width: 30px
-  background:
-    position: center center
-    size: cover
-    repeat: no-repeat
+  background: $f-icon-sprite
 
   &.f-icon-left
     background-position: left center
@@ -13,34 +12,34 @@
     background-position: right center
 
   &.f-non-profit, .f-icon
-    background-image: inline-image('categories/cc_charity.png')
+    background-position: sprite-position($f-icon-sprite, cc_charity)
   &.f-community
-    background-image: inline-image('categories/cc_community.png')
+    background-position: sprite-position($f-icon-sprite, cc_community)
   &.f-arts
-    background-image: inline-image('categories/cc_creative.png')
+    background-position: sprite-position($f-icon-sprite, cc_creative)
   &.f-education
-    background-image: inline-image('categories/cc_education.png')
+    background-position: sprite-position($f-icon-sprite, cc_education)
   &.f-children
-    background-image: inline-image('categories/cc_family_kids.png')
+    background-position: sprite-position($f-icon-sprite, cc_family_kids)
   &.f-other
-    background-image: inline-image('categories/cc_fun_special_events.png')
+    background-position: sprite-position($f-icon-sprite, cc_fun_special_events)
   &.f-greek
-    background-image: inline-image('categories/cc_greek.png')
+    background-position: sprite-position($f-icon-sprite, cc_greek)
   &.f-health
-    background-image: inline-image('categories/cc_health.png')
+    background-position: sprite-position($f-icon-sprite, cc_health)
   &.f-memorial
-    background-image: inline-image('categories/cc_memorial.png')
+    background-position: sprite-position($f-icon-sprite, cc_memorial)
   &.f-animal
-    background-image: inline-image('categories/cc_pets.png')
+    background-position: sprite-position($f-icon-sprite, cc_pets)
   &.f-politics
-    background-image: inline-image('categories/cc_politics.png')
+    background-position: sprite-position($f-icon-sprite, cc_politics)
   &.f-church
-    background-image: inline-image('categories/cc_religious_groups.png')
+    background-position: sprite-position($f-icon-sprite, cc_religious_groups)
   &.f-run-walk-ride
-    background-image: inline-image('categories/cc_runwalkride.png')
+    background-position: sprite-position($f-icon-sprite, cc_runwalkride)
   &.f-sports
-    background-image: inline-image('categories/cc_sports_and_teams.png')
+    background-position: sprite-position($f-icon-sprite, cc_sports_and_teams)
   &.f-trips
-    background-image: inline-image('categories/cc_travel.png')
+    background-position: sprite-position($f-icon-sprite, cc_travel)
   &.f-location
-    background-image: inline-image('categories/cc_pin.png')
+    background-position: sprite-position($f-icon-sprite, cc_pin)

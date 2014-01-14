@@ -113,8 +113,7 @@ module.exports = function (grunt) {
         httpGeneratedImagesPath: '/images/generated',
         httpFontsPath: '/styles/fonts',
         relativeAssets: false,
-        assetCacheBuster: false,
-        banner: '<%= meta.banner %>'
+        assetCacheBuster: false
       },
       dist: {
         options: {
@@ -244,7 +243,13 @@ module.exports = function (grunt) {
         banner: '<%= meta.banner %>'
       },
       dist: {
-        files: '.tmp/styles/*.css'
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '.tmp',
+          dest: '<%= yeoman.dist %>',
+          src: ['**/*.css']
+        }]
       }
     },
     modernizr: {
@@ -287,11 +292,6 @@ module.exports = function (grunt) {
       'connect:livereload',
       'watch'
     ]);
-  });
-
-  grunt.registerTask('server', function () {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve']);
   });
 
   grunt.registerTask('test', [
