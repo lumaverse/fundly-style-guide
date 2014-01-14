@@ -239,6 +239,14 @@ module.exports = function (grunt) {
         src: '{,*/}*.css'
       }
     },
+    cssmin: {
+      options: {
+        banner: '<%= meta.banner %>'
+      },
+      dist: {
+        files: '.tmp/styles/*.css'
+      }
+    },
     modernizr: {
       devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
       outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
