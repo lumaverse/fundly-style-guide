@@ -8,14 +8,27 @@
 
 
 // Border radius
-.f-br-small
+.f-br-none
+  +border-radius(0)
+.f-br-xsmall
   +border-radius(2px)
+.f-br-small
+  +border-radius(3px)
 .f-br-medium
-  +border-radius(4px)
-.f-br-large
   +border-radius(6px)
-.f-br-round
+.f-br-large
+  +border-radius(10px)
+.f-br-circle
   +border-radius(100%)
+
+.f-br-none-tl
+  +border-top-left-radius(0)
+.f-br-none-tr
+  +border-top-right-radius(0)
+.f-br-none-bl
+  +border-bottom-left-radius(0)
+.f-br-none-br
+  +border-bottom-right-radius(0)
 
 
 // Cursor elements

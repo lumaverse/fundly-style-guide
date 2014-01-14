@@ -46,7 +46,7 @@ module.exports = function (grunt) {
       options: {
         port: 8111,
         livereload: 8112,
-        hostname: 'localhost'
+        hostname: '*'
       },
       livereload: {
         options: {
