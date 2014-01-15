@@ -1,17 +1,32 @@
 // Colour Swatch
-$swatch-one: #59CAE9
-$swatch-two: #CEE8C5
-$swatch-three: #FF9666
-$swatch-four: #777F83
-$swatch-five: #252B2C
+$f-color-swatch-one: #59CAE9
+$f-color-swatch-two: #CEE8C5
+$f-color-swatch-three: #FF9666
+$f-color-swatch-four: #777F83
+$f-color-swatch-five: #252B2C
 
+// Primary color
+$f-color-primary: $f-color-swatch-three
 
+// White to Black
+$f-color-white: white
+$f-color-xlight: #f0f0f0
+$f-color-light: #eee
+$f-color-medium: #888
+$f-color-dark: #444
+$f-color-black: black
+
+// Social network brand colors
 $f-color-facebook: #395b98
 $f-color-twitter: #1ba5e2
+$f-color-google: #ff0000
+$f-color-linkedin: blue
+$f-color-pinterest: red
+
 
 // Color reset
 body
-  color: #333
+  color: $f-color-dark
 a
   color: $link-color
 
@@ -19,81 +34,41 @@ a
   &:focus
     color: $link-hover-color
 
+@function color-invert($color)
+  @if lightness($color) >= 50
+    @return $f-color-dark
+  @else
+    @return $f-color-light
 
-// Font Colors
-.f-fc-light
-  color: #eee
-.f-fc-medium
-  color: #888
-.f-fc-dark
-  color: #333
-.f-fc-white
-  color: #fff
-.f-fc-black
-  color: #000
-.f-fc-swatchone
-  color: $swatch-one
-.f-fc-swatchtwo
-  color: $swatch-two
-.f-fc-swatchthree
-  color: $swatch-three
-.f-fc-swatchfour
-  color: $swatch-four
-.f-fc-swatchfive
-  color: $swatch-five
+@mixin make-color-set($key, $color)
+  .f-fc-#{$key}
+    color: $color
+  .f-fc-hover-#{$key}:hover
+    color: $color
+  .f-bg-#{$key}
+    background-color: $color
+    color: color-invert($color)
+  .f-b-#{$key}
+    border-color: $color
 
-
-// Font Hover Colors
-.f-fc-hover-dark:hover
-  color: #333
-.f-fc-hover-black:hover
-  color: #000
-
-
-// Backgrounds
-.f-bg-black
-  background-color: black
-.f-bg-white
-  background-color: white
-.f-bg-light
-  background-color: #f1f1f2
-.f-bg-medium
-  background-color: #888
-.f-bg-dark
-  background-color: #444
-.f-bg-transparent
-  background-color: transparent
-.f-bg-swatchone
-  background-color: $swatch-one
-.f-bg-swatchtwo
-  background-color: $swatch-two
-.f-bg-swatchthree
-  background-color: $swatch-three
-.f-bg-swatchfour
-  background-color: $swatch-four
-.f-bg-swatchfive
-  background-color: $swatch-five
-
-// Set appropriate text colour for the background
-.f-bg-white, .f-bg-light, .f-bg-swatchone, .f-bg-swatchtwo, .f-bg-swatchthree
-  @extend .f-fc-dark
-.f-bg-swatchfour, .f-bg-swatchfive, .f-bg-dark
-  @extend .f-fc-light
++make-color-set('primary', $f-color-primary)
++make-color-set('xlight', $f-color-xlight)
++make-color-set('light', $f-color-light)
++make-color-set('medium', $f-color-medium)
++make-color-set('dark', $f-color-dark)
++make-color-set('black', $f-color-black)
++make-color-set('swatchone', $f-color-swatch-one)
++make-color-set('swatchtwo', $f-color-swatch-two)
++make-color-set('swatchthree', $f-color-swatch-three)
++make-color-set('swatchfour', $f-color-swatch-four)
++make-color-set('swatchfive', $f-color-swatch-five)
 
 
 // Borders
-.f-b-white, .f-b-light, .f-b-medium, .f-b-dark
+.f-b-white, .f-b-xlight, .f-b-light, .f-b-medium, .f-b-dark, .f-b-black
   border:
     style: solid
     width: 1px
-.f-b-white
-  border-color: white
-.f-b-light
-  border-color: #eee
-.f-b-medium
-  border-color: #888
-.f-b-dark
-  border-color: #333
 .f-b-l
   border-width: 0px
   border-left-width: 1px
