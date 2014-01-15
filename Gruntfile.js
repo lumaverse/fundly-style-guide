@@ -14,12 +14,13 @@ module.exports = function (grunt) {
     meta: {
       version: '<%= pkg.version %>',
       banner:
-        '//     Fundly Style Guide v<%= pkg.version %>\n' +
-        '//     Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
-        '//     <%= pkg.author %>\n' +
-        '//     Distributed under MIT license\n' +
-        '//     <%= pkg.repository.url %>\n' +
-        '\n\n'
+        '/**' +
+        '*     Fundly Style Guide v<%= pkg.version %>\n' +
+        '*     Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
+        '*     <%= pkg.author %>\n' +
+        '*     Distributed under MIT license\n' +
+        '*     <%= pkg.repository.url %>\n' +
+        '**/\n\n'
     },
     watch: {
       compass: {
@@ -109,9 +110,9 @@ module.exports = function (grunt) {
         javascriptsDir: '<%= yeoman.app %>/scripts',
         fontsDir: '<%= yeoman.app %>/styles/fonts',
         importPath: '<%= yeoman.app %>/bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
+        httpImagesPath: 'images',
+        httpGeneratedImagesPath: 'images/generated',
+        httpFontsPath: 'styles/fonts',
         relativeAssets: false,
         assetCacheBuster: false
       },
@@ -226,7 +227,9 @@ module.exports = function (grunt) {
             '.htaccess',
             'images/{,*/}*.{webp,gif}',
             'styles/fonts/{,*/}*.*',
-            'bower_components/sass-bootstrap/fonts/*.*'
+            'bower_components/font-awesome/fonts/*.*',
+            'bower_components/modernizr/modernizr.js',
+            'bower_components/jquery/jquery.js'
           ]
         }]
       },
