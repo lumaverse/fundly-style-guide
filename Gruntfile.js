@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     meta: {
       version: '<%= pkg.version %>',
       banner:
-        '/**' +
+        '/**\n' +
         '*     Fundly Style Guide v<%= pkg.version %>\n' +
         '*     Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
         '*     <%= pkg.author %>\n' +
@@ -72,11 +72,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           dot: true,
-          src: [
-            '.tmp',
-            '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
-          ]
+          src: ['.tmp', '<%= yeoman.dist %>/*', '!<%= yeoman.dist %>/.git*']
         }]
       },
       server: '.tmp'
@@ -110,9 +106,9 @@ module.exports = function (grunt) {
         javascriptsDir: '<%= yeoman.app %>/scripts',
         fontsDir: '<%= yeoman.app %>/styles/fonts',
         importPath: '<%= yeoman.app %>/bower_components',
-        httpImagesPath: 'images',
-        httpGeneratedImagesPath: 'images/generated',
-        httpFontsPath: 'styles/fonts',
+        httpImagesPath: '../images',
+        httpGeneratedImagesPath: '../images/generated',
+        httpFontsPath: 'fonts',
         relativeAssets: false,
         assetCacheBuster: false
       },
@@ -224,7 +220,6 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             '*.{ico,png,txt}',
-            '.htaccess',
             'images/{,*/}*.{webp,gif}',
             'styles/fonts/{,*/}*.*',
             'bower_components/font-awesome/fonts/*.*',
@@ -313,7 +308,7 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
-    'modernizr',
+    // 'modernizr',
     'copy:dist',
     'rev',
     'usemin'
