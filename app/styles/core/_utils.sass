@@ -47,3 +47,24 @@
 .f-hover-show:hover
   .f-hover-show
     display: block
+
+
+// Shows the picture icon in the center of the component, requires code to be:
+//     .f-image-preview
+//       .js-image-preview
+.f-image-preview
+  position: relative
+
+  &:before
+    content: $fa-var-picture-o
+    position: absolute
+    left: 0
+    width: 100%
+    top: 35%
+    text-align: center
+    font-family: FontAwesome
+    font-size: 300%
+    color: #ccc
+
+  div, img
+    position: relative

@@ -1,24 +1,23 @@
 // Reset the box sizing
-*,
-*:before,
-*:after
+*, *:before, *:after
   @include box-sizing(border-box)
 
-
-$f-page-container-width: 1100
 
 // Page Container
 .f-page-container
   width: $f-page-container-width
+  margin:
+    left: auto
+    right: auto
 
 
 // Z-indexes
 .f-z-appribbon
-  z-index: 1000
+  z-index: $f-z-appribbon
 .f-z-popup
-  z-index: 1001
+  z-index: $f-z-popup
 .f-z-top
-  z-index: 1010
+  z-index: $f-z-top
 .f-z-bottom
   z-index: 1
 
@@ -118,5 +117,7 @@ $f-page-container-width: 1100
 // Misc.
 .f-width-100
   width: 100%
+.f-height-100
+  height: 100%
 .f-ilb
   +inline-block
