@@ -9,7 +9,7 @@
     <title>activities assets</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles/e5183cc0.fundly-style.css">
+    <link rel="stylesheet" href="styles/0aca338e.fundly-style.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
     <style id="theme-target"></style>
   </head>
@@ -147,20 +147,25 @@
 
     <section id="color" class="f-padding-xxlarge f-tc f-bg-dark">
       <h2>Color</h2>
-      <p class="f-margin-t-xlarge">Colors can be applied by the following selectors:</p>
-      <ul class="f-ilb f-tl">
-        <li><strong>.f-fc-{KEY}</strong> - Font Color</li>
-        <li><strong>.f-fc-hover-{KEY}</strong> - Font Color (hover)</li>
-        <li><strong>.f-bg-{KEY}</strong> - Background Color</li>
-        <li><strong>.f-b-{KEY}</strong> - Border Color</li>
-      </ul>
-      <p class="f-margin-t-xlarge">Currently the following keys are supported:</p>
-      <ul class="f-ilb f-tl">
-        <li><strong>primary</strong></li>
-        <li><strong>swatchone, swatchtwo, swatchthree, swatchfour, swatchfive</strong></li>
-        <li><strong>xlight, light, medium, dark, black</strong></li>
-      </ul>
-
+      <div class="f-grid-row">
+        <div class="f-grid-4of12 f-grid-1of12-offset f-tl">
+          <p class="f-margin-t-xlarge">Colors can be applied by the following selectors:</p>
+          <ul class="f-ilb f-tl">
+            <li><strong>.f-fc-{KEY}</strong> - Font Color</li>
+            <li><strong>.f-fc-hover-{KEY}</strong> - Font Color (hover)</li>
+            <li><strong>.f-bg-{KEY}</strong> - Background Color</li>
+            <li><strong>.f-b-{KEY}</strong> - Border Color</li>
+          </ul>
+        </div>
+        <div class="f-grid-4of12 f-grid-1of12-offset f-tl">
+          <p class="f-margin-t-xlarge">Currently the following keys are supported:</p>
+          <ul class="f-ilb f-tl">
+            <li><strong>primary</strong></li>
+            <li><strong>swatchone, swatchtwo, swatchthree, swatchfour, swatchfive</strong></li>
+            <li><strong>xlight, light, medium, dark, black</strong></li>
+          </ul>
+        </div>
+      </div>
 
       <p class="f-margin-xlarge">Most core action buttons and highlights use the <strong>Primary</strong> color.</p>
       <div class="f-grid-row f-margin-t-large">
@@ -226,6 +231,14 @@
             <strong>#FFFFFF</strong>
             <br>
             <span class="f-fs-xsmall">white</span>
+          </p>
+        </div>
+        <div class="f-ilb f-margin-r-regular f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-xlight" style="height: 100px; width: 125px"></div>
+          <p class="f-padding-regular f-tc">
+            <strong>#F1F1F2</strong>
+            <br>
+            <span class="f-fs-xsmall">xlight</span>
           </p>
         </div>
         <div class="f-ilb f-margin-r-regular f-br-medium f-of-hidden f-bg-light">
@@ -340,32 +353,58 @@
       </div>
     </section>
 
-    <section id="buttons" class="f-margin-t-xlarge">
+    <section id="buttons" class="f-margin-t-xlarge f-tc">
       <h2>Buttons</h2>
-      <div class="f-grid-row f-margin-t-large f-fs-regular f-lh-large">
-        <h3 class="f-grid-4of12">Basic</h3>
-        <div class="f-grid-8of12">
-          <div class="f-margin-t-small">
-            <a href="#" class="button action f-fs-xsmall">X Small</a>
+      <p>Buttons follow all the major color keys
+      <div class="f-page-container f-tl">
+        <div class="f-grid-row f-margin-t-large f-fs-regular f-lh-large">
+          <h3 class="f-grid-4of12">Primary</h3>
+          <div class="f-grid-8of12">
+            <div class="f-margin-t-small">
+              <a href="#" class="f-button primary f-fs-xsmall">X Small</a>
+            </div>
+            <div class="f-margin-t-small">
+              <a href="#" class="f-button primary f-fs-small">Small</a>
+            </div>
+            <div class="f-margin-t-small">
+              <a href="#" class="f-button primary f-fs-regular">Regular</a>
+            </div>
+            <div class="f-margin-t-small">
+              <a href="#" class="f-button primary f-fs-large">Large</a>
+            </div>
+            <div class="f-margin-t-small">
+              <a href="#" class="f-button primary f-fs-xlarge">X Large</a>
+            </div>
+            <div class="f-margin-t-small">
+              <a href="#" class="f-button primary f-fs-xxlarge">XX Large</a>
+            </div>
           </div>
-          <div class="f-margin-t-small">
-            <a href="#" class="button action f-fs-small">Small</a>
+        </div>
+
+        <div class="f-grid-row f-margin-t-xlarge">
+          <div class="f-grid-4of12">
+            <h3>All Buttons</h3>
           </div>
-          <div class="f-margin-t-small">
-            <a href="#" class="button action f-fs-regular">Regular</a>
-          </div>
-          <div class="f-margin-t-small">
-            <a href="#" class="button action f-fs-large">Large</a>
-          </div>
-          <div class="f-margin-t-small">
-            <a href="#" class="button action f-fs-xlarge">X Large</a>
-          </div>
-          <div class="f-margin-t-small">
-            <a href="#" class="button action f-fs-xxlarge">XX Large</a>
+          <div class="f-grid-8of12">
+            <div class="f-grid-row f-fs-regular">
+              <div class="f-button white f-ilb f-margin-small">white</div>
+              <div class="f-button xlight f-ilb f-margin-small">xlight</div>
+              <div class="f-button light f-ilb f-margin-small">light</div>
+              <div class="f-button medium f-ilb f-margin-small">medium</div>
+              <div class="f-button dark f-ilb f-margin-small">dark</div>
+              <div class="f-button black f-ilb f-margin-small">black</div>
+            </div>
+            <div class="f-grid-row f-fs-regular">
+              <div class="f-button swatchone f-ilb f-margin-small">swatchone</div>
+              <div class="f-button swatchtwo f-ilb f-margin-small">swatchtwo</div>
+              <div class="f-button swatchthree f-ilb f-margin-small">swatchthree</div>
+              <div class="f-button swatchfour f-ilb f-margin-small">swatchfour</div>
+              <div class="f-button swatchfive f-ilb f-margin-small">swatchfive</div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </p></section>
 
     <footer class="f-margin-xxlarge">
     </footer>
@@ -384,7 +423,7 @@
     .f-b-primary {
       border-color: #f27555;
     }
-    .f-button-primary {
+    .f-button.primary {
       background-color: #f27555;
       color: white;
     }
