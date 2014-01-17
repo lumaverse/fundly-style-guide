@@ -1,84 +1,74 @@
-@mixin button-colour($color, $fontColor: #fff)
-  color: $fontColor
-  background-color: $color
-  +background-image(linear-gradient($color, darken($color, 5%)))
-  border-color: darken($color, 10%)
-  text-shadow: 0 1px 1px rgba(darken($color, 10%), 0.3)
-  +box-shadow(inset 0 1px 1px rgba(darken($color, 15%), 0.3))
-
-  &:hover
-    +background-image(linear-gradient($color, darken($color, 10%)))
-    background-color: darken($color, 10%)
-    border-color: darken($color, 20%)
-    text:
-      decoration: none
-    +box-shadow(0 1px 1px rgba(0,0,0,0.2))
-
-  &:active
-    +box-shadow(inset 0 2px 6px rgba(darken($color, 15%),0.9) !important)
-
-  &.disabled
-    &, &:hover, &:active
-      background-image: none
-      background-color: $color
-      border-color: darken($color, 10%)
-      color: darken($fontColor, 20%)
-      cursor: wait
-
-    &:active
-      +box-shadow(none !important)
-
-
-.button
+.f-button
+  position: relative
   +inline-block
-  margin: 0
-  padding: 0 1.25em
-  line-height: 2.25em
+  padding: 0 0.75em
+  line-height: 2.5em
   border:
     width: 1px
     style: solid
+    color: black
+    color: rgba(0,0,0,0.25)
   +border-radius(3px)
   +transition(all 150ms ease-in-out)
   cursor: pointer
-  text-decoration: none
+  text-shadow: 0 1px 0 rgba(0,0,0,0.1)
+  text-transform: uppercase
+  font-family: $font-family-condensed
 
-  i.l, i.r
-    +inline-block
-    height: inherit
-    width: inherit
-    background:
-      position: center center
-      repeat: no-repeat
-      size: 100% auto
-  i.l
-    margin:
-      left: -0.5em
-      right: 0.5em
-  i.r
-    margin:
-      left: 0.5em
-      right: -0.5em
+  &:focus
+    outline: none
 
-.button:focus
-  outline: none
+  &:hover
+    text-decoration: none
+    border-color: rgba(0,0,0,0.5)
 
-.button.action
-  @include button-colour(#ff9666, #333)
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.1)
 
-.button.continue
-  @include button-colour(#5493d3)
+  &:active
+    +box-shadow(inset 0 1px 5px rgba(0,0,0,0.4))
 
-.button.info, .button.grey
-  @include button-colour(#ddd, #333)
-  &.email i.l
-    background:
-      size: 90% auto
-    +opacity(0.8)
+  &.primary
+    background-color: $f-color-primary
+    color: $f-color-white
 
-.button.facebook
-  @include button-colour(#395b98)
-  i.l
-    width: 1em
-    margin-left: -0.75em
-    background:
-      size: auto 22px
+  &.white
+    background-color: $f-color-white
+    color: $f-color-black
+  &.xlight
+    background-color: $f-color-xlight
+    color: $f-color-black
+  &.light
+    background-color: $f-color-light
+    color: $f-color-black
+  &.medium
+    background-color: $f-color-medium
+    color: $f-color-white
+  &.dark
+    background-color: $f-color-dark
+    color: $f-color-white
+  &.black
+    background-color: $f-color-black
+    color: $f-color-white
+
+  &.swatchone
+    background-color: $f-color-swatch-one
+    color: $f-color-white
+  &.swatchtwo
+    background-color: $f-color-swatch-two
+    color: $f-color-dark
+  &.swatchthree
+    background-color: $f-color-swatch-three
+    color: $f-color-white
+  &.swatchfour
+    background-color: $f-color-swatch-four
+    color: $f-color-white
+  &.swatchfive
+    background-color: $f-color-swatch-five
+    color: $f-color-white
