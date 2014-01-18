@@ -21,15 +21,7 @@
   &:hover
     text-decoration: none
     border-color: rgba(0,0,0,0.5)
-
-    &:after
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background-color: rgba(0,0,0,0.1)
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1))
 
   &:active
     +box-shadow(inset 0 1px 5px rgba(0,0,0,0.4))
@@ -72,3 +64,37 @@
   &.swatchfive
     background-color: $f-color-swatch-five
     color: $f-color-white
+
+  &.facebook, &.twitter, &.google, &.linkedin, &.pinterest
+    &:before
+      font:
+        family: FontAwesome
+        size: 1.20em
+      margin-right: 0.75em
+    &:empty:before
+      margin-right: 0
+  &.facebook
+    background-color: $f-color-facebook
+    color: $f-color-white
+    &:before
+      content: $fa-var-facebook
+  &.twitter
+    background-color: $f-color-twitter
+    color: $f-color-white
+    &:before
+      content: $fa-var-twitter
+  &.google
+    background-color: $f-color-google
+    color: $f-color-white
+    &:before
+      content: $fa-var-google-plus
+  &.linkedin
+    background-color: $f-color-linkedin
+    color: $f-color-white
+    &:before
+      content: $fa-var-linkedin
+  &.pinterest
+    background-color: $f-color-pinterest
+    color: $f-color-white
+    &:before
+      content: $fa-var-pinterest
