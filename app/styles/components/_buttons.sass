@@ -1,8 +1,12 @@
 .f-button
-  position: relative
   +inline-block
+  position: relative
   padding: 0 0.75em
   line-height: 2.5em
+  font-family: $font-family-condensed
+  text:
+    shadow: 0 1px 0 rgba(0,0,0,0.1)
+    transform: uppercase
   border:
     width: 1px
     style: solid
@@ -11,9 +15,6 @@
   +border-radius(3px)
   +transition(all 150ms ease-in-out)
   cursor: pointer
-  text-shadow: 0 1px 0 rgba(0,0,0,0.1)
-  text-transform: uppercase
-  font-family: $font-family-condensed
 
   &:focus
     outline: none
@@ -33,12 +34,15 @@
   &.white
     background-color: $f-color-white
     color: $f-color-black
+    text-shadow: 0 1px 0 rgba(255,255,255,0.1)
   &.xlight
     background-color: $f-color-xlight
     color: $f-color-black
+    text-shadow: 0 1px 0 rgba(255,255,255,0.1)
   &.light
     background-color: $f-color-light
     color: $f-color-black
+    text-shadow: 0 1px 0 rgba(255,255,255,0.1)
   &.medium
     background-color: $f-color-medium
     color: $f-color-white
@@ -55,6 +59,7 @@
   &.swatchtwo
     background-color: $f-color-swatch-two
     color: $f-color-dark
+    text-shadow: 0 1px 0 rgba(255,255,255,0.1)
   &.swatchthree
     background-color: $f-color-swatch-three
     color: $f-color-white

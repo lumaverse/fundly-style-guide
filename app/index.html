@@ -304,16 +304,18 @@
       </div>
     </section>
 
-    <section id="forms" class="f-padding-xlarge f-tc f-bg-dark">
+    <section id="forms" class="f-padding-xlarge f-tc f-bg-white">
       <h2>Forms</h2>
       <p></p>
       <div class="f-page-container f-tl">
         <div class="f-grid-row f-margin-t-large">
           <h3 class="f-grid-4of12">Basic</h3>
           <div class="f-grid-8of12">
-            <input type="text" name="test" class="f-lh-small">
-            <textarea name="test-textarea" class="f-margin-t-small f-margin-b-small"></textarea>
-            <select name="test-select">
+            <input type="text" name="test" class="f-fs-regular f-margin-b-small" placeholder="Input .f-fs-regular">
+            <input type="text" name="test" class="f-fs-large f-margin-b-small" placeholder="Input .f-fs-large">
+            <input type="text" name="test" class="f-fs-xlarge f-margin-b-small" placeholder="Input .f-fs-xlarge">
+            <textarea name="test-textarea" class="f-fs-regular f-margin-b-small" placeholder="Textarea .f-fs-regular"></textarea>
+            <select class="f-fs-regular" name="test-select" placeholder="Select .f-fs-regular">
               <option>Something</option>
               <option>Something</option>
               <option>Something</option>
@@ -326,7 +328,11 @@
           <h3 class="f-grid-4of12">Form Row</h3>
           <div class="f-grid-8of12">
             <div class="f-form-row">
-              <label for=""></label>
+              <label for="">Inline (default)</label>
+              <input type="text">
+            </div>
+            <div class="f-form-row stacked">
+              <label for="">Stacked</label>
               <input type="text">
             </div>
           </div>
@@ -358,34 +364,34 @@
       <p>Buttons follow all the major color keys, and their layout is based on font-size. </p>
       <div class="f-page-container f-tl">
         <div class="f-grid-row f-margin-t-large f-fs-regular f-lh-large">
-          <h3 class="f-grid-4of12">Primary</h3>
-          <div class="f-grid-8of12">
-            <div class="f-margin-t-small">
-              <a href="#" class="f-button primary f-fs-xsmall">X Small</a>
+          <h3 class="f-grid-3of12">Primary Button</h3>
+          <div class="f-grid-9of12">
+            <div class="f-ilb f-margin-small">
+              <a href="#" class="f-button primary f-fs-xxlarge">XX Large</a>
             </div>
-            <div class="f-margin-t-small">
-              <a href="#" class="f-button primary f-fs-small">Small</a>
-            </div>
-            <div class="f-margin-t-small">
-              <a href="#" class="f-button primary f-fs-regular">Regular</a>
-            </div>
-            <div class="f-margin-t-small">
-              <a href="#" class="f-button primary f-fs-large">Large</a>
-            </div>
-            <div class="f-margin-t-small">
+            <div class="f-ilb f-margin-small">
               <a href="#" class="f-button primary f-fs-xlarge">X Large</a>
             </div>
-            <div class="f-margin-t-small">
-              <a href="#" class="f-button primary f-fs-xxlarge">XX Large</a>
+            <div class="f-ilb f-margin-small">
+              <a href="#" class="f-button primary f-fs-large">Large</a>
+            </div>
+            <div class="f-ilb f-margin-small">
+              <a href="#" class="f-button primary f-fs-regular">Regular</a>
+            </div>
+            <div class="f-ilb f-margin-small">
+              <a href="#" class="f-button primary f-fs-small">Small</a>
+            </div>
+            <div class="f-ilb f-margin-small">
+              <a href="#" class="f-button primary f-fs-xsmall">X Small</a>
             </div>
           </div>
         </div>
 
         <div class="f-grid-row f-margin-t-xxlarge">
-          <div class="f-grid-4of12">
+          <div class="f-grid-3of12">
             <h3>All Button Colors</h3>
           </div>
-          <div class="f-grid-8of12">
+          <div class="f-grid-9of12">
             <div class="f-grid-row f-fs-regular">
               <div class="f-button white f-ilb f-margin-small">white</div>
               <div class="f-button xlight f-ilb f-margin-small">xlight</div>
@@ -404,10 +410,10 @@
           </div>
         </div>
         <div class="f-grid-row f-margin-t-xxlarge">
-          <div class="f-grid-4of12">
-            <h3>Social Btns</h3>
+          <div class="f-grid-3of12">
+            <h3>Social Buttons</h3>
           </div>
-          <div class="f-grid-8of12">
+          <div class="f-grid-9of12">
             <div class="f-grid-row f-fs-regular">
               <div class="f-button facebook f-ilb f-margin-small">facebook</div>
               <div class="f-button twitter f-ilb f-margin-small"></div>
