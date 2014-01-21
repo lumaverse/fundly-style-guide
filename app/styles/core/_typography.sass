@@ -15,19 +15,38 @@ p
   font-family: $f-font-monospace
 
 
+// Font Reset
+html
+  font-size: 100%
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+body
+  font-family: $f-font-base
+  font-size: $f-font-size
+  line-height: $line-height-base
+
+input,
+button,
+select,
+textarea
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+
 // Font Sizes
 .f-fs-xsmall
-  font-size: round($f-font-size * 0.75)
+  font-size: $f-fs-xsmall
 .f-fs-small
-  font-size: round($f-font-size * 0.85)
+  font-size: $f-fs-small
 .f-fs-regular
-  font-size: $f-font-size
+  font-size: $f-fs-regular
 .f-fs-large
-  font-size: ceil($f-font-size * 1.5)
+  font-size: $f-fs-large
 .f-fs-xlarge
-  font-size: ceil($f-font-size * 2)
+  font-size: $f-fs-xlarge
 .f-fs-xxlarge
-  font-size: ceil($f-font-size * 2.5)
+  font-size: $f-fs-xxlarge
 
 
 // Font Weights
@@ -49,17 +68,17 @@ h1, h2, h3, h4, h5, h6,
   font-family: $f-font-condensed
   font-weight: 700
 h1, .h1
-  font-size: round($f-font-size * 2.5)
+  font-size: $f-fs-h1
 h2, .h2
-  font-size: round($f-font-size * 2)
+  font-size: $f-fs-h2
 h3, .h3
-  font-size: round($f-font-size * 1.75)
+  font-size: $f-fs-h3
 h4, .h4
-  font-size: round($f-font-size * 1.25)
+  font-size: $f-fs-h4
 h5, .h5
-  font-size: $f-font-size
+  font-size: $f-fs-h5
 h6, .h6
-  font-size: round($f-font-size * 0.85)
+  font-size: $f-fs-h6
 
 
 // Line Heights
@@ -73,25 +92,6 @@ h6, .h6
   line-height: 2.5em
 .f-lh-xxlarge
   line-height: 3em
-
-
-// Font Reset
-html
-  font-size: 100%
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
-
-body
-  font-family: $f-font-base
-  font-size: $f-font-size
-  line-height: $line-height-base
-
-input,
-button,
-select,
-textarea
-  font-family: inherit
-  font-size: inherit
-  line-height: inherit
 
 
 // Links

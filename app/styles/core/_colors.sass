@@ -23,7 +23,7 @@ a
   .f-bg-#{$key}
     background-color: $color
     color: color-invert($color)
-  .f-b-#{$key}
+  .f-b-#{$key}, [class*="f-b-#{$key}"]
     border-color: $color
 
 // Black to White color sets
@@ -47,6 +47,10 @@ a
 +make-color-set('google',      $f-color-google)
 +make-color-set('linkedin',    $f-color-linkedin)
 +make-color-set('pinterest',   $f-color-pinterest)
+
+// Application state colors
++make-color-set('success',     $f-color-success)
++make-color-set('error',       $f-color-error)
 
 
 // Opacity
