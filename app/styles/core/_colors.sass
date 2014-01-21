@@ -1,39 +1,14 @@
-// Colour Swatch
-$f-color-swatch-one: #59CAE9
-$f-color-swatch-two: #CEE8C5
-$f-color-swatch-three: #FF9666
-$f-color-swatch-four: #777F83
-$f-color-swatch-five: #252B2C
-
-// Primary color
-$f-color-primary: #FF8B5D
-
-// White to Black
-$f-color-white: white
-$f-color-xlight: #f0f0f0
-$f-color-light: #eee
-$f-color-medium: #888
-$f-color-dark: #444
-$f-color-black: black
-
-// Social network brand colors
-$f-color-facebook: #395b98
-$f-color-twitter: #1ba5e2
-$f-color-google: #ff0000
-$f-color-linkedin: #1d87bd
-$f-color-pinterest: #cb2027
-
-
 // Color reset
 body
   color: $f-color-dark
 a
-  color: $link-color
+  color: $f-color-link
 
   &:hover,
   &:focus
-    color: $link-hover-color
+    color: $f-color-link-hover
 
+// Mixins for making the color sets
 @function color-invert($color)
   @if lightness($color) >= 50
     @return $f-color-dark
@@ -51,49 +26,27 @@ a
   .f-b-#{$key}
     border-color: $color
 
-+make-color-set('primary', $f-color-primary)
-+make-color-set('xlight', $f-color-xlight)
-+make-color-set('light', $f-color-light)
-+make-color-set('medium', $f-color-medium)
-+make-color-set('dark', $f-color-dark)
-+make-color-set('black', $f-color-black)
-+make-color-set('swatchone', $f-color-swatch-one)
-+make-color-set('swatchtwo', $f-color-swatch-two)
+// Black to White color sets
++make-color-set('primary',     $f-color-primary)
++make-color-set('xlight',      $f-color-xlight)
++make-color-set('light',       $f-color-light)
++make-color-set('medium',      $f-color-medium)
++make-color-set('dark',        $f-color-dark)
++make-color-set('black',       $f-color-black)
+
+// Swatch color sets
++make-color-set('swatchone',   $f-color-swatch-one)
++make-color-set('swatchtwo',   $f-color-swatch-two)
 +make-color-set('swatchthree', $f-color-swatch-three)
-+make-color-set('swatchfour', $f-color-swatch-four)
-+make-color-set('swatchfive', $f-color-swatch-five)
++make-color-set('swatchfour',  $f-color-swatch-four)
++make-color-set('swatchfive',  $f-color-swatch-five)
 
-+make-color-set('swatchfive', $f-color-swatch-five)
-+make-color-set('swatchfive', $f-color-swatch-five)
-+make-color-set('swatchfive', $f-color-swatch-five)
-+make-color-set('swatchfive', $f-color-swatch-five)
-
-
-// Borders
-.f-b-white, .f-b-xlight, .f-b-light, .f-b-medium, .f-b-dark, .f-b-black
-  border:
-    style: solid
-    width: 1px
-.f-b-l
-  border-width: 0px
-  border-left-width: 1px
-.f-b-r
-  border-width: 0px
-  border-right-width: 1px
-.f-b-t
-  border-width: 0px
-  border-top-width: 1px
-.f-b-b
-  border-width: 0px
-  border-bottom-width: 1px
-.f-b-nl
-  border-left-width: 0px
-.f-b-nr
-  border-right-width: 0px
-.f-b-nt
-  border-top-width: 0px
-.f-b-nb
-  border-bottom-width: 0px
+// Social network color sets
++make-color-set('facebook',    $f-color-facebook)
++make-color-set('twitter',     $f-color-twitter)
++make-color-set('google',      $f-color-google)
++make-color-set('linkedin',    $f-color-linkedin)
++make-color-set('pinterest',   $f-color-pinterest)
 
 
 // Opacity

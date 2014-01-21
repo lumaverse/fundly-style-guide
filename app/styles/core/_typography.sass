@@ -1,18 +1,3 @@
-// Import the base font
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed')
-
-// Import FontAwesome
-$fa-font-path: "../bower_components/font-awesome/fonts"
-@import "font-awesome/scss/font-awesome"
-
-
-// Set some global variables, overridding the Bootstrap ones
-$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif
-$font-family-serif:       Georgia, "Times New Roman", Times, serif
-$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace
-$font-family-condensed:   "Roboto Condensed", Helvetica, Arial, sans-serif
-$font-family-base:        $font-family-sans-serif
-
 // Reset
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
@@ -20,30 +5,29 @@ p
   padding: 0
   margin: 0
 
+
 // Font Families
 .f-font-main
-  font-family: $font-family-base
+  font-family: $f-font-base
 .f-font-condensed
-  font-family: $font-family-condensed
+  font-family: $f-font-condensed
 .f-font-monospace
-  font-family: $font-family-monospace
+  font-family: $f-font-monospace
 
 
 // Font Sizes
-$font-size-base: 14px
-
 .f-fs-xsmall
-  font-size: round($font-size-base * 0.75)
+  font-size: round($f-font-size * 0.75)
 .f-fs-small
-  font-size: round($font-size-base * 0.85)
+  font-size: round($f-font-size * 0.85)
 .f-fs-regular
-  font-size: $font-size-base
+  font-size: $f-font-size
 .f-fs-large
-  font-size: ceil($font-size-base * 1.5)
+  font-size: ceil($f-font-size * 1.5)
 .f-fs-xlarge
-  font-size: ceil($font-size-base * 2)
+  font-size: ceil($f-font-size * 2)
 .f-fs-xxlarge
-  font-size: ceil($font-size-base * 2.5)
+  font-size: ceil($f-font-size * 2.5)
 
 
 // Font Weights
@@ -62,19 +46,20 @@ $font-size-base: 14px
 // Headings
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6
+  font-family: $f-font-condensed
   font-weight: 700
 h1, .h1
-  font-size: round($font-size-base * 2.5)
+  font-size: round($f-font-size * 2.5)
 h2, .h2
-  font-size: round($font-size-base * 2)
+  font-size: round($f-font-size * 2)
 h3, .h3
-  font-size: round($font-size-base * 1.75)
+  font-size: round($f-font-size * 1.75)
 h4, .h4
-  font-size: round($font-size-base * 1.25)
+  font-size: round($f-font-size * 1.25)
 h5, .h5
-  font-size: $font-size-base
+  font-size: $f-font-size
 h6, .h6
-  font-size: round($font-size-base * 0.85)
+  font-size: round($f-font-size * 0.85)
 
 
 // Line Heights
@@ -96,8 +81,8 @@ html
   -webkit-tap-highlight-color: rgba(0,0,0,0)
 
 body
-  font-family: $font-family-base
-  font-size: $font-size-base
+  font-family: $f-font-base
+  font-size: $f-font-size
   line-height: $line-height-base
 
 input,

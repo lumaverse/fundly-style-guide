@@ -2,7 +2,7 @@
 @import "core/variables"
 @import "sass-bootstrap/lib/mixins"
 
-// Import some Compass helpers
+// Compass helpers
 @import "compass/css3"
 
 // Reset
@@ -13,8 +13,12 @@
 @import "core/colors"
 
 // Typography
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed')
 @import "core/typography"
+$fa-font-path: "../bower_components/font-awesome/fonts"
+@import "font-awesome/scss/font-awesome"
 @import "core/icons"
+// End Typography
 
 // Layout
 @import "core/layout"
@@ -34,3 +38,6 @@
 @import "components/popups"
 @import "components/gallery"
 @import "components/spinners"
+
+// Vendor
+// @import "hint.css/src/hint"

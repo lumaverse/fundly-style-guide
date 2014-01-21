@@ -46,11 +46,38 @@
 
 
 // Margins and Padding Sets
-+make-margin-padding-set(small,   $font-size-base/2)
-+make-margin-padding-set(regular, $font-size-base)
-+make-margin-padding-set(large,   $font-size-base * 1.5)
-+make-margin-padding-set(xlarge,  $font-size-base * 2)
-+make-margin-padding-set(xxlarge, $font-size-base * 3)
++make-margin-padding-set(small,   $f-spacing-small)
++make-margin-padding-set(regular, $f-spacing-regular)
++make-margin-padding-set(large,   $f-spacing-large)
++make-margin-padding-set(xlarge,  $f-spacing-xlarge)
++make-margin-padding-set(xxlarge, $f-spacing-xxlarge)
+
+
+// Borders
+.f-b-white, .f-b-xlight, .f-b-light, .f-b-medium, .f-b-dark, .f-b-black
+  border:
+    style: solid
+    width: 1px
+.f-b-l
+  border-width: 0px
+  border-left-width: 1px
+.f-b-r
+  border-width: 0px
+  border-right-width: 1px
+.f-b-t
+  border-width: 0px
+  border-top-width: 1px
+.f-b-b
+  border-width: 0px
+  border-bottom-width: 1px
+.f-b-nl
+  border-left-width: 0px
+.f-b-nr
+  border-right-width: 0px
+.f-b-nt
+  border-top-width: 0px
+.f-b-nb
+  border-bottom-width: 0px
 
 
 // Position
