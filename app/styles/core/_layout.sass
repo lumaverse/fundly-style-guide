@@ -67,24 +67,29 @@
     border:
       style: solid
       width: #{$width}px
-  .f-b-l#{$k}
-    border-width: 0px
-    border-left-width: #{$width}px
-  .f-b-r#{$k}
-    border-width: 0px
-    border-right-width: #{$width}px
-  .f-b-t#{$k}
-    border-width: 0px
-    border-top-width: #{$width}px
-  .f-b-b#{$k}
-    border-width: 0px
-    border-bottom-width: #{$width}px
 
 +make-border-set
 +make-border-set(2)
 +make-border-set(3)
 +make-border-set(4)
 +make-border-set(5)
+
+.f-b-l
+  border-top-width: 0px
+  border-bottom-width: 0px
+  border-right-width: 0px
+.f-b-r
+  border-top-width: 0px
+  border-bottom-width: 0px
+  border-left-width: 0px
+.f-b-t
+  border-bottom-width: 0px
+  border-left-width: 0px
+  border-right-width: 0px
+.f-b-b
+  border-top-width: 0px
+  border-left-width: 0px
+  border-right-width: 0px
 
 .f-b-nl
   border-left-width: 0px
