@@ -49,6 +49,9 @@
   &.dark
     background-color: $f-color-dark
     color: $f-color-white
+  &.xdark
+    background-color: $f-color-xdark
+    color: $f-color-white
   &.black
     background-color: $f-color-black
     color: $f-color-white
@@ -70,7 +73,7 @@
     background-color: $f-color-swatch-five
     color: $f-color-white
 
-  &.facebook, &.twitter, &.google, &.linkedin, &.pinterest
+  &.facebook, &.twitter, &.google, &.linkedin, &.pinterest, &.email
     &:before
       font:
         family: FontAwesome
@@ -83,6 +86,10 @@
     color: $f-color-white
     &:before
       content: $fa-var-facebook
+    &:empty:before
+      margin:
+        right: 0.25em
+        left: 0.25em
   &.twitter
     background-color: $f-color-twitter
     color: $f-color-white
@@ -103,3 +110,6 @@
     color: $f-color-white
     &:before
       content: $fa-var-pinterest
+  &.email
+    &:before
+      content: $fa-var-envelope

@@ -23,34 +23,39 @@
 
 
 @mixin make-margin-padding-set($set, $dimension)
-  .f-margin-#{$set}
+  .f-m-#{$set}
     margin: $dimension
-  .f-margin-l-#{$set}
+  .f-m-l-#{$set}
     margin-left: $dimension
-  .f-margin-r-#{$set}
+  .f-m-r-#{$set}
     margin-right: $dimension
-  .f-margin-t-#{$set}
+  .f-m-t-#{$set}
     margin-top: $dimension
-  .f-margin-b-#{$set}
+  .f-m-b-#{$set}
     margin-bottom: $dimension
-  .f-padding-#{$set}
+  .f-p-#{$set}
     padding: $dimension
-  .f-padding-l-#{$set}
+  .f-p-l-#{$set}
     padding-left: $dimension
-  .f-padding-r-#{$set}
+  .f-p-r-#{$set}
     padding-right: $dimension
-  .f-padding-t-#{$set}
+  .f-p-t-#{$set}
     padding-top: $dimension
-  .f-padding-b-#{$set}
+  .f-p-b-#{$set}
     padding-bottom: $dimension
+  .f-content-spacing-#{$set}
+    & > *
+      margin-left: $dimension
+    & > *:first-child
+      margin-left: 0
 
 
 // Margins and Padding Sets
++make-margin-padding-set(xsmall,  $f-spacing-xsmall)
 +make-margin-padding-set(small,   $f-spacing-small)
-+make-margin-padding-set(regular, $f-spacing-regular)
++make-margin-padding-set(medium,  $f-spacing-medium)
 +make-margin-padding-set(large,   $f-spacing-large)
 +make-margin-padding-set(xlarge,  $f-spacing-xlarge)
-+make-margin-padding-set(xxlarge, $f-spacing-xxlarge)
 
 
 // Borders
@@ -58,7 +63,7 @@
   @if $width > 1
     $k: "-#{$width}"
 
-  .f-b-white#{$k}, .f-b-xlight#{$k}, .f-b-light#{$k}, .f-b-medium#{$k}, .f-b-dark#{$k}, .f-b-black#{$k}
+  .f-b-white#{$k}, .f-b-xlight#{$k}, .f-b-light#{$k}, .f-b-medium#{$k}, .f-b-dark#{$k}, .f-b-xdark#{$k}, .f-b-black#{$k}
     border:
       style: solid
       width: #{$width}px
@@ -78,6 +83,8 @@
 +make-border-set
 +make-border-set(2)
 +make-border-set(3)
++make-border-set(4)
++make-border-set(5)
 
 .f-b-nl
   border-left-width: 0px
@@ -157,3 +164,12 @@
   height: 100%
 .f-ilb
   +inline-block
+
+
+// Horizontal rules (the colors are mixed into the color sets)
+[class*='f-hr']
+  height: 0
+  border-bottom-style: solid
+  border-bottom-width: 1px
+.f-hr
+  @extend .f-hr-light

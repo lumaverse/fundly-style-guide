@@ -39,5 +39,12 @@ $fa-font-path: "../bower_components/font-awesome/fonts"
 @import "components/gallery"
 @import "components/spinners"
 
-// Vendor
-// @import "hint.css/src/hint"
+// Vendor Plugins
+
+// Hint CSS
+@import "hint.css/src/hint"
+[class*='hint--']:after
+  font:
+    family: $f-font-condensed
+    weight: 500
+// End Hint CSS

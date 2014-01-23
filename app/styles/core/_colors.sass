@@ -1,6 +1,6 @@
 // Color reset
 body
-  color: $f-color-dark
+  color: $f-color-xdark
 a
   color: $f-color-link
 
@@ -8,12 +8,13 @@ a
   &:focus
     color: $f-color-link-hover
 
+
 // Mixins for making the color sets
 @function color-invert($color)
-  @if lightness($color) >= 50
-    @return $f-color-dark
+  @if lightness($color) >= 75
+    @return $f-color-xdark
   @else
-    @return $f-color-light
+    @return $f-color-xlight
 
 @mixin make-color-set($key, $color)
   .f-fc-#{$key}
@@ -25,13 +26,19 @@ a
     color: color-invert($color)
   .f-b-#{$key}, [class*="f-b-#{$key}"]
     border-color: $color
+  .f-hr-#{$key}
+    border-color: $color
+
+// Primary color set
++make-color-set('primary',     $f-color-primary)
 
 // Black to White color sets
-+make-color-set('primary',     $f-color-primary)
++make-color-set('white',       $f-color-white)
 +make-color-set('xlight',      $f-color-xlight)
 +make-color-set('light',       $f-color-light)
 +make-color-set('medium',      $f-color-medium)
 +make-color-set('dark',        $f-color-dark)
++make-color-set('xdark',       $f-color-xdark)
 +make-color-set('black',       $f-color-black)
 
 // Swatch color sets

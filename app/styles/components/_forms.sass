@@ -44,6 +44,21 @@ input, textarea, select
   &:-ms-placeholder
     +f-placeholder
 
+select
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  +border-radius(3px)
+  cursor: pointer
+  background:
+    image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="24px" height="16px" viewBox="0 0 24 16" enable-background="new 0 0 24 16" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace"><polygon fill="#C0C8C9" points="12.333,5 7.794,10 3.254,5 "/></svg>')
+    repeat: no-repeat
+    position: right center
+
+  &:hover
+    background:
+      image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="24px" height="16px" viewBox="0 0 24 16" enable-background="new 0 0 24 16" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace"><polygon fill="#444" points="12.333,5 7.794,10 3.254,5 "/></svg>')
+
 .f-input-decorator
   border: 1px solid $f-color-medium
   +border-radius(2px)
