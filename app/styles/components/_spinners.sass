@@ -1,4 +1,4 @@
-@mixin colour-wheel($top:#eee, $bottom:#eee, $left:#bbb, $right:#bbb, $rotation:20s, $border:0.2em)
+@mixin colour-wheel($top:#eee, $bottom:#eee, $left:#bbb, $right:#bbb, $rotation:20s, $border:0.15em)
   border-width: $border
   border-style: solid
   border-top-color: $top
@@ -6,8 +6,8 @@
   border-left-color: $left
   border-right-color: $right
 
-  height: 1em
-  width: 1em
+  height: 1.5em
+  width: 1.5em
   +border-radius(100%)
 
   -webkit-animation: f-spinner-rotate $rotation linear 0s infinite
@@ -24,6 +24,10 @@
 @keyframes f-spinner-rotate
   100%
     transform: rotateZ(3600deg) translateZ(0)
+
+
+.f-spinner-lifepreserver
+  +colour-wheel($f-color-light, $f-color-light, $f-color-dark, $f-color-dark)
 
 
 @-webkit-keyframes f-spinner-circles
@@ -71,9 +75,6 @@
     background-color: inherit
     -webkit-animation-delay: -0.32s
     animation-delay: -0.32s
-
-.f-spinner-lifepreserver
-  +colour-wheel
 
 
 @-webkit-keyframes f-spinner-bars
