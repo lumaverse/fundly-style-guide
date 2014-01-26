@@ -223,6 +223,7 @@ module.exports = function (grunt) {
             'images/{,*/}*.{webp,gif}',
             'styles/fonts/{,*/}*.*',
             'bower_components/font-awesome/fonts/*.*',
+            'bower_components/fundly-icon-font/dist/fonts/*.*',
             'bower_components/modernizr/modernizr.js',
             'bower_components/jquery/jquery.js'
           ]
