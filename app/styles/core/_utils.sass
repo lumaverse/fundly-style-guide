@@ -56,10 +56,11 @@
 //   on its parent
 .f-hover-show
   .f-hover-show
-    display: none
+    +opacity(0)
+    +transition(opacity 250ms linear)
 .f-hover-show:hover
   .f-hover-show
-    display: block
+    +opacity(1)
 
 
 // Shows the picture icon in the center of the component, requires code to be:
@@ -81,3 +82,16 @@
 
   div, img
     position: relative
+
+
+// File upload btn
+.f-upload-btn
+  position: relative
+
+  input
+    position: absolute
+    top: 0
+    left: 0
+    width: 98%
+    height: 98%
+    +opacity(0)

@@ -25,6 +25,21 @@ a
   .f-bg-#{$key}
     background-color: $color
     color: color-invert($color)
+  .f-bg-#{$key}-o-xlight
+    background-color: rgba($color, $f-opacity-xlight)
+    color: color-invert($color)
+  .f-bg-#{$key}-o-light
+    background-color: rgba($color, $f-opacity-light)
+    color: color-invert($color)
+  .f-bg-#{$key}-o-medium
+    background-color: rgba($color, $f-opacity-medium)
+    color: color-invert($color)
+  .f-bg-#{$key}-o-dark
+    background-color: rgba($color, $f-opacity-dark)
+    color: color-invert($color)
+  .f-bg-#{$key}-o-xdark
+    background-color: rgba($color, $f-opacity-xdark)
+    color: color-invert($color)
   .f-b-#{$key}, [class*="f-b-#{$key}"]
     border-color: $color
   .f-hr-#{$key}
@@ -60,17 +75,16 @@ a
 +make-color-set('success',     $f-color-success)
 +make-color-set('error',       $f-color-error)
 
-
 // Opacity
 .f-opacity-xlight
-  +opacity(0.25)
+  +opacity($f-opacity-xlight)
 .f-opacity-light
-  +opacity(0.5)
+  +opacity($f-opacity-light)
 .f-opacity-medium
-  +opacity(0.75)
+  +opacity($f-opacity-medium)
 .f-opacity-dark
-  +opacity(0.85)
+  +opacity($f-opacity-dark)
 .f-opacity-xdark
-  +opacity(0.95)
+  +opacity($f-opacity-xdark)
 .f-opacity-full
-  +opacity(1)
+  +opacity($f-opacity-full)
