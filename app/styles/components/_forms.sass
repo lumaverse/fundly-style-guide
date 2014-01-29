@@ -80,7 +80,7 @@ select
 
   .f-decorator
     display: table-cell
-    padding: 0.5em 1em
+    padding: 0 0.5em
     font-size: inherit
     line-height: 1
     text-align: center
@@ -89,11 +89,17 @@ select
     white-space: nowrap
     vertical-align: middle
 
-  .f-decorator:last-child
-    @extend .f-b-l
+    &.small
+      padding: 0 0.25em
+    &.medium
+      padding: 0 0.5em
+    &.large
+      padding: 0 1em
 
-  .f-decorator:first-child
-    @extend .f-b-r
+    &:last-child
+      @extend .f-b-l
+    &:first-child
+      @extend .f-b-r
 
 .f-form-row
   display: table
