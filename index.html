@@ -9,7 +9,7 @@
     <title>activities assets</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles/8d955aa3.fundly-style.css">
+    <link rel="stylesheet" href="styles/76996e8d.fundly-style.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
     <style id="theme-target"></style>
   </head>
@@ -227,6 +227,7 @@
           <li><strong>.f-fc-{KEY}</strong> - Font Color</li>
           <li><strong>.f-fc-hover-{KEY}</strong> - Font Color (hover)</li>
           <li><strong>.f-bg-{KEY}</strong> - Background Color</li>
+          <li><strong>.f-bg-{KEY}-o-{OPACITY_KEY}</strong> - Background Color with opacity</li>
           <li><strong>.f-b-{KEY}</strong> - Border Color</li>
           <li><strong>.f-hr-{KEY}</strong> - Horizontal Rule Color</li>
         </ul>
@@ -412,10 +413,8 @@
             <textarea name="test-textarea" class="f-fs-medium f-m-b-small" placeholder="Textarea .f-fs-medium"></textarea>
             <select class="f-fs-medium" name="test-select" placeholder="Select .f-fs-medium">
               <option>Something</option>
-              <option>Something</option>
-              <option>Something</option>
-              <option>Something</option>
-              <option>Something</option>
+              <option>Else</option>
+              <option>Entirely</option>
             </select>
           </div>
         </div>
@@ -432,21 +431,37 @@
             </div>
           </div>
         </div>
-        <div class="f-grid-row f-m-t-large f-fs-medium f-lh-large">
-          <h3 class="f-grid-4of12">Decorator</h3>
+        <div class="f-grid-row f-m-t-xlarge f-fs-medium">
+          <div class="f-grid-4of12 f-p-r-large">
+            <h3>Decorator</h3>
+            <p>The decorators have three widths:</p>
+            <ul>
+              <li><strong>Small</strong></li>
+              <li><strong>Medium (default)</strong></li>
+              <li><strong>Large</strong></li>
+            </ul>
+          </div>
           <div class="f-grid-8of12">
             <div class="f-input-decorator">
-              <input type="text">
-              <div class="js-calendar f-decorator f-clickable f-bg-white">
+              <input type="text" placeholder=".f-fs-medium .f-decorator.large">
+              <div class="js-calendar f-decorator large f-clickable f-bg-white">
                 <i class="fa fa-calendar"></i>
               </div>
             </div>
             <div class="f-m-t-medium">
-              <div class="f-input-decorator f-fs-medium f-lh-large">
-                <div class="f-decorator f-bg-swatchfive">
+              <div class="f-input-decorator f-fs-large">
+                <div class="f-decorator f-bg-swatchfive medium">
                   <i class="fa fa-bar-chart-o"></i>
                 </div>
-                <input type="text" name="decorator-test-2">
+                <input type="text" placeholder=".f-fs-large .f-decorator.medium">
+              </div>
+            </div>
+            <div class="f-m-t-medium">
+              <div class="f-input-decorator f-fs-xlarge">
+                <input type="text" placeholder=".f-fs-xlarge .f-decorator.small">
+                <div class="f-decorator f-bg-primary small">
+                  <i class="fa fa-truck"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -682,6 +697,71 @@
         </div>
         <div class="f-grid-1of12 f-grid-1of12-offset f-b-light f-p-xsmall">
           <p class="f-bg-light">1of12</p>
+        </div>
+      </div>
+      <h3 class="f-m-t-large">Spaced Grids</h3>
+      <p>Space the contents of a grid even in three percentage widths: small, medium and large.</p>
+      <p class="f-m-t-large"><strong>.f-spaced-grid-4-small</strong></p>
+      <div class="f-spaced-grid-4-small">
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+      </div>
+      <p class="f-m-t-large"><strong>.f-spaced-grid-8-med</strong></p>
+      <div class="f-spaced-grid-8-medium">
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+      </div>
+      <p class="f-m-t-large"><strong>.f-spaced-grid-6-large</strong></p>
+      <div class="f-spaced-grid-6-large">
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
+        </div>
+        <div class="f-b-light f-p-small">
+          <div class="f-bg-light">even spacing</div>
         </div>
       </div>
     </section>
