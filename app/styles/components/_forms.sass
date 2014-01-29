@@ -3,7 +3,7 @@
   font:
     style: italic
   padding: inherit 0
-  line-height: 1.32em
+  line-height: 1.5em
 
 label
   @extend .f-fw-bold
@@ -21,9 +21,9 @@ select optgroup
 
 input, textarea, select
   width: 100%
-  padding: 0.75em
+  padding: 0.5em 0.75em
   font-size: inherit
-  line-height: inherit
+  line-height: 1.5em
   background: white
   border: 1px solid $f-color-medium
   +border-radius(2px)
@@ -64,12 +64,13 @@ select
   +border-radius(2px)
   display: table
   width: 100%
+  border-collapse: separate
 
   input
     display: table-cell
     width: 100%
     border: none
-    margin-top: -1px
+    margin-bottom: 0
 
   input:first-child
     +border-right-radius(0)
@@ -79,11 +80,14 @@ select
 
   .f-decorator
     display: table-cell
-    padding: 0.75em 0.5em
+    padding: 0.5em 1em
     font-size: inherit
-    line-height: inherit
+    line-height: 1
     text-align: center
     border-color: $f-color-medium
+    width: 1%
+    white-space: nowrap
+    vertical-align: middle
 
   .f-decorator:last-child
     @extend .f-b-l

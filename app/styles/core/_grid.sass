@@ -22,3 +22,31 @@
   +clearfix
 +make-grid($f-grid-columns)
 +make-grid-offsets($f-grid-columns)
+
+
+// Spaced Grid, assigns widths to grid items and adds one of 3 spacings
+// between elements: 2%, 4%, 6%
+@mixin make-spaced-grid-set($columns:12)
+  @for $i from 2 through $columns
+    .f-spaced-grid-#{$i}-small
+      & > *
+        width: percentage(((100 - (($i - 1) * 2))/$i)/100)
+        margin-left: 2%
+    .f-spaced-grid-#{$i}-med
+      & > *
+        width: percentage(((100 - (($i - 1) * 4))/$i)/100)
+        margin-left: 4%
+    .f-spaced-grid-#{$i}-large
+      & > *
+        width: percentage(((100 - (($i - 1) * 6))/$i)/100)
+        margin-left: 6%
+
+[class*='f-spaced-grid-']
+  +clearfix
+  & > *
+    float: left
+    min-height: 1px
+  & > *:first-child
+    margin-left: 0
+
++make-spaced-grid-set(12)
