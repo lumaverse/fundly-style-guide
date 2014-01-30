@@ -1,0 +1,49 @@
+@mixin make-arrow-set($size:medium) {
+  $label: '';
+
+  @if $size != medium {
+    $label: "-#{$size}";
+  }
+
+  $border_size: 12px;
+  @if $size == small {
+    $border_size: 6px;
+  } @else if $size == medium {
+    $border_size: 12px
+  } @else if $size == large {
+    $border_size: 18px
+  }
+
+  .f-arrow-down#{$label} {
+    position: relative;
+    &:before, &:after {
+      border: $border_size solid transparent;
+      border-bottom: none;
+      position: absolute;
+      left: 50%;
+      content: '';
+      margin-left: -1 * $border_size;
+      bottom: -1 * ($border_size - 2px);
+    }
+    &:before {
+      bottom: -1 * $border_size;
+      margin-left: -1 * $border_size;
+    }
+  }
+}
+
+@include make-arrow-set
+@include make-arrow-set(small)
+@include make-arrow-set(large)
+
+[class*='f-arrow-'] {
+  &.social {
+    &:before, &:after {
+      border-top-color: $f-color-white
+    }
+    &:before {
+      border-top-color: $f-color-dark
+    }
+  }
+}
+
