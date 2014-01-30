@@ -1,0 +1,32 @@
+// -------------------
+// Vendor Plugins
+// -------------------
+
+// Hint CSS
+@import "hint.css/src/hint.scss";
+[class*='hint--'] {
+  &:after {
+    font: {
+      family: $f-font-condensed;
+      weight: 500;
+    }
+    background: $f-color-black;
+  }
+}
+.hint--top:before {
+  border-top-color: $f-color-black
+}
+.hint--bottom:before {
+  border-bottom-color: $f-color-black
+}
+.hint--right:before {
+  border-right-color: $f-color-black
+}
+.hint--left:before {
+  border-left-color: $f-color-black
+}
+// End Hint CSS
+
+// -------------------
+// End Vendor Plugins
+// -------------------

@@ -1,4 +1,17 @@
+/*
+Fundly Style Guide compiled for use in front-end contexts.
+  - fonts are referenced as a relative link to a catch-all font directory
+  - build script will move fonts to the correct location
+*/
 
-$f-context: 'other';
 
-@import "fundly-style";
+// Need a specific Icon font load path for this context
+$fa-font-path: "/fonts";
+@import "font-awesome/scss/font-awesome";
+$f-icon-path: "/fonts/";
+@import "fundly-icon-font/vendor/assets/stylesheets/fundly-icon-font";
+
+// Install the core, component and plugin files
+@import "core/index";
+@import "components/index";
+@import "plugins/index";

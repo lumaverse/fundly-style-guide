@@ -2,9 +2,8 @@
 var gulp =     require('gulp'),
     p =        require('gulp-load-plugins')({camelize: true}),
     lr =       require('tiny-lr')(),
-    path =     require('path'),
-    express =  require('express'),
-    app =      express(),
+    connect =  require('connect'),
+    open =     require('open'),
     pkg =      require('./package.json');
 
 // Directory configs
@@ -12,10 +11,14 @@ var config = {
   port: 8111,
   src: 'vendor/assets/',
   dev: '.tmp',
-  dist: 'dist2/',
+  dist: 'dist/',
   autoprefixer: ['last 2 version', '> 1%', 'ie 9', 'ie 8'],
-
 };
+
+
+// -----
+// Tasks
+// -----
 
 gulp.task('sass:dev', function(){
   return gulp.src(config.src + 'stylesheets/*-dist.scss')
@@ -25,12 +28,11 @@ gulp.task('sass:dev', function(){
     }))
     .pipe(p.autoprefixer.apply(null, config.autoprefixer))
     .pipe(p.rename(function(dir,base,ext){
-      return base.replace('-dist') + ext;
+      return base.replace('-dist', '') + ext;
     }))
     .pipe(gulp.dest(config.dev));
 });
 
-// Compile the distribution versions of the CSS
 gulp.task('sass:dist', function(){
   return gulp.src(config.src + 'stylesheets/*-dist.scss')
     .pipe(p.sass({
@@ -39,7 +41,7 @@ gulp.task('sass:dist', function(){
     }))
     .pipe(p.autoprefixer.apply(null, config.autoprefixer))
     .pipe(p.rename(function(dir,base,ext){
-      return base.replace('-dist') + ext;
+      return base.replace('-dist', '') + ext;
     }))
     .pipe(gulp.dest(config.dist))
     .pipe(p.minifyCss())
@@ -48,7 +50,6 @@ gulp.task('sass:dist', function(){
     }))
     .pipe(gulp.dest(config.dist));
 });
-
 
 
 gulp.task('clean:dev', function(){
@@ -60,65 +61,69 @@ gulp.task('clean:dist', function(){
 });
 
 
-gulp.task('fonts:dev', function(){
-  gulp.src('app/bower_components/**/fonts/*').pipe(gulp.dest('.tmp/fonts'));
+gulp.task('fonts:dev', ['clean:dev'], function(){
+  return gulp.src([
+      'app/bower_components/font-awesome/fonts/*',
+      'app/bower_components/fundly-icon-font/dist/fonts/*'
+    ])
+    .pipe(gulp.dest('.tmp/fonts'));
 });
 
-gulp.task('fonts:dist', function(){
-  gulp.src('app/bower_components/**/fonts/*').pipe(gulp.dest('dist/fonts'));
-});
-
-
-gulp.task('scripts', function(){
-  gulp.src('app/scripts/*').pipe(gulp.dest('dist/fonts'));
-});
-
-gulp.task('lint', function() {
-  return gulp.src('app/scripts/*.js')
-    .pipe(p.jshint())
-    .pipe(p.jshint.reporter('jshint-stylish'));
+gulp.task('fonts:dist', ['clean:dist'], function(){
+  return gulp.src([
+      'app/bower_components/font-awesome/fonts/*',
+      'app/bower_components/fundly-icon-font/dist/fonts/*'
+    ])
+    .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('lr', function(){
-  lr.listen(config.lr, function(err){
+  lr.listen(config.port + 1, function(err){
     if (err) {
       return console.log(err);
+    } else {
+      p.util.log(
+        'Livereload running on:',
+        p.util.colors.magenta(config.port + 1)
+      );
     }
   });
 });
 
-// Start an express server, pointing to the correct directories
-gulp.task('server', ['lr', 'clean:dev', 'sass:dev', 'fonts:dev'], function(){
-  app.use(express.static(path.join(__dirname, '.tmp')));
-  app.use(express.static(path.join(__dirname, 'app')));
-  app.use(require('connect-livereload')({
-    port: config.port + 1
-  }));
-  app.listen(config.port);
+gulp.task('server', ['lr', 'fonts:dev', 'sass:dev'], function(){
+  var middleware = [
+    require('connect-livereload')({ port: config.port + 1 }),
+    connect.static('app'),
+    connect.static('.tmp'),
+    connect.directory('app')
+  ];
+
+  var app = connect.apply(null, middleware),
+      server = require('http').createServer(app);
+
+  server
+    .listen(config.port)
+    .on('listening', function() {
+      p.util.log(
+        'Started connect webserver on: ',
+        p.util.colors.magenta('http://localhost:' + (config.port + 1))
+      );
+      open('http://localhost:' + config.port);
+    });
 });
 
-gulp.task('open', ['server'], function(){
-  gulp.src('app/index.html')
-    .pipe(
-      p.open(''),
-      {app: 'google-chrome', url: 'http://localhost:' + config.port}
-    );
-});
-
-gulp.task('watch', ['open'], function(){
-
+gulp.task('watch', ['server'], function(){
+  // watch the stylesheets and compile the CSS on change
   gulp.watch('vendor/assets/stylesheets/**/*.scss', ['sass:dev']);
 
+  // watch the .tmp directory and app html and reload the browser
   gulp.watch(['.tmp/**/*', 'app/*.html'], function(event){
-    var fileName = require('path').relative(EXPRESS_ROOT, event.path);
-
-    lr.changed({
-      body: {
-        files: [fileName]
-      }
-    });
+    p.util.log('file changed:', p.util.colors.green(event.path));
+    gulp.src(event.path).pipe(p.livereload(lr));
   });
 });
+
+gulp.task('build', ['clean:dist', 'fonts:dist', 'sass:dist']);
 
 
 // Bump Version Numbers

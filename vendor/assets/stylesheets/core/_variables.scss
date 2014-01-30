@@ -1,10 +1,6 @@
 // Import the base sass variables
 @import "sass-bootstrap/lib/variables";
 
-// What context are we compiling the CSS as?
-//  - gem: in a ruby/rails env
-//  - other: in a gulp,grunt,front-end context
-$f-context: 'gem' !default;
 
 // -------
 // Typography
