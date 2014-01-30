@@ -3,19 +3,20 @@
   right: 50px;
   max-width: 33%;
   padding: 1.5em;
-  @include border-radius(2em);
+  border-radius: 2em;
   z-index: $f-z-top;
 
   & > div:before {
     float: left;
     content: '';
-    @include border-radius(1em);
+    border-radius: 1em;
     width: 0.8em;
     height: 0.8em;
     background-color: $f-color-success;
-    margin:
+    margin: {
       top: 0.1em;
       right: 0.8em;
+    }
   }
 
   &.error > div:before {

@@ -1,7 +1,7 @@
 // This includes a line-height hack to vertically center the placeholder text
 @mixin f-placeholder {
-  font-style: italic;
   padding: inherit 0;
+  font-style: italic;
   line-height: 1.5em;
 }
 
@@ -29,9 +29,9 @@ input, textarea, select {
   line-height: 1.5em;
   background: white;
   border: 1px solid $f-color-medium;
-  @include border-radius(2px);
-  @include transition(all 0.3s linear);
-  @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.2));
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
   outline: 0;
   vertical-align: middle;
 
@@ -57,7 +57,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  @include border-radius(3px);
+  border-radius: 3px;
   cursor: pointer;
   background: {
     image: url('data:image/svg@include xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="24px" height="16px" viewBox="0 0 24 16" enable-background="new 0 0 24 16" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace"><polygon fill="#C0C8C9" points="12.333,5 7.794,10 3.254,5 "/></svg>');
@@ -72,7 +72,7 @@ select {
 
 .f-input-decorator {
   border: 1px solid $f-color-medium;
-  @include border-radius(2px);
+  border-radius: 2px;
   display: table;
   width: 100%;
   border-collapse: separate;
@@ -85,11 +85,11 @@ select {
   }
 
   input:first-child {
-    @include border-right-radius(0);
+    border-right-radius: 0;
   }
 
   input:last-child {
-    @include border-left-radius(0);
+    border-left-radius: 0;
   }
 
   .f-decorator {

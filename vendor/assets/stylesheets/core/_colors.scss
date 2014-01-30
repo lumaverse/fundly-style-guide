@@ -95,20 +95,20 @@ a {
 
 // Opacity
 .f-opacity-xlight {
-  +opacity($f-opacity-xlight);
+  opacity: $f-opacity-xlight;
 }
 .f-opacity-light {
-  +opacity($f-opacity-light);
+  opacity: $f-opacity-light;
 }
 .f-opacity-medium {
-  +opacity($f-opacity-medium);
+  opacity: $f-opacity-medium;
 }
 .f-opacity-dark {
-  +opacity($f-opacity-dark);
+  opacity: $f-opacity-dark;
 }
 .f-opacity-xdark {
-  +opacity($f-opacity-xdark);
+  opacity: $f-opacity-xdark;
 }
 .f-opacity-full {
-  +opacity($f-opacity-full);
+  opacity: $f-opacity-full;
 }

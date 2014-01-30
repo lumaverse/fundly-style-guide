@@ -17,14 +17,14 @@
 .f-gallery-leftarea {
   color: rgba(43,43,43,0.8);
   left: 0;
-  @include border-radius(0 3px 3px 0);
+  border-radius: 0 3px 3px 0;
   @extend .fa-angle-left;
 }
 
 .f-gallery-rightarea {
   color: rgba(43,43,43,0.8);
   right: 0;
-  @include border-radius(3px 0 0 3px);
+  border-radius: 3px 0 0 3px;
   @extend .fa-angle-right;
 }
 
@@ -34,20 +34,20 @@
   text-align: center;
 
   a {
-    @include inline-block;
+    display: inline-block;
     font-size: inherit;
     height: 0.5em;
     width: 0.5em;
     margin: 0 0.3em;
     background: white;
     border: 1px solid white;
-    @include opacity(0.5);
-    @include border-radius(100%);
-    @include transition(all 0.5s ease-in-out);
+    opacity: 0.5;
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
   }
 
   a.selected {
-    @include opacity(0.9);
-    @include transform(scale(1.75));
+    opacity: 0.9;
+    transform: scale(1.75);
   }
 }

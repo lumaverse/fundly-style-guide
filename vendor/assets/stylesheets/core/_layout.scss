@@ -1,6 +1,6 @@
 // Reset the box sizing
 *, *:before, *:after {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 
@@ -29,7 +29,7 @@
 }
 
 
-@mixin make-margin-padding-set($set, $dimension)
+@mixin make-margin-padding-set($set, $dimension) {
   .f-m-#{$set} {
     margin: $dimension;
   }
@@ -68,6 +68,7 @@
       margin-left: 0
     }
   }
+}
 
 
 // Margins and Padding Sets
@@ -222,7 +223,7 @@
   height: 100%;
 }
 .f-ilb {
-  @include inline-block;
+  display: inline-block;
 }
 .f-db {
   display: block;

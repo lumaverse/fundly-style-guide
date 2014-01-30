@@ -2,9 +2,6 @@
 @import "core/variables";
 @import "sass-bootstrap/lib/mixins";
 
-// Compass helpers
-@import "compass/css3";
-
 // Reset
 @import "sass-bootstrap/lib/normalize";
 @import "sass-bootstrap/lib/print";
@@ -18,10 +15,15 @@
 // End Typography
 
 // Icons
-$fa-font-path: "../bower_components/font-awesome/fonts";
-@import "font-awesome/scss/font-awesome";
-$f-icon-path: "../bower_components/fundly-icon-font/dist/fonts/";
-@import "fundly-icon-font/vendor/assets/stylesheets/fundly-icon-font";
+@if $f-context == 'gem' {
+  @import "font-awesome/scss/font-awesome";
+  @import "fundly-icon-font";
+} @else {
+  $fa-font-path: "/fonts";
+  @import "font-awesome/scss/font-awesome";
+  $f-icon-path: "/fonts/";
+  @import "fundly-icon-font/vendor/assets/stylesheets/fundly-icon-font";
+}
 // End Icons
 
 // Layout
@@ -55,7 +57,7 @@ $f-icon-path: "../bower_components/fundly-icon-font/dist/fonts/";
 // -------------------
 
 // Hint CSS
-@import "hint.css/src/hint";
+@import "hint.css/src/hint.scss";
 [class*='hint--'] {
   &:after {
     font: {

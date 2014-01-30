@@ -3,13 +3,16 @@ Avatars: come in 5 sizes and can be decorated with a range of social badges
  */
 
 .f-avatar-xlarge, .f-avatar-large, .f-avatar-medium, .f-avatar-small, .f-avatar-xsmall {
-  @include inline-block;
-  @include border-radius(100%);
+  display: inline-block;
+  border-radius: 100%;
   position: relative;
-  background:
+  background: {
     position: center center;
     size: 100%;
+  }
+}
 
+[class*='f-avatar-']{
   &.fb:after, &.facebook:after, &.tw:after, &.twitter:after, &.google:after, &.linkedin:after, &.pinterest:after {
     position: absolute;
     bottom: 0;
@@ -17,7 +20,7 @@ Avatars: come in 5 sizes and can be decorated with a range of social badges
     height: 2em;
     line-height: 2em;
     width: 2em;
-    @include border-radius(inherit);
+    border-radius: inherit;
     color: white;
     font: {
       family: FontAwesome;
@@ -30,27 +33,22 @@ Avatars: come in 5 sizes and can be decorated with a range of social badges
     content: $fa-var-facebook;
     background: $f-color-facebook;
   }
-
   &.tw:after, &.twitter:after {
     content: $fa-var-twitter;
     background: $f-color-twitter;
   }
-
   &.google:after {
     content: $fa-var-google-plus;
     background: $f-color-google;
   }
-
   &.linkedin:after {
     content: $fa-var-linkedin;
     background: $f-color-linkedin;
   }
-
   &.pinterest:after {
     content: $fa-var-pinterest;
     background: $f-color-pinterest;
   }
-
 }
 
 .f-avatar-xlarge {

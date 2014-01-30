@@ -3,15 +3,15 @@
   $list: '';
 
   @for $i from 1 through $columns {
-    $list: ".f-grid-#{$i}of#{$columns}, #{$list}";
-    .f-grid-#{$i}of#{$columns} {
+    $item: ".f-grid-#{$i}of#{$columns}";
+    $list: "#{$item}, #{$list}";
+    #{$item} {
       width: percentage($i/$columns);
+      min-height: 1px;
     }
-  }
-
-  #{$list} {
-    float: left;
-    min-height: 1px;
+    .f-grid-row > #{$item} {
+      float: left
+    }
   }
 }
 

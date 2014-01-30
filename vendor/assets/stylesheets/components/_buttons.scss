@@ -1,5 +1,5 @@
 .f-button {
-  @include inline-block;
+  display: inline-block;
   position: relative;
   padding: 0 0.75em;
   line-height: 2.5em;
@@ -14,8 +14,8 @@
     color: black;
     color: rgba(0,0,0,0.25);
   }
-  @include border-radius(3px);
-  @include transition(all 150ms ease-in-out);
+  border-radius: 3px;
+  transition: all 150ms ease-in-out;
   cursor: pointer;
 
   &:focus {
@@ -29,7 +29,7 @@
   }
 
   &:active {
-    @include box-shadow(inset 0 1px 5px rgba(0,0,0,0.4));
+    box-shadow: inset 0 1px 5px rgba(0,0,0,0.4);
   }
 
   &.primary {

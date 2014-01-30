@@ -9,9 +9,9 @@
   @if $size == small {
     $border_size: 6px;
   } @else if $size == medium {
-    $border_size: 12px
+    $border_size: 12px;
   } @else if $size == large {
-    $border_size: 18px
+    $border_size: 18px;
   }
 
   .f-arrow-down#{$label} {
@@ -32,17 +32,17 @@
   }
 }
 
-@include make-arrow-set
-@include make-arrow-set(small)
-@include make-arrow-set(large)
+@include make-arrow-set;
+@include make-arrow-set(small);
+@include make-arrow-set(large);
 
 [class*='f-arrow-'] {
   &.social {
     &:before, &:after {
-      border-top-color: $f-color-white
+      border-top-color: $f-color-white;
     }
     &:before {
-      border-top-color: $f-color-dark
+      border-top-color: $f-color-dark;
     }
   }
 }
