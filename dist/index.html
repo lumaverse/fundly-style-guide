@@ -9,7 +9,7 @@
     <title>activities assets</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles/76996e8d.fundly-style.css">
+    <link rel="stylesheet" href="fundly-style.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
     <style id="theme-target"></style>
   </head>
@@ -107,7 +107,7 @@
 
     <section id="avatars" class="f-p-xlarge f-tc f-bg-dark">
       <h2>Avatars</h2>
-      <p>Come in the full range of sizes: xlarge, large, medium, small, xsmall.<br>You can decorate the avatar with either Facebook, Twitter, Google+, LinkedIn or Pinterest icons.</p>
+      <p>Come in the full range of sizes: xlarge, large, medium, small, xsmall.<br />You can decorate the avatar with either Facebook, Twitter, Google+, LinkedIn or Pinterest icons.</p>
       <div class="f-grid-row f-tc f-m-t-xlarge">
         <div class="f-ilb f-m-r-large">
           <a href="#" class="f-avatar-xlarge tw" style="background-image: url(http://graph.facebook.com/528533108/picture?width=200&amp;height=200)"></a>
@@ -366,36 +366,34 @@
       <h2>Typography</h2>
       <p>The primary font used is <a href="http://www.google.com/fonts/specimen/Roboto">Roboto</a>. All the font weights are accessible via class.</p>
       <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
-        <div class="f-grid-8of12 f-grid-2of12-offset">
-          <h3 class="f-grid-4of12">Headings</h3>
-          <div class="f-grid-8of12">
-            <h1>Heading1</h1>
-            <h2>Heading2</h2>
-            <h3>Heading3</h3>
-            <h4>Heading4</h4>
-            <h5>Heading5</h5>
-            <h6>Heading6</h6>
-          </div>
+        <h3 class="f-grid-4of12">Headings</h3>
+        <div class="f-grid-8of12">
+          <h1>Heading1</h1>
+          <h2>Heading2</h2>
+          <h3>Heading3</h3>
+          <h4>Heading4</h4>
+          <h5>Heading5</h5>
+          <h6>Heading6</h6>
         </div>
-        <div class="f-grid-8of12 f-grid-2of12-offset f-m-t-xlarge">
-          <h3 class="f-grid-4of12">Sizes</h3>
-          <div class="f-grid-8of12">
-            <p class="f-fs-xlarge">.f-fs-xlarge</p>
-            <p class="f-fs-large">.f-fs-large</p>
-            <p class="f-fs-medium">.f-fs-medium</p>
-            <p class="f-fs-small">.f-fs-small</p>
-            <p class="f-fs-xsmall">.f-fs-xsmall</p>
-          </div>
+      </div>
+      <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
+        <h3 class="f-grid-4of12">Sizes</h3>
+        <div class="f-grid-8of12">
+          <p class="f-fs-xlarge">.f-fs-xlarge</p>
+          <p class="f-fs-large">.f-fs-large</p>
+          <p class="f-fs-medium">.f-fs-medium</p>
+          <p class="f-fs-small">.f-fs-small</p>
+          <p class="f-fs-xsmall">.f-fs-xsmall</p>
         </div>
-        <div class="f-grid-8of12 f-grid-2of12-offset f-m-t-xlarge">
-          <h3 class="f-grid-4of12">Weights</h3>
-          <div class="f-grid-8of12">
-            <p class="f-fw-ultrabold">.f-fw-ultrabold</p>
-            <p class="f-fw-bold">.f-fw-bold</p>
-            <p class="f-fw-medium">.f-fw-medium</p>
-            <p class="f-fw-normal">.f-fw-normal</p>
-            <p class="f-fw-thin">.f-fw-thin</p>
-          </div>
+      </div>
+      <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
+        <h3 class="f-grid-4of12">Weights</h3>
+        <div class="f-grid-8of12">
+          <p class="f-fw-ultrabold">.f-fw-ultrabold</p>
+          <p class="f-fw-bold">.f-fw-bold</p>
+          <p class="f-fw-medium">.f-fw-medium</p>
+          <p class="f-fw-normal">.f-fw-normal</p>
+          <p class="f-fw-thin">.f-fw-thin</p>
         </div>
       </div>
     </section>
@@ -811,7 +809,7 @@
 
     <section id="badges" class="f-p-xlarge f-tc">
       <h2>Badges</h2>
-      <p>Badges accept all the background colors and font-size options.<br>The should be attached to inline elements such as i or span, and can be positioned in two ways: inline or top-right.</p>
+      <p>Badges accept all the background colors and font-size options.<br />The should be attached to inline elements such as i or span, and can be positioned in two ways: inline or top-right.</p>
       <div class="f-grid-rwo f-content-spacing-small f-p-t-large">
         <div class="f-ilb">
           <a href="#" class="f-button email f-fs-small">
@@ -860,7 +858,12 @@
     </footer>
 
 
-    <script src="scripts/14f84738.vendor.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
     <script type="css-template">
       /* sample theme */

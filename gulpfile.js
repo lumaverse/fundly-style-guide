@@ -1,4 +1,4 @@
-// Initialise Gulp
+// Initialise Gulp and dependancies
 var gulp =     require('gulp'),
     p =        require('gulp-load-plugins')({camelize: true}),
     lr =       require('tiny-lr')(),
@@ -14,6 +14,17 @@ var config = {
   dist: 'dist/',
   autoprefixer: ['last 2 version', '> 1%', 'ie 9', 'ie 8'],
 };
+
+// Create a banner for distribution builds
+var banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  '\n',
+  ' * @author     <%= pkg.author %>',
+  ' * @repository <%= pkg.repository.url %>',
+  ' * @link       <%= pkg.homepage %>',
+  ' * @license    <%= pkg.license %>',
+  ' */',
+  '\n\n'].join('\n');
 
 
 // -----
@@ -33,18 +44,20 @@ gulp.task('sass:dev', function(){
     .pipe(gulp.dest(config.dev));
 });
 
-gulp.task('sass:dist', function(){
+gulp.task('sass:dist', ['clean:dist'], function(){
   return gulp.src(config.src + 'stylesheets/*-dist.scss')
     .pipe(p.sass({
       includePaths: ['app/bower_components/'],
       outputStyle: 'expanded'
     }))
     .pipe(p.autoprefixer.apply(null, config.autoprefixer))
+    .pipe(p.header(banner, { pkg : pkg } ))
     .pipe(p.rename(function(dir,base,ext){
       return base.replace('-dist', '') + ext;
     }))
     .pipe(gulp.dest(config.dist))
     .pipe(p.minifyCss())
+    .pipe(p.header(banner, { pkg : pkg } ))
     .pipe(p.rename(function(dir,base,ext){
       return base + '.min' + ext;
     }))
@@ -123,10 +136,17 @@ gulp.task('watch', ['server'], function(){
   });
 });
 
-gulp.task('build', ['clean:dist', 'fonts:dist', 'sass:dist']);
+gulp.task('build', ['clean:dist', 'fonts:dist', 'sass:dist'], function(){
+  gulp.src(['app/*.html']).pipe(gulp.dest('dist/'));
+  gulp.src(['app/images/**/*']).pipe(gulp.dest('dist/images'));
+  gulp.src(['app/scripts/**/*']).pipe(gulp.dest('dist/scripts'));
+});
 
 
-// Bump Version Numbers
+// ---------
+// Versioning Tasks
+// ---------
+
 function bumpJsonVersions(type) {
   type = type || 'patch';
 
@@ -153,6 +173,11 @@ function bumpRubyVersion(){
 gulp.task('bump:major', function(){ bumpJsonVersions('major'); });
 gulp.task('bump:minor', function(){ bumpJsonVersions('minor'); });
 gulp.task('bump:patch', function(){ bumpJsonVersions('patch'); });
+
+// ---------
+// End Versioning Tasks
+// ---------
+
 
 
 /*
