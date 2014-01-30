@@ -1,0 +1,174 @@
+// ---------
+// Animations lifted from and inspired by Animate.css
+// ---------
+
+$f-anim-slow:   1s          !default;
+$f-anim-med:    750ms       !default;
+$f-anim-fast:   300ms       !default;
+$f-anim-easing: ease-in-out !default;
+
+// FadeIn
+@-webkit-keyframes f-kf-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes f-kf-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.f-anim-fadein-fast {
+  -webkit-animation: f-kf-fadein #{$f-anim-fast} #{$f-anim-easing};
+  animation: f-kf-fadein #{$f-anim-fast} #{$f-anim-easing};
+}
+.f-anim-fadein-med {
+  -webkit-animation: f-kf-fadein #{$f-anim-med} #{$f-anim-easing};
+  animation: f-kf-fadein #{$f-anim-med} #{$f-anim-easing};
+}
+.f-anim-fadein-slow {
+  -webkit-animation: f-kf-fadein #{$f-anim-slow} #{$f-anim-easing};
+  animation: f-kf-fadein #{$f-anim-slow} #{$f-anim-easing};
+}
+// End FadeIn
+
+
+// FadeInUp
+@-webkit-keyframes f-kf-fadeinup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes f-kf-fadeinup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.f-anim-fadeinup-fast {
+  -webkit-animation: f-kf-fadeinup #{$f-anim-fast} #{$f-anim-easing};
+  animation: f-kf-fadeinup #{$f-anim-fast} #{$f-anim-easing};
+}
+.f-anim-fadeinup-med {
+  -webkit-animation: f-kf-fadeinup #{$f-anim-med} #{$f-anim-easing};
+  animation: f-kf-fadeinup #{$f-anim-med} #{$f-anim-easing};
+}
+.f-anim-fadeinup-slow {
+  -webkit-animation: f-kf-fadeinup #{$f-anim-slow} #{$f-anim-easing};
+  animation: f-kf-fadeinup #{$f-anim-slow} #{$f-anim-easing};
+}
+// End FadeInUp
+
+
+// FlipInX
+@-webkit-keyframes f-kf-flipinx {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+  }
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+  }
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+  }
+}
+@keyframes f-kf-flipinx {
+  0% {
+    @include transform(perspective(400px) rotateX(90deg));
+  }
+  40 %{
+    @include transform(perspective(400px) rotateX(-10deg));
+  }
+  70 %{
+    @include transform(perspective(400px) rotateX(10deg));
+  }
+  10 0%{
+    @include transform(perspective(400px) rotateX(0deg));
+  }
+}
+
+.f-anim-flipinx-fast, .f-anim-flipinx-medium, .f-anim-flipinx-slow {
+  @include backface-visibility(visible !important);
+  -webkit-animation-name: f-kf-flipinx;
+  -webkit-animation-timing-function: #{$f-anim-easing};
+  -webkit-animation-fill-mode: both;
+  animation-name: f-kf-flipinx;
+  animation-timing-function: #{$f-anim-easing};
+  animation-fill-mode: both;
+}
+.f-anim-flipinx-fast {
+  -webkit-animation-duration: #{$f-anim-fast};
+  animation-duration: #{$f-anim-fast};
+}
+.f-anim-flipinx-medium {
+  -webkit-animation-duration: #{$f-anim-med};
+  animation-duration: #{$f-anim-med};}
+.f-anim-flipinx-slow {
+  -webkit-animation-duration: #{$f-anim-slow};
+  animation-duration: #{$f-anim-slow};
+}
+// End FlipInX
+
+
+// FlipInY
+@-webkit-keyframes f-kf-flipoutx {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+  }
+}
+@keyframes f-kf-flipoutx {
+  0% {
+    @include transform(perspective(400px) rotateX(0deg));
+  }
+  100% {
+    @include transform(perspective(400px) rotateX(90deg));
+  }
+}
+
+.f-anim-flipoutx-fast, .f-anim-flipoutx-medium, .f-anim-flipoutx-slow {
+  @include backface-visibility(visible !important);
+  -webkit-animation-name: f-kf-flipoutx;
+  -webkit-animation-timing-function: #{$f-anim-easing};
+  -webkit-animation-fill-mode: both;
+  animation-name: f-kf-flipinx;
+  animation-timing-function: #{$f-anim-easing};
+  animation-fill-mode: both;
+}
+.f-anim-flipoutx-fast
+  -webkit-animation-duration: #{$f-anim-fast};
+  animation-duration: #{$f-anim-fast};
+.f-anim-flipoutx-med
+  -webkit-animation-duration: #{$f-anim-med};
+  animation-duration: #{$f-anim-med};
+.f-anim-flipoutx-slow
+  -webkit-animation-duration: #{$f-anim-slow};
+  animation-duration: #{$f-anim-slow};
+// End FlipInY

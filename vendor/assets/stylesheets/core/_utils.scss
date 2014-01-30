@@ -1,0 +1,102 @@
+// Background Utils
+.f-bg-norepeat {
+  background-repeat: no-repeat;
+}
+.f-bg-center {
+  background-position: center;
+}
+.f-bg-cover {
+  background-size: cover;
+}
+.f-bg-contain {
+  background-size: contain;
+}
+
+
+// Overflow
+.f-of-hidden {
+  overflow: hidden;
+}
+.f-of-hidden-x {
+  overflow-x: hidden;
+}
+.f-of-hidden-y {
+  overflow-x: hidden;
+}
+
+
+// Border radius
+[class*='f-br-'] {
+  overflow: hidden;
+}
+.f-br-none{
+  @include border-radius(0);
+}
+.f-br-xsmall{
+  @include border-radius(2px);
+}
+.f-br-small{
+  @include border-radius(3px);
+}
+.f-br-medium{
+  @include border-radius(6px);
+}
+.f-br-large{
+  @include border-radius(10px);
+}
+.f-br-circle{
+  @include border-radius(100%);
+}
+
+.f-br-none-tl{
+  @include border-top-left-radius(0);
+}
+.f-br-none-tr{
+  @include border-top-right-radius(0);
+}
+.f-br-none-bl{
+  @include border-bottom-left-radius(0);
+}
+.f-br-none-br{
+  @include border-bottom-right-radius(0);
+}
+
+
+// Cursor elements
+.f-clickable {
+  cursor: pointer;
+}
+.f-draggable {
+  cursor: move;
+}
+
+
+// Hover show
+// - need to place this class both on the component you want to hide/show and
+//   on its parent
+.f-hover-show {
+  .f-hover-show {
+    @include opacity(0);
+    @include transition(opacity 250ms linear);
+  }
+}
+.f-hover-show:hover {
+  .f-hover-show {
+    @include opacity(1);
+  }
+}
+
+
+// File upload btn
+.f-upload-btn {
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 98%;
+    @include opacity(0);
+  }
+}

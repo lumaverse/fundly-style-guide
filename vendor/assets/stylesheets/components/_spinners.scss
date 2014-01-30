@@ -1,0 +1,172 @@
+/*
+Spinner Lifepreserver
+ */
+@mixin f-colour-wheel($top:#eee, $bottom:#eee, $left:#bbb, $right:#bbb, $rotation:20s, $border:0.15em) {
+  border-width: $border;
+  border-style: solid;
+  border-top-color: $top;
+  border-bottom-color: $bottom;
+  border-left-color: $left;
+  border-right-color: $right;
+
+  height: 1.5em;
+  width: 1.5em;
+  @include border-radius(100%);
+
+  -webkit-animation: f-kf-spinner-rotate $rotation linear 0s infinite;
+  -moz-animation: f-kf-spinner-rotate $rotation linear 0s infinite;
+  animation: f-kf-spinner-rotate $rotation linear 0s infinite;
+}
+
+@-webkit-keyframes f-kf-spinner-rotate {
+  100% {
+    -webkit-transform: rotateZ(3600deg) translateZ(0);
+  }
+}
+@-moz-keyframes f-kf-spinner-rotate {
+  100% {
+    -moz-transform: rotateZ(3600deg) translateZ(0);
+  }
+}
+@keyframes f-kf-spinner-rotate {
+  100% {
+    transform: rotateZ(3600deg) translateZ(0);
+  }
+}
+
+.f-spinner-lifepreserver {
+  @include f-colour-wheel($f-color-light, $f-color-light, $f-color-dark, $f-color-dark);
+}
+/*
+End Spinner Lifepreserver
+ */
+
+
+/*
+Spinner Circles
+ */
+@-webkit-keyframes f-kf-spinner-circles {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0.0);
+  }
+  40% {
+    -webkit-transform: scale(1.0);
+  }
+}
+@-moz-keyframes f-kf-spinner-circles {
+  0%, 80%, 100% {
+    -moz-transform: scale(0.0);
+  }
+  40% {
+    -moz-transform: scale(1.0);
+  }
+}
+@keyframes f-kf-spinner-circles {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+.f-spinner-circles:before, .f-spinner-circles:after {
+  -webkit-animation: f-kf-spinner-circles 1.4s infinite ease-in-out;
+  -moz-animation: f-kf-spinner-circles 1.4s infinite ease-in-out;
+  animation: f-kf-spinner-circles 1.4s infinite ease-in-out;
+}
+
+.f-spinner-circles {
+  position: relative;
+  height: 1em;
+  width: 1em;
+  margin: 0 1.5em;
+  @include border-radius(100%);
+
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    height: 1em;
+    width: 1em;
+    @include border-radius(100%);
+  }
+  &:before {
+    left: -150%;
+    background-color: inherit;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  &:after {
+    right: -150%;
+    background-color: inherit;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+}
+/*
+End Spinner Circles
+ */
+
+
+/*
+Spinner Bars
+ */
+@-webkit-keyframes f-kf-spinner-bars {
+  0%, 80%, 100% {
+    -webkit-transform: scaleY(1.0);
+  }
+  40% {
+    -webkit-transform: scaleY(1.5);
+  }
+}
+@-moz-keyframes f-kf-spinner-bars {
+  0%, 80%, 100% {
+    -moz-transform: scaleY(1.0);
+  }
+  40% {
+    -moz-transform: scaleY(1.25);
+  }
+}
+@keyframes f-kf-spinner-bars {
+  0%, 80%, 100% {
+    transform: scaleY(1.0);
+  }
+  40% {
+    transform: scaleY(1.25);
+  }
+}
+
+.f-spinner-bars:before, .f-spinner-bars:after {
+  -webkit-animation: f-kf-spinner-bars 1.4s infinite ease-in-out;
+  -moz-animation: f-kf-spinner-bars 1.4s infinite ease-in-out;
+  animation: f-kf-spinner-bars 1.4s infinite ease-in-out;
+}
+
+.f-spinner-bars {
+  position: relative;
+  height: 1.5em;
+  width: 0.5em;
+  margin: 0 1em;
+
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    height: 1.5em;
+    width: 0.5em;
+  }
+  &:before {
+    left: -150%;
+    background-color: inherit;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  &:after {
+    right: -150%;
+    background-color: inherit;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+}
+/*
+End Spinner Bars
+ */

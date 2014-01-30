@@ -1,0 +1,64 @@
+// Grid mixins
+@mixin make-grid($columns:12) {
+  $list: '';
+
+  @for $i from 1 through $columns {
+    $list: ".f-grid-#{$i}of#{$columns}, #{$list}";
+    .f-grid-#{$i}of#{$columns} {
+      width: percentage($i/$columns);
+    }
+  }
+
+  #{$list} {
+    float: left;
+    min-height: 1px;
+  }
+}
+
+@mixin make-grid-offsets($columns:12) {
+  @for $i from 1 through ($columns - 1) {
+    .f-grid-#{$i}of#{$columns}-offset {
+      margin-left: percentage($i/$columns);
+    }
+  }
+}
+
+
+// Grid elements
+.f-grid-row {
+  @include clearfix;
+}
+@include make-grid($f-grid-columns);
+@include make-grid-offsets($f-grid-columns);
+
+
+// Spaced Grid, assigns widths to grid items and adds one of 3 spacings
+// between elements: 2%, 4%, 6%
+@mixin make-spaced-grid-set($columns:12) {
+  @for $i from 2 through $columns {
+    .f-spaced-grid-#{$i}-small > * {
+      width: percentage(((100 - (($i - 1) * 2))/$i)/100);
+      margin-left: 2%;
+    }
+    .f-spaced-grid-#{$i}-medium > * {
+      width: percentage(((100 - (($i - 1) * 4))/$i)/100);
+      margin-left: 4%;
+    }
+    .f-spaced-grid-#{$i}-large > * {
+      width: percentage(((100 - (($i - 1) * 6))/$i)/100);
+      margin-left: 6%;
+    }
+  }
+}
+
+[class*='f-spaced-grid-'] {
+  @include clearfix;
+  & > * {
+    float: left;
+    min-height: 1px;
+  }
+  & > *:first-child {
+    margin-left: 0;
+  }
+}
+@include make-spaced-grid-set(12);
