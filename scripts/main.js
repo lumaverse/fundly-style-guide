@@ -6,27 +6,39 @@ function rgb2hex(rgb) {
   return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 
+$(function(){
+  'use strict';
 
-// list the color swatches
-$('.js-color-swatch').each(function(el){
-  var el = $(this),
-      rgb = el.find('> div').css('backgroundColor');
+  // list the color swatches
+  $('.js-color-swatch').each(function(el){
+    var el = $(this),
+        rgb = el.find('> div').css('backgroundColor');
 
-  el.find('p').append(
-    '<span class="f-db f-fs-xsmall">' + rgb + '</span>'
-  ).append(
-    '<span class="f-db f-fs-xsmall">' + rgb2hex(rgb) + '</span>'
-  );
-});
+    el.find('p').append(
+      '<span class="f-db f-fs-xsmall">' + rgb + '</span>'
+    ).append(
+      '<span class="f-db f-fs-xsmall">' + rgb2hex(rgb) + '</span>'
+    );
+  });
 
 
-// add links to the app ribbon for each of sections
-$('section').each(function(el, i){
-  var el = $(this),
-      linkTarget = $('.js-section-list'),
-      id = el.attr('id');
+  // add links to the app ribbon for each of sections
+  $('section').each(function(i){
+    var el = $(this),
+        linkTarget = $('.js-section-list'),
+        id = el.attr('id');
 
-  linkTarget.append(
-    '<li class="f-bg-hover-swatchfive f-caps f-fw-bold"><a href="#' + id + '">' + id + '</li>'
-  );
+    linkTarget.append(
+      '<li class="f-bg-hover-swatchfive f-caps f-fw-bold"><a href="#' + id + '">' + id + '</li>'
+    );
+  });
+
+
+  // make alternating sections a dark background
+  $('body > section').each(function(i){
+    var el = $(this);
+    if ((i + 1) % 2 === 0){
+      el.addClass('f-bg-swatchfive');
+    }
+  });
 });
