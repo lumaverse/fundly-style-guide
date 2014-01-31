@@ -13,7 +13,7 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <style id="theme-target"></style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".js-section-list">
     <header class="f-appribbon">
       <div class="f-appribbon-brand">
         <iframe src="https://d2wwhrh9otv6z9.cloudfront.net/logo.html" frameborder="0"></iframe>
@@ -24,6 +24,17 @@
       </div>
     </header>
     <div class="f-appribbon-padding"></div>
+
+    <a href="https://github.com/fundly/style-guide"><img style="position: absolute; top: 60px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    <section id="home" class="f-tc f-p-xlarge">
+      <h2>About</h2>
+      <p>The style guide is a CSS framework that forms the base of styling for all Fundly products (<a href="http://fundly.com">Fundly.com</a> etc.)</p>
+      <p>The <strong>Atomic CSS</strong> principles used in this framework were deeply inspired by this <a href="http://coding.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/">article</a>.</p>
+
+      <h3 class="f-m-t-large">Repo</h3>
+      <p><a href="https://github.com/fundly/style-guide">https://github.com/fundly/style-guide</a></p>
+    </section>
 
     <section id="color" class="f-p-xlarge f-tc">
       <h2>Color</h2>
@@ -167,10 +178,7 @@
           </p>
         </div>
       </div>
-    </section>
-
-    <section id="opacity" class="f-p-xlarge f-tc">
-      <h2>Opacity</h2>
+      <h2 class="f-m-t-large">Opacity</h2>
       <p></p>
       <div class="f-grid-row f-m-t-xlarge">
         <div class="f-ilb f-m-r-medium f-br-medium f-opacity-xlight">
@@ -371,11 +379,11 @@
       <h3 class="f-m-t-large">Content Spacing</h3>
       <p>The class <strong>.f-content-spacing-{KEY}</strong> will neatly space all of the direct descendants.</p>
       <div class="f-grid-row f-content-spacing-medium f-m-t-large">
-        <div class="f-bg-white f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-white f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-white f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-white f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-white f-ilb f-p-medium">.f-ilb</div>
+        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
       </div>
       <h3 class="f-m-t-large">Z-index</h3>
       <p>Pronounced "zed index" ;-) we have a couple of classes that apply set stacking points.</p>
@@ -884,7 +892,6 @@
         &copy; Fundly, 2014
       </div>
     </footer>
-
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
