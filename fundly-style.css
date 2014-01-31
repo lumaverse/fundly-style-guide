@@ -3597,6 +3597,8 @@ select {
     background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)); }
   [class*='f-list'] li > a {
     color: inherit; }
+  [class*='f-list'] li.active {
+    background-color: #FF8B5D; }
   [class*='f-list'].no-hover li:hover {
     background-image: none; }
   [class*='f-list'].bulleted li:before {
