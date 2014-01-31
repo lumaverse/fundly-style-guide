@@ -21,13 +21,15 @@
   display: table-cell;
   padding-left: 1.5em;
   vertical-align: middle;
-  height: inherit;
+  height: 100%;
 
   iframe, img, div {
-    height: inherit;
+    height: 0.75 * $f-appribbon-height;
+    max-width: 200px;
+    display: table-cell;
   }
 
   iframe {
-    width: 3/4 * $f-appribbon-height;
+    width: 0.75 * $f-appribbon-height;
   }
 }

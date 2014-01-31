@@ -107,13 +107,7 @@
     background-color: $f-color-facebook;
     color: $f-color-white;
     &:before {
-      content: $fa-var-facebook;
-    }
-    &:empty:before {
-      margin: {
-        right: 0.25em;
-        left: 0.25em;
-      }
+      content: $fa-var-facebook-square;
     }
   }
   &.twitter {

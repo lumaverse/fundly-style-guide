@@ -1,0 +1,62 @@
+[class*='f-list'] {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0.75em 1em;
+  }
+
+  li:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+  }
+
+  li > a {
+    color: inherit;
+  }
+
+  &.no-hover li:hover {
+    background-image: none;
+  }
+
+  &.bulleted li:before {
+    content: $fa-var-circle;
+    font: {
+      family: FontAwesome;
+      size: 0.5em;
+    }
+    line-height: 1;
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+}
+
+.f-list {
+  li {
+    border-bottom: 1px solid $f-color-light
+  }
+  li:last-child {
+    border-bottom: none
+  }
+}
+
+.f-list-inline {
+  display: table;
+
+  li {
+    display: table-cell;
+    border-right: 1px solid $f-color-light;
+    vertical-align: middle;
+  }
+  li:last-child {
+    border-right: none
+  }
+
+  &.vertical-fill {
+    height: 100%;
+
+    li {
+      height: 100%;
+    }
+  }
+}

@@ -35,7 +35,8 @@ gulp.task('sass:dev', function(){
   return gulp.src(config.src + 'stylesheets/*-dist.scss')
     .pipe(p.sass({
       includePaths: ['app/bower_components/'],
-      outputStyle: 'expanded'
+      outputStyle: 'expanded',
+      errLogToConsole: true
     }))
     .pipe(p.autoprefixer.apply(null, config.autoprefixer))
     .pipe(p.rename(function(dir,base,ext){
@@ -128,7 +129,9 @@ gulp.task('watch', ['server'], function(){
   gulp.watch('vendor/assets/stylesheets/**/*.scss', ['sass:dev']);
 
   // watch the .tmp directory and app html and reload the browser
-  gulp.watch(['.tmp/**/*', 'app/*.html'], function(event){
+  gulp.watch(
+    ['.tmp/**/*', 'app/*.html', 'app/scripts/**/*.js'],
+    function(event){
     p.util.log('file changed:', p.util.colors.green(event.path));
     gulp.src(event.path).pipe(p.livereload(lr));
   });

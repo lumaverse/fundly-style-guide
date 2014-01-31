@@ -33,6 +33,10 @@ a {
     background-color: $color;
     color: color-invert($color);
   }
+  .f-bg-hover-#{$key}:hover {
+    background-color: $color;
+    color: color-invert($color);
+  }
   .f-bg-#{$key}-o-xlight {
     background-color: rgba($color, $f-opacity-xlight);
     color: color-invert($color);
@@ -91,6 +95,15 @@ a {
 // Application state colors
 @include make-color-set('success',     $f-color-success);
 @include make-color-set('error',       $f-color-error);
+
+
+// Color effects
+[class*='f-bg-hover-'] {
+  transition: background-color 150ms ease-in-out;
+}
+[class*='f-fc-hover-'] {
+  transition: color 150ms ease-in-out;
+}
 
 
 // Opacity
