@@ -64,7 +64,6 @@ gulp.task('sass:dist', ['clean:dist'], function(){
     .pipe(gulp.dest(config.dist));
 });
 
-
 gulp.task('clean:dev', function(){
   return gulp.src([config.dev], {read: false}).pipe(p.clean());
 });
@@ -72,7 +71,6 @@ gulp.task('clean:dev', function(){
 gulp.task('clean:dist', function(){
   return gulp.src([config.dist], {read: false}).pipe(p.clean());
 });
-
 
 gulp.task('fonts:dev', ['clean:dev'], function(){
   return gulp.src([

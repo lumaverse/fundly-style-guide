@@ -39,16 +39,7 @@ input, textarea, select {
     background-color: darken(#fff, 2.5%);
   }
 
-  &::-webkit-input-placeholder {
-    @include f-placeholder;
-  }
-  &:-moz-placeholder {
-    @include f-placeholder;
-  }
-  &::-moz-placeholder {
-    @include f-placeholder;
-  }
-  &:-ms-placeholder {
+  &::placeholder {
     @include f-placeholder;
   }
 }

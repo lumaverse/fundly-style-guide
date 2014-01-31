@@ -1,9 +1,10 @@
 // -------------------
-// Vendor Plugins
+// Vendor Plugins alterations
 // -------------------
 
 // Hint CSS
-@import "hint.css/src/hint.scss";
+@import "hintcss/hint";
+
 [class*='hint--'] {
   &:after {
     font: {

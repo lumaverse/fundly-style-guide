@@ -8,7 +8,18 @@ Fundly Style Guide ready for use in Rails projects.
 @import "font-awesome";
 @import "fundly-icon-font";
 
-// Install the core, component and plugin files
+
+// Import bootstrap files
+@import "plugins/bootstrap/variables";
+@import "plugins/bootstrap/mixins";
+@import "plugins/bootstrap/normalize";
+@import "plugins/bootstrap/print";
+
+
+// Install the core and component files
 @import "core/index";
 @import "components/index";
+
+
+// Install the plugins
 @import "plugins/index";
