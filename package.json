@@ -1,6 +1,6 @@
 {
   "name": "fundly-style-guide",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Core styles and documentation for Fundly platform",
   "homepage": "http://fundly.github.io/style-guide/",
   "repository": {
@@ -32,7 +32,9 @@
     "gulp-util": "~2.2.13",
     "jshint-stylish": "~0.1.5",
     "open": "0.0.4",
-    "tiny-lr": "0.0.5"
+    "tiny-lr": "0.0.5",
+    "map-stream": "~0.1.0",
+    "gulp-replace": "~0.2.0"
   },
   "engines": {
     "node": ">=0.8.0"
