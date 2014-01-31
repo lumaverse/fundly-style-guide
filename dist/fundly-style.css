@@ -1,5 +1,7 @@
 /**
  * fundly-style-guide - Core styles and documentation for Fundly platform
+
+
  * @author     James Nicol <james@fundly.com>
  * @repository git@github.com:fundly/style-guide.git
  * @link       http://fundly.github.io/style-guide/
@@ -3417,7 +3419,11 @@ input, textarea, select {
     padding: inherit 0;
     font-style: italic;
     line-height: 1.5em; }
-  input:-ms-placeholder, textarea:-ms-placeholder, select:-ms-placeholder {
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
+    padding: inherit 0;
+    font-style: italic;
+    line-height: 1.5em; }
+  input::placeholder, textarea::placeholder, select::placeholder {
     padding: inherit 0;
     font-style: italic;
     line-height: 1.5em; }
