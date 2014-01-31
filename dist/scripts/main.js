@@ -18,3 +18,15 @@ $('.js-color-swatch').each(function(el){
     '<span class="f-db f-fs-xsmall">' + rgb2hex(rgb) + '</span>'
   );
 });
+
+
+// add links to the app ribbon for each of sections
+$('section').each(function(el, i){
+  var el = $(this),
+      linkTarget = $('.js-section-list'),
+      id = el.attr('id');
+
+  linkTarget.append(
+    '<li class="f-bg-hover-swatchfive f-caps f-fw-bold"><a href="#' + id + '">' + id + '</li>'
+  );
+});
