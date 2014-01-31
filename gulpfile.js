@@ -141,6 +141,12 @@ gulp.task('build', ['clean:dist', 'fonts:dist', 'sass:dist'], function(){
   gulp.src(['app/*.html']).pipe(gulp.dest('dist/'));
   gulp.src(['app/images/**/*']).pipe(gulp.dest('dist/images'));
   gulp.src(['app/scripts/**/*']).pipe(gulp.dest('dist/scripts'));
+  gulp.src(
+    ['app/bower_components/modernizr/modernizr.js']
+  ).pipe(gulp.dest('dist/bower_components/modernizr/'));
+  gulp.src(
+    ['app/bower_components/jquery/jquery.js']
+  ).pipe(gulp.dest('dist/bower_components/jquery/'));
 });
 
 
