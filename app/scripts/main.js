@@ -27,10 +27,11 @@ $(function(){
     var el = $(this),
         linkTarget = $('.js-section-list'),
         id = el.attr('id');
-
-    linkTarget.append(
-      '<li class="f-bg-hover-swatchfive f-caps f-fw-bold"><a href="#' + id + '">' + id + '</li>'
-    );
+    if (i > 0) {
+      linkTarget.append(
+        '<li class="f-bg-hover-swatchfive f-caps f-fw-bold"><a href="#' + id + '">' + id + '</li>'
+      );
+    }
   });
 
 

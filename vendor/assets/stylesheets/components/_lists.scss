@@ -15,6 +15,10 @@
     color: inherit;
   }
 
+  li.active {
+    background-color: $f-font-primary;
+  }
+
   &.no-hover li:hover {
     background-image: none;
   }
