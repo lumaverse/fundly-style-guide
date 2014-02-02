@@ -93,3 +93,20 @@ $f-anim-easing: ease-in-out !default;
   animation-duration: #{$f-anim-slow};
 }
 // End FlipInY
+
+
+// Rotate
+@keyframes f-kf-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+.f-anim-rotate-fast {
+  animation: spin #{f-anim-fast} infinite linear;
+}
+.f-anim-rotate-medium {
+  animation: spin #{f-anim-med} infinite linear;
+}
+.f-anim-rotate-slow {
+  animation: spin #{f-anim-slow} infinite linear;
+}
+// End Rotate

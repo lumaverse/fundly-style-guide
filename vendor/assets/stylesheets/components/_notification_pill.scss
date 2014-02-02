@@ -1,25 +1,43 @@
 .f-notification-pill {
-  position: fixed;
-  right: 50px;
-  max-width: 33%;
+  display: inline-block;
   padding: 1.5em;
-  border-radius: 2em;
-  z-index: $f-z-top;
+  border-radius: 3em;
 
-  & > div:before {
-    float: left;
+  &.fixed {
+    position: fixed;
+    right: 10%;
+    z-index: $f-z-top;
+  }
+
+  &.success > div:before, &.error > div:before, &.processing > div:before {
+    display: inline-block;
     content: '';
-    border-radius: 1em;
-    width: 0.8em;
-    height: 0.8em;
-    background-color: $f-color-success;
     margin: {
-      top: 0.1em;
       right: 0.8em;
     }
   }
 
+  &.success > div:before {
+    border-radius: 100%;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: $f-color-success;
+  }
+
   &.error > div:before {
+    border-radius: 100%;
+    width: 0.8em;
+    height: 0.8em;
     background-color: $f-color-error;
+  }
+
+  &.processing > div:before {
+    content: $fa-var-spinner;
+    font-family: FontAwesome;
+    background: transparent;
+    height: 1em;
+    width: 1em;
+    line-height: 1;
+    animation: f-kf-rotate 750ms infinite linear;
   }
 }
