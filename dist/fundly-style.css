@@ -3390,6 +3390,38 @@ a {
   -webkit-animation-duration: 1s;
   animation-duration: 1s; }
 
+@-webkit-keyframes f-kf-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes f-kf-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+.f-anim-rotate-fast {
+  -webkit-animation: spin f-anim-fast infinite linear;
+  animation: spin f-anim-fast infinite linear; }
+
+.f-anim-rotate-medium {
+  -webkit-animation: spin f-anim-med infinite linear;
+  animation: spin f-anim-med infinite linear; }
+
+.f-anim-rotate-slow {
+  -webkit-animation: spin f-anim-slow infinite linear;
+  animation: spin f-anim-slow infinite linear; }
+
 .f-appribbon {
   position: fixed;
   z-index: 1000;
@@ -3971,6 +4003,38 @@ select {
     position: absolute;
     top: -0.9em;
     right: -0.9em; }
+
+.f-notification-pill {
+  display: inline-block;
+  padding: 1.5em;
+  border-radius: 3em; }
+  .f-notification-pill.fixed {
+    position: fixed;
+    right: 10%;
+    z-index: 1010; }
+  .f-notification-pill.success > div:before, .f-notification-pill.error > div:before, .f-notification-pill.processing > div:before {
+    display: inline-block;
+    content: '';
+    margin-right: 0.8em; }
+  .f-notification-pill.success > div:before {
+    border-radius: 100%;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: green; }
+  .f-notification-pill.error > div:before {
+    border-radius: 100%;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: red; }
+  .f-notification-pill.processing > div:before {
+    content: "\f110";
+    font-family: FontAwesome;
+    background: transparent;
+    height: 1em;
+    width: 1em;
+    line-height: 1;
+    -webkit-animation: f-kf-rotate 750ms infinite linear;
+    animation: f-kf-rotate 750ms infinite linear; }
 
 /*-------------------------------------*\
 	HINT.css - A CSS tooltip library
