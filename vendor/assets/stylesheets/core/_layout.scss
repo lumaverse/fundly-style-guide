@@ -80,58 +80,51 @@
 
 
 // Borders
-@mixin make-border-set($width:1, $k:'') {
-  @if $width > 1 {
-    $k: "-#{$width}";
+[class*='f-b-'] {
+  border-style: solid;
+  border-width: 1px;
+
+  &.two   { border-width: 2px; }
+  &.three { border-width: 3px; }
+  &.four  { border-width: 4px; }
+  &.five  { border-width: 5px; }
+
+  &.f-b-l {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+  }
+  &.f-b-r {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+  }
+  &.f-b-t {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+  &.f-b-b {
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
   }
 
-  .f-b-white#{$k}, .f-b-xlight#{$k}, .f-b-light#{$k}, .f-b-medium#{$k}, .f-b-dark#{$k}, .f-b-xdark#{$k}, .f-b-black#{$k} {
-    border: {
-      style: solid;
-      width: #{$width}px;
-    }
+  &.f-b-nl {
+    border-left-width: 0px;
+  }
+  &.f-b-nr {
+    border-right-width: 0px;
+  }
+  &.f-b-nt {
+    border-top-width: 0px;
+  }
+  &.f-b-nb {
+    border-bottom-width: 0px;
   }
 }
 
-@include make-border-set;
-@include make-border-set(2);
-@include make-border-set(3);
-@include make-border-set(4);
-@include make-border-set(5);
 
-.f-b-l {
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-}
-.f-b-r {
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-}
-.f-b-t {
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-}
-.f-b-b {
-  border-top-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-}
-
-.f-b-nl {
-  border-left-width: 0px;
-}
-.f-b-nr {
-  border-right-width: 0px;
-}
-.f-b-nt {
-  border-top-width: 0px;
-}
-.f-b-nb {
-  border-bottom-width: 0px;
-}
 
 
 // Position
