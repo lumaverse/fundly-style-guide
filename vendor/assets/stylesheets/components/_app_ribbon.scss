@@ -34,3 +34,9 @@
     width: 0.75 * $f-appribbon-height;
   }
 }
+
+.f-appribbon-element {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
