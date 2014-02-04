@@ -34,22 +34,29 @@ function colorStringToRGB(str){
   return rgb
 }
 
+function listColorSwatches() {
+  // list the color swatches
+  $('.js-color-swatch').each(function(el){
+    var el = $(this),
+        rgb = el.find('> div').css('backgroundColor');
+
+    el.find('.js-color-info').remove();
+
+    el.find('p').append(
+      '<span class="js-color-info f-db f-fs-xsmall">' + rgb + '</span>'
+    ).append(
+      '<span class="js-color-info f-db f-fs-xsmall">' + rgb2hex(rgb) + '</span>'
+    );
+  });
+}
+
 
 
 $(function(){
   'use strict';
 
   // list the color swatches
-  $('.js-color-swatch').each(function(el){
-    var el = $(this),
-        rgb = el.find('> div').css('backgroundColor');
-
-    el.find('p').append(
-      '<span class="f-db f-fs-xsmall">' + rgb + '</span>'
-    ).append(
-      '<span class="f-db f-fs-xsmall">' + rgb2hex(rgb) + '</span>'
-    );
-  });
+  listColorSwatches();
 
 
   // add links to the app ribbon for each of sections
@@ -81,8 +88,8 @@ $(function(){
 
     theme = $(this);
 
-    primaryColor = theme.find('div:eq(0)').css('backgroundColor');
-    appRibbonColor = theme.find('div:eq(1)').css('backgroundColor');
+    primaryColor = theme.find('div:eq(1)').css('backgroundColor');
+    appRibbonColor = theme.find('div:eq(0)').css('backgroundColor');
     footerColor = theme.find('div:eq(2)').css('backgroundColor');
 
     if (isColorDark(primaryColor)){
@@ -103,7 +110,6 @@ $(function(){
       footerTextColor = 'black';
     }
 
-
     newTheme = themeTemplate
       .replace(/{{primaryColor}}/g, primaryColor)
       .replace(/{{primaryTextColor}}/g, primaryTextColor)
@@ -113,5 +119,6 @@ $(function(){
       .replace(/{{footerTextColor}}/g, footerTextColor);
 
     $('#theme-target').html(newTheme);
+    listColorSwatches();
   });
 });
