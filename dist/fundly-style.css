@@ -3253,6 +3253,11 @@ a {
   .f-appribbon-brand iframe {
     width: 45px; }
 
+.f-appribbon-element {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%; }
+
 /*
 Avatars: come in 5 sizes and can be decorated with a range of social badges
  */
