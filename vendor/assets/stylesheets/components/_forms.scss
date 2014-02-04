@@ -89,7 +89,11 @@ select {
     font-size: inherit;
     line-height: 1;
     text-align: center;
-    border-color: $f-color-medium;
+    border: {
+      color: $f-color-medium;
+      style: solid;
+      width: 1px;
+    }
     width: 1%;
     white-space: nowrap;
     vertical-align: middle;

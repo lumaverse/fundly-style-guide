@@ -23,17 +23,10 @@ a {
 }
 
 @mixin make-color-set($key, $color) {
-  .f-fc-#{$key} {
+  .f-fc-#{$key}, .f-fc-hover-#{$key}:hover {
     color: $color;
   }
-  .f-fc-hover-#{$key}:hover {
-    color: $color;
-  }
-  .f-bg-#{$key} {
-    background-color: $color;
-    color: color-invert($color);
-  }
-  .f-bg-hover-#{$key}:hover {
+  .f-bg-#{$key}, .f-bg-hover-#{$key}:hover {
     background-color: $color;
     color: color-invert($color);
   }
@@ -57,10 +50,7 @@ a {
     background-color: rgba($color, $f-opacity-xdark);
     color: color-invert($color);
   }
-  .f-b-#{$key}, [class*="f-b-#{$key}"] {
-    border-color: $color;
-  }
-  .f-hr-#{$key} {
+  .f-b-#{$key}, [class*="f-b-#{$key}"], .f-hr-#{$key} {
     border-color: $color;
   }
 }
