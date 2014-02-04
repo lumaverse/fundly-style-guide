@@ -6,6 +6,36 @@ function rgb2hex(rgb) {
   return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 
+function isColorDark(rgb) {
+  var rgb, yiq;
+  if (typeof rgb === 'string'){ rgb = colorStringToRGB(rgb); }
+  yiq = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+  return yiq < 128;
+}
+
+function isColorLight(rgb) {
+  return !isColorDark(rgb);
+}
+
+function colorStringToRGB(str){
+  var re, parts, rgb, str;
+  if (/^rgb/i.test(str)) {
+    re = /^rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*([\d\.]+)\s*)?\)$/;
+    parts = str.match(re).slice(1,4);
+    rgb = { r: parts[0], g: parts[1], b: parts[2] };
+  } else {
+    str = str.replace('#', '');
+    rgb = {
+      r: parseInt(str.slice(0,2), 16),
+      g: parseInt(str(2,4), 16),
+      b: parseInt(str(4,6), 16)
+    };
+  }
+  return rgb
+}
+
+
+
 $(function(){
   'use strict';
 
@@ -41,5 +71,47 @@ $(function(){
     if ((i + 1) % 2 === 0){
       el.addClass('f-bg-swatchfive');
     }
+  });
+
+
+  // add the theme functionality
+  var themeTemplate = $('#theme-template').text();
+  $('.js-theme').click(function(){
+    var theme, newTheme, primaryColor, primaryTextColor, appRibbonColor, appRibbonTextColor, footerColor, footerTextColor;
+
+    theme = $(this);
+
+    primaryColor = theme.find('div:eq(0)').css('backgroundColor');
+    appRibbonColor = theme.find('div:eq(1)').css('backgroundColor');
+    footerColor = theme.find('div:eq(2)').css('backgroundColor');
+
+    if (isColorDark(primaryColor)){
+      primaryTextColor = 'white';
+    } else {
+      primaryTextColor = 'black';
+    }
+
+    if (isColorDark(appRibbonColor)){
+      appRibbonTextColor = 'white';
+    } else {
+      appRibbonTextColor = 'black';
+    }
+
+    if (isColorDark(footerColor)){
+      footerTextColor = 'white';
+    } else {
+      footerTextColor = 'black';
+    }
+
+
+    newTheme = themeTemplate
+      .replace(/{{primaryColor}}/g, primaryColor)
+      .replace(/{{primaryTextColor}}/g, primaryTextColor)
+      .replace(/{{appRibbonColor}}/g, appRibbonColor)
+      .replace(/{{appRibbonTextColor}}/g, appRibbonTextColor)
+      .replace(/{{footerColor}}/g, footerColor)
+      .replace(/{{footerTextColor}}/g, footerTextColor);
+
+    $('#theme-target').html(newTheme);
   });
 });
