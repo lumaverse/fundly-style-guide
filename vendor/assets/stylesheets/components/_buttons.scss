@@ -5,7 +5,6 @@
   line-height: 2.5em;
   font-family: $f-font-condensed;
   text: {
-    shadow: 0 1px 0 rgba(0,0,0,0.1);
     transform: uppercase;
   }
   border: {
@@ -91,13 +90,14 @@
     color: $f-color-white;
   }
 
-  &.facebook, &.twitter, &.google, &.linkedin, &.pinterest, &.email {
+  &.facebook, &.twitter, &.google, &.linkedin,
+  &.pinterest, &.email, &.youtube {
     &:before {
       font: {
         family: FontAwesome;
         size: 1.20em;
       }
-      margin-right: 0.75em;
+      margin-right: 0.5em;
     }
     &:empty:before {
       margin-right: 0;
@@ -122,6 +122,13 @@
     color: $f-color-white;
     &:before {
       content: $fa-var-google-plus;
+    }
+  }
+  &.youtube {
+    background-color: $f-color-google;
+    color: $f-color-white;
+    &:before {
+      content: $fa-var-youtube-play;
     }
   }
   &.linkedin {

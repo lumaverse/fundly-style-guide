@@ -115,3 +115,22 @@ a {
 .f-opacity-full {
   opacity: $f-opacity-full;
 }
+
+.f-opacity-hover-xlight {
+  @include opacity($f-opacity-xlight)
+}
+.f-opacity-hover-light {
+  @include opacity($f-opacity-light)
+}
+.f-opacity-hover-medium {
+  @include opacity($f-opacity-medium)
+}
+.f-opacity-hover-dark {
+  @include opacity($f-opacity-dark)
+}
+.f-opacity-hover-xdark {
+  @include opacity($f-opacity-xdark)
+}
+.f-opacity-hover-full {
+  @include opacity($f-opacity-full)
+}

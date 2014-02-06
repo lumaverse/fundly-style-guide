@@ -82,38 +82,38 @@ select {
   input:last-child {
     border-left-radius: 0;
   }
+}
 
-  .f-decorator {
-    display: table-cell;
+.f-decorator {
+  display: table-cell;
+  padding: 0 0.5em;
+  font-size: inherit;
+  line-height: 1;
+  text-align: center;
+  border: {
+    color: $f-color-medium;
+    style: solid;
+    width: 1px;
+  }
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  &.small {
+    padding: 0 0.25em;
+  }
+  &.medium {
     padding: 0 0.5em;
-    font-size: inherit;
-    line-height: 1;
-    text-align: center;
-    border: {
-      color: $f-color-medium;
-      style: solid;
-      width: 1px;
-    }
-    width: 1%;
-    white-space: nowrap;
-    vertical-align: middle;
+  }
+  &.large {
+    padding: 0 1em;
+  }
 
-    &.small {
-      padding: 0 0.25em;
-    }
-    &.medium {
-      padding: 0 0.5em;
-    }
-    &.large {
-      padding: 0 1em;
-    }
-
-    &:last-child {
-      border-width: 0 0 0 1px;
-    }
-    &:first-child {
-      border-width: 0 1px 0 0;
-    }
+  &:last-child {
+    border-width: 0 0 0 1px;
+  }
+  &:first-child {
+    border-width: 0 1px 0 0;
   }
 }
 
