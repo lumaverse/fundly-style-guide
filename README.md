@@ -44,7 +44,7 @@ Both the bower package and the rails gem rely on semver versioning. There are a 
     gulp bump:minor
     gulp bump:major
 
-Following a version bump use the following campaigns, replacing the version number:
+Following a version bump use the following commands, replacing the version number:
 
     gulp build
     git commit -am"Distribution build and bump to v0.4.5"
