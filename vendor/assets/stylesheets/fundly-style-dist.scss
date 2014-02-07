@@ -13,16 +13,16 @@ $f-icon-path: "./fonts/";
 
 
 // Import bootstrap files
-@import "plugins/bootstrap/variables";
-@import "plugins/bootstrap/mixins";
-@import "plugins/bootstrap/normalize";
-@import "plugins/bootstrap/print";
+@import "fundly-style-guide/plugins/bootstrap/variables";
+@import "fundly-style-guide/plugins/bootstrap/mixins";
+@import "fundly-style-guide/plugins/bootstrap/normalize";
+@import "fundly-style-guide/plugins/bootstrap/print";
 
 
 // Install the core and component files
-@import "core/index";
-@import "components/index";
+@import "fundly-style-guide/core/index";
+@import "fundly-style-guide/components/index";
 
 
 // Install the plugins
-@import "plugins/index";
+@import "fundly-style-guide/plugins/index";
