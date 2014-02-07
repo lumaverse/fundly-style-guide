@@ -219,10 +219,17 @@
 .f-width-100 {
   width: 100%;
 }
+.f-maxwidth-100 {
+  max-width: 100%;
+}
 .f-height-100 {
   height: 100%;
 }
-.f-ilb { // added the full compass mixin here as the vertical align is useful
+.f-maxheight-100 {
+  max-height: 100%;
+}
+// added the full compass mixin here as the vertical align is useful
+.f-ilb {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -242,5 +249,5 @@
   border-bottom-width: 1px;
 }
 .f-hr {
-  @extend .f-hr-light;
+  border-color: $f-color-light;
 }
