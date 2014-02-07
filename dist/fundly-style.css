@@ -3423,8 +3423,8 @@ input[type='checkbox'] {
   border-radius: 4px; }
 
 input[type='checkbox']:checked {
-  background: #b8bbbd;
-  border-color: #abaeb1; }
+  background: #777F83;
+  border-color: #6b7276; }
   input[type='checkbox']:checked:after {
     position: absolute;
     top: 0;
@@ -3441,8 +3441,8 @@ input[type='radio'] {
   border-radius: 100%; }
 
 input[type='radio']:checked {
-  background: #b8bbbd;
-  border-color: #abaeb1; }
+  background: #777F83;
+  border-color: #6b7276; }
   input[type='radio']:checked:after {
     position: absolute;
     top: 25%;
