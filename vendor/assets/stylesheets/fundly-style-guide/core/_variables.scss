@@ -2,11 +2,11 @@
 // Typography
 // -------
 
-$f-font-sans-serif:  "Roboto", Helvetica, Arial, sans-serif;
-$f-font-serif:       Georgia, "Times New Roman", Times, serif;
-$f-font-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
-$f-font-condensed:   "Roboto Condensed", Helvetica, Arial, sans-serif;
-$f-font-base:        $f-font-sans-serif;
+$f-font-sans-serif:  "Roboto", Helvetica, Arial, sans-serif !default;
+$f-font-serif:       Georgia, "Times New Roman", Times, serif !default;
+$f-font-monospace:   Monaco, Menlo, "Courier New", monospace !default;
+$f-font-condensed:   "Roboto Condensed", Helvetica, Arial, sans-serif !default;
+$f-font-base:        $f-font-sans-serif !default;
 $f-font-size:        14px;
 
 $f-fs-xsmall:        10px !default;
