@@ -2229,7 +2229,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif; }
 
 .f-font-monospace {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+  font-family: Monaco, Menlo, "Courier New", monospace; }
 
 .f-font-serif {
   font-family: Georgia, "Times New Roman", Times, serif; }
@@ -2355,6 +2355,12 @@ a {
 
 .f-normal-caps {
   text-transform: none; }
+
+.f-wordwrap-break {
+  word-wrap: break-word; }
+
+.f-wordwrap-normal {
+  word-wrap: normal; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -3036,14 +3042,17 @@ a {
   opacity: 1; }
 
 .f-upload-btn {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .f-upload-btn input {
+    display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 98%;
-    height: 98%;
-    opacity: 0; }
+    right: 0;
+    font-size: 200px;
+    direction: ltr;
+    opacity: 0;
+    cursor: pointer; }
 
 @-webkit-keyframes f-kf-fadein {
   0% {
