@@ -90,13 +90,16 @@
 // File upload btn
 .f-upload-btn {
   position: relative;
+  overflow: hidden;
 
   input {
+    display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 98%;
-    height: 98%;
-    opacity: 0;
+    right: 0;
+    font-size: 200px;
+    direction: ltr;
+    opacity 0;
+    cursor: pointer;
   }
 }

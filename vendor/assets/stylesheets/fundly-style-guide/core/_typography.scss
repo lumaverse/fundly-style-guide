@@ -172,3 +172,10 @@ a {
 .f-normal-caps {
   text-transform: none;
 }
+
+.f-wordwrap-break {
+  word-wrap: break-word;
+}
+.f-wordwrap-normal {
+  word-wrap: normal;
+}
