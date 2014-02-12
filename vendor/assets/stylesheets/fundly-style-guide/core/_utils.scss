@@ -88,6 +88,7 @@
 
 
 // File upload btn
+//   - note, this can not be applied to a button as it fails in FF
 .f-upload-btn {
   position: relative;
   overflow: hidden;
@@ -102,4 +103,17 @@
     opacity: 0;
     cursor: pointer;
   }
+}
+
+
+// Display States
+.f-hide {
+  display: none !important;
+  visibility: hidden !important;
+}
+.f-show {
+  display: block !important;
+}
+.f-invisible {
+  visibility: hidden !important;
 }

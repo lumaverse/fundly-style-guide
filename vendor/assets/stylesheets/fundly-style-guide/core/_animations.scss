@@ -3,7 +3,7 @@
 // ---------
 
 $f-anim-slow:   1s          !default;
-$f-anim-med:    750ms       !default;
+$f-anim-medium: 750ms       !default;
 $f-anim-fast:   300ms       !default;
 $f-anim-easing: ease-in-out !default;
 
@@ -15,8 +15,8 @@ $f-anim-easing: ease-in-out !default;
 .f-anim-fadein-fast {
   animation: f-kf-fadein #{$f-anim-fast} #{$f-anim-easing};
 }
-.f-anim-fadein-med {
-  animation: f-kf-fadein #{$f-anim-med} #{$f-anim-easing};
+.f-anim-fadein-medium {
+  animation: f-kf-fadein #{$f-anim-medium} #{$f-anim-easing};
 }
 .f-anim-fadein-slow {
   animation: f-kf-fadein #{$f-anim-slow} #{$f-anim-easing};
@@ -38,8 +38,8 @@ $f-anim-easing: ease-in-out !default;
 .f-anim-fadeinup-fast {
   animation: f-kf-fadeinup #{$f-anim-fast} #{$f-anim-easing};
 }
-.f-anim-fadeinup-med {
-  animation: f-kf-fadeinup #{$f-anim-med} #{$f-anim-easing};
+.f-anim-fadeinup-medium {
+  animation: f-kf-fadeinup #{$f-anim-medium} #{$f-anim-easing};
 }
 .f-anim-fadeinup-slow {
   animation: f-kf-fadeinup #{$f-anim-slow} #{$f-anim-easing};
@@ -47,7 +47,7 @@ $f-anim-easing: ease-in-out !default;
 // End FadeInUp
 
 
-// FlipInX
+// FlipIn
 @keyframes f-kf-flipinx {
   0% { transform: perspective(400px) rotateX(90deg); }
   40% { transform: perspective(400px) rotateX(-10deg); }
@@ -64,22 +64,22 @@ $f-anim-easing: ease-in-out !default;
   animation-duration: #{$f-anim-fast};
 }
 .f-anim-flipinx-medium {
-  animation-duration: #{$f-anim-med};
+  animation-duration: #{$f-anim-medium};
 }
 .f-anim-flipinx-slow {
   animation-duration: #{$f-anim-slow};
 }
-// End FlipInX
+// End FlipIn
 
 
-// FlipInY
+// FlipOut
 @keyframes f-kf-flipoutx {
   0% { transform: perspective(400px) rotateX(0deg); }
   100% { transform: perspective(400px) rotateX(90deg); }
 }
 .f-anim-flipoutx-fast, .f-anim-flipoutx-medium, .f-anim-flipoutx-slow {
   backface-visibility: visible !important;
-  animation-name: f-kf-flipinx;
+  animation-name: f-kf-flipoutx;
   animation-timing-function: #{$f-anim-easing};
   animation-fill-mode: both;
 }
@@ -87,12 +87,12 @@ $f-anim-easing: ease-in-out !default;
   animation-duration: #{$f-anim-fast};
 }
 .f-anim-flipoutx-medium {
-  animation-duration: #{$f-anim-med};
+  animation-duration: #{$f-anim-medium};
 }
 .f-anim-flipoutx-slow {
   animation-duration: #{$f-anim-slow};
 }
-// End FlipInY
+// End FlipOut
 
 
 // Rotate
@@ -104,7 +104,7 @@ $f-anim-easing: ease-in-out !default;
   animation: spin #{f-anim-fast} infinite linear;
 }
 .f-anim-rotate-medium {
-  animation: spin #{f-anim-med} infinite linear;
+  animation: spin #{f-anim-medium} infinite linear;
 }
 .f-anim-rotate-slow {
   animation: spin #{f-anim-slow} infinite linear;
