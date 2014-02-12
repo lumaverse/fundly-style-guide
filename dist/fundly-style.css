@@ -3054,6 +3054,16 @@ a {
     opacity: 0;
     cursor: pointer; }
 
+.f-hide {
+  display: none !important;
+  visibility: hidden !important; }
+
+.f-show {
+  display: block !important; }
+
+.f-invisible {
+  visibility: hidden !important; }
+
 @-webkit-keyframes f-kf-fadein {
   0% {
     opacity: 0; }
@@ -3072,7 +3082,7 @@ a {
   -webkit-animation: f-kf-fadein 300ms ease-in-out;
   animation: f-kf-fadein 300ms ease-in-out; }
 
-.f-anim-fadein-med {
+.f-anim-fadein-medium {
   -webkit-animation: f-kf-fadein 750ms ease-in-out;
   animation: f-kf-fadein 750ms ease-in-out; }
 
@@ -3108,7 +3118,7 @@ a {
   -webkit-animation: f-kf-fadeinup 300ms ease-in-out;
   animation: f-kf-fadeinup 300ms ease-in-out; }
 
-.f-anim-fadeinup-med {
+.f-anim-fadeinup-medium {
   -webkit-animation: f-kf-fadeinup 750ms ease-in-out;
   animation: f-kf-fadeinup 750ms ease-in-out; }
 
@@ -3201,8 +3211,8 @@ a {
   -webkit-backface-visibility: visible !important;
   -ms-backface-visibility: visible !important;
   backface-visibility: visible !important;
-  -webkit-animation-name: f-kf-flipinx;
-  animation-name: f-kf-flipinx;
+  -webkit-animation-name: f-kf-flipoutx;
+  animation-name: f-kf-flipoutx;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: both;
@@ -3245,8 +3255,8 @@ a {
   animation: spin f-anim-fast infinite linear; }
 
 .f-anim-rotate-medium {
-  -webkit-animation: spin f-anim-med infinite linear;
-  animation: spin f-anim-med infinite linear; }
+  -webkit-animation: spin f-anim-medium infinite linear;
+  animation: spin f-anim-medium infinite linear; }
 
 .f-anim-rotate-slow {
   -webkit-animation: spin f-anim-slow infinite linear;
