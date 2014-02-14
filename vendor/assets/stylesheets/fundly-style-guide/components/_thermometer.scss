@@ -3,12 +3,11 @@
   height: $f-thermometer-height;
   position: relative;
   overflow: hidden;
-  background-color: #EFEFEF;
+  background-color: $f-color-xlight;
   box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 .f-mercury {
-  box-sizing: border-box;
   height: 100%;
   background-color: $f-color-primary;
   border: 1px solid darken($f-color-primary, 5%);
