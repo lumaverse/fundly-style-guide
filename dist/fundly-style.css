@@ -3957,6 +3957,21 @@ input[type='radio']:checked {
     -webkit-animation: f-kf-rotate 750ms infinite linear;
     animation: f-kf-rotate 750ms infinite linear; }
 
+.f-thermometer {
+  width: 100%;
+  height: 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e7eaed;
+  -webkit-box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.2); }
+
+.f-mercury {
+  height: 100%;
+  background-color: #FF8B5D;
+  border: 1px solid #ff7943;
+  max-width: 100%; }
+
 /*-------------------------------------*\
 	HINT.css - A CSS tooltip library
 \*-------------------------------------*/
