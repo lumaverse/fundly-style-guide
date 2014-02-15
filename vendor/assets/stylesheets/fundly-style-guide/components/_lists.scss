@@ -4,7 +4,12 @@
   margin: 0;
 
   li {
-    padding: 0.75em 1em;
+    padding: 0.5em 1em;
+    border: {
+      color: inherit;
+      style: solid;
+      width: inherit;
+    }
   }
 
   li:hover {
@@ -36,8 +41,18 @@
 }
 
 .f-list {
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+
+  &:first-child {
+    border-bottom-style: none;
+  }
+
   li {
-    border-bottom: 1px solid $f-color-light
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
   }
   li:last-child {
     border-bottom: none
@@ -49,8 +64,10 @@
 
   li {
     display: table-cell;
-    border-right: 1px solid $f-color-light;
     vertical-align: middle;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
   }
   li:last-child {
     border-right: none
