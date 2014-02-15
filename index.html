@@ -379,232 +379,254 @@
     </section>
 
     <section id="layout" class="f-p-xlarge f-tc">
-      <h2>Layout</h2>
-      <p>All layout spacing follows the convention: <strong>xsmall, small, medium, large, xlarge</strong>.</p>
-      <h3 class="f-m-t-large">Margin / Padding</h3>
-      <p><strong>Margin:</strong> .f-m-{KEY} or .f-m-{SIDE}-{KEY}.</p>
-      <p><strong>Padding:</strong> .f-p-{KEY} or .f-p-{SIDE}-{KEY}.</p>
-      <div class="f-grid-row f-content-spacing-xsmall f-m-t-large">
-        <div class="f-ilb f-b-medium f-p-xsmall">
-          <div class="f-bg-light">
-            <p class="f-ilb f-p-medium">xsmall</p>
+      <div class="f-page-container">
+        <h2>Layout</h2>
+        <p>All layout spacing follows the convention: <strong>xsmall, small, medium, large, xlarge</strong>.</p>
+        <h3 class="f-m-t-large">Margin / Padding</h3>
+        <p><strong>Margin:</strong> .f-m-{KEY} or .f-m-{SIDE}-{KEY}.</p>
+        <p><strong>Padding:</strong> .f-p-{KEY} or .f-p-{SIDE}-{KEY}.</p>
+        <p>The values for side are: <strong>b</strong> (bottom), <strong>t</strong> (top), <strong>r</strong> (right), <strong>l</strong> (left)</p>
+        <div class="f-grid-row f-content-spacing-xsmall f-m-t-large">
+          <div class="f-ilb f-b-medium f-p-xsmall">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">xsmall</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-small">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">small</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-medium">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">medium</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-large">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">large</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-xlarge">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">xlarge</p>
+            </div>
           </div>
         </div>
-        <div class="f-ilb f-b-medium f-p-small">
-          <div class="f-bg-light">
-            <p class="f-ilb f-p-medium">small</p>
-          </div>
+        <h3 class="f-m-t-large">Content Spacing</h3>
+        <p>The class <strong>.f-content-spacing-{KEY}</strong> will neatly space all of the direct descendants.</p>
+        <div class="f-grid-row f-content-spacing-medium f-m-t-large">
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
         </div>
-        <div class="f-ilb f-b-medium f-p-medium">
-          <div class="f-bg-light">
-            <p class="f-ilb f-p-medium">medium</p>
-          </div>
+        <h3 class="f-m-t-large">Z-index</h3>
+        <p>Pronounced "zed index" ;-) we have a couple of classes that apply set stacking points.</p>
+        <div class="f-grid-row f-m-t-large">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-z-bottom">.f-z-bottom</div>
+          <div class="f-bg-swatchtwo f-ilb f-p-medium f-z-appribbon" style="margin-left: -30px">.f-z-appribbon</div>
+          <div class="f-bg-swatchthree f-ilb f-p-medium f-z-popup" style="margin-left: -30px">.f-z-popup</div>
+          <div class="f-bg-swatchfour f-ilb f-p-medium f-z-top" style="margin-left: -30px">.f-z-top</div>
         </div>
-        <div class="f-ilb f-b-medium f-p-large">
-          <div class="f-bg-light">
-            <p class="f-ilb f-p-medium">large</p>
-          </div>
+        <h3 class="f-m-t-large">Borders</h3>
+        <p>Borders have 5 widths (in px) and accept any of the color modifiers.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black">.f-b-black</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black two">.f-b-black.two</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black three">.f-b-black.three</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four">.f-b-black.four</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black five">.f-b-black.five</div>
         </div>
-        <div class="f-ilb f-b-medium f-p-xlarge">
-          <div class="f-bg-light">
-            <p class="f-ilb f-p-medium">xlarge</p>
-          </div>
+        <h4 class="f-m-t-large">Border on one side</h4>
+        <p>You can also chose to add a border to one particular side, by adding one of the above classes and a side modifier.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-t">.f-b-t</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-b">.f-b-b</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-l">.f-b-l</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-r">.f-b-r</div>
         </div>
-      </div>
-      <h3 class="f-m-t-large">Content Spacing</h3>
-      <p>The class <strong>.f-content-spacing-{KEY}</strong> will neatly space all of the direct descendants.</p>
-      <div class="f-grid-row f-content-spacing-medium f-m-t-large">
-        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
-        <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
-      </div>
-      <h3 class="f-m-t-large">Z-index</h3>
-      <p>Pronounced "zed index" ;-) we have a couple of classes that apply set stacking points.</p>
-      <div class="f-grid-row f-m-t-large">
-        <div class="f-bg-swatchone f-ilb f-p-medium f-z-bottom">.f-z-bottom</div>
-        <div class="f-bg-swatchtwo f-ilb f-p-medium f-z-appribbon" style="margin-left: -30px">.f-z-appribbon</div>
-        <div class="f-bg-swatchthree f-ilb f-p-medium f-z-popup" style="margin-left: -30px">.f-z-popup</div>
-        <div class="f-bg-swatchfour f-ilb f-p-medium f-z-top" style="margin-left: -30px">.f-z-top</div>
-      </div>
-      <h3 class="f-m-t-large">Borders</h3>
-      <p>Borders have 5 widths (in px) and accept any of the color modifiers.</p>
-      <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black">.f-b-black</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black two">.f-b-black.two</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black three">.f-b-black.three</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four">.f-b-black.four</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black five">.f-b-black.five</div>
-      </div>
-      <h4 class="f-m-t-large">Border on one side</h4>
-      <p>You can also chose to add a border to one particular side, by adding one of the above classes and a side modifier.</p>
-      <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-t">.f-b-t</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-b">.f-b-b</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-l">.f-b-l</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-r">.f-b-r</div>
-      </div>
-      <h4 class="f-m-t-large">Remove Border on one side</h4>
-      <p>You can also remove a border to one particular side, by adding one of the above classes and a side modifier.</p>
-      <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nt">.f-b-nt</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nb">.f-b-nb</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nl">.f-b-nl</div>
-        <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nr">.f-b-nr</div>
+        <h4 class="f-m-t-large">Remove Border on one side</h4>
+        <p>You can also remove a border to one particular side, by adding one of the above classes and a side modifier.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nt">.f-b-nt</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nb">.f-b-nb</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nl">.f-b-nl</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nr">.f-b-nr</div>
+        </div>
+
+        <h4 class="f-m-t-large">Alignment</h4>
+        <p>You can also move elements via position:absolute.</p>
+        <div class="f-pos-rel f-width-100 f-b-xlight f-bg-light f-m-t-small f-tc" style="height: 100px">
+          <div class="f-align-tl f-bg-white f-b-medium f-p-xsmall">.f-align-tl</div>
+          <div class="f-align-tr f-bg-white f-b-medium f-p-xsmall">.f-align-tr</div>
+          <div class="f-align-bl f-bg-white f-b-medium f-p-xsmall">.f-align-bl</div>
+          <div class="f-align-br f-bg-white f-b-medium f-p-xsmall">.f-align-br</div>
+        </div>
+
+        <h4 class="f-m-t-large">Floats</h4>
+        <div class="f-width-100 f-b-xlight f-bg-light f-m-t-small f-tc f-clearfix">
+          <div class="f-fl f-bg-white f-b-medium f-p-xsmall">.f-fl</div>
+          <div class="f-fr f-bg-white f-b-medium f-p-xsmall">.f-fr</div>
+          <div class="f-fn f-ilb f-bg-white f-b-medium f-p-xsmall">.f-fn</div>
+        </div>
+
       </div>
     </section>
 
     <section id="grid" class="f-p-xlarge f-tc">
-      <h2>Grid</h2>
-      <p>The grid is made up of any combination of <strong>12</strong> columns. The grid columns are merely a % width of the containing box.</p>
-      <div class="f-grid-row f-m-t-large">
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
+      <div class="f-page-container">
+        <h2>Grid</h2>
+        <p>The grid is made up of any combination of <strong>12</strong> columns. The grid columns are merely a % width of the containing box.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
         </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
         </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-4of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">4of12</p>
+          </div>
+          <div class="f-grid-4of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">4of12</p>
+          </div>
+          <div class="f-grid-4of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">4of12</p>
+          </div>
         </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-6of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">6of12</p>
+          </div>
+          <div class="f-grid-6of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">6of12</p>
+          </div>
         </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
+        <h3 class="f-m-t-large">Offset</h3>
+        <p>Grid offsets run off the same column widths and are in the pattern: <strong>.f-grid-{NUM COLUMNS}-offset</strong>.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-3of12 f-grid-3of12-offset f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-1of12 f-grid-3of12-offset f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-grid-1of12-offset f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
         </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
+        <h3 class="f-m-t-large">Spaced Grids</h3>
+        <p>Space the contents of a grid even in three percentage widths: small, medium and large.</p>
+        <p class="f-m-t-large f-m-b-small"><strong>.f-spaced-grid-4-small</strong></p>
+        <div class="f-spaced-grid-4-small f-fs-small">
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
         </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
+        <p class="f-m-t-large f-m-b-small"><strong>.f-spaced-grid-8-med</strong></p>
+        <div class="f-spaced-grid-8-medium f-fs-small">
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
         </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
-        </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
-        </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
-        </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
-        </div>
-        <div class="f-grid-1of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
-        </div>
-      </div>
-      <div class="f-grid-row f-m-t-large">
-        <div class="f-grid-3of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">3of12</p>
-        </div>
-        <div class="f-grid-3of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">3of12</p>
-        </div>
-        <div class="f-grid-3of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">3of12</p>
-        </div>
-        <div class="f-grid-3of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">3of12</p>
-        </div>
-      </div>
-      <div class="f-grid-row f-m-t-large">
-        <div class="f-grid-4of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">4of12</p>
-        </div>
-        <div class="f-grid-4of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">4of12</p>
-        </div>
-        <div class="f-grid-4of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">4of12</p>
-        </div>
-      </div>
-      <div class="f-grid-row f-m-t-large">
-        <div class="f-grid-6of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">6of12</p>
-        </div>
-        <div class="f-grid-6of12 f-b-light f-p-xsmall">
-          <p class="f-bg-light">6of12</p>
-        </div>
-      </div>
-      <h3 class="f-m-t-large">Offset</h3>
-      <p>Grid offsets run off the same column widths and are in the pattern: <strong>.f-grid-{NUM COLUMNS}-offset</strong>.</p>
-      <div class="f-grid-row f-m-t-large">
-        <div class="f-grid-3of12 f-grid-3of12-offset f-b-light f-p-xsmall">
-          <p class="f-bg-light">3of12</p>
-        </div>
-        <div class="f-grid-1of12 f-grid-3of12-offset f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
-        </div>
-        <div class="f-grid-1of12 f-grid-1of12-offset f-b-light f-p-xsmall">
-          <p class="f-bg-light">1of12</p>
-        </div>
-      </div>
-      <h3 class="f-m-t-large">Spaced Grids</h3>
-      <p>Space the contents of a grid even in three percentage widths: small, medium and large.</p>
-      <p class="f-m-t-large"><strong>.f-spaced-grid-4-small</strong></p>
-      <div class="f-spaced-grid-4-small">
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-      </div>
-      <p class="f-m-t-large"><strong>.f-spaced-grid-8-med</strong></p>
-      <div class="f-spaced-grid-8-medium">
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-      </div>
-      <p class="f-m-t-large"><strong>.f-spaced-grid-6-large</strong></p>
-      <div class="f-spaced-grid-6-large">
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
-        </div>
-        <div class="f-b-light f-p-small">
-          <div class="f-bg-light">even spacing</div>
+        <p class="f-m-t-large f-m-b-small"><strong>.f-spaced-grid-6-large</strong></p>
+        <div class="f-spaced-grid-6-large f-fs-small">
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
         </div>
       </div>
     </section>
@@ -766,6 +788,14 @@
         <li>Something I have never seen before!</li>
       </ul>
 
+      <h3 class="f-m-t-large">.f-list.f-b-primary</h3>
+      <p>Set a border color to get dividers to appear</p>
+      <ul class="f-list f-ilb f-tl f-bg-xlight-o-dark f-b-primary">
+        <li>Something Else</li>
+        <li>Something Entirely</li>
+        <li>Something I have never seen before!</li>
+      </ul>
+
       <h3 class="f-m-t-large">.f-list.bulleted.no-hover</h3>
       <ul class="f-list bulleted no-hover f-ilb f-tl f-bg-xlight-o-dark">
         <li>Something Else</li>
@@ -816,7 +846,6 @@
             <div class="f-spinner-circles f-fs-xlarge f-bg-xdark"></div>
           </div>
         </div>
-        <div class="f-hr-light f-m-medium"></div>
         <div class="f-grid-row f-m-t-large">
           <h3>.f-spinner-lifepreserver</h3>
           <p class="f-m-b-medium">The spinner lifepreserver color can be set via <strong>.f-fc-*</strong>.</p>
@@ -836,7 +865,6 @@
             <div class="f-spinner-lifepreserver f-fs-xlarge f-fc-xdark"></div>
           </div>
         </div>
-        <div class="f-hr-light f-m-medium"></div>
         <div class="f-grid-row f-m-t-large">
           <h3>.f-spinner-bars</h3>
           <p class="f-m-b-medium">The spinner circles color can be set via <strong>.f-bg-*</strong>.</p>
@@ -934,47 +962,48 @@
     </section>
 
     <section id="misc" class="f-p-xlarge f-tc">
-      <h2>Miscellaneous</h2>
-      <p></p>
-      <h3 class="f-m-t-large">Notification Pill</h3>
-      <p class="f-m-medium">These components are generally set to position:fixed at the highest z-index and with an animated show effect (flip) for maximum visibility.</p>
-      <div class="f-content-spacing-medium f-pos-rel">
-        <div class="f-notification-pill f-bg-dark">
-          <div class="f-font-condensed">Standard</div>
+      <div class="f-page-container">
+        <h2>Miscellaneous</h2>
+        <p></p>
+        <h3 class="f-m-t-large">Notification Pill</h3>
+        <p class="f-m-medium">These components are generally set to position:fixed at the highest z-index and with an animated show effect (flip) for maximum visibility.</p>
+        <div class="f-content-spacing-medium f-pos-rel">
+          <div class="f-notification-pill f-bg-dark">
+            <div class="f-font-condensed">Standard</div>
+          </div>
+          <div class="f-notification-pill success f-bg-dark">
+            <div class="f-font-condensed">Success</div>
+          </div>
+          <div class="f-notification-pill error f-bg-medium">
+            <div class="f-font-condensed">Something went wrong</div>
+          </div>
+          <div class="f-notification-pill processing f-bg-swatchfive">
+            <div class="f-font-condensed">Processing</div>
+          </div>
         </div>
-        <div class="f-notification-pill success f-bg-dark">
-          <div class="f-font-condensed">Success</div>
-        </div>
-        <div class="f-notification-pill error f-bg-medium">
-          <div class="f-font-condensed">Something went wrong</div>
-        </div>
-        <div class="f-notification-pill processing f-bg-swatchfive">
-          <div class="f-font-condensed">Processing</div>
-        </div>
-      </div>
 
-      <h3 class="f-m-t-large">Thermometer</h3>
-      <p class="f-m-medium">
-      </p>
+        <h3 class="f-m-t-large">Thermometer</h3>
+        <p class="f-m-medium">The thermometer mercury needs to have an explicit background color set, this is primarily so it can be set via themes.</p>
 
-      <div class="f-thermometer f-m-b-small">
-        <div class="f-mercury" style="width: 0%">
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury" style="width: 0%">
+          </div>
         </div>
-      </div>
-      <div class="f-thermometer f-m-b-small">
-        <div class="f-mercury" style="width: 25%">
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-swatchfive" style="width: 25%">
+          </div>
         </div>
-      </div>
-      <div class="f-thermometer f-m-b-small">
-        <div class="f-mercury" style="width: 50%">
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-primary" style="width: 50%">
+          </div>
         </div>
-      </div>
-      <div class="f-thermometer f-m-b-small">
-        <div class="f-mercury" style="width: 75%">
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-swatchtwo" style="width: 75%">
+          </div>
         </div>
-      </div>
-      <div class="f-thermometer f-m-b-small">
-        <div class="f-mercury">
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-swatchone">
+          </div>
         </div>
       </div>
     </section>

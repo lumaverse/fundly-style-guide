@@ -1564,7 +1564,9 @@ body {
 
 a {
   color: #252b2c;
-  weight: 500; }
+  weight: 500;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out; }
   a:hover, a:focus {
     color: #000000; }
 
@@ -1574,6 +1576,10 @@ a {
 .f-bg-primary, .f-bg-hover-primary:hover {
   background-color: #FF8B5D;
   color: #e7eaed; }
+  .f-bg-primary a, .f-bg-hover-primary:hover a {
+    color: white; }
+  .f-bg-primary a:hover, .f-bg-primary a:focus, .f-bg-hover-primary:hover a:hover, .f-bg-hover-primary:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-primary-o-xlight {
   background-color: rgba(255, 139, 93, 0.25);
@@ -1604,6 +1610,10 @@ a {
 .f-bg-white, .f-bg-hover-white:hover {
   background-color: white;
   color: #5c5d5e; }
+  .f-bg-white a, .f-bg-hover-white:hover a {
+    color: #5c5d5e; }
+  .f-bg-white a:hover, .f-bg-white a:focus, .f-bg-hover-white:hover a:hover, .f-bg-hover-white:hover a:focus {
+    color: black; }
 
 .f-bg-white-o-xlight {
   background-color: rgba(255, 255, 255, 0.25);
@@ -1634,6 +1644,10 @@ a {
 .f-bg-xlight, .f-bg-hover-xlight:hover {
   background-color: #e7eaed;
   color: #5c5d5e; }
+  .f-bg-xlight a, .f-bg-hover-xlight:hover a {
+    color: #5c5d5e; }
+  .f-bg-xlight a:hover, .f-bg-xlight a:focus, .f-bg-hover-xlight:hover a:hover, .f-bg-hover-xlight:hover a:focus {
+    color: black; }
 
 .f-bg-xlight-o-xlight {
   background-color: rgba(231, 234, 237, 0.25);
@@ -1664,6 +1678,10 @@ a {
 .f-bg-light, .f-bg-hover-light:hover {
   background-color: #cfd2d5;
   color: #5c5d5e; }
+  .f-bg-light a, .f-bg-hover-light:hover a {
+    color: #5c5d5e; }
+  .f-bg-light a:hover, .f-bg-light a:focus, .f-bg-hover-light:hover a:hover, .f-bg-hover-light:hover a:focus {
+    color: black; }
 
 .f-bg-light-o-xlight {
   background-color: rgba(207, 210, 213, 0.25);
@@ -1694,6 +1712,10 @@ a {
 .f-bg-medium, .f-bg-hover-medium:hover {
   background-color: #b8bbbd;
   color: #5c5d5e; }
+  .f-bg-medium a, .f-bg-hover-medium:hover a {
+    color: #5c5d5e; }
+  .f-bg-medium a:hover, .f-bg-medium a:focus, .f-bg-hover-medium:hover a:hover, .f-bg-hover-medium:hover a:focus {
+    color: black; }
 
 .f-bg-medium-o-xlight {
   background-color: rgba(184, 187, 189, 0.25);
@@ -1724,6 +1746,10 @@ a {
 .f-bg-dark, .f-bg-hover-dark:hover {
   background-color: #8a8c8e;
   color: #e7eaed; }
+  .f-bg-dark a, .f-bg-hover-dark:hover a {
+    color: white; }
+  .f-bg-dark a:hover, .f-bg-dark a:focus, .f-bg-hover-dark:hover a:hover, .f-bg-hover-dark:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-dark-o-xlight {
   background-color: rgba(138, 140, 142, 0.25);
@@ -1754,6 +1780,10 @@ a {
 .f-bg-xdark, .f-bg-hover-xdark:hover {
   background-color: #5c5d5e;
   color: #e7eaed; }
+  .f-bg-xdark a, .f-bg-hover-xdark:hover a {
+    color: white; }
+  .f-bg-xdark a:hover, .f-bg-xdark a:focus, .f-bg-hover-xdark:hover a:hover, .f-bg-hover-xdark:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-xdark-o-xlight {
   background-color: rgba(92, 93, 94, 0.25);
@@ -1784,6 +1814,10 @@ a {
 .f-bg-black, .f-bg-hover-black:hover {
   background-color: black;
   color: #e7eaed; }
+  .f-bg-black a, .f-bg-hover-black:hover a {
+    color: white; }
+  .f-bg-black a:hover, .f-bg-black a:focus, .f-bg-hover-black:hover a:hover, .f-bg-hover-black:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-black-o-xlight {
   background-color: rgba(0, 0, 0, 0.25);
@@ -1814,6 +1848,10 @@ a {
 .f-bg-swatchone, .f-bg-hover-swatchone:hover {
   background-color: #59CAE9;
   color: #e7eaed; }
+  .f-bg-swatchone a, .f-bg-hover-swatchone:hover a {
+    color: white; }
+  .f-bg-swatchone a:hover, .f-bg-swatchone a:focus, .f-bg-hover-swatchone:hover a:hover, .f-bg-hover-swatchone:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-swatchone-o-xlight {
   background-color: rgba(89, 202, 233, 0.25);
@@ -1844,6 +1882,10 @@ a {
 .f-bg-swatchtwo, .f-bg-hover-swatchtwo:hover {
   background-color: #CEE8C5;
   color: #5c5d5e; }
+  .f-bg-swatchtwo a, .f-bg-hover-swatchtwo:hover a {
+    color: #5c5d5e; }
+  .f-bg-swatchtwo a:hover, .f-bg-swatchtwo a:focus, .f-bg-hover-swatchtwo:hover a:hover, .f-bg-hover-swatchtwo:hover a:focus {
+    color: black; }
 
 .f-bg-swatchtwo-o-xlight {
   background-color: rgba(206, 232, 197, 0.25);
@@ -1874,6 +1916,10 @@ a {
 .f-bg-swatchthree, .f-bg-hover-swatchthree:hover {
   background-color: #FF9666;
   color: #5c5d5e; }
+  .f-bg-swatchthree a, .f-bg-hover-swatchthree:hover a {
+    color: #5c5d5e; }
+  .f-bg-swatchthree a:hover, .f-bg-swatchthree a:focus, .f-bg-hover-swatchthree:hover a:hover, .f-bg-hover-swatchthree:hover a:focus {
+    color: black; }
 
 .f-bg-swatchthree-o-xlight {
   background-color: rgba(255, 150, 102, 0.25);
@@ -1904,6 +1950,10 @@ a {
 .f-bg-swatchfour, .f-bg-hover-swatchfour:hover {
   background-color: #777F83;
   color: #e7eaed; }
+  .f-bg-swatchfour a, .f-bg-hover-swatchfour:hover a {
+    color: white; }
+  .f-bg-swatchfour a:hover, .f-bg-swatchfour a:focus, .f-bg-hover-swatchfour:hover a:hover, .f-bg-hover-swatchfour:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-swatchfour-o-xlight {
   background-color: rgba(119, 127, 131, 0.25);
@@ -1934,6 +1984,10 @@ a {
 .f-bg-swatchfive, .f-bg-hover-swatchfive:hover {
   background-color: #2B2B3F;
   color: #e7eaed; }
+  .f-bg-swatchfive a, .f-bg-hover-swatchfive:hover a {
+    color: white; }
+  .f-bg-swatchfive a:hover, .f-bg-swatchfive a:focus, .f-bg-hover-swatchfive:hover a:hover, .f-bg-hover-swatchfive:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-swatchfive-o-xlight {
   background-color: rgba(43, 43, 63, 0.25);
@@ -1964,6 +2018,10 @@ a {
 .f-bg-facebook, .f-bg-hover-facebook:hover {
   background-color: #395b98;
   color: #e7eaed; }
+  .f-bg-facebook a, .f-bg-hover-facebook:hover a {
+    color: white; }
+  .f-bg-facebook a:hover, .f-bg-facebook a:focus, .f-bg-hover-facebook:hover a:hover, .f-bg-hover-facebook:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-facebook-o-xlight {
   background-color: rgba(57, 91, 152, 0.25);
@@ -1994,6 +2052,10 @@ a {
 .f-bg-twitter, .f-bg-hover-twitter:hover {
   background-color: #1ba5e2;
   color: #e7eaed; }
+  .f-bg-twitter a, .f-bg-hover-twitter:hover a {
+    color: white; }
+  .f-bg-twitter a:hover, .f-bg-twitter a:focus, .f-bg-hover-twitter:hover a:hover, .f-bg-hover-twitter:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-twitter-o-xlight {
   background-color: rgba(27, 165, 226, 0.25);
@@ -2024,6 +2086,10 @@ a {
 .f-bg-google, .f-bg-hover-google:hover {
   background-color: #ff0000;
   color: #e7eaed; }
+  .f-bg-google a, .f-bg-hover-google:hover a {
+    color: white; }
+  .f-bg-google a:hover, .f-bg-google a:focus, .f-bg-hover-google:hover a:hover, .f-bg-hover-google:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-google-o-xlight {
   background-color: rgba(255, 0, 0, 0.25);
@@ -2054,6 +2120,10 @@ a {
 .f-bg-linkedin, .f-bg-hover-linkedin:hover {
   background-color: #1d87bd;
   color: #e7eaed; }
+  .f-bg-linkedin a, .f-bg-hover-linkedin:hover a {
+    color: white; }
+  .f-bg-linkedin a:hover, .f-bg-linkedin a:focus, .f-bg-hover-linkedin:hover a:hover, .f-bg-hover-linkedin:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-linkedin-o-xlight {
   background-color: rgba(29, 135, 189, 0.25);
@@ -2084,6 +2154,10 @@ a {
 .f-bg-pinterest, .f-bg-hover-pinterest:hover {
   background-color: #cb2027;
   color: #e7eaed; }
+  .f-bg-pinterest a, .f-bg-hover-pinterest:hover a {
+    color: white; }
+  .f-bg-pinterest a:hover, .f-bg-pinterest a:focus, .f-bg-hover-pinterest:hover a:hover, .f-bg-hover-pinterest:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-pinterest-o-xlight {
   background-color: rgba(203, 32, 39, 0.25);
@@ -2114,6 +2188,10 @@ a {
 .f-bg-success, .f-bg-hover-success:hover {
   background-color: green;
   color: #e7eaed; }
+  .f-bg-success a, .f-bg-hover-success:hover a {
+    color: white; }
+  .f-bg-success a:hover, .f-bg-success a:focus, .f-bg-hover-success:hover a:hover, .f-bg-hover-success:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-success-o-xlight {
   background-color: rgba(0, 128, 0, 0.25);
@@ -2144,6 +2222,10 @@ a {
 .f-bg-error, .f-bg-hover-error:hover {
   background-color: red;
   color: #e7eaed; }
+  .f-bg-error a, .f-bg-hover-error:hover a {
+    color: white; }
+  .f-bg-error a:hover, .f-bg-error a:focus, .f-bg-hover-error:hover a:hover, .f-bg-hover-error:hover a:focus {
+    color: #e7eaed; }
 
 .f-bg-error-o-xlight {
   background-color: rgba(255, 0, 0, 0.25);
@@ -2604,20 +2686,21 @@ a {
 .f-pos-fix {
   position: fixed; }
 
+.f-clearfix:before, .f-clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.f-clearfix:after {
+  clear: both; }
+
 .f-center-h {
   height: 100%;
   display: table-cell;
   vertical-align: middle; }
 
-.f-absolute-center, [class*='f-align-'] {
+[class*='f-align-'] {
   position: absolute; }
-
-.f-absolute-center {
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
 
 .f-align-tr {
   top: 0;
@@ -2646,16 +2729,6 @@ a {
 
 .f-align-r {
   right: 0; }
-
-.f-align-tc {
-  left: 0;
-  right: 0;
-  top: 0; }
-
-.f-align-bc {
-  left: 0;
-  right: 0;
-  bottom: 0; }
 
 .f-align-c {
   margin-left: auto;
@@ -3539,7 +3612,10 @@ input[type='radio']:checked {
   padding: 0;
   margin: 0; }
   [class*='f-list'] li {
-    padding: 0.75em 1em; }
+    padding: 0.5em 1em;
+    border-color: inherit;
+    border-style: solid;
+    border-width: inherit; }
   [class*='f-list'] li:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.05)));
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
@@ -3558,17 +3634,27 @@ input[type='radio']:checked {
     vertical-align: middle;
     margin-right: 1em; }
 
-.f-list li {
-  border-bottom: 1px solid #cfd2d5; }
-.f-list li:last-child {
-  border-bottom: none; }
+.f-list {
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none; }
+  .f-list:first-child {
+    border-bottom-style: none; }
+  .f-list li {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0; }
+  .f-list li:last-child {
+    border-bottom: none; }
 
 .f-list-inline {
   display: table; }
   .f-list-inline li {
     display: table-cell;
-    border-right: 1px solid #cfd2d5;
-    vertical-align: middle; }
+    vertical-align: middle;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0; }
   .f-list-inline li:last-child {
     border-right: none; }
   .f-list-inline.vertical-fill {
@@ -3968,9 +4054,11 @@ input[type='radio']:checked {
 
 .f-mercury {
   height: 100%;
-  background-color: #FF8B5D;
-  border: 1px solid #ff7943;
-  max-width: 100%; }
+  max-width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-color: rgba(0, 0, 0, 0.1); }
 
 /*-------------------------------------*\
 	HINT.css - A CSS tooltip library
