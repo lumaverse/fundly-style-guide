@@ -6,6 +6,7 @@ body {
 a {
   color: $f-color-link;
   weight: 500;
+  transition: color 150ms ease-in-out;
 
   &:hover, &:focus {
     color: $f-color-link-hover;
@@ -29,6 +30,13 @@ a {
   .f-bg-#{$key}, .f-bg-hover-#{$key}:hover {
     background-color: $color;
     color: color-invert($color);
+    @if lightness($color) >= 70 {
+      a { color: $f-color-xdark; }
+      a:hover, a:focus { color: $f-color-black; }
+    } @else {
+      a { color: $f-color-white; }
+      a:hover, a:focus { color: $f-color-xlight; }
+    }
   }
   .f-bg-#{$key}-o-xlight {
     background-color: rgba($color, $f-opacity-xlight);

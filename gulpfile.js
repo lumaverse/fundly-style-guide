@@ -187,6 +187,19 @@ gulp.task('bump:patch', function(){ bumpJsonVersions('patch'); });
 // End Versioning Tasks
 // ---------
 
+gulp.task('gh-pages', function(){
+  var gutil = require('gulp-util'),
+      exec = require('child_process').exec,
+      cmd = 'git subtree push --prefix dist origin gh-pages';
+
+  exec(cmd, {}, function(err, stdout, stderr){
+    if(err) {
+      gutil.log(err);
+    } else {
+      gutil.log(stdout, stderr);
+    }
+  });
+});
 
 
 /*

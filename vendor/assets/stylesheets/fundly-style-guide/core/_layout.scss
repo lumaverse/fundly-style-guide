@@ -140,22 +140,18 @@
 
 
 // Display alignment
+.f-clearfix {
+  @include clearfix();
+}
+
 .f-center-h {
   height: 100%;
   display: table-cell;
   vertical-align: middle;
 }
 
-
-.f-absolute-center, [class*='f-align-'] {
-  position: absolute
-}
-.f-absolute-center {
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+[class*='f-align-'] {
+  position: absolute;
 }
 .f-align-tr {
   top: 0;
@@ -184,16 +180,6 @@
 }
 .f-align-r {
   right: 0;
-}
-.f-align-tc {
-  left: 0;
-  right: 0;
-  top: 0;
-}
-.f-align-bc {
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 .f-align-c {
   margin: {
