@@ -237,3 +237,18 @@
 .f-hr {
   border-color: $f-color-light;
 }
+
+// Flexbox utilities
+.f-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-flex-center-y {
+  display: flex;
+  align-items: center;
+}
+.f-flex-center-x {
+  display: flex;
+  justify-content: center;
+}

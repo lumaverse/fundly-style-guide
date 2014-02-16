@@ -44,9 +44,16 @@
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
+  position: relative;
 
-  &:first-child {
-    border-bottom-style: none;
+  &:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    background-color: inherit;
   }
 
   li {
@@ -60,7 +67,21 @@
 }
 
 .f-list-inline {
+  position: relative;
   display: table;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+
+  &:after {
+    position: absolute;
+    content: '';
+    background-color: inherit;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: -1px;
+  }
 
   li {
     display: table-cell;
