@@ -472,6 +472,26 @@
           <div class="f-fn f-ilb f-bg-white f-b-medium f-p-xsmall">.f-fn</div>
         </div>
 
+        <h4 class="f-m-t-large">Flex</h4>
+        <p>These layout utilities use flexbox and such are not compatible with <a href="http://caniuse.com/#search=flexbox">older browsers</a>, so use sparingly.</p>
+        <p class="f-m-t-small"><strong>.f-flex-center</strong></p>
+        <div class="f-flex-center f-width-100 f-b-xlight f-bg-light" style="height: 80px">
+          <div class="f-bg-white f-b-medium f-p-xsmall">flexed</div>
+        </div>
+        <div class="f-grid-row f-m-t-small">
+          <div class="f-grid-6of12 f-p-r-xsmall">
+            <p class="f-tc"><strong>.f-flex-center-y</strong></p>
+            <div class="f-bg-light f-flex-center-y" style="height: 80px">
+              <div class="f-bg-white f-b-medium f-p-xsmall" style="width: 50%">flexed</div>
+            </div>
+          </div>
+          <div class="f-grid-6of12 f-p-l-xsmall">
+            <p class="f-tc"><strong>.f-flex-center-x</strong></p>
+            <div class="f-bg-light f-flex-center-x" style="height: 80px">
+              <div class="f-bg-white f-b-medium f-p-xsmall" style="height: 50%">flexed</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -790,7 +810,7 @@
 
       <h3 class="f-m-t-large">.f-list.f-b-primary</h3>
       <p>Set a border color to get dividers to appear</p>
-      <ul class="f-list f-ilb f-tl f-bg-xlight-o-dark f-b-primary">
+      <ul class="f-list f-ilb f-tl f-bg-dark f-b-primary">
         <li>Something Else</li>
         <li>Something Entirely</li>
         <li>Something I have never seen before!</li>
@@ -805,7 +825,7 @@
 
       <h3 class="f-m-t-large">.f-list-inline</h3>
       <div class="f-ilb">
-        <ul class="f-list-inline f-tl f-bg-xlight-o-dark">
+        <ul class="f-list-inline f-tl f-bg-xlight f-b-black">
           <li>Something Else</li>
           <li>Something Entirely</li>
           <li>Something I have never seen before!</li>
@@ -815,7 +835,7 @@
       <h3 class="f-m-t-large">.f-list-inline.vertical-fill</h3>
       <p class="f-m-b-medium">Vertical fill will make an inline list item fill the vertical space and center the item contents vertically as well.<br />If needed you can apply <strong>.f-bg-hover-{COLOR}</strong> to the item to set hover effects.</p>
       <div class="f-ilb" style="height: 75px">
-        <ul class="f-list-inline vertical-fill f-tl f-bg-xlight-o-dark f-font-condensed" >
+        <ul class="f-list-inline vertical-fill f-tl f-bg-xlight f-font-condensed f-b-primary" >
           <li>Something Else</li>
           <li class="f-bg-hover-primary"><a href="http://google.com">Something Entirely</a></li>
           <li>Something I have never seen before!</li>
