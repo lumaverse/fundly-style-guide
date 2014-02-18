@@ -2808,6 +2808,9 @@ a {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.f-flex-align-right {
+  margin-left: auto; }
+
 .f-grid-row:before, .f-grid-row:after {
   content: " ";
   /* 1 */
