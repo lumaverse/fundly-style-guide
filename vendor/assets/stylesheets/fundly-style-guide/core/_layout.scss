@@ -239,6 +239,9 @@
 }
 
 // Flexbox utilities
+// - these pages are very helpful in understanding flexbox
+//    - http://www.sketchingwithcss.com/samplechapter/cheatsheet.html
+//    - http://css-tricks.com/snippets/css/a-guide-to-flexbox/
 .f-flex-center {
   display: flex;
   align-items: center;
@@ -251,4 +254,7 @@
 .f-flex-center-x {
   display: flex;
   justify-content: center;
+}
+.f-flex-align-right {
+  margin-left: auto;
 }
