@@ -14,6 +14,11 @@ select[multiple], select[size] {
   height: auto;
 }
 
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"] {
+  @include box-sizing(border-box);
+}
+
 // Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
 select optgroup {
   font-size: inherit;
