@@ -2387,22 +2387,22 @@ h6, .h6 {
   font-size: 12px; }
 
 .f-lh-xsmall {
-  line-height: 1em; }
+  line-height: 1; }
 
 .f-lh-small {
-  line-height: 1.25em; }
+  line-height: 1.25; }
 
 .f-lh-medium {
-  line-height: 1.5em; }
+  line-height: 1.5; }
 
 .f-lh-large {
-  line-height: 1.75em; }
+  line-height: 1.75; }
 
 .f-lh-xlarge {
-  line-height: 2em; }
+  line-height: 2; }
 
 .f-lh-xxlarge {
-  line-height: 2.5em; }
+  line-height: 2.5; }
 
 a {
   text-decoration: none; }
@@ -3477,6 +3477,11 @@ label {
 
 select[multiple], select[size] {
   height: auto; }
+
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 select optgroup {
   font-size: inherit;
