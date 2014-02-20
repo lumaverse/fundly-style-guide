@@ -190,7 +190,7 @@ gulp.task('bump:patch', function(){ bumpJsonVersions('patch'); });
 gulp.task('gh-pages', function(){
   var gutil = require('gulp-util'),
       exec = require('child_process').exec,
-      cmd = 'git subtree push --prefix dist origin gh-pages';
+      cmd = 'git push origin :gh-pages && git subtree push --prefix dist origin gh-pages';
 
   exec(cmd, {}, function(err, stdout, stderr){
     if(err) {

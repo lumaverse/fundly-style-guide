@@ -60,4 +60,4 @@ To push the style guide as a web app to Github run the following commands. The u
     gulp build
     git commit -am"Distribution build"
     git push origin master
-    git subtree push --prefix dist origin gh-pages
+    gulp gh-pages
