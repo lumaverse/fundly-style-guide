@@ -117,21 +117,21 @@ a {
   opacity: $f-opacity-full;
 }
 
-.f-opacity-hover-xlight {
+.f-opacity-hover-xlight:hover {
   @include opacity($f-opacity-xlight)
 }
-.f-opacity-hover-light {
+.f-opacity-hover-light:hover {
   @include opacity($f-opacity-light)
 }
-.f-opacity-hover-medium {
+.f-opacity-hover-medium:hover {
   @include opacity($f-opacity-medium)
 }
-.f-opacity-hover-dark {
+.f-opacity-hover-dark:hover {
   @include opacity($f-opacity-dark)
 }
-.f-opacity-hover-xdark {
+.f-opacity-hover-xdark:hover {
   @include opacity($f-opacity-xdark)
 }
-.f-opacity-hover-full {
+.f-opacity-hover-full:hover {
   @include opacity($f-opacity-full)
 }

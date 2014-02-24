@@ -129,21 +129,12 @@ input[type='radio']:checked {
   border-radius: 2px;
   display: table;
   width: 100%;
-  border-collapse: separate;
 
   input {
     display: table-cell;
     width: 100%;
     border: none;
-    margin-bottom: 0;
-  }
-
-  input:first-child {
-    border-right-radius: 0;
-  }
-
-  input:last-child {
-    border-left-radius: 0;
+    border-radius: 0;
   }
 }
 
@@ -151,7 +142,7 @@ input[type='radio']:checked {
   display: table-cell;
   padding: 0 0.5em;
   font-size: inherit;
-  line-height: 1;
+  line-height: inherit;
   text-align: center;
   border: {
     color: $f-color-medium;
@@ -159,7 +150,6 @@ input[type='radio']:checked {
     width: 1px;
   }
   width: 1%;
-  white-space: nowrap;
   vertical-align: middle;
 
   &.none {
@@ -180,6 +170,11 @@ input[type='radio']:checked {
   }
   &:first-child {
     border-width: 0 1px 0 0;
+  }
+
+  .f-button {
+    border-radius: 0;
+    border: none;
   }
 }
 

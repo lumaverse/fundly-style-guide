@@ -38,6 +38,10 @@
     vertical-align: middle;
     margin-right: 1em;
   }
+
+  &.no-padding li {
+    padding: 0;
+  }
 }
 
 .f-list {
