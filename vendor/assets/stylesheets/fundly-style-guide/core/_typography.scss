@@ -179,3 +179,7 @@ a {
 .f-wordwrap-normal {
   word-wrap: normal;
 }
+
+.f-no-underline, a.f-no-underline, a.f-no-underline:hover {
+  text-decoration: none;
+}

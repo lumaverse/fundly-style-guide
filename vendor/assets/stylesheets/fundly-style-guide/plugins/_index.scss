@@ -26,6 +26,17 @@
 .hint--left:before {
   border-left-color: $f-color-black
 }
+.hint--top--right {
+  @extend .hint--top;
+  &:before, &:after {
+    left: auto;
+    right: 40%;
+  }
+  &:after {
+    margin-left: auto;
+    margin-right: -5px;
+  }
+}
 // End Hint CSS
 
 // -------------------
