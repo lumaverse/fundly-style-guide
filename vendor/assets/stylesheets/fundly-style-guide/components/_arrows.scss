@@ -15,19 +15,62 @@
   }
 
   .f-arrow-down#{$label} {
-    position: relative;
     &:before, &:after {
       border: $border_size solid transparent;
       border-bottom: none;
-      position: absolute;
       left: 50%;
-      content: '';
       margin-left: -1 * $border_size;
-      bottom: -1 * ($border_size - 2px);
+      bottom: -1 * ($border_size - 1px);
     }
     &:before {
       bottom: -1 * $border_size;
       margin-left: -1 * $border_size;
+      border-top-color: inherit;
+    }
+  }
+
+  .f-arrow-up#{$label} {
+    &:before, &:after {
+      border: $border_size solid transparent;
+      border-top: none;
+      left: 50%;
+      margin-left: -1 * $border_size;
+      top: -1 * ($border_size - 1px);
+    }
+    &:before {
+      top: -1 * $border_size;
+      margin-left: -1 * $border_size;
+      border-bottom-color: inherit;
+    }
+  }
+
+  .f-arrow-left#{$label} {
+    &:before, &:after {
+      border: $border_size solid transparent;
+      border-left: none;
+      top: 50%;
+      margin-top: -1 * $border_size;
+      left: -1 * ($border_size - 1px);
+    }
+    &:before {
+      left: -1 * $border_size;
+      margin-top: -1 * $border_size;
+      border-right-color: inherit;
+    }
+  }
+
+  .f-arrow-right#{$label} {
+    &:before, &:after {
+      border: $border_size solid transparent;
+      border-right: none;
+      top: 50%;
+      margin-top: -1 * $border_size;
+      right: -1 * ($border_size - 1px);
+    }
+    &:before {
+      right: -1 * $border_size;
+      margin-top: -1 * $border_size;
+      border-left-color: inherit;
     }
   }
 }
@@ -37,13 +80,73 @@
 @include make-arrow-set(large);
 
 [class*='f-arrow-'] {
-  &.social {
-    &:before, &:after {
-      border-top-color: $f-color-white;
-    }
-    &:before {
-      border-top-color: $f-color-dark;
-    }
+  position: relative;
+  &:before, &:after {
+    position: absolute;
+    content: '';
   }
 }
 
+[class*='f-arrow-down'] {
+  &.f-bg-white:after       { border-top-color: $f-color-white; }
+  &.f-bg-xlight:after      { border-top-color: $f-color-xlight; }
+  &.f-bg-light:after       { border-top-color: $f-color-light; }
+  &.f-bg-medium:after      { border-top-color: $f-color-medium; }
+  &.f-bg-dark:after        { border-top-color: $f-color-dark; }
+  &.f-bg-xdark:after       { border-top-color: $f-color-xdark; }
+  &.f-bg-black:after       { border-top-color: $f-color-black; }
+
+  &.f-bg-swatchone:after   { border-top-color: $f-color-swatch-one; }
+  &.f-bg-swatchtwo:after   { border-top-color: $f-color-swatch-two; }
+  &.f-bg-swatchthree:after { border-top-color: $f-color-swatch-three; }
+  &.f-bg-swatchfour:after  { border-top-color: $f-color-swatch-four; }
+  &.f-bg-swatchfive:after  { border-top-color: $f-color-swatch-five; }
+}
+
+[class*='f-arrow-up'] {
+  &.f-bg-white:after       { border-bottom-color: $f-color-white; }
+  &.f-bg-xlight:after      { border-bottom-color: $f-color-xlight; }
+  &.f-bg-light:after       { border-bottom-color: $f-color-light; }
+  &.f-bg-medium:after      { border-bottom-color: $f-color-medium; }
+  &.f-bg-dark:after        { border-bottom-color: $f-color-dark; }
+  &.f-bg-xdark:after       { border-bottom-color: $f-color-xdark; }
+  &.f-bg-black:after       { border-bottom-color: $f-color-black; }
+
+  &.f-bg-swatchone:after   { border-bottom-color: $f-color-swatch-one; }
+  &.f-bg-swatchtwo:after   { border-bottom-color: $f-color-swatch-two; }
+  &.f-bg-swatchthree:after { border-bottom-color: $f-color-swatch-three; }
+  &.f-bg-swatchfour:after  { border-bottom-color: $f-color-swatch-four; }
+  &.f-bg-swatchfive:after  { border-bottom-color: $f-color-swatch-five; }
+}
+
+[class*='f-arrow-left'] {
+  &.f-bg-white:after       { border-right-color: $f-color-white; }
+  &.f-bg-xlight:after      { border-right-color: $f-color-xlight; }
+  &.f-bg-light:after       { border-right-color: $f-color-light; }
+  &.f-bg-medium:after      { border-right-color: $f-color-medium; }
+  &.f-bg-dark:after        { border-right-color: $f-color-dark; }
+  &.f-bg-xdark:after       { border-right-color: $f-color-xdark; }
+  &.f-bg-black:after       { border-right-color: $f-color-black; }
+
+  &.f-bg-swatchone:after   { border-right-color: $f-color-swatch-one; }
+  &.f-bg-swatchtwo:after   { border-right-color: $f-color-swatch-two; }
+  &.f-bg-swatchthree:after { border-right-color: $f-color-swatch-three; }
+  &.f-bg-swatchfour:after  { border-right-color: $f-color-swatch-four; }
+  &.f-bg-swatchfive:after  { border-right-color: $f-color-swatch-five; }
+}
+
+[class*='f-arrow-right'] {
+  &.f-bg-white:after       { border-left-color: $f-color-white; }
+  &.f-bg-xlight:after      { border-left-color: $f-color-xlight; }
+  &.f-bg-light:after       { border-left-color: $f-color-light; }
+  &.f-bg-medium:after      { border-left-color: $f-color-medium; }
+  &.f-bg-dark:after        { border-left-color: $f-color-dark; }
+  &.f-bg-xdark:after       { border-left-color: $f-color-xdark; }
+  &.f-bg-black:after       { border-left-color: $f-color-black; }
+
+  &.f-bg-swatchone:after   { border-left-color: $f-color-swatch-one; }
+  &.f-bg-swatchtwo:after   { border-left-color: $f-color-swatch-two; }
+  &.f-bg-swatchthree:after { border-left-color: $f-color-swatch-three; }
+  &.f-bg-swatchfour:after  { border-left-color: $f-color-swatch-four; }
+  &.f-bg-swatchfive:after  { border-left-color: $f-color-swatch-five; }
+}
