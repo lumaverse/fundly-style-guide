@@ -1,3 +1,11 @@
+// Reset lists
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
 [class*='f-list'] {
   list-style-type: none;
   padding: 0;

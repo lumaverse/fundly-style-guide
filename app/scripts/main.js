@@ -121,4 +121,11 @@ $(function(){
     $('#theme-target').html(newTheme);
     listColorSwatches();
   });
+
+  $('.js-font-families > div').each(function(){
+    var $el = $(this),
+        font = $el.css('fontFamily').split(',')[0];
+
+    $el.find('span').html(font);
+  });
 });
