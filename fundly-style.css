@@ -3042,9 +3042,6 @@ a {
 .f-of-hidden-y {
   overflow-x: hidden; }
 
-[class*='f-br-'] {
-  overflow: hidden; }
-
 .f-br-none {
   border-radius: 0; }
 
