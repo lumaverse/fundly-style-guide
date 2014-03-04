@@ -2,7 +2,7 @@
 @mixin f-placeholder {
   padding: inherit 0;
   font-style: italic;
-  line-height: 1.5em;
+  line-height: inherit;
 }
 
 label {
