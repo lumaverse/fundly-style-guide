@@ -200,6 +200,14 @@
   margin: auto;
 }
 
+
+// Basic positioning (ie: no assumptions on positioning type)
+.f-top-left { top: 0; left: 0 }
+.f-top-right { top: 0; right: 0 }
+.f-bottom-left { bottom: 0; left: 0 }
+.f-bottom-right { bottom: 0; right: 0 }
+
+
 // Floats
 .f-fl {
   float: left;
