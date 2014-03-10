@@ -12,6 +12,20 @@
     .f-grid-row > #{$item} {
       float: left
     }
+    .f-grid-row.spaced-small > #{$item} {
+      width: percentage(($i * (100 - ($columns - 1) * 2)/$columns)/100) + ($i - 1) * 2;
+      margin-left: 2%;
+    }
+
+    .f-grid-row.spaced-medium > #{$item} {
+      width: percentage(($i * (100 - ($columns - 1) * 4)/$columns)/100) + ($i - 1) * 4;
+      margin-left: 4%;
+    }
+
+    .f-grid-row.spaced-large > #{$item} {
+      width: percentage(($i * (100 - ($columns - 1) * 6)/$columns)/100) + ($i - 1) * 6;
+      margin-left: 6%;
+    }
   }
 }
 
@@ -25,11 +39,17 @@
 
 
 // Grid elements
-.f-grid-row {
-  @include clearfix;
-}
 @include make-grid($f-grid-columns);
 @include make-grid-offsets($f-grid-columns);
+.f-grid-row {
+  @include clearfix;
+
+  &[class*='spaced-'] {
+    & > *:first-child {
+      margin-left: 0;
+    }
+  }
+}
 
 
 // Spaced Grid, assigns widths to grid items and adds one of 3 spacings
