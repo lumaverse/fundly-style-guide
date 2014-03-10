@@ -125,16 +125,14 @@ input[type='radio']:checked {
 }
 
 .f-input-decorator {
-  border: 1px solid $f-color-medium;
-  border-radius: 2px;
   display: table;
   width: 100%;
 
   input {
     display: table-cell;
     width: 100%;
-    border: none;
-    border-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -166,10 +164,10 @@ input[type='radio']:checked {
   }
 
   &:last-child {
-    border-width: 0 0 0 1px;
+    border-width: 1px 1px 1px 0;
   }
   &:first-child {
-    border-width: 0 1px 0 0;
+    border-width: 1px 0 1px 1px;
   }
 
   .f-button {
