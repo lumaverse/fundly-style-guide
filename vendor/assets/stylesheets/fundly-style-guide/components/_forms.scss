@@ -127,17 +127,27 @@ input[type='radio']:checked {
 .f-input-decorator {
   display: table;
   width: 100%;
+  overflow: hidden;
 
   input {
     display: table-cell;
     width: 100%;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: inherit;
+  }
+
+  input:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  input:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
 }
 
 .f-decorator {
   display: table-cell;
+  width: 1%;
   padding: 0 0.5em;
   font-size: inherit;
   line-height: inherit;
@@ -147,8 +157,9 @@ input[type='radio']:checked {
     style: solid;
     width: 1px;
   }
-  width: 1%;
   vertical-align: middle;
+  border-radius: inherit;
+  overflow: hidden;
 
   &.none {
     padding: 0;
@@ -163,16 +174,21 @@ input[type='radio']:checked {
     padding: 0 1em;
   }
 
-  &:last-child {
-    border-width: 1px 1px 1px 0;
-  }
   &:first-child {
     border-width: 1px 0 1px 1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  &:last-child {
+    border-width: 1px 1px 1px 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
 
   .f-button {
     border-radius: 0;
     border: none;
+    white-space: nowrap;
   }
 }
 
