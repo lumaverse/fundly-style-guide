@@ -155,7 +155,7 @@
     color: $f-color-white;
     &:before {
       font-family: FundlyIcons;
-      content: "\e612";
+      content: $f-icon-var-whats-app;
     }
   }
 }
