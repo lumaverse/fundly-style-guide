@@ -91,13 +91,17 @@
   }
 
   &.facebook, &.twitter, &.google, &.linkedin,
-  &.pinterest, &.email, &.youtube {
+  &.pinterest, &.email, &.youtube, &.whats-app {
     &:before {
       font: {
         family: FontAwesome;
         size: 1.20em;
       }
       margin-right: 0.5em;
+      // Setting the line-height fixes a Chrome issue when it's being wrapped
+      // within the .f-decorator class. Without the line-height, it
+      // adds a pixel to the height of the button
+      line-height: normal;
     }
     &:empty:before {
       margin-right: 0;
@@ -148,6 +152,14 @@
   &.email {
     &:before {
       content: $fa-var-envelope;
+    }
+  }
+  &.whats-app {
+    background-color: $f-color-whats-app;
+    color: $f-color-white;
+    &:before {
+      font-family: FundlyIcons;
+      content: "\e612";
     }
   }
 }
