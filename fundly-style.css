@@ -1283,8 +1283,8 @@ Fundly Style Guide compiled for use in front-end contexts.
 
 @font-face {
   font-family: 'FundlyIcons';
-  src: url('./fonts/fundly-icons.eot?v=0.2.0');
-  src: url('./fonts/fundly-icons.eot?v=0.2.0#iefix') format('embedded-opentype'), url('./fonts/fundly-icons.woff?v=0.2.0') format('woff'), url('./fonts/fundly-icons.ttf?v=0.2.0') format('truetype'), url('./fonts/fundly-icons.svg?v=0.2.0#fundlyicons') format('svg');
+  src: url('./fonts/fundly-icons.eot?v=0.3.0');
+  src: url('./fonts/fundly-icons.eot?v=0.3.0#iefix') format('embedded-opentype'), url('./fonts/fundly-icons.woff?v=0.3.0') format('woff'), url('./fonts/fundly-icons.ttf?v=0.3.0') format('truetype'), url('./fonts/fundly-icons.svg?v=0.3.0#fundlyicons') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -1352,6 +1352,9 @@ Fundly Style Guide compiled for use in front-end contexts.
 
 .f-icon-animal:before {
   content: "\e611"; }
+
+.f-icon-whats-app:before {
+  content: "\e612"; }
 
 .f-icon-lg {
   font-size: 1.33333em;
@@ -2110,6 +2113,36 @@ a {
 .f-b-pinterest, [class*="f-b-pinterest"], .f-hr-pinterest {
   border-color: #cb2027; }
 
+.f-fc-whats-app, .f-fc-hover-whats-app:hover {
+  color: #60B82D; }
+
+.f-bg-whats-app, .f-bg-hover-whats-app:hover {
+  background-color: #60B82D;
+  color: #e7eaed; }
+
+.f-bg-whats-app-o-xlight {
+  background-color: rgba(96, 184, 45, 0.25);
+  color: #e7eaed; }
+
+.f-bg-whats-app-o-light {
+  background-color: rgba(96, 184, 45, 0.5);
+  color: #e7eaed; }
+
+.f-bg-whats-app-o-medium {
+  background-color: rgba(96, 184, 45, 0.75);
+  color: #e7eaed; }
+
+.f-bg-whats-app-o-dark {
+  background-color: rgba(96, 184, 45, 0.85);
+  color: #e7eaed; }
+
+.f-bg-whats-app-o-xdark {
+  background-color: rgba(96, 184, 45, 0.95);
+  color: #e7eaed; }
+
+.f-b-whats-app, [class*="f-b-whats-app"], .f-hr-whats-app {
+  border-color: #60B82D; }
+
 .f-fc-success, .f-fc-hover-success:hover {
   color: green; }
 
@@ -2275,8 +2308,11 @@ input, button, select, textarea {
 .f-fw-thin {
   font-weight: 100; }
 
-.f-fw-normal {
+.f-fw-light {
   font-weight: 300; }
+
+.f-fw-normal {
+  font-weight: 400; }
 
 .f-fw-medium {
   font-weight: 500; }
@@ -2765,20 +2801,24 @@ a {
 .f-flex-align-right {
   margin-left: auto; }
 
-.f-grid-row:before, .f-grid-row:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-.f-grid-row:after {
-  clear: both; }
-
 .f-grid-1of12 {
   width: 8.33333%;
   min-height: 1px; }
 
 .f-grid-row > .f-grid-1of12 {
   float: left; }
+
+.f-grid-row.spaced-small > .f-grid-1of12 {
+  width: 6.5%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-1of12 {
+  width: 4.66667%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-1of12 {
+  width: 2.83333%;
+  margin-left: 6%; }
 
 .f-grid-2of12 {
   width: 16.66667%;
@@ -2787,12 +2827,36 @@ a {
 .f-grid-row > .f-grid-2of12 {
   float: left; }
 
+.f-grid-row.spaced-small > .f-grid-2of12 {
+  width: 15%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-2of12 {
+  width: 13.33333%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-2of12 {
+  width: 11.66667%;
+  margin-left: 6%; }
+
 .f-grid-3of12 {
   width: 25%;
   min-height: 1px; }
 
 .f-grid-row > .f-grid-3of12 {
   float: left; }
+
+.f-grid-row.spaced-small > .f-grid-3of12 {
+  width: 23.5%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-3of12 {
+  width: 22%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-3of12 {
+  width: 20.5%;
+  margin-left: 6%; }
 
 .f-grid-4of12 {
   width: 33.33333%;
@@ -2801,12 +2865,36 @@ a {
 .f-grid-row > .f-grid-4of12 {
   float: left; }
 
+.f-grid-row.spaced-small > .f-grid-4of12 {
+  width: 32%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-4of12 {
+  width: 30.66667%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-4of12 {
+  width: 29.33333%;
+  margin-left: 6%; }
+
 .f-grid-5of12 {
   width: 41.66667%;
   min-height: 1px; }
 
 .f-grid-row > .f-grid-5of12 {
   float: left; }
+
+.f-grid-row.spaced-small > .f-grid-5of12 {
+  width: 40.5%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-5of12 {
+  width: 39.33333%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-5of12 {
+  width: 38.16667%;
+  margin-left: 6%; }
 
 .f-grid-6of12 {
   width: 50%;
@@ -2815,12 +2903,36 @@ a {
 .f-grid-row > .f-grid-6of12 {
   float: left; }
 
+.f-grid-row.spaced-small > .f-grid-6of12 {
+  width: 49%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-6of12 {
+  width: 48%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-6of12 {
+  width: 47%;
+  margin-left: 6%; }
+
 .f-grid-7of12 {
   width: 58.33333%;
   min-height: 1px; }
 
 .f-grid-row > .f-grid-7of12 {
   float: left; }
+
+.f-grid-row.spaced-small > .f-grid-7of12 {
+  width: 57.5%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-7of12 {
+  width: 56.66667%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-7of12 {
+  width: 55.83333%;
+  margin-left: 6%; }
 
 .f-grid-8of12 {
   width: 66.66667%;
@@ -2829,12 +2941,36 @@ a {
 .f-grid-row > .f-grid-8of12 {
   float: left; }
 
+.f-grid-row.spaced-small > .f-grid-8of12 {
+  width: 66%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-8of12 {
+  width: 65.33333%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-8of12 {
+  width: 64.66667%;
+  margin-left: 6%; }
+
 .f-grid-9of12 {
   width: 75%;
   min-height: 1px; }
 
 .f-grid-row > .f-grid-9of12 {
   float: left; }
+
+.f-grid-row.spaced-small > .f-grid-9of12 {
+  width: 74.5%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-9of12 {
+  width: 74%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-9of12 {
+  width: 73.5%;
+  margin-left: 6%; }
 
 .f-grid-10of12 {
   width: 83.33333%;
@@ -2843,6 +2979,18 @@ a {
 .f-grid-row > .f-grid-10of12 {
   float: left; }
 
+.f-grid-row.spaced-small > .f-grid-10of12 {
+  width: 83%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-10of12 {
+  width: 82.66667%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-10of12 {
+  width: 82.33333%;
+  margin-left: 6%; }
+
 .f-grid-11of12 {
   width: 91.66667%;
   min-height: 1px; }
@@ -2850,12 +2998,36 @@ a {
 .f-grid-row > .f-grid-11of12 {
   float: left; }
 
+.f-grid-row.spaced-small > .f-grid-11of12 {
+  width: 91.5%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-11of12 {
+  width: 91.33333%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-11of12 {
+  width: 91.16667%;
+  margin-left: 6%; }
+
 .f-grid-12of12 {
   width: 100%;
   min-height: 1px; }
 
 .f-grid-row > .f-grid-12of12 {
   float: left; }
+
+.f-grid-row.spaced-small > .f-grid-12of12 {
+  width: 100%;
+  margin-left: 2%; }
+
+.f-grid-row.spaced-medium > .f-grid-12of12 {
+  width: 100%;
+  margin-left: 4%; }
+
+.f-grid-row.spaced-large > .f-grid-12of12 {
+  width: 100%;
+  margin-left: 6%; }
 
 .f-grid-1of12-offset {
   margin-left: 8.33333%; }
@@ -2889,6 +3061,16 @@ a {
 
 .f-grid-11of12-offset {
   margin-left: 91.66667%; }
+
+.f-grid-row:before, .f-grid-row:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.f-grid-row:after {
+  clear: both; }
+.f-grid-row[class*='spaced-'] > *:first-child {
+  margin-left: 0; }
 
 [class*='f-spaced-grid-']:before, [class*='f-spaced-grid-']:after {
   content: " ";
@@ -3546,15 +3728,13 @@ input[type='radio']:checked {
     border-radius: 100%; }
 
 .f-input-decorator {
-  border: 1px solid #b8bbbd;
-  border-radius: 2px;
   display: table;
   width: 100%; }
   .f-input-decorator input {
     display: table-cell;
     width: 100%;
-    border: none;
-    border-radius: 0; }
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
 
 .f-decorator {
   display: table-cell;
@@ -3576,9 +3756,9 @@ input[type='radio']:checked {
   .f-decorator.large {
     padding: 0 1em; }
   .f-decorator:last-child {
-    border-width: 0 0 0 1px; }
+    border-width: 1px 1px 1px 0; }
   .f-decorator:first-child {
-    border-width: 0 1px 0 0; }
+    border-width: 1px 0 1px 1px; }
   .f-decorator .f-button {
     border-radius: 0;
     border: none; }
@@ -3755,11 +3935,12 @@ li {
   .f-button.swatchfive {
     background-color: #2B2B3F;
     color: white; }
-  .f-button.facebook:before, .f-button.twitter:before, .f-button.google:before, .f-button.linkedin:before, .f-button.pinterest:before, .f-button.email:before, .f-button.youtube:before {
+  .f-button.facebook:before, .f-button.twitter:before, .f-button.google:before, .f-button.linkedin:before, .f-button.pinterest:before, .f-button.email:before, .f-button.youtube:before, .f-button.whats-app:before {
     font-family: FontAwesome;
     font-size: 1.2em;
-    margin-right: 0.5em; }
-  .f-button.facebook:empty:before, .f-button.twitter:empty:before, .f-button.google:empty:before, .f-button.linkedin:empty:before, .f-button.pinterest:empty:before, .f-button.email:empty:before, .f-button.youtube:empty:before {
+    margin-right: 0.5em;
+    line-height: normal; }
+  .f-button.facebook:empty:before, .f-button.twitter:empty:before, .f-button.google:empty:before, .f-button.linkedin:empty:before, .f-button.pinterest:empty:before, .f-button.email:empty:before, .f-button.youtube:empty:before, .f-button.whats-app:empty:before {
     margin-right: 0; }
   .f-button.facebook {
     background-color: #395b98;
@@ -3793,6 +3974,12 @@ li {
       content: "\f0d2"; }
   .f-button.email:before {
     content: "\f0e0"; }
+  .f-button.whats-app {
+    background-color: #60B82D;
+    color: white; }
+    .f-button.whats-app:before {
+      font-family: FundlyIcons;
+      content: "\e612"; }
 
 .f-popup {
   position: absolute;
