@@ -82,6 +82,7 @@ a {
 @include make-color-set('google',      $f-color-google);
 @include make-color-set('linkedin',    $f-color-linkedin);
 @include make-color-set('pinterest',   $f-color-pinterest);
+@include make-color-set('whats-app',   $f-color-whats-app);
 
 // Application state colors
 @include make-color-set('success',     $f-color-success);
