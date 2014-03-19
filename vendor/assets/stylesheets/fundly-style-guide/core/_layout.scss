@@ -201,6 +201,14 @@ iframe { border: none; }
   margin: auto;
 }
 
+.f-cover-viewport {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 // Basic positioning (ie: no assumptions on positioning type)
 .f-top-left { top: 0; left: 0 }
