@@ -2411,6 +2411,9 @@ a {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+iframe {
+  border: none; }
+
 .f-page-container {
   width: 960px;
   margin-left: auto;
