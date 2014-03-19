@@ -40,22 +40,22 @@
       <p>The style guide supports the concept of themes. Three colors can be set as part of the theme: Primary, AppRibbon, Footer</p>
       <p>Click one of the following themes to see its effect:</p>
       <div class="f-content-spacing-large f-p-large">
-        <div class="js-theme f-ilb f-br-medium f-clickable" style="width: 80px; height: 120px">
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
           <div style="height:33%; background-color: #E0FFB3"></div>
           <div style="height:33%; background-color: #61C791"></div>
           <div style="height:33%; background-color: #31797D"></div>
         </div>
-        <div class="js-theme f-ilb f-br-medium f-clickable" style="width: 80px; height: 120px">
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
           <div style="height:33%; background-color: #343844"></div>
           <div style="height:33%; background-color: #2AB69D"></div>
           <div style="height:33%; background-color: #E65848"></div>
         </div>
-        <div class="js-theme f-ilb f-br-medium f-clickable" style="width: 80px; height: 120px">
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
           <div style="height:33%; background-color: #F34A53"></div>
           <div style="height:33%; background-color: #FAE3B4"></div>
           <div style="height:33%; background-color: #AAC789"></div>
         </div>
-        <div class="js-theme f-ilb f-br-medium f-clickable" style="width: 80px; height: 120px">
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
           <div style="height:33%; background-color: #045274"></div>
           <div style="height:33%; background-color: #0586A6"></div>
           <div style="height:33%; background-color: #31ADC2"></div>
@@ -324,12 +324,12 @@
           <p>Line heights are indexed to their contents font-size.</p>
         </div>
         <div class="f-grid-8of12">
-          <p class="f-fs-medium f-bg-swatchtwo f-m-b-xsmall f-lh-xsmall">.f-lh-xsmall</p>
-          <p class="f-fs-medium f-bg-swatchtwo f-m-b-xsmall f-lh-small">.f-lh-small</p>
-          <p class="f-fs-medium f-bg-swatchtwo f-m-b-xsmall f-lh-medium">.f-lh-medium</p>
-          <p class="f-fs-medium f-bg-swatchtwo f-m-b-xsmall f-lh-large">.f-lh-large</p>
-          <p class="f-fs-medium f-bg-swatchtwo f-m-b-xsmall f-lh-xlarge">.f-lh-xlarge</p>
-          <p class="f-fs-medium f-bg-swatchtwo f-m-b-xsmall f-lh-xxlarge">.f-lh-xxlarge</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-xsmall">.f-lh-xsmall</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-small">.f-lh-small</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-medium">.f-lh-medium</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-large">.f-lh-large</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-xlarge">.f-lh-xlarge</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-xxlarge">.f-lh-xxlarge</p>
         </div>
       </div>
     </section>
@@ -819,13 +819,13 @@
               </div>
             </div>
             <div class="f-m-t-medium">
-              <div class="f-input-decorator f-fs-medium f-m-b-large f-b-black f-br-medium">
+              <div class="f-input-decorator f-fs-medium f-m-b-large f-br-medium">
                 <input class="f-bg-xlight f-font-condensed" name="email" placeholder=".f-decorator with button as decorator item" type="email">
                 <div class="f-decorator none">
                   <button class="f-button swatchone f-clickable">Submit</button>
                 </div>
               </div>
-              <div class="f-input-decorator f-fs-large f-m-b-large f-b-black f-br-small">
+              <div class="f-input-decorator f-fs-large f-m-b-large f-br-small">
                 <div class="f-decorator none">
                   <a class="f-button swatchone f-clickable">Tell Me!</a>
                 </div>
@@ -910,14 +910,14 @@
       <p>Lists come in two flavours: normal and inline. You can also add bullets if needed and turn off the hover effect (.no-hover).</p>
 
       <h3 class="f-m-t-large">.f-list</h3>
-      <ul class="f-list f-ilb f-tl f-bg-xlight-o-dark">
+      <ul class="f-list f-font-condensed f-ilb f-tl f-bg-xlight-o-dark">
         <li>Something Else</li>
         <li>Something Entirely</li>
         <li>Something I have never seen before!</li>
       </ul>
 
       <h3 class="f-m-t-large">.f-list.no-padding</h3>
-      <ul class="f-list no-padding f-ilb f-tl f-bg-xlight-o-dark">
+      <ul class="f-list f-font-condensed  no-padding f-ilb f-tl f-bg-xlight-o-dark">
         <li>Something Else</li>
         <li>Something Entirely</li>
         <li>Something I have never seen before!</li>
@@ -925,14 +925,14 @@
 
       <h3 class="f-m-t-large">.f-list.f-b-primary</h3>
       <p>Set a border color to get dividers to appear</p>
-      <ul class="f-list f-ilb f-tl f-bg-dark f-b-primary">
+      <ul class="f-list f-font-condensed  f-ilb f-tl f-bg-dark f-b-primary">
         <li>Something Else</li>
         <li>Something Entirely</li>
         <li>Something I have never seen before!</li>
       </ul>
 
       <h3 class="f-m-t-large">.f-list.bulleted.no-hover</h3>
-      <ul class="f-list bulleted no-hover f-ilb f-tl f-bg-xlight-o-dark">
+      <ul class="f-list f-font-condensed  bulleted no-hover f-ilb f-tl f-bg-xlight-o-dark">
         <li>Something Else</li>
         <li>Something Entirely</li>
         <li>Something I have never seen before!</li>
@@ -940,7 +940,7 @@
 
       <h3 class="f-m-t-large">.f-list-inline</h3>
       <div class="f-ilb">
-        <ul class="f-list-inline f-tl f-bg-xlight f-b-black">
+        <ul class="f-list-inline f-font-condensed f-tl f-bg-xlight f-b-black">
           <li>Something Else</li>
           <li>Something Entirely</li>
           <li>Something I have never seen before!</li>
@@ -1046,26 +1046,6 @@
           <a href="#" class="f-avatar-xsmall facebook" style="background-image: url(http://graph.facebook.com/528533108/picture)"></a>
           <p>.f-avatar-small.facebook</p>
         </div>
-      </div>
-<!--       <div class="f-grid-row f-tc f-m-t-xlarge">
-        <div class="f-ilb">
-          <div class="f-ilb" style="width:50px; height: 50px">
-            <a href="#" class="f-avatar-fill fb" style="background-image: url(http://graph.facebook.com/528533108/picture?width=200&amp;height=200)"></a>
-          </div>
-          <p>.f-avatar-fill.fb</p>
-        </div>
-        <div class="f-ilb">
-          <div class="f-ilb" style="width:125px; height:125px">
-            <a href="#" class="f-avatar-fill fb" style="background-image: url(http://graph.facebook.com/528533108/picture?width=200&amp;height=200)"></a>
-          </div>
-          <p>.f-avatar-fill.fb</p>
-        </div>
-        <div class="f-ilb">
-          <div class="f-ilb" style="width:300px; height:300px">
-            <a href="#" class="f-avatar-fill fb" style="background-image: url(http://graph.facebook.com/528533108/picture?width=200&amp;height=200)"></a>
-          </div>
-          <p>.f-avatar-fill.fb</p>
-        </div> -->
       </div>
     </section>
 
