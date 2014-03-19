@@ -201,10 +201,17 @@ iframe { border: none; }
   margin: auto;
 }
 
-.f-cover-viewport {
+.f-fullbleed {
   height: 100%;
   width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+}
+.f-fullbleed-fixed {
+  height: 100%;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
 }
