@@ -1,0 +1,61 @@
+.f-content-section {
+  text-align: left;
+  color: $f-color-black;
+  padding: $f-spacing-large;
+
+  h2 {
+    font-size: $f-fs-h3;
+    margin: {
+      bottom: $f-spacing-large;
+    }
+  }
+
+  p {
+    margin: {
+      top: $f-spacing-small;
+      bottom: $f-spacing-medium;
+    }
+  }
+
+  p, li {
+    font: {
+      family: $f-font-condensed;
+      size: $f-fs-large;
+      weight: 300;
+    }
+  }
+
+  a {
+    font-weight: normal;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong, b {
+    font-weight: 700;
+  }
+
+  i, em {
+    font: {
+      style: italic;
+      weight: 300;
+    }
+  }
+
+  li {
+    margin-left: $f-spacing-small;
+  }
+
+  li:before {
+    content: $fa-var-circle;
+    font: {
+      family: FontAwesome;
+      size: 0.5em;
+    }
+    line-height: 1;
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+}
