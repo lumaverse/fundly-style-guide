@@ -13,7 +13,8 @@
   }
 
   ul {
-    padding-left: $f-spacing-medium;
+    margin-left: $f-spacing-small;
+    padding-left: $f-spacing-xlarge;
   }
 
   p, ul {
@@ -29,6 +30,10 @@
       size: $f-fs-large;
       weight: 300;
     }
+  }
+
+  li {
+    list-style: disc;
   }
 
   a {
@@ -51,18 +56,4 @@
     }
   }
 
-  li {
-    margin-left: $f-spacing-small;
-  }
-
-  li:before {
-    content: $fa-var-circle;
-    font: {
-      family: FontAwesome;
-      size: 0.5em;
-    }
-    line-height: 1;
-    vertical-align: middle;
-    margin-right: 1em;
-  }
 }
