@@ -4493,20 +4493,23 @@ li {
 
 .f-content-section {
   text-align: left;
-  color: black;
-  padding: 24px; }
+  color: black; }
   .f-content-section h2 {
     font-size: 24px;
     margin-bottom: 24px; }
-  .f-content-section p {
+  .f-content-section ul {
+    padding-left: 20px; }
+  .f-content-section p, .f-content-section ul {
     margin-top: 14px;
     margin-bottom: 20px; }
   .f-content-section p, .f-content-section li {
+    line-height: 1.5em;
     font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 300; }
   .f-content-section a {
-    font-weight: normal; }
+    font-weight: 300;
+    color: #59CAE9; }
   .f-content-section a:hover {
     text-decoration: underline; }
   .f-content-section strong, .f-content-section b {
