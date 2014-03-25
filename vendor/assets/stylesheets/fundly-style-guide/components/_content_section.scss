@@ -1,7 +1,6 @@
 .f-content-section {
   text-align: left;
   color: $f-color-black;
-  padding: $f-spacing-large;
 
   h2 {
     font-size: $f-fs-h3;
@@ -10,7 +9,11 @@
     }
   }
 
-  p {
+  ul {
+    padding-left: $f-spacing-medium;
+  }
+
+  p, ul {
     margin: {
       top: $f-spacing-small;
       bottom: $f-spacing-medium;
@@ -18,6 +21,7 @@
   }
 
   p, li {
+    line-height: 1.5em;
     font: {
       family: $f-font-condensed;
       size: $f-fs-large;
@@ -26,7 +30,8 @@
   }
 
   a {
-    font-weight: normal;
+    font-weight: 300;
+    color: $f-color-swatch-one;
   }
 
   a:hover {
