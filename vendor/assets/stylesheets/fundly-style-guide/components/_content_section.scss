@@ -4,9 +4,7 @@
 
   h2 {
     font-size: $f-fs-h3;
-    margin: {
-      bottom: $f-spacing-xsmall;
-    }
+    line-height: 1.35em;
     padding: {
       top: $f-spacing-medium;
     }
@@ -19,12 +17,12 @@
 
   p, ul {
     margin: {
-      bottom: $f-spacing-medium;
+      top: $f-spacing-medium;
     }
   }
 
   p, li {
-    line-height: 1.5em;
+    line-height: 1.35em;
     font: {
       family: $f-font-condensed;
       size: $f-fs-large;
