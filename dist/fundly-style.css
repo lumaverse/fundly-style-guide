@@ -3255,7 +3255,25 @@ iframe {
   overflow-x: hidden; }
 
 .f-of-hidden-y {
-  overflow-x: hidden; }
+  overflow-y: hidden; }
+
+.f-of-scroll {
+  overflow: scroll; }
+
+.f-of-scroll-x {
+  overflow-x: scroll; }
+
+.f-of-scroll-y {
+  overflow-y: scroll; }
+
+.f-of-visible {
+  overflow: visible; }
+
+.f-of-visible-x {
+  overflow-x: visible; }
+
+.f-of-visible-y {
+  overflow-y: visible; }
 
 .f-br-none {
   border-radius: 0; }
@@ -3750,19 +3768,23 @@ input, textarea, select {
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
     padding: inherit 0;
     line-height: inherit;
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: none; }
   input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
     padding: inherit 0;
     line-height: inherit;
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: none; }
   input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
     padding: inherit 0;
     line-height: inherit;
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: none; }
   input::placeholder, textarea::placeholder, select::placeholder {
     padding: inherit 0;
     line-height: inherit;
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: none; }
 
 input, textarea {
   -webkit-transition: all 0.3s linear;
