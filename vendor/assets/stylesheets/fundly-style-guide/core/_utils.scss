@@ -23,7 +23,24 @@
 .f-of-hidden-y {
   overflow-y: hidden;
 }
-
+.f-of-scroll {
+  overflow: scroll;
+}
+.f-of-scroll-x {
+  overflow-x: scroll;
+}
+.f-of-scroll-y {
+  overflow-y: scroll;
+}
+.f-of-visible {
+  overflow: visible;
+}
+.f-of-visible-x {
+  overflow-x: visible;
+}
+.f-of-visible-y {
+  overflow-y: visible;
+}
 
 // Border radius
 .f-br-none {
