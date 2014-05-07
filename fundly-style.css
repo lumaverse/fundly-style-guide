@@ -1283,8 +1283,8 @@ Fundly Style Guide compiled for use in front-end contexts.
 
 @font-face {
   font-family: 'FundlyIcons';
-  src: url('./fonts/fundly-icons.eot?v=0.3.0');
-  src: url('./fonts/fundly-icons.eot?v=0.3.0#iefix') format('embedded-opentype'), url('./fonts/fundly-icons.woff?v=0.3.0') format('woff'), url('./fonts/fundly-icons.ttf?v=0.3.0') format('truetype'), url('./fonts/fundly-icons.svg?v=0.3.0#fundlyicons') format('svg');
+  src: url('./fonts/fundly-icons.eot?v=0.3.1');
+  src: url('./fonts/fundly-icons.eot?v=0.3.1#iefix') format('embedded-opentype'), url('./fonts/fundly-icons.woff?v=0.3.1') format('woff'), url('./fonts/fundly-icons.ttf?v=0.3.1') format('truetype'), url('./fonts/fundly-icons.svg?v=0.3.1#fundlyicons') format('svg');
   font-weight: normal;
   font-style: normal; }
 
