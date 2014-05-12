@@ -74,7 +74,11 @@ Avatars: come in 5 sizes and can be decorated with a range of social badges
   height: 40px;
   font-size: 4px;
 }
-
+.f-avatar-xxsmall {
+  width: 25px;
+  height: 25px;
+  font-size: 2px;
+}
 .f-avatar-fill {
   width: 100%;
   height: 100%;
