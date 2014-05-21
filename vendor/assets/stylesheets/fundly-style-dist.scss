@@ -26,3 +26,7 @@ $f-icon-path: "./fonts/";
 
 // Install the plugins
 @import "fundly-style-guide/plugins/index";
+
+
+// Install the responsive utilities last so they can override any selectors
+@import "fundly-style-guide/core/responsive";

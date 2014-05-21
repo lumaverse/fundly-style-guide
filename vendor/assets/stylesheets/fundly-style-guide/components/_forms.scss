@@ -121,6 +121,12 @@ input[type='radio']:checked {
   }
 }
 
+input[type='color'] {
+  padding: 0.1em 0.2em;
+  height: 2.5em;
+  cursor: pointer;
+}
+
 .f-input-decorator {
   display: table;
   width: 100%;
@@ -186,6 +192,10 @@ input[type='radio']:checked {
     border-radius: 0;
     border: none;
     white-space: nowrap;
+  }
+
+  input[type='color'] {
+    border: none;
   }
 }
 
