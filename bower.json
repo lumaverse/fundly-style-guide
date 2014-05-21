@@ -1,6 +1,6 @@
 {
   "name": "fundly-style-guide",
-  "version": "0.16.5",
+  "version": "0.17.0",
   "authors": [
     "jimmynicol <james@fundly.com>"
   ],
@@ -17,7 +17,7 @@
   "main": "dist/fundly-style.css",
   "dependencies": {
     "sass-bootstrap": "~3.0.0",
-    "font-awesome": "~4.0.3",
+    "font-awesome": "~4.1.0",
     "hint.css": "~1.3.1",
     "fundly-icon-font": "~0.3.0"
   },
