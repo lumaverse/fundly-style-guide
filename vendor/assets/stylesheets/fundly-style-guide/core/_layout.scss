@@ -274,9 +274,15 @@ iframe { border: none; }
 }
 
 // Flexbox utilities
-// - these pages are very helpful in understanding flexbox
+//
+// these pages are very helpful in understanding flexbox:
 //    - http://www.sketchingwithcss.com/samplechapter/cheatsheet.html
 //    - http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+// make a container flexible
+.f-flex { display: flex }
+
+// align children of a parent element in the x and y directions
 .f-flex-center {
   display: flex;
   align-items: center;
@@ -290,6 +296,35 @@ iframe { border: none; }
   display: flex;
   justify-content: center;
 }
-.f-flex-align-right {
-  margin-left: auto;
-}
+
+// use to right align a child of a flex-center, flex-center-y
+.f-flex-align-right { margin-left: auto; }
+
+// make all children of f-flex to fill the vertical space
+.f-flex-children-stretch { align-items: stretch }
+
+// make the children of f-flex fill horizontal space, with first element on the
+// left edge, and the last child on the right edge. Apply this in addition to
+// f-flex
+.f-flex-children-spread { justify-content: space-between }
+
+// left or right align all children of f-flex
+.f-flex-children-l { justify-content: flex-start }
+.f-flex-children-r { justify-content: flex-end }
+
+// align children of f-flex to top or bottom of parent
+.f-flex-children-t { align-items: flex-start }
+.f-flex-children-b { align-items: flex-end }
+
+// apply to a f-flex child to make it fill the available space, useful for
+// instance when you need the center element to fill the space while the first
+// and last elements set to their respective edges.
+.f-flex-self-expand { flex: 1 }
+
+// apply to f-flex child to fill vertical space
+.f-flex-self-stretch { align-self: stretch }
+
+// individually align a f-flex child in the y direction
+.f-flex-self-t { align-self: flex-start }
+.f-flex-self-b { align-self: flex-end }
+.f-flex-self-c { align-self: center }
