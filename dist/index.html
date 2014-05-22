@@ -1,0 +1,1237 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Style Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic|Roboto+Condensed:700,700italic,400,400italic,300,300italic|Roboto+Slab:100,300,400,700">
+    <link rel="stylesheet" href="fundly-style.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <style id="theme-target"></style>
+  </head>
+  <body data-spy="scroll" data-target=".js-section-list">
+    <header class="f-appribbon">
+      <div class="f-appribbon-brand" style="width: 45px">
+        <iframe class="f-fl f-m-r-medium" src="https://d2wwhrh9otv6z9.cloudfront.net/logo.html" frameborder="0"></iframe>
+      </div>
+      <h1 class="f-appribbon-element">Style Guide</h1>
+      <div class="f-appribbon-element f-fr">
+        <ul class="f-list-inline vertical-fill js-section-list f-font-condensed f-fs-xsmall f-b-xlight"></ul>
+      </div>
+    </header>
+    <div class="f-appribbon-padding"></div>
+
+    <a href="https://github.com/fundly/style-guide"><img style="position: absolute; top: 60px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    <section id="home" class="f-tc f-p-xlarge">
+      <h2>About</h2>
+      <p>The style guide is a CSS framework that forms the base of styling for all Fundly products (<a href="http://fundly.com">Fundly.com</a> etc.)</p>
+      <p>The <strong>Atomic CSS</strong> principles used in this framework were deeply inspired by this <a href="http://coding.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/">article</a>.</p>
+
+      <h3 class="f-m-t-large">Repo</h3>
+      <p><a href="https://github.com/fundly/style-guide">https://github.com/fundly/style-guide</a></p>
+
+      <h3 class="f-m-t-large">Themes</h3>
+      <p>The style guide supports the concept of themes. Three colors can be set as part of the theme: Primary, AppRibbon, Footer</p>
+      <p>Click one of the following themes to see its effect:</p>
+      <div class="f-content-spacing-large f-p-large">
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+          <div style="height:33%; background-color: #E0FFB3"></div>
+          <div style="height:33%; background-color: #61C791"></div>
+          <div style="height:33%; background-color: #31797D"></div>
+        </div>
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+          <div style="height:33%; background-color: #343844"></div>
+          <div style="height:33%; background-color: #2AB69D"></div>
+          <div style="height:33%; background-color: #E65848"></div>
+        </div>
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+          <div style="height:33%; background-color: #F34A53"></div>
+          <div style="height:33%; background-color: #FAE3B4"></div>
+          <div style="height:33%; background-color: #AAC789"></div>
+        </div>
+        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+          <div style="height:33%; background-color: #045274"></div>
+          <div style="height:33%; background-color: #0586A6"></div>
+          <div style="height:33%; background-color: #31ADC2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="color" class="f-p-xlarge f-tc">
+      <h2>Color</h2>
+      <div class="f-grid-row f-page-container">
+        <p class="f-m-t-xlarge">Colors can be applied by the following selectors:</p>
+        <ul class="f-ilb f-tl">
+          <li><strong>.f-fc-{KEY}</strong> - Font Color</li>
+          <li><strong>.f-fc-hover-{KEY}</strong> - Font Color (hover)</li>
+          <li><strong>.f-bg-{KEY}</strong> - Background Color</li>
+          <li><strong>.f-bg-hover-{KEY}</strong> - Background Color (hover)</li>
+          <li><strong>.f-bg-{KEY}-o-{OPACITY_KEY}</strong> - Background Color with opacity</li>
+          <li><strong>.f-b-{KEY}</strong> - Border Color</li>
+          <li><strong>.f-hr-{KEY}</strong> - Horizontal Rule Color</li>
+        </ul>
+      </div>
+
+      <p class="f-m-xlarge">Most core action buttons and highlights use the <strong>Primary</strong> color.</p>
+      <div class="f-grid-row f-m-t-large">
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-primary" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">primary</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="f-m-t-xlarge">We also have a 5 color swatch to chose from:</p>
+      <div class="f-grid-row f-m-t-large">
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchone" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchone</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchtwo" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchtwo</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchthree" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchthree</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchfour" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchfour</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-swatchfive" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchfive</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="f-m-t-xlarge">Black and White:</p>
+      <div class="f-grid-row f-m-t-xlarge">
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-white" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">white</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-black" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">black</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="f-m-t-xlarge">A color range from light to dark:</p>
+      <div class="f-grid-row f-m-t-xlarge">
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-xlight" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">xlight</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-light" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">light</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-medium" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">medium</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-dark" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">dark</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-xdark" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">xdark</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="f-m-t-xlarge">A range of social network colors:</p>
+      <div class="f-grid-row f-m-t-xlarge">
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-facebook" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">facebook</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-twitter" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">twitter</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-google" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">google</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-linkedin" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">linkedin</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-pinterest" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">pinterest</span>
+          </p>
+        </div>
+        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+          <div class="f-bg-whats-app" style="height: 100px; width: 125px"></div>
+          <p class="f-p-small f-tc">
+            <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">whats-app</span>
+          </p>
+        </div>
+      </div>
+      <h2 class="f-m-t-large">Opacity</h2>
+      <p>The rules for opacity are: <strong>.f-opacity-{KEY}</strong></p>
+      <div class="f-grid-row f-m-t-xlarge">
+        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-xlight">
+          <div class="f-bg-white" style="height: 100px; width: 125px"></div>
+          <p class="f-p-medium f-tc f-bg-light">
+            <span class="f-fs-xsmall">xlight</span>
+          </p>
+        </div>
+        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-light">
+          <div class="f-bg-white" style="height: 100px; width: 125px"></div>
+          <p class="f-p-medium f-tc f-bg-light">
+            <span class="f-fs-xsmall">light</span>
+          </p>
+        </div>
+        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-medium">
+          <div class="f-bg-white" style="height: 100px; width: 125px"></div>
+          <p class="f-p-medium f-tc f-bg-light">
+            <span class="f-fs-xsmall">medium</span>
+          </p>
+        </div>
+        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-dark">
+          <div class="f-bg-white" style="height: 100px; width: 125px"></div>
+          <p class="f-p-medium f-tc f-bg-light">
+            <span class="f-fs-xsmall">dark</span>
+          </p>
+        </div>
+        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-xdark">
+          <div class="f-bg-white" style="height: 100px; width: 125px"></div>
+          <p class="f-p-medium f-tc f-bg-light">
+            <span class="f-fs-xsmall">xdark</span>
+          </p>
+        </div>
+        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-full">
+          <div class="f-bg-white" style="height: 100px; width: 125px"></div>
+          <p class="f-p-medium f-tc f-bg-light">
+            <span class="f-fs-xsmall">full</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography" class="f-p-xlarge f-tc">
+      <h2>Typography</h2>
+      <p>The primary font used is <a href="http://www.google.com/fonts/specimen/Roboto">Roboto</a>. All the font weights are accessible via class.</p>
+      <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
+        <h3 class="f-grid-4of12">Families</h3>
+        <div class="f-grid-8of12 js-font-families">
+          <div class="f-grid-row f-m-b-xsmall f-fs-large f-font-main">
+            .f-font-main
+            (<span></span>)
+          </div>
+          <div class="f-grid-row f-m-b-xsmall f-fs-large f-font-condensed">
+            .f-font-condensed
+            (<span></span>)
+          </div>
+          <div class="f-grid-row f-m-b-xsmall f-fs-large f-font-monospace">
+            .f-font-monospace
+            (<span></span>)
+          </div>
+          <div class="f-grid-row f-m-b-xsmall f-fs-large f-font-serif">
+            .f-font-serif
+            (<span></span>)
+          </div>
+          <div class="f-grid-row f-m-b-xsmall f-fs-large f-font-sans-serif">
+            .f-font-sans-serif
+            (<span></span>)
+          </div>
+        </div>
+      </div>
+      <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
+        <div class="f-grid-4of12">
+          <h3>Headings</h3>
+          <p>All headings inherit the condensed family.</p>
+        </div>
+        <div class="f-grid-8of12">
+          <h1>Heading1</h1>
+          <h2>Heading2</h2>
+          <h3>Heading3</h3>
+          <h4>Heading4</h4>
+          <h5>Heading5</h5>
+          <h6>Heading6</h6>
+        </div>
+      </div>
+      <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
+        <h3 class="f-grid-4of12">Sizes</h3>
+        <div class="f-grid-8of12">
+          <p class="f-fs-xlarge">.f-fs-xlarge</p>
+          <p class="f-fs-large">.f-fs-large</p>
+          <p class="f-fs-medium">.f-fs-medium</p>
+          <p class="f-fs-small">.f-fs-small</p>
+          <p class="f-fs-xsmall">.f-fs-xsmall</p>
+        </div>
+      </div>
+      <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
+        <div class="f-grid-4of12 f-p-r-medium">
+          <h3>Weights</h3>
+          <p>Only the main font (Roboto) has all the weights. Condensed and Serif are missing specific weights.</p>
+        </div>
+        <div class="f-grid-8of12">
+          <p class="f-fw-ultrabold">.f-fw-ultrabold</p>
+          <p class="f-fw-bold">.f-fw-bold</p>
+          <p class="f-fw-medium">.f-fw-medium</p>
+          <p class="f-fw-normal">.f-fw-normal</p>
+          <p class="f-fw-thin">.f-fw-thin</p>
+        </div>
+      </div>
+      <div class="f-grid-row f-page-container f-tl f-m-t-xlarge">
+        <div class="f-grid-4of12 f-p-r-medium">
+          <h3>Line Heights</h3>
+          <p>Line heights are indexed to their contents font-size.</p>
+        </div>
+        <div class="f-grid-8of12">
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-xsmall">.f-lh-xsmall</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-small">.f-lh-small</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-medium">.f-lh-medium</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-large">.f-lh-large</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-xlarge">.f-lh-xlarge</p>
+          <p class="f-fs-medium f-font-condensed f-bg-swatchtwo f-m-b-xsmall f-lh-xxlarge">.f-lh-xxlarge</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="icons" class="f-p-xlarge f-tc">
+      <div class="f-page-container">
+        <h2>Icons</h2>
+        <h3 class="f-m-t-large">Font Awesome</h3>
+        <p>The style guide is deeply integrated with <a href="http://fontawesome.io/icons/" class="f-fc-primary">FontAwesome</a>.</p>
+        <h3 class="f-m-t-large">Fundly Icons</h3>
+        <p>There is also a Fundly specific set of icons available too as a font. These icons are a mixture of custom built and Iconmonstr.</p>
+        <p>The format of the icon class is: <strong>.f-icon-{SET}</strong>.</p>
+        <h4 class="f-m-t-large">Category Icons</h4>
+        <p>Each of theses icons represents one of the categories of campaign.</p>
+        <div class="f-grid-row f-m-t-large">
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-non-profit"></div>
+            <p class="f-fs-small">.f-icon-non-profit</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-community"></div>
+            <p class="f-fs-small">.f-icon-community</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-arts"></div>
+            <p class="f-fs-small">.f-icon-arts</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-education"></div>
+            <p class="f-fs-small">.f-icon-education</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-children"></div>
+            <p class="f-fs-small">.f-icon-children</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-other"></div>
+            <p class="f-fs-small">.f-icon-other</p>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large">
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-greek"></div>
+            <p class="f-fs-small">.f-icon-greek</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-health"></div>
+            <p class="f-fs-small">.f-icon-health</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-memorial"></div>
+            <p class="f-fs-small">.f-icon-memorial</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-animal"></div>
+            <p class="f-fs-small">.f-icon-animal</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-political"></div>
+            <p class="f-fs-small">.f-icon-politics</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-church"></div>
+            <p class="f-fs-small">.f-icon-church</p>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large">
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-run-walk-ride"></div>
+            <p class="f-fs-small">.f-icon-run-walk-ride</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-sports"></div>
+            <p class="f-fs-small">.f-icon-sports</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-trips"></div>
+            <p class="f-fs-small">.f-icon-trips</p>
+          </div>
+        </div>
+        <h4 class="f-m-t-large">General Icons</h4>
+        <p>Series of miscellaneous icons</p>
+        <div class="f-grid-row f-m-t-large">
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-logo-heart"></div>
+            <p class="f-fs-small">.f-icon-logo-heart</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-logo-knockout"></div>
+            <p class="f-fs-small">.f-icon-logo-knockout</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-location"></div>
+            <p class="f-fs-small">.f-icon-location</p>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-icon-2x f-icon-whats-app"></div>
+            <p class="f-fs-small">.f-icon-whats-app</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="layout" class="f-p-xlarge f-tc">
+      <div class="f-page-container">
+        <h2>Layout</h2>
+        <p>All layout spacing follows the convention: <strong>xsmall, small, medium, large, xlarge</strong>.</p>
+        <h3 class="f-m-t-large">Margin / Padding</h3>
+        <p><strong>Margin:</strong> .f-m-{KEY} or .f-m-{SIDE}-{KEY}.</p>
+        <p><strong>Padding:</strong> .f-p-{KEY} or .f-p-{SIDE}-{KEY}.</p>
+        <p>The values for side are: <strong>b</strong> (bottom), <strong>t</strong> (top), <strong>r</strong> (right), <strong>l</strong> (left)</p>
+        <div class="f-grid-row f-content-spacing-xsmall f-m-t-large">
+          <div class="f-ilb f-b-medium f-p-xsmall">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">xsmall</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-small">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">small</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-medium">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">medium</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-large">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">large</p>
+            </div>
+          </div>
+          <div class="f-ilb f-b-medium f-p-xlarge">
+            <div class="f-bg-light">
+              <p class="f-ilb f-p-medium">xlarge</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="f-m-t-large">Content Spacing</h3>
+        <p>The class <strong>.f-content-spacing-{KEY}</strong> will neatly space all of the direct descendants.</p>
+        <div class="f-grid-row f-content-spacing-medium f-m-t-large">
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+          <div class="f-bg-medium f-ilb f-p-medium">.f-ilb</div>
+        </div>
+        <h3 class="f-m-t-large">Z-index</h3>
+        <p>Pronounced "zed index" ;-) we have a couple of classes that apply set stacking points.</p>
+        <div class="f-grid-row f-m-t-large">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-z-bottom">.f-z-bottom</div>
+          <div class="f-bg-swatchtwo f-ilb f-p-medium f-z-appribbon" style="margin-left: -30px">.f-z-appribbon</div>
+          <div class="f-bg-swatchthree f-ilb f-p-medium f-z-popup" style="margin-left: -30px">.f-z-popup</div>
+          <div class="f-bg-swatchfour f-ilb f-p-medium f-z-top" style="margin-left: -30px">.f-z-top</div>
+        </div>
+        <h3 class="f-m-t-large">Borders</h3>
+        <p>Borders have 5 widths (in px) and accept any of the color modifiers.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black">.f-b-black</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black two">.f-b-black.two</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black three">.f-b-black.three</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four">.f-b-black.four</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black five">.f-b-black.five</div>
+        </div>
+        <h4 class="f-m-t-large">Border on one side</h4>
+        <p>You can also chose to add a border to one particular side, by adding one of the above classes and a side modifier.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-t">.f-b-t</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-b">.f-b-b</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-l">.f-b-l</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-r">.f-b-r</div>
+        </div>
+        <h4 class="f-m-t-large">Remove Border on one side</h4>
+        <p>You can also remove a border to one particular side, by adding one of the above classes and a side modifier.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small f-content-spacing-small">
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nt">.f-b-nt</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nb">.f-b-nb</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nl">.f-b-nl</div>
+          <div class="f-bg-swatchone f-ilb f-p-medium f-b-black four f-b-nr">.f-b-nr</div>
+        </div>
+
+        <h4 class="f-m-t-large">Alignment</h4>
+        <p>You can also move elements via position:absolute.</p>
+        <div class="f-pos-rel f-width-100 f-b-xlight f-bg-light f-m-t-small f-tc" style="height: 100px">
+          <div class="f-align-tl f-bg-white f-b-medium f-p-xsmall">.f-align-tl</div>
+          <div class="f-align-tr f-bg-white f-b-medium f-p-xsmall">.f-align-tr</div>
+          <div class="f-align-bl f-bg-white f-b-medium f-p-xsmall">.f-align-bl</div>
+          <div class="f-align-br f-bg-white f-b-medium f-p-xsmall">.f-align-br</div>
+        </div>
+
+        <h4 class="f-m-t-large">Floats</h4>
+        <div class="f-width-100 f-b-xlight f-bg-light f-m-t-small f-tc f-clearfix">
+          <div class="f-fl f-bg-white f-b-medium f-p-xsmall">.f-fl</div>
+          <div class="f-fr f-bg-white f-b-medium f-p-xsmall">.f-fr</div>
+          <div class="f-fn f-ilb f-bg-white f-b-medium f-p-xsmall">.f-fn</div>
+        </div>
+
+        <h4 class="f-m-t-large">Flex</h4>
+        <p>These layout utilities use flexbox and such are not compatible with <a href="http://caniuse.com/#search=flexbox">older browsers</a>, so use sparingly.</p>
+        <p class="f-m-t-small"><strong>.f-flex-center</strong></p>
+        <div class="f-flex-center f-width-100 f-b-xlight f-bg-light" style="height: 80px">
+          <div class="f-bg-white f-b-medium f-p-xsmall">flexed</div>
+        </div>
+        <div class="f-grid-row f-m-t-small">
+          <div class="f-grid-6of12 f-p-r-xsmall">
+            <p class="f-tc"><strong>.f-flex-center-y</strong></p>
+            <div class="f-bg-light f-flex-center-y" style="height: 80px">
+              <div class="f-bg-white f-b-medium f-p-xsmall" style="width: 20%">flexed</div>
+              <div class="f-flex-align-right f-bg-white f-b-medium f-p-xsmall">.f-flex-align-right</div>
+            </div>
+          </div>
+          <div class="f-grid-6of12 f-p-l-xsmall">
+            <p class="f-tc"><strong>.f-flex-center-x</strong></p>
+            <div class="f-bg-light f-flex-center-x" style="height: 80px">
+              <div class="f-bg-white f-b-medium f-p-xsmall" style="height: 50%">flexed</div>
+            </div>
+          </div>
+        </div>
+        <p class="f-m-t-small"><strong>.f-flex.f-flex-children-spread</strong></p>
+        <div class="f-flex f-flex-children-spread f-width-100 f-b-xlight f-bg-light">
+          <div class="f-bg-white f-b-medium f-p-xsmall">flexed</div>
+          <div class="f-bg-white f-b-medium f-p-xsmall f-flex-self-expand">.f-flex-self-expand</div>
+          <div class="f-bg-white f-b-medium f-p-xsmall">flexed</div>
+        </div>
+
+        <div class="f-grid-row f-m-t-small">
+          <div class="f-grid-6of12 f-p-r-xsmall">
+          <p class="f-m-t-small"><strong>.f-flex.f-flex-children-t</strong></p>
+            <div class="f-flex f-flex-children-t f-width-100 f-b-xlight f-bg-light" style="height: 80px">
+              <div class="f-bg-white f-b-medium f-p-xsmall">flexed</div>
+              <div class="f-bg-white f-b-medium f-p-xsmall f-flex-self-b">.f-flex-self-b</div>
+              <div class="f-bg-white f-b-medium f-p-xsmall">flexed</div>
+            </div>
+          </div>
+          <div class="f-grid-6of12 f-p-r-xsmall">
+            <p class="f-m-t-small"><strong>.f-flex.f-flex-children-b</strong></p>
+            <div class="f-flex f-flex-children-b f-width-100 f-b-xlight f-bg-light" style="height: 80px">
+              <div class="f-bg-white f-b-medium f-p-xsmall">flexed</div>
+              <div class="f-bg-white f-b-medium f-p-xsmall f-flex-self-c">.f-flex-self-c</div>
+              <div class="f-bg-white f-b-medium f-p-xsmall f-flex-self-t">.f-flex-self-t</div>
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    <section id="grid" class="f-p-xlarge f-tc">
+      <div class="f-page-container">
+        <h2>Grid</h2>
+        <p>The grid is made up of any combination of <strong>12</strong> columns. The grid columns are merely a % width of the containing box.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-4of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">4of12</p>
+          </div>
+          <div class="f-grid-4of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">4of12</p>
+          </div>
+          <div class="f-grid-4of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">4of12</p>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-6of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">6of12</p>
+          </div>
+          <div class="f-grid-6of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">6of12</p>
+          </div>
+        </div>
+        <h3 class="f-m-t-large">Offset</h3>
+        <p>Grid offsets run off the same column widths and are in the pattern: <strong>.f-grid-{NUM COLUMNS}-offset</strong>.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small">
+          <div class="f-grid-3of12 f-grid-3of12-offset f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-1of12 f-grid-3of12-offset f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-1of12 f-grid-1of12-offset f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+        </div>
+        <h3 class="f-m-t-large">Dynamic Spaced Grids</h3>
+        <p>Space the any columns of a grid even in three percentage widths: small, medium and large.</p>
+        <div class="f-grid-row f-m-t-large f-fs-small spaced-small">
+          <div class="f-grid-1of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">1of12</p>
+          </div>
+          <div class="f-grid-2of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">2of12</p>
+          </div>
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-4of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">4of12</p>
+          </div>
+          <div class="f-grid-2of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">2of12</p>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large f-fs-small spaced-small">
+          <div class="f-grid-3of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">3of12</p>
+          </div>
+          <div class="f-grid-7of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">7of12</p>
+          </div>
+          <div class="f-grid-2of12 f-b-light f-p-xsmall">
+            <p class="f-bg-light">2of12</p>
+          </div>
+        </div>
+        <h3 class="f-m-t-large">Spaced Grids</h3>
+        <p>Space the contents of a grid even in three percentage widths: small, medium and large.</p>
+        <p class="f-m-t-large f-m-b-small"><strong>.f-spaced-grid-4-small</strong></p>
+        <div class="f-spaced-grid-4-small f-fs-small">
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+        </div>
+        <p class="f-m-t-large f-m-b-small"><strong>.f-spaced-grid-8-med</strong></p>
+        <div class="f-spaced-grid-8-medium f-fs-small">
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+        </div>
+        <p class="f-m-t-large f-m-b-small"><strong>.f-spaced-grid-6-large</strong></p>
+        <div class="f-spaced-grid-6-large f-fs-small">
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+          <div class="f-b-light f-p-small">
+            <div class="f-bg-light">even spacing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="forms" class="f-p-xlarge f-tc">
+      <h2>Forms</h2>
+      <p></p>
+      <div class="f-page-container f-tl">
+        <div class="f-grid-row f-m-t-large">
+          <h3 class="f-grid-4of12">Basic</h3>
+          <div class="f-grid-8of12">
+            <input type="text" name="test" class="f-fs-medium f-m-b-small" placeholder="Input .f-fs-medium">
+            <input type="text" name="test" class="f-fs-medium f-m-b-small f-b-error" placeholder="Input Error .f-fs-medium.f-b-error">
+            <input type="text" name="test" class="f-fs-large f-m-b-small" placeholder="Input .f-fs-large">
+            <input type="text" name="test" class="f-fs-xlarge f-m-b-small" placeholder="Input .f-fs-xlarge">
+            <textarea name="test-textarea" class="f-fs-medium f-m-b-small" placeholder="Textarea .f-fs-medium"></textarea>
+            <select class="f-fs-medium f-m-b-small" name="test-select" placeholder="Select .f-fs-medium">
+              <option>Something</option>
+              <option>Else</option>
+              <option>Entirely</option>
+            </select>
+            <label class="f-fs-medium f-m-b-small f-db">
+              <input type="checkbox" class="f-m-r-xsmall">
+              This is a checkbox
+            </label>
+            <label class="f-fs-large f-m-b-small f-db">
+              <input type="radio" name="f-radio">
+              <input type="radio" name="f-radio">
+              <input type="radio" name="f-radio">
+              These are radio buttons
+            </label>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large f-fs-medium f-lh-large">
+          <h3 class="f-grid-4of12">Form Row</h3>
+          <div class="f-grid-8of12">
+            <div class="f-form-row">
+              <label for="">Inline (default)</label>
+              <input type="text">
+            </div>
+            <div class="f-form-row stacked">
+              <label for="">Stacked (.f-form-row.stacked)</label>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-xlarge f-fs-medium">
+          <div class="f-grid-4of12 f-p-r-large">
+            <h3>Decorator</h3>
+            <p>The decorators have three widths:</p>
+            <ul>
+              <li><strong>Small</strong></li>
+              <li><strong>Medium (default)</strong></li>
+              <li><strong>Large</strong></li>
+            </ul>
+          </div>
+          <div class="f-grid-8of12">
+            <div class="f-input-decorator">
+              <input type="text" placeholder=".f-fs-medium .f-decorator.large">
+              <div class="js-calendar f-decorator large f-clickable f-bg-white">
+                <i class="fa fa-calendar"></i>
+              </div>
+            </div>
+            <div class="f-input-decorator f-m-t-medium">
+              <input class="f-b-error" type="text" placeholder=".f-fs-medium .f-decorator.large .f-b-error">
+              <div class="js-calendar f-decorator large f-clickable f-bg-white">
+                <i class="fa fa-calendar"></i>
+              </div>
+            </div>
+            <div class="f-m-t-medium">
+              <div class="f-input-decorator f-fs-large">
+                <div class="f-decorator f-bg-swatchfive medium">
+                  <i class="fa fa-bar-chart-o"></i>
+                </div>
+                <input type="text" placeholder=".f-fs-large .f-decorator.medium">
+              </div>
+            </div>
+            <div class="f-m-t-medium">
+              <div class="f-input-decorator f-fs-xlarge">
+                <input type="text" placeholder=".f-fs-xlarge .f-decorator.small">
+                <div class="f-decorator f-bg-primary small">
+                  <i class="fa fa-truck"></i>
+                </div>
+              </div>
+            </div>
+            <div class="f-m-t-medium">
+              <div class="f-input-decorator f-fs-medium f-m-b-large f-br-medium">
+                <input class="f-bg-xlight f-font-condensed" name="email" placeholder=".f-decorator with button as decorator item" type="email">
+                <div class="f-decorator none">
+                  <button class="f-button swatchone f-clickable">Submit</button>
+                </div>
+              </div>
+              <div class="f-input-decorator f-fs-large f-m-b-large f-br-small">
+                <div class="f-decorator none">
+                  <a class="f-button swatchone f-clickable">Tell Me!</a>
+                </div>
+                <input class="f-bg-xlight f-font-condensed" name="email" placeholder=".f-decorator with button as decorator item" type="email">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="buttons" class="f-p-xlarge f-tc">
+      <h2>Buttons</h2>
+      <p>Buttons follow all the major color keys, and their layout is based on font-size. </p>
+      <div class="f-page-container f-tl">
+        <div class="f-grid-row f-m-t-large f-fs-medium f-lh-large">
+          <h3 class="f-grid-3of12">Primary Button</h3>
+          <div class="f-grid-9of12 f-content-spacing-xsmall">
+            <div class="f-ilb">
+              <a href="#" class="f-button primary f-fs-xlarge">X Large</a>
+            </div>
+            <div class="f-ilb">
+              <a href="#" class="f-button primary f-fs-large">Large</a>
+            </div>
+            <div class="f-ilb">
+              <a href="#" class="f-button primary f-fs-medium">Medium</a>
+            </div>
+            <div class="f-ilb">
+              <a href="#" class="f-button primary f-fs-small">Small</a>
+            </div>
+            <div class="f-ilb">
+              <a href="#" class="f-button primary f-fs-xsmall">X Small</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-grid-row f-m-t-xlarge">
+          <div class="f-grid-3of12">
+            <h3>All Button Colors</h3>
+          </div>
+          <div class="f-grid-9of12">
+            <div class="f-grid-row f-fs-medium f-content-spacing-xsmall">
+              <button class="f-button white f-ilb">white</button>
+              <button class="f-button xlight f-ilb">xlight</button>
+              <button class="f-button light f-ilb">light</button>
+              <button class="f-button medium f-ilb">medium</button>
+              <button class="f-button dark f-ilb">dark</button>
+              <button class="f-button xdark f-ilb">xdark</button>
+              <button class="f-button black f-ilb">black</button>
+            </div>
+            <div class="f-grid-row f-content-spacing-xsmall f-fs-medium f-m-t-medium">
+              <button class="f-button swatchone f-ilb">swatchone</button>
+              <button class="f-button swatchtwo f-ilb">swatchtwo</button>
+              <button class="f-button swatchthree f-ilb">swatchthree</button>
+              <button class="f-button swatchfour f-ilb">swatchfour</button>
+              <button class="f-button swatchfive f-ilb">swatchfive</button>
+            </div>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-xlarge">
+          <div class="f-grid-3of12">
+            <h3>Social Buttons</h3>
+          </div>
+          <div class="f-grid-9of12">
+            <div class="f-grid-row f-content-spacing-xsmall f-fs-medium">
+              <button class="f-button facebook f-ilb"></button>
+              <button class="f-button twitter f-ilb"></button>
+              <button class="f-button google f-ilb">google</button>
+              <button class="f-button linkedin f-ilb"></button>
+              <button class="f-button youtube f-ilb">youtube</button>
+              <button class="f-button pinterest f-ilb">pinterest</button>
+              <button class="f-button whats-app f-ilb">whats-app</button>
+              <button class="f-button email f-ilb">email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lists" class="f-p-xlarge f-tc">
+      <h2>Lists</h2>
+      <p>Lists come in two flavours: normal and inline. You can also add bullets if needed and turn off the hover effect (.no-hover).</p>
+
+      <h3 class="f-m-t-large">.f-list</h3>
+      <ul class="f-list f-font-condensed f-ilb f-tl f-bg-xlight-o-dark">
+        <li>Something Else</li>
+        <li>Something Entirely</li>
+        <li>Something I have never seen before!</li>
+      </ul>
+
+      <h3 class="f-m-t-large">.f-list.no-padding</h3>
+      <ul class="f-list f-font-condensed  no-padding f-ilb f-tl f-bg-xlight-o-dark">
+        <li>Something Else</li>
+        <li>Something Entirely</li>
+        <li>Something I have never seen before!</li>
+      </ul>
+
+      <h3 class="f-m-t-large">.f-list.f-b-primary</h3>
+      <p>Set a border color to get dividers to appear</p>
+      <ul class="f-list f-font-condensed  f-ilb f-tl f-bg-dark f-b-primary">
+        <li>Something Else</li>
+        <li>Something Entirely</li>
+        <li>Something I have never seen before!</li>
+      </ul>
+
+      <h3 class="f-m-t-large">.f-list.bulleted.no-hover</h3>
+      <ul class="f-list f-font-condensed  bulleted no-hover f-ilb f-tl f-bg-xlight-o-dark">
+        <li>Something Else</li>
+        <li>Something Entirely</li>
+        <li>Something I have never seen before!</li>
+      </ul>
+
+      <h3 class="f-m-t-large">.f-list-inline</h3>
+      <div class="f-ilb">
+        <ul class="f-list-inline f-font-condensed f-tl f-bg-xlight f-b-black">
+          <li>Something Else</li>
+          <li>Something Entirely</li>
+          <li>Something I have never seen before!</li>
+        </ul>
+      </div>
+
+      <h3 class="f-m-t-large">.f-list-inline.vertical-fill</h3>
+      <p class="f-m-b-medium">Vertical fill will make an inline list item fill the vertical space and center the item contents vertically as well.<br />If needed you can apply <strong>.f-bg-hover-{COLOR}</strong> to the item to set hover effects.</p>
+      <div class="f-ilb" style="height: 75px">
+        <ul class="f-list-inline vertical-fill f-tl f-bg-xlight f-font-condensed f-b-primary" >
+          <li>Something Else</li>
+          <li class="f-bg-hover-primary"><a href="http://google.com">Something Entirely</a></li>
+          <li>Something I have never seen before!</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="spinners" class="f-p-xlarge f-tc">
+      <h2>Spinners</h2>
+      <p>Each spinner's layout is governed by their font size, so changing the font will alter the spinners size.</p>
+      <div class="f-page-container">
+        <div class="f-grid-row f-m-t-large">
+          <h3>.f-spinner-circles</h3>
+          <p class="f-m-b-medium">The spinner circles color can be set via <strong>.f-bg-*</strong>.</p>
+          <div class="f-grid-2of12 f-grid-2of12-offset">
+            <div class="f-spinner-circles f-fs-xsmall f-bg-xlight"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-circles f-fs-small f-bg-light"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-circles f-fs-medium f-bg-medium"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-circles f-fs-large f-bg-dark"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-circles f-fs-xlarge f-bg-xdark"></div>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large">
+          <h3>.f-spinner-lifepreserver</h3>
+          <p class="f-m-b-medium">The spinner lifepreserver color can be set via <strong>.f-fc-*</strong>.</p>
+          <div class="f-grid-2of12 f-grid-2of12-offset">
+            <div class="f-spinner-lifepreserver f-fs-xsmall f-fc-xlight"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-lifepreserver f-fs-small f-fc-light"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-lifepreserver f-fs-medium f-fc-medium"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-lifepreserver f-fs-large f-fc-dark"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-lifepreserver f-fs-xlarge f-fc-xdark"></div>
+          </div>
+        </div>
+        <div class="f-grid-row f-m-t-large">
+          <h3>.f-spinner-bars</h3>
+          <p class="f-m-b-medium">The spinner circles color can be set via <strong>.f-bg-*</strong>.</p>
+          <div class="f-grid-2of12 f-grid-2of12-offset">
+            <div class="f-spinner-bars f-fs-xsmall f-bg-xlight"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-bars f-fs-small f-bg-light"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-bars f-fs-medium f-bg-medium"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-bars f-fs-large f-bg-dark"></div>
+          </div>
+          <div class="f-grid-2of12">
+            <div class="f-spinner-bars f-fs-xlarge f-bg-xdark"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avatars" class="f-p-xlarge f-tc">
+      <h2>Avatars</h2>
+      <p>Come in the full range of sizes: xlarge, large, medium, small, xsmall.<br />You can decorate the avatar with either Facebook, Twitter, Google+, LinkedIn or Pinterest icons.</p>
+      <div class="f-grid-row f-tc f-m-t-xlarge f-content-spacing-large">
+        <div class="f-ilb">
+          <a href="#" class="f-avatar-xlarge tw" style="background-image: url(http://graph.facebook.com/528533108/picture?width=200&amp;height=200)"></a>
+          <p>.f-avatar-xlarge.tw</p>
+        </div>
+        <div class="f-ilb">
+          <a href="#" class="f-avatar-large google" style="background-image: url(http://graph.facebook.com/528533108/picture?width=200&amp;height=200)"></a>
+          <p>.f-avatar-large.google</p>
+        </div>
+        <div class="f-ilb">
+          <a href="#" class="f-avatar-medium pinterest" style="background-image: url(http://graph.facebook.com/528533108/picture?width=100&amp;height=100)"></a>
+          <p>.f-avatar-medium.pinterest</p>
+        </div>
+        <div class="f-ilb">
+          <a href="#" class="f-avatar-small linkedin" style="background-image: url(http://graph.facebook.com/528533108/picture?width=100&amp;height=100)"></a>
+          <p>.f-avatar-medium.linkedin</p>
+        </div>
+        <div class="f-ilb">
+          <a href="#" class="f-avatar-xsmall facebook" style="background-image: url(http://graph.facebook.com/528533108/picture)"></a>
+          <p>.f-avatar-small.facebook</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="badges" class="f-p-xlarge f-tc">
+      <h2>Badges</h2>
+      <p>Badges accept all the background colors and font-size options.<br />The should be attached to inline elements such as i or span, and can be positioned in two ways: inline or top-right.</p>
+      <div class="f-grid-rwo f-content-spacing-small f-p-t-large">
+        <div class="f-ilb">
+          <a href="#" class="f-button light email f-fs-small">
+            Inline
+            <i class="f-badge inline f-bg-swatchone f-m-l-xsmall">42</i>
+          </a>
+        </div>
+        <div class="f-ilb">
+          <a href="#" class="f-button light email f-fs-small">
+            top-right
+            <i class="f-badge tr f-bg-primary">6,666</i>
+          </a>
+        </div>
+      </div>
+      <div class="f-grid-rwo f-content-spacing-small f-p-t-large">
+        <div class="f-ilb">
+          <a href="#" class="f-button light email f-fs-medium">
+            Inline
+            <i class="f-badge inline f-bg-dark f-m-l-xsmall">42</i>
+          </a>
+        </div>
+        <div class="f-ilb">
+          <a href="#" class="f-button light email f-fs-medium">
+            top-left
+            <i class="f-badge tl f-bg-light">6,666</i>
+          </a>
+        </div>
+      </div>
+      <div class="f-grid-rwo f-content-spacing-small f-p-t-large">
+        <div class="f-ilb">
+          <a href="#" class="f-button light email f-fs-large">
+            Inline
+            <i class="f-badge inline f-bg-swatchtwo f-m-l-xsmall">42</i>
+          </a>
+        </div>
+        <div class="f-ilb">
+          <a href="#" class="f-button light email f-fs-large">
+            top-right
+            <i class="f-badge tr f-bg-black">6,666</i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="misc" class="f-p-xlarge f-tc">
+      <div class="f-page-container">
+        <h2>Miscellaneous</h2>
+        <p></p>
+        <h3 class="f-m-t-large">Notification Pill</h3>
+        <p class="f-m-medium">These components are generally set to position:fixed at the highest z-index and with an animated show effect (flip) for maximum visibility.</p>
+        <div class="f-content-spacing-medium f-pos-rel">
+          <div class="f-notification-pill f-bg-dark">
+            <div class="f-font-condensed">Standard</div>
+          </div>
+          <div class="f-notification-pill success f-bg-dark">
+            <div class="f-font-condensed">Success</div>
+          </div>
+          <div class="f-notification-pill error f-bg-medium">
+            <div class="f-font-condensed">Something went wrong</div>
+          </div>
+          <div class="f-notification-pill processing f-bg-swatchfive">
+            <div class="f-font-condensed">Processing</div>
+          </div>
+        </div>
+
+        <h3 class="f-m-t-large">Thermometer</h3>
+        <p class="f-m-medium">The thermometer mercury needs to have an explicit background color set, this is primarily so it can be set via themes.</p>
+
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury" style="width: 0%">
+          </div>
+        </div>
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-swatchfive" style="width: 25%">
+          </div>
+        </div>
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-primary" style="width: 50%">
+          </div>
+        </div>
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-swatchtwo" style="width: 75%">
+          </div>
+        </div>
+        <div class="f-thermometer f-m-b-small">
+          <div class="f-mercury f-bg-swatchone">
+          </div>
+        </div>
+
+        <h3 class="f-m-t-large">Arrow Boxes</h3>
+        <p class="f-m-medium">The arrows can be placed on each side, but only on one side. The arrow length variables are: <strong>small, medium (default), large</strong>.<br /> The will inherit both the background color and border color given to them.</p>
+        <div class="f-spaced-grid-5-large">
+          <div class="f-b-medium f-p-t-medium f-p-b-medium f-bg-white f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-down-small f-fc-swatchfive">12,345</div>
+          <div class="f-b-primary f-p-t-medium f-p-b-medium f-bg-light f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-up f-fc-swatchfive">12,345</div>
+          <div class="f-b-swatchtwo f-p-t-medium f-p-b-medium f-bg-medium f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-left f-fc-swatchfive">12,345</div>
+          <div class="f-b-swatchone f-p-t-medium f-p-b-medium f-bg-dark f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-right-large f-fc-xlight">12,345</div>
+          <div class="f-b-primary f-p-t-medium f-p-b-medium f-bg-black f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-down f-fc-white">12,345</div>
+        </div>
+
+        <h3 class="f-m-t-large">Content Section</h3>
+        <p>Small set of selectors to handle sections of user generated content. Includes an h2, p, strong, ul, li, a and i.</p>
+        <div class="f-content-section f-p-t-medium">
+          <h2>Header</h2>
+          <p>Lorem <stromg>ipsum</stromg> dolor sit amet, <stromg>consectetur</stromg> adipisicing elit. <strong>Reprehenderit</strong>, incidunt, asperiores, quas magni quisquam <a href="http://fundly,com">nobis totam voluptas adipisci deleniti</a> pariatur soluta temporibus quaerat cumque dolor perferendis neque illum? Cumque, doloribus.</p>
+          <p>Eius, unde, <strong>reprehenderit</strong>, quisquam, officia eos libero dicta quo ullam illum inventore nobis quam optio explicabo quidem impedit suscipit ex ea accusamus ipsam magnam placeat neque autem sequi voluptatem cumque.</p>
+          <h2>Another heading</h2>
+          <p>Nulla, facilis, unde <strong>ratione</strong> vitae facere at ut voluptatibus sit pariatur fugit repellat beatae sequi veniam iusto quos quis veritatis rerum accusamus aspernatur consectetur qui alias laborum in soluta enim? Veniam <strong>molestiae</strong> numquam amet adipisci cumque optio sed dolor eum! Illo, rem, facere veniam aperiam deleniti quia quaerat explicabo quae <strong>necessitatibus</strong> pariatur repellendus modi quasi sit possimus fuga. Nobis, tenetur?</p>
+          <ul>
+          <li>this is a list</li>
+          <li>and so is this</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer class="f-footer f-p-small f-tr">
+      <div class="f-fs-medium f-font-condensed f-fw-ultrabold">
+        &copy; Fundly, 2014
+      </div>
+    </footer>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script type="css-template" id="theme-template">
+      /* sample theme */
+      .f-fc-primary, .f-fc-hover-primary:hover {
+        color: {{primaryColor}};
+      }
+      .f-bg-primary, .f-bg-hover-primary {
+        background-color: {{primaryColor}};
+        color: {{primaryColorTextColor}};
+      }
+      .f-b-primary, .f-hr-primary {
+        border-color: {{primaryColor}};
+      }
+      .f-button.primary {
+        background-color: {{primaryColor}};
+        color: {{primaryColorTextColor}};
+      }
+      .f-appribbon {
+        background: {{appRibbonColor}};
+        color: {{appRibbonTextColor}};
+      }
+      .f-footer {
+        background: {{footerColor}};
+        color: {{footerTextColor}};
+      }
+    </script>
+
+</body>
+</html>

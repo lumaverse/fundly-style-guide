@@ -15,15 +15,15 @@ Fundly Style Guide compiled for use in front-end contexts.
   - build script will move fonts to the correct location
 */
 /*!
- *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('./fonts/fontawesome-webfont.eot?v=4.0.3');
-  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('./fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('./fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('./fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  src: url('./fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('./fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('./fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('./fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -85,9 +85,9 @@ Fundly Style Guide compiled for use in front-end contexts.
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.f-gallery-leftarea, .pull-left.f-gallery-rightarea {
+.fa.pull-left {
   margin-right: 0.3em; }
-.fa.pull-right, .pull-right.f-gallery-leftarea, .pull-right.f-gallery-rightarea {
+.fa.pull-right {
   margin-left: 0.3em; }
 
 .fa-spin {
@@ -101,13 +101,6 @@ Fundly Style Guide compiled for use in front-end contexts.
   100% {
     -webkit-transform: rotate(359deg); } }
 
-@-ms-keyframes spin {
-  0% {
-    -ms-transform: rotate(0deg); }
-
-  100% {
-    -ms-transform: rotate(359deg); } }
-
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -120,31 +113,31 @@ Fundly Style Guide compiled for use in front-end contexts.
     transform: rotate(359deg); } }
 
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
@@ -351,7 +344,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-video-camera:before {
   content: "\f03d"; }
 
-.fa-picture-o:before {
+.fa-photo:before, .fa-image:before, .fa-picture-o:before {
   content: "\f03e"; }
 
 .fa-pencil:before {
@@ -705,7 +698,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-square:before {
   content: "\f0c8"; }
 
-.fa-bars:before {
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
   content: "\f0c9"; }
 
 .fa-list-ul:before {
@@ -762,10 +755,10 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-unsorted:before, .fa-sort:before {
   content: "\f0dc"; }
 
-.fa-sort-down:before, .fa-sort-asc:before {
+.fa-sort-down:before, .fa-sort-desc:before {
   content: "\f0dd"; }
 
-.fa-sort-up:before, .fa-sort-desc:before {
+.fa-sort-up:before, .fa-sort-asc:before {
   content: "\f0de"; }
 
 .fa-envelope:before {
@@ -870,10 +863,10 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-angle-double-down:before {
   content: "\f103"; }
 
-.fa-angle-left:before, .f-gallery-leftarea:before {
+.fa-angle-left:before {
   content: "\f104"; }
 
-.fa-angle-right:before, .f-gallery-rightarea:before {
+.fa-angle-right:before {
   content: "\f105"; }
 
 .fa-angle-up:before {
@@ -948,10 +941,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-code:before {
   content: "\f121"; }
 
-.fa-reply-all:before {
-  content: "\f122"; }
-
-.fa-mail-reply-all:before {
+.fa-mail-reply-all:before, .fa-reply-all:before {
   content: "\f122"; }
 
 .fa-star-half-empty:before, .fa-star-half-full:before, .fa-star-half-o:before {
@@ -1281,10 +1271,223 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-plus-square-o:before {
   content: "\f196"; }
 
+.fa-space-shuttle:before {
+  content: "\f197"; }
+
+.fa-slack:before {
+  content: "\f198"; }
+
+.fa-envelope-square:before {
+  content: "\f199"; }
+
+.fa-wordpress:before {
+  content: "\f19a"; }
+
+.fa-openid:before {
+  content: "\f19b"; }
+
+.fa-institution:before, .fa-bank:before, .fa-university:before {
+  content: "\f19c"; }
+
+.fa-mortar-board:before, .fa-graduation-cap:before {
+  content: "\f19d"; }
+
+.fa-yahoo:before {
+  content: "\f19e"; }
+
+.fa-google:before {
+  content: "\f1a0"; }
+
+.fa-reddit:before {
+  content: "\f1a1"; }
+
+.fa-reddit-square:before {
+  content: "\f1a2"; }
+
+.fa-stumbleupon-circle:before {
+  content: "\f1a3"; }
+
+.fa-stumbleupon:before {
+  content: "\f1a4"; }
+
+.fa-delicious:before {
+  content: "\f1a5"; }
+
+.fa-digg:before {
+  content: "\f1a6"; }
+
+.fa-pied-piper-square:before, .fa-pied-piper:before {
+  content: "\f1a7"; }
+
+.fa-pied-piper-alt:before {
+  content: "\f1a8"; }
+
+.fa-drupal:before {
+  content: "\f1a9"; }
+
+.fa-joomla:before {
+  content: "\f1aa"; }
+
+.fa-language:before {
+  content: "\f1ab"; }
+
+.fa-fax:before {
+  content: "\f1ac"; }
+
+.fa-building:before {
+  content: "\f1ad"; }
+
+.fa-child:before {
+  content: "\f1ae"; }
+
+.fa-paw:before {
+  content: "\f1b0"; }
+
+.fa-spoon:before {
+  content: "\f1b1"; }
+
+.fa-cube:before {
+  content: "\f1b2"; }
+
+.fa-cubes:before {
+  content: "\f1b3"; }
+
+.fa-behance:before {
+  content: "\f1b4"; }
+
+.fa-behance-square:before {
+  content: "\f1b5"; }
+
+.fa-steam:before {
+  content: "\f1b6"; }
+
+.fa-steam-square:before {
+  content: "\f1b7"; }
+
+.fa-recycle:before {
+  content: "\f1b8"; }
+
+.fa-automobile:before, .fa-car:before {
+  content: "\f1b9"; }
+
+.fa-cab:before, .fa-taxi:before {
+  content: "\f1ba"; }
+
+.fa-tree:before {
+  content: "\f1bb"; }
+
+.fa-spotify:before {
+  content: "\f1bc"; }
+
+.fa-deviantart:before {
+  content: "\f1bd"; }
+
+.fa-soundcloud:before {
+  content: "\f1be"; }
+
+.fa-database:before {
+  content: "\f1c0"; }
+
+.fa-file-pdf-o:before {
+  content: "\f1c1"; }
+
+.fa-file-word-o:before {
+  content: "\f1c2"; }
+
+.fa-file-excel-o:before {
+  content: "\f1c3"; }
+
+.fa-file-powerpoint-o:before {
+  content: "\f1c4"; }
+
+.fa-file-photo-o:before, .fa-file-picture-o:before, .fa-file-image-o:before {
+  content: "\f1c5"; }
+
+.fa-file-zip-o:before, .fa-file-archive-o:before {
+  content: "\f1c6"; }
+
+.fa-file-sound-o:before, .fa-file-audio-o:before {
+  content: "\f1c7"; }
+
+.fa-file-movie-o:before, .fa-file-video-o:before {
+  content: "\f1c8"; }
+
+.fa-file-code-o:before {
+  content: "\f1c9"; }
+
+.fa-vine:before {
+  content: "\f1ca"; }
+
+.fa-codepen:before {
+  content: "\f1cb"; }
+
+.fa-jsfiddle:before {
+  content: "\f1cc"; }
+
+.fa-life-bouy:before, .fa-life-saver:before, .fa-support:before, .fa-life-ring:before {
+  content: "\f1cd"; }
+
+.fa-circle-o-notch:before {
+  content: "\f1ce"; }
+
+.fa-ra:before, .fa-rebel:before {
+  content: "\f1d0"; }
+
+.fa-ge:before, .fa-empire:before {
+  content: "\f1d1"; }
+
+.fa-git-square:before {
+  content: "\f1d2"; }
+
+.fa-git:before {
+  content: "\f1d3"; }
+
+.fa-hacker-news:before {
+  content: "\f1d4"; }
+
+.fa-tencent-weibo:before {
+  content: "\f1d5"; }
+
+.fa-qq:before {
+  content: "\f1d6"; }
+
+.fa-wechat:before, .fa-weixin:before {
+  content: "\f1d7"; }
+
+.fa-send:before, .fa-paper-plane:before {
+  content: "\f1d8"; }
+
+.fa-send-o:before, .fa-paper-plane-o:before {
+  content: "\f1d9"; }
+
+.fa-history:before {
+  content: "\f1da"; }
+
+.fa-circle-thin:before {
+  content: "\f1db"; }
+
+.fa-header:before {
+  content: "\f1dc"; }
+
+.fa-paragraph:before {
+  content: "\f1dd"; }
+
+.fa-sliders:before {
+  content: "\f1de"; }
+
+.fa-share-alt:before {
+  content: "\f1e0"; }
+
+.fa-share-alt-square:before {
+  content: "\f1e1"; }
+
+.fa-bomb:before {
+  content: "\f1e2"; }
+
 @font-face {
   font-family: 'FundlyIcons';
-  src: url('./fonts/fundly-icons.eot?v=0.3.1');
-  src: url('./fonts/fundly-icons.eot?v=0.3.1#iefix') format('embedded-opentype'), url('./fonts/fundly-icons.woff?v=0.3.1') format('woff'), url('./fonts/fundly-icons.ttf?v=0.3.1') format('truetype'), url('./fonts/fundly-icons.svg?v=0.3.1#fundlyicons') format('svg');
+  src: url('./fonts/fundly-icons.eot?v=0.3.0');
+  src: url('./fonts/fundly-icons.eot?v=0.3.0#iefix') format('embedded-opentype'), url('./fonts/fundly-icons.woff?v=0.3.0') format('woff'), url('./fonts/fundly-icons.ttf?v=0.3.0') format('truetype'), url('./fonts/fundly-icons.svg?v=0.3.0#fundlyicons') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -2781,6 +2984,12 @@ iframe {
 .f-hr {
   border-color: #cfd2d5; }
 
+.f-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .f-flex-center {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2817,6 +3026,68 @@ iframe {
 
 .f-flex-align-right {
   margin-left: auto; }
+
+.f-flex-children-stretch {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
+
+.f-flex-children-spread {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.f-flex-children-l {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.f-flex-children-r {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.f-flex-children-t {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.f-flex-children-b {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.f-flex-self-expand {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.f-flex-self-stretch {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch; }
+
+.f-flex-self-t {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
+.f-flex-self-b {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end; }
+
+.f-flex-self-c {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center; }
 
 .f-grid-1of12 {
   width: 8.33333%;
@@ -3859,6 +4130,11 @@ input[type='radio']:checked {
     height: 50%;
     border-radius: 100%; }
 
+input[type='color'] {
+  padding: 0.1em 0.2em;
+  height: 2.5em;
+  cursor: pointer; }
+
 .f-input-decorator {
   display: table;
   width: 100%;
@@ -3907,6 +4183,8 @@ input[type='radio']:checked {
     border-radius: 0;
     border: none;
     white-space: nowrap; }
+  .f-decorator input[type='color'] {
+    border: none; }
 
 .f-form-row {
   display: table;
@@ -4557,6 +4835,10 @@ li {
     position: absolute;
     top: -0.9em;
     right: -0.9em; }
+  .f-badge.tl {
+    position: absolute;
+    top: -0.9em;
+    left: -0.9em; }
 
 .f-notification-pill {
   display: inline-block;
@@ -4714,7 +4996,7 @@ li {
 /**
  * set default color for tooltip arrows
  */
-.hint--top:before, .hint--top--right:before {
+.hint--top:before {
   border-top-color: #383838; }
 
 .hint--bottom:before {
@@ -4729,14 +5011,14 @@ li {
 /**
  * top tooltip
  */
-.hint--top:before, .hint--top--right:before {
+.hint--top:before {
   margin-bottom: -12px; }
-.hint--top:after, .hint--top--right:after {
+.hint--top:after {
   margin-left: -18px; }
-.hint--top:before, .hint--top--right:before, .hint--top:after, .hint--top--right:after {
+.hint--top:before, .hint--top:after {
   bottom: 100%;
   left: 50%; }
-.hint--top:hover:after, .hint--top--right:hover:after, .hint--top:hover:before, .hint--top--right:hover:before, .hint--top:focus:after, .hint--top--right:focus:after, .hint--top:focus:before, .hint--top--right:focus:before {
+.hint--top:hover:after, .hint--top:hover:before, .hint--top:focus:after, .hint--top:focus:before {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px); }
@@ -4806,7 +5088,7 @@ li {
 .hint--error:after {
   background-color: #b34e4d;
   text-shadow: 0 -1px 0px #592626; }
-.hint--error.hint--top:before, .hint--error.hint--top--right:before {
+.hint--error.hint--top:before {
   border-top-color: #b34e4d; }
 .hint--error.hint--bottom:before {
   border-bottom-color: #b34e4d; }
@@ -4821,7 +5103,7 @@ li {
 .hint--warning:after {
   background-color: #c09854;
   text-shadow: 0 -1px 0px #6c5228; }
-.hint--warning.hint--top:before, .hint--warning.hint--top--right:before {
+.hint--warning.hint--top:before {
   border-top-color: #c09854; }
 .hint--warning.hint--bottom:before {
   border-bottom-color: #c09854; }
@@ -4836,7 +5118,7 @@ li {
 .hint--info:after {
   background-color: #3986ac;
   text-shadow: 0 -1px 0px #193b4d; }
-.hint--info.hint--top:before, .hint--info.hint--top--right:before {
+.hint--info.hint--top:before {
   border-top-color: #3986ac; }
 .hint--info.hint--bottom:before {
   border-bottom-color: #3986ac; }
@@ -4851,7 +5133,7 @@ li {
 .hint--success:after {
   background-color: #458746;
   text-shadow: 0 -1px 0px #1a321a; }
-.hint--success.hint--top:before, .hint--success.hint--top--right:before {
+.hint--success.hint--top:before {
   border-top-color: #458746; }
 .hint--success.hint--bottom:before {
   border-bottom-color: #458746; }
@@ -4872,7 +5154,7 @@ li {
 .hint--always:after, .hint--always:before {
   opacity: 1;
   visibility: visible; }
-.hint--always.hint--top:after, .hint--always.hint--top--right:after, .hint--always.hint--top:before, .hint--always.hint--top--right:before {
+.hint--always.hint--top:after, .hint--always.hint--top:before {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px); }
@@ -4919,7 +5201,7 @@ li {
   font-weight: 500;
   background: black; }
 
-.hint--top:before, .hint--top--right:before {
+.hint--top:before {
   border-top-color: black; }
 
 .hint--bottom:before {
