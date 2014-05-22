@@ -1,9 +1,12 @@
+'use strict';
+
+
 // Initialise Gulp and dependancies
 var gulp =     require('gulp'),
     p =        require('gulp-load-plugins')({camelize: true}),
     lr =       require('tiny-lr')(),
     connect =  require('connect'),
-    open =     require('open'),
+    opn =     require('open'),
     pkg =      require('./package.json');
 
 // Directory configs
@@ -120,7 +123,7 @@ gulp.task('server', ['lr', 'fonts:dev', 'sass:dev'], function(){
         'Started connect webserver on: ',
         p.util.colors.magenta('http://localhost:' + (config.port + 1))
       );
-      open('http://localhost:' + config.port);
+      opn('http://localhost:' + config.port);
     });
 });
 
@@ -154,15 +157,6 @@ gulp.task('build', ['clean:dist', 'fonts:dist', 'sass:dist'], function(){
 // Versioning Tasks
 // ---------
 
-function bumpJsonVersions(type) {
-  type = type || 'patch';
-
-  gulp.src(['./bower.json', './package.json'])
-    .pipe(p.bump({type: type}))
-    .pipe(gulp.dest('./'))
-    .pipe(bumpRubyVersion());
-}
-
 function bumpRubyVersion(){
   var map = require('map-stream');
 
@@ -175,9 +169,19 @@ function bumpRubyVersion(){
       .pipe(p.replace(/VERSION.*\n/g, 'VERSION = "' + json.version + '"\n'))
       .pipe(gulp.dest('lib/fundly/style/guide/'));
 
-    cb(null, file)
+    cb(null, file);
   });
 }
+
+function bumpJsonVersions(type) {
+  type = type || 'patch';
+
+  gulp.src(['./bower.json', './package.json'])
+    .pipe(p.bump({type: type}))
+    .pipe(gulp.dest('./'))
+    .pipe(bumpRubyVersion());
+}
+
 
 gulp.task('bump:major', function(){ bumpJsonVersions('major'); });
 gulp.task('bump:minor', function(){ bumpJsonVersions('minor'); });
