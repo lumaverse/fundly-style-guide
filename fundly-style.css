@@ -3582,13 +3582,19 @@ iframe {
 .f-draggable {
   cursor: move; }
 
-.f-hover-show .f-hover-show {
+.f-hover-fade-in .f-hover-fade-in {
   opacity: 0;
   -webkit-transition: opacity 250ms linear;
   transition: opacity 250ms linear; }
 
-.f-hover-show:hover .f-hover-show {
+.f-hover-fade-in:hover .f-hover-fade-in {
   opacity: 1; }
+
+.f-hover-show .f-hover-show {
+  display: none; }
+
+.f-hover-show:hover .f-hover-show {
+  display: block; }
 
 .f-upload-btn {
   position: relative;
@@ -4208,7 +4214,8 @@ input[type='color'] {
     display: block; }
 
 ul {
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 li {
   list-style: none; }
