@@ -85,18 +85,28 @@
 }
 
 
-// Hover show
+// Hover fadeIn/show
 // - need to place this class both on the component you want to hide/show and
 //   on its parent
-.f-hover-show {
-  .f-hover-show {
+.f-hover-fade-in {
+  .f-hover-fade-in {
     opacity: 0;
     transition: opacity 250ms linear;
   }
 }
+.f-hover-fade-in:hover {
+  .f-hover-fade-in {
+    opacity: 1;
+  }
+}
+.f-hover-show {
+  .f-hover-show {
+    display: none;
+  }
+}
 .f-hover-show:hover {
   .f-hover-show {
-    opacity: 1;
+    display: block;
   }
 }
 
