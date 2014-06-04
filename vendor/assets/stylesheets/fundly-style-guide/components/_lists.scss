@@ -51,6 +51,7 @@ li {
   &.no-padding li {
     padding: 0;
   }
+
 }
 
 .f-list {
@@ -75,7 +76,34 @@ li {
     border-right-width: 0;
   }
   li:last-child {
-    border-bottom: none
+    border-bottom-width: 0;
+  }
+
+  &.menu {
+    border-bottom-width: 0;
+
+    li {
+      $menu-li-border-radius: 2px;
+
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+
+      &:first-child {
+        border-top-width: 1px;
+        border-top-left-radius: $menu-li-border-radius;
+        border-top-right-radius: $menu-li-border-radius;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: $menu-li-border-radius;
+        border-bottom-right-radius: $menu-li-border-radius;
+      }
+    }
+
+    &.f-clickable li:active {
+      box-shadow: inset 0 0 1px rgba(0,0,0,0.4);
+    }
   }
 }
 
