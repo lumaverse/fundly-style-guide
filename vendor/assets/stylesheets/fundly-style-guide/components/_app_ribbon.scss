@@ -24,6 +24,11 @@
     justify-content: space-between;
   }
 
+  // this is needed for older IE
+  .middle {
+    @extend .f-ilb;
+  }
+
   .brand, .middle, .right, .collapse-icon {
     display: flex;
     align-items: center;
@@ -43,6 +48,7 @@
   .middle {
     flex: 1;
     text-align: center;
+    justify-content: center; // need to center the content in this section
   }
 
   .right {
