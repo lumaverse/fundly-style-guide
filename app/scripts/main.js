@@ -66,7 +66,7 @@ $(function(){
         id = el.attr('id');
     if (i > 0) {
       linkTarget.append(
-        '<li class="f-bg-hover-swatchfive f-caps f-fw-bold"><a href="#' + id + '">' + id + '</li>'
+        '<li class="f-bg-hover-light two f-p-xsmall f-clickable f-caps f-fw-bold f-br-small"><a class="f-db" href="#' + id + '">' + id + '</li>'
       );
     }
   });
@@ -127,5 +127,9 @@ $(function(){
         font = $el.css('fontFamily').split(',')[0];
 
     $el.find('span').html(font);
+  });
+
+  $('.f-app-ribbon .collapse-icon').click(function(){
+    $('.f-app-ribbon .right').toggleClass('show');
   });
 });

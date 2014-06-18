@@ -1,42 +1,108 @@
-.f-appribbon {
-  position: fixed;
-  z-index: $f-z-appribbon;
-  top: 0;
-  left: 0;
-  width: 100%;
+// This defines the app-ribbon component. Key features are:
+//
+//  - three sections: brand, middle, right
+//  - the middle section will expand to fit
+
+.f-app-ribbon {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
   height: $f-appribbon-height;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-  display: table;
-  overflow: hidden;
-  vertical-align: middle;
-  background: white;
-  color: black;
-}
+  padding: $f-appribbon-padding 0;
+  box-sizing: padding-box;
 
-.f-appribbon-padding {
-  height: $f-appribbon-height;
-  width: 100%;
-}
-
-.f-appribbon-brand {
-  display: table-cell;
-  padding-left: 1.5em;
-  vertical-align: middle;
-  height: 100%;
-
-  iframe, img, div {
-    height: 0.75 * $f-appribbon-height;
-    max-width: 200px;
-    display: table-cell;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
-  iframe {
-    width: 0.75 * $f-appribbon-height;
+  .f-page-container {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .brand, .middle, .right, .collapse-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .collapse-icon {
+    float: left;
+    display: none;
+    height: $f-appribbon-content;
+  }
+
+  .brand {
+    float: left;
+    text-align: left;
+  }
+
+  .middle {
+    flex: 1;
+    text-align: center;
+  }
+
+  .right {
+    float: right;
+    text-align: right;
+  }
+
+  li {
+    display: inline-block;
   }
 }
 
-.f-appribbon-element {
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
+@media (max-width: $f-screen-tablet){
+  .f-app-ribbon {
+    display: flex;
+    position: relative;
+
+    .f-page-container {
+      display: block;
+      text-align: center;
+    }
+
+    // show the collapse hamburger icon
+    .collapse-icon {
+      display: flex;
+    }
+    // move the brand section to the middle
+    .brand {
+      margin: auto;
+      display: inline-block;
+      float: none;
+    }
+    // make both the middle and right sections into floating sections beneath
+    // the ribbon.
+    .middle, .right {
+      position: absolute;
+      top: 100%;
+      background-color: white;
+      text-align: left;
+      width: 100%;
+      display: none;
+
+      // use this to show the sections, only currently supports either middle
+      // or right, but not both
+      &.show {
+        display: block;
+      }
+
+      // convert any inline lists to stacked to show nicely
+      ul, li {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// This is a dummy element used to prop open space underneath an fixed app
+// ribbon.
+.f-app-ribbon-spacer {
+  width: 100%;
+  height: $f-appribbon-height;
 }

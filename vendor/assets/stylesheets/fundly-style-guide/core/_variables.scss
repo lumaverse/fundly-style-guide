@@ -38,7 +38,9 @@ $f-page-container-width: 960px !default;
 $f-grid-columns:         12    !default;
 
 // Appribbon Height
-$f-appribbon-height:     60px  !default;
+$f-appribbon-content:    40px  !default;
+$f-appribbon-padding:    15px  !default;
+$f-appribbon-height: $f-appribbon-content + 2 * $f-appribbon-padding;
 
 // Thermometer Height
 $f-thermometer-height:   8px  !default;
@@ -109,4 +111,15 @@ $f-opacity-full:       1       !default;
 
 // -------
 // End Colour
+// -------
+
+
+// -------
+// Media Query Breakpoints
+// -------
+$f-screen-phone:    480px !default;
+$f-screen-tablet:   768px !default;
+$f-screen-desktop:  $f-page-container-width !default;
+// -------
+// End Media Query Breakpoints
 // -------

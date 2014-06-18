@@ -15,7 +15,7 @@
     <style id="theme-target"></style>
   </head>
   <body data-spy="scroll" data-target=".js-section-list">
-    <header class="f-appribbon">
+<!--     <header class="f-appribbon">
       <div class="f-appribbon-brand" style="width: 45px">
         <iframe class="f-fl f-m-r-medium" src="https://d2wwhrh9otv6z9.cloudfront.net/logo.html" frameborder="0"></iframe>
       </div>
@@ -24,41 +24,77 @@
         <ul class="f-list-inline vertical-fill js-section-list f-font-condensed f-fs-xsmall f-b-xlight"></ul>
       </div>
     </header>
-    <div class="f-appribbon-padding"></div>
+    <div class="f-appribbon-padding"></div> -->
 
-    <a href="https://github.com/fundly/style-guide"><img style="position: absolute; top: 60px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-    <section id="home" class="f-tc f-p-xlarge">
-      <h2>About</h2>
-      <p>The style guide is a CSS framework that forms the base of styling for all Fundly products (<a href="http://fundly.com">Fundly.com</a> etc.)</p>
-      <p>The <strong>Atomic CSS</strong> principles used in this framework were deeply inspired by this <a href="http://coding.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/">article</a>.</p>
-
-      <h3 class="f-m-t-large">Repo</h3>
-      <p><a href="https://github.com/fundly/style-guide">https://github.com/fundly/style-guide</a></p>
-
-      <h3 class="f-m-t-large">Themes</h3>
-      <p>The style guide supports the concept of themes. Three colors can be set as part of the theme: Primary, AppRibbon, Footer</p>
-      <p>Click one of the following themes to see its effect:</p>
-      <div class="f-content-spacing-large f-p-large">
-        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
-          <div style="height:33%; background-color: #E0FFB3"></div>
-          <div style="height:33%; background-color: #61C791"></div>
-          <div style="height:33%; background-color: #31797D"></div>
+    <header class="f-app-ribbon fixed f-z-top f-b-primary three f-b-b f-bg-xlight-o-dark">
+      <div class="f-page-container responsive">
+        <div class="collapse-icon f-p-l-small f-clickable f-flex-center-y">
+          <i class="fa fa-bars fa-lg f-fc-dark f-fc-hover-black"></i>
         </div>
-        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
-          <div style="height:33%; background-color: #343844"></div>
-          <div style="height:33%; background-color: #2AB69D"></div>
-          <div style="height:33%; background-color: #E65848"></div>
+        <div class="brand">
+          <svg id="fundly-logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="145.823px" viewBox="0 0 902.761 247.632" enable-background="new 0 0 902.761 247.632" xml:space="preserve">
+            <path id="background-circle" fill="#59CAE9" d="M247.631,123.816c0,68.383-55.434,123.816-123.814,123.816 C55.434,247.632,0,192.199,0,123.816C0,55.435,55.434,0,123.817,0C192.197,0,247.631,55.435,247.631,123.816"></path>
+            <g id="knockout-heart">
+              <path fill="#2B2B3F" d="M180.111,89.444c-14.907-14.523-49.124-13.887-70.599,7.589c-21.48,21.481-21.979,55.825-7.591,70.602 l-0.015,0.015l11.659,11.659l0.617-0.617c-13.322-20.069-10.031-48.663,9.147-67.839c19.173-19.173,47.767-22.468,67.838-9.146 l0.618-0.619l-11.658-11.66L180.111,89.444z"></path>
+              <path fill="#2B2B3F" d="M123.817,0C55.434,0,0,55.435,0,123.816c0,68.383,55.434,123.816,123.817,123.816 c68.38,0,123.814-55.434,123.814-123.816C247.631,55.435,192.197,0,123.817,0z M208.42,121.729c0,0-0.199,0.611-0.62,1.726 c-0.386,1.071-0.812,2.123-1.267,3.159c-6.133,14.558-28.326,58.215-82.127,83.328l-0.001,0.224 c-0.079-0.037-0.156-0.075-0.235-0.111c-0.079,0.036-0.156,0.074-0.235,0.111l-0.001-0.224 c-48.931-22.84-71.72-61.021-80.058-78.699c-4.003-7.216-6.29-15.516-6.29-24.353c0-27.77,22.512-50.282,50.282-50.282 c14.161,0,26.947,5.863,36.085,15.283c9.166-9.69,22.134-15.745,36.525-15.745c27.771,0,50.283,22.512,50.283,50.282 c0,5.338-0.839,10.479-2.38,15.306L208.42,121.729z"></path>
+            </g>
+            <g id="fundly-text">
+              <g id="fund-text">
+                <path fill="#2B2B3F" d="M375.562,89.261h-63.84v24.64h48.16v25.76h-48.16v50.399h-25.76V63.501h89.6V89.261z"></path>
+                <path fill="#2B2B3F" d="M489.321,139.822c0,0.854-0.08,1.92-0.24,3.199c-0.16,1.28-0.348,2.535-0.562,3.761 c-0.215,1.228-0.455,2.319-0.72,3.279c-0.268,0.96-0.455,1.601-0.56,1.921c-2.138,6.827-5.075,12.64-8.815,17.439 s-7.933,8.72-12.577,11.76c-4.647,3.04-9.508,5.28-14.583,6.721c-5.075,1.439-10.018,2.159-14.822,2.159 c-5.022,0-10.178-0.774-15.465-2.319c-5.288-1.548-10.283-3.976-14.983-7.28c-4.7-3.308-8.892-7.492-12.577-12.56 c-3.685-5.065-6.438-11.065-8.252-18c-0.215-0.426-0.403-1.12-0.562-2.08c-0.16-0.96-0.32-1.945-0.48-2.96 c-0.16-1.013-0.295-2-0.4-2.96c-0.107-0.96-0.16-1.761-0.16-2.4v-76h25.76v75.4c0,0.319,0.053,0.8,0.16,1.439 c0.105,0.641,0.212,1.277,0.32,1.915c0.105,0.64,0.24,1.197,0.4,1.678c0.16,0.479,0.24,0.772,0.24,0.877 c1.065,3.41,2.56,6.338,4.48,8.788s4.025,4.473,6.32,6.07c2.292,1.597,4.745,2.77,7.36,3.515c2.612,0.745,5.2,1.117,7.76,1.117 c2.453,0,4.985-0.372,7.6-1.117c2.612-0.745,5.092-1.89,7.44-3.436c2.345-1.545,4.452-3.54,6.32-5.989 c1.864-2.45,3.385-5.433,4.56-8.948c0-0.104,0.08-0.397,0.24-0.877c0.16-0.48,0.32-1.038,0.479-1.678 c0.16-0.638,0.293-1.25,0.4-1.835c0.104-0.585,0.16-1.093,0.16-1.52v-75.4h25.76V139.822z"></path>
+                <path fill="#2B2B3F" d="M604.52,190.061h-25.6l-56-81.12v81.12h-25.76V63.501h25.6l56,81.12v-81.12h25.76V190.061z"></path>
+                <path fill="#2B2B3F" d="M718.44,126.862c0,7.574-1.28,14.747-3.84,21.52c-2.561,6.775-6,12.827-10.32,18.16 c-4.32,5.335-9.388,9.865-15.2,13.6c-5.814,3.732-11.975,6.4-18.479,8c-2.136,0.533-4.428,0.985-6.881,1.36 c-2.454,0.372-4.479,0.56-6.079,0.56h-45.28V63.501h45.28c1.064,0,2.292,0.08,3.68,0.24c1.385,0.16,2.8,0.375,4.24,0.64 c1.439,0.268,2.8,0.56,4.08,0.88c1.279,0.32,2.292,0.588,3.039,0.8c4.48,1.28,8.745,2.987,12.801,5.12 c4.052,2.135,8.16,5.067,12.319,8.8c3.732,3.308,6.745,6.667,9.04,10.08c2.293,3.415,4.24,6.828,5.84,10.24 c0.853,2.028,1.681,4.268,2.48,6.72c0.8,2.455,1.465,4.855,2,7.2c0.425,1.815,0.745,3.919,0.96,6.32 C718.333,122.942,718.44,125.049,718.44,126.862z M692.679,126.862c0-1.28,0-2.133,0-2.561c0-0.425-0.027-0.8-0.079-1.12 c-0.056-0.319-0.136-0.8-0.24-1.439c-0.107-0.641-0.268-1.76-0.48-3.36c-0.215-0.745-0.455-1.545-0.72-2.399 c-0.268-0.853-0.508-1.545-0.72-2.081c-0.748-2.24-1.976-4.72-3.681-7.44c-1.707-2.72-3.84-5.252-6.399-7.6 c-2.668-2.452-5.468-4.373-8.4-5.76c-2.935-1.385-5.787-2.4-8.56-3.04c-0.855-0.212-1.92-0.4-3.2-0.56s-2.027-0.24-2.24-0.24 h-19.84v75.04h19.84c0.641,0,1.44-0.053,2.4-0.16c0.96-0.104,1.92-0.292,2.88-0.56c0.96-0.265,1.865-0.505,2.72-0.72 c0.853-0.213,1.545-0.426,2.08-0.641c4.48-1.705,8.293-3.893,11.44-6.56c3.145-2.665,5.705-5.601,7.68-8.8 c1.973-3.2,3.385-6.533,4.24-10C692.252,133.396,692.679,130.061,692.679,126.862z"></path>
+              </g>
+              <g id="ly-text">
+                <path fill="#92A0A5" d="M816.203,190.061h-89.6V63.501h25.76v100.8h63.84V190.061z"></path>
+                <path fill="#92A0A5" d="M899.561,63.501l-39.84,69.6v56.96h-25.76v-56.96l-40-69.6h29.6l23.2,40.16l23.2-40.16H899.561z"></path>
+              </g>
+            </g>
+          </svg>
         </div>
-        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
-          <div style="height:33%; background-color: #F34A53"></div>
-          <div style="height:33%; background-color: #FAE3B4"></div>
-          <div style="height:33%; background-color: #AAC789"></div>
+        <div class="middle"></div>
+        <div class="right">
+          <ul class="js-section-list f-font-condensed f-fs-xsmall vertical-fill">
         </div>
-        <div class="js-theme f-ilb f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
-          <div style="height:33%; background-color: #045274"></div>
-          <div style="height:33%; background-color: #0586A6"></div>
-          <div style="height:33%; background-color: #31ADC2"></div>
+      </div>
+    </header>
+
+    <div class="f-app-ribbon-spacer"></div>
+
+    <section id="home" class="f-tc f-fc-black f-font-condensed f-pos-rel">
+      <div class="f-page-container responsive f-p-large">
+        <a href="https://github.com/fundly/style-guide"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+        <h2>About</h2>
+        <p>The style guide is a CSS framework that forms the base of styling for all Fundly products (<a href="http://fundly.com">Fundly.com</a> etc.). The <strong>Atomic CSS</strong> principles used in this framework were deeply inspired by this <a href="http://coding.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/">article</a>.</p>
+
+        <h3 class="f-m-t-large">Repo</h3>
+        <p><a href="https://github.com/fundly/style-guide">https://github.com/fundly/style-guide</a></p>
+
+        <h3 class="f-m-t-large">Themes</h3>
+        <p>The style guide supports the concept of themes. Three colors can be set as part of the theme: Primary, AppRibbon, Footer</p>
+        <p>Click one of the following themes to see its effect:</p>
+        <div class="f-tc f-p-large">
+          <div class="js-theme f-ilb f-m-xsmall f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+            <div style="height:33%; background-color: #E0FFB3"></div>
+            <div style="height:33%; background-color: #61C791"></div>
+            <div style="height:33%; background-color: #31797D"></div>
+          </div>
+          <div class="js-theme f-ilb f-m-xsmall f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+            <div style="height:33%; background-color: #343844"></div>
+            <div style="height:33%; background-color: #2AB69D"></div>
+            <div style="height:33%; background-color: #E65848"></div>
+          </div>
+          <div class="js-theme f-ilb f-m-xsmall f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+            <div style="height:33%; background-color: #F34A53"></div>
+            <div style="height:33%; background-color: #FAE3B4"></div>
+            <div style="height:33%; background-color: #AAC789"></div>
+          </div>
+          <div class="js-theme f-ilb f-m-xsmall f-br-medium f-clickable f-of-hidden" style="width: 80px; height: 120px">
+            <div style="height:33%; background-color: #045274"></div>
+            <div style="height:33%; background-color: #0586A6"></div>
+            <div style="height:33%; background-color: #31ADC2"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -90,31 +126,31 @@
 
       <p class="f-m-t-xlarge">We also have a 5 color swatch to chose from:</p>
       <div class="f-grid-row f-m-t-large">
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-swatchone" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchone</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-swatchtwo" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchtwo</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-swatchthree" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchthree</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-swatchfour" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchfour</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-swatchfive" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">swatchfive</span>
@@ -124,13 +160,13 @@
 
       <p class="f-m-t-xlarge">Black and White:</p>
       <div class="f-grid-row f-m-t-xlarge">
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-white" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">white</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-black" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">black</span>
@@ -140,31 +176,31 @@
 
       <p class="f-m-t-xlarge">A color range from light to dark:</p>
       <div class="f-grid-row f-m-t-xlarge">
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-xlight" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">xlight</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-light" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">light</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-medium" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">medium</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-dark" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">dark</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-xdark" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">xdark</span>
@@ -174,37 +210,37 @@
 
       <p class="f-m-t-xlarge">A range of social network colors:</p>
       <div class="f-grid-row f-m-t-xlarge">
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-facebook" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">facebook</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-twitter" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">twitter</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-google" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">google</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-linkedin" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">linkedin</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-pinterest" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">pinterest</span>
           </p>
         </div>
-        <div class="js-color-swatch f-ilb f-m-r-medium f-br-medium f-of-hidden f-bg-light">
+        <div class="js-color-swatch f-ilb f-m-xsmall f-br-medium f-of-hidden f-bg-light">
           <div class="f-bg-whats-app" style="height: 100px; width: 125px"></div>
           <p class="f-p-small f-tc">
             <span class="f-fs-small f-db f-m-b-xsmall f-fw-bold">whats-app</span>
@@ -214,37 +250,37 @@
       <h2 class="f-m-t-large">Opacity</h2>
       <p>The rules for opacity are: <strong>.f-opacity-{KEY}</strong></p>
       <div class="f-grid-row f-m-t-xlarge">
-        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-xlight">
+        <div class="f-ilb f-m-xsmall f-br-medium f-opacity-xlight f-of-hidden">
           <div class="f-bg-white" style="height: 100px; width: 125px"></div>
           <p class="f-p-medium f-tc f-bg-light">
             <span class="f-fs-xsmall">xlight</span>
           </p>
         </div>
-        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-light">
+        <div class="f-ilb f-m-xsmall f-br-medium f-opacity-light f-of-hidden">
           <div class="f-bg-white" style="height: 100px; width: 125px"></div>
           <p class="f-p-medium f-tc f-bg-light">
             <span class="f-fs-xsmall">light</span>
           </p>
         </div>
-        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-medium">
+        <div class="f-ilb f-m-xsmall f-br-medium f-opacity-medium f-of-hidden">
           <div class="f-bg-white" style="height: 100px; width: 125px"></div>
           <p class="f-p-medium f-tc f-bg-light">
             <span class="f-fs-xsmall">medium</span>
           </p>
         </div>
-        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-dark">
+        <div class="f-ilb f-m-xsmall f-br-medium f-opacity-dark f-of-hidden">
           <div class="f-bg-white" style="height: 100px; width: 125px"></div>
           <p class="f-p-medium f-tc f-bg-light">
             <span class="f-fs-xsmall">dark</span>
           </p>
         </div>
-        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-xdark">
+        <div class="f-ilb f-m-xsmall f-br-medium f-opacity-xdark f-of-hidden">
           <div class="f-bg-white" style="height: 100px; width: 125px"></div>
           <p class="f-p-medium f-tc f-bg-light">
             <span class="f-fs-xsmall">xdark</span>
           </p>
         </div>
-        <div class="f-ilb f-m-r-medium f-br-medium f-opacity-full">
+        <div class="f-ilb f-m-xsmall f-br-medium f-opacity-full f-of-hidden">
           <div class="f-bg-white" style="height: 100px; width: 125px"></div>
           <p class="f-p-medium f-tc f-bg-light">
             <span class="f-fs-xsmall">full</span>
@@ -930,7 +966,7 @@
       </div>
     </section>
 
-    <section id="lists" class="f-p-xlarge f-tc">
+    <section id="lists" class="f-p-xlarge f-tc f-font-condensed">
       <h2>Lists</h2>
       <p>Lists come in two flavours: normal and inline. You can also add bullets if needed and turn off the hover effect (.no-hover).</p>
 
@@ -984,7 +1020,7 @@
 
       <h3 class="f-m-t-large">.f-list-inline.vertical-fill</h3>
       <p class="f-m-b-medium">Vertical fill will make an inline list item fill the vertical space and center the item contents vertically as well.<br />If needed you can apply <strong>.f-bg-hover-{COLOR}</strong> to the item to set hover effects.</p>
-      <div class="f-ilb" style="height: 75px">
+      <div class="f-ilb f-flex-center" style="height: 75px">
         <ul class="f-list-inline vertical-fill f-tl f-bg-xlight f-font-condensed f-b-primary" >
           <li>Something Else</li>
           <li class="f-bg-hover-primary"><a href="http://google.com">Something Entirely</a></li>
@@ -993,14 +1029,14 @@
       </div>
     </section>
 
-    <section id="spinners" class="f-p-xlarge f-tc">
+    <section id="spinners" class="f-p-xlarge f-tc f-font-condensed">
       <h2>Spinners</h2>
       <p>Each spinner's layout is governed by their font size, so changing the font will alter the spinners size.</p>
-      <div class="f-page-container">
+      <div class="f-page-container responsive">
         <div class="f-grid-row f-m-t-large">
           <h3>.f-spinner-circles</h3>
           <p class="f-m-b-medium">The spinner circles color can be set via <strong>.f-bg-*</strong>.</p>
-          <div class="f-grid-2of12 f-grid-2of12-offset">
+          <div class="f-grid-2of12 f-grid-1of12-offset">
             <div class="f-spinner-circles f-fs-xsmall f-bg-xlight"></div>
           </div>
           <div class="f-grid-2of12">
@@ -1084,24 +1120,24 @@
       </div>
     </section>
 
-    <section id="badges" class="f-p-xlarge f-tc">
+    <section id="badges" class="f-p-xlarge f-tc f-font-condensed">
       <h2>Badges</h2>
       <p>Badges accept all the background colors and font-size options.<br />The should be attached to inline elements such as i or span, and can be positioned in two ways: inline or top-right.</p>
-      <div class="f-grid-rwo f-content-spacing-small f-p-t-large">
+      <div class="f-grid-rwo f-content-spacing-xsmall f-p-t-large">
         <div class="f-ilb">
-          <a href="#" class="f-button light email f-fs-small">
+          <a href="#" class="f-button light email f-fs-medium">
             Inline
             <i class="f-badge inline f-bg-swatchone f-m-l-xsmall">42</i>
           </a>
         </div>
         <div class="f-ilb">
-          <a href="#" class="f-button light email f-fs-small">
+          <a href="#" class="f-button light email f-fs-medium">
             top-right
             <i class="f-badge tr f-bg-primary">6,666</i>
           </a>
         </div>
       </div>
-      <div class="f-grid-rwo f-content-spacing-small f-p-t-large">
+      <div class="f-grid-rwo f-content-spacing-xsmall f-p-t-large">
         <div class="f-ilb">
           <a href="#" class="f-button light email f-fs-medium">
             Inline
@@ -1115,15 +1151,15 @@
           </a>
         </div>
       </div>
-      <div class="f-grid-rwo f-content-spacing-small f-p-t-large">
+      <div class="f-grid-rwo f-content-spacing-xsmall f-p-t-large">
         <div class="f-ilb">
-          <a href="#" class="f-button light email f-fs-large">
+          <a href="#" class="f-button light email f-fs-medium">
             Inline
             <i class="f-badge inline f-bg-swatchtwo f-m-l-xsmall">42</i>
           </a>
         </div>
         <div class="f-ilb">
-          <a href="#" class="f-button light email f-fs-large">
+          <a href="#" class="f-button light email f-fs-medium">
             top-right
             <i class="f-badge tr f-bg-black">6,666</i>
           </a>
@@ -1131,23 +1167,23 @@
       </div>
     </section>
 
-    <section id="misc" class="f-p-xlarge f-tc">
-      <div class="f-page-container">
+    <section id="misc" class="f-p-xlarge f-tc f-font-condensed">
+      <div class="f-page-container responsive">
         <h2>Miscellaneous</h2>
         <p></p>
         <h3 class="f-m-t-large">Notification Pill</h3>
         <p class="f-m-medium">These components are generally set to position:fixed at the highest z-index and with an animated show effect (flip) for maximum visibility.</p>
-        <div class="f-content-spacing-medium f-pos-rel">
-          <div class="f-notification-pill f-bg-dark">
+        <div class="ff-pos-rel">
+          <div class="f-notification-pill f-m-xsmall f-bg-dark">
             <div class="f-font-condensed">Standard</div>
           </div>
-          <div class="f-notification-pill success f-bg-dark">
+          <div class="f-notification-pill f-m-xsmall success f-bg-dark">
             <div class="f-font-condensed">Success</div>
           </div>
-          <div class="f-notification-pill error f-bg-medium">
+          <div class="f-notification-pill f-m-xsmall error f-bg-medium">
             <div class="f-font-condensed">Something went wrong</div>
           </div>
-          <div class="f-notification-pill processing f-bg-swatchfive">
+          <div class="f-notification-pill f-m-xsmall processing f-bg-swatchfive">
             <div class="f-font-condensed">Processing</div>
           </div>
         </div>
@@ -1178,12 +1214,12 @@
 
         <h3 class="f-m-t-large">Arrow Boxes</h3>
         <p class="f-m-medium">The arrows can be placed on each side, but only on one side. The arrow length variables are: <strong>small, medium (default), large</strong>.<br /> The will inherit both the background color and border color given to them.</p>
-        <div class="f-spaced-grid-5-large">
-          <div class="f-b-medium f-p-t-medium f-p-b-medium f-bg-white f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-down-small f-fc-swatchfive">12,345</div>
-          <div class="f-b-primary f-p-t-medium f-p-b-medium f-bg-light f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-up f-fc-swatchfive">12,345</div>
-          <div class="f-b-swatchtwo f-p-t-medium f-p-b-medium f-bg-medium f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-left f-fc-swatchfive">12,345</div>
-          <div class="f-b-swatchone f-p-t-medium f-p-b-medium f-bg-dark f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-right-large f-fc-xlight">12,345</div>
-          <div class="f-b-primary f-p-t-medium f-p-b-medium f-bg-black f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-down f-fc-white">12,345</div>
+        <div class="f-m-t-medium f-spaced-grid-3-medium">
+          <div class="f-m-b-small f-b-medium f-p-t-medium f-p-b-medium f-bg-white f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-down-small f-fc-swatchfive">12,345</div>
+          <div class="f-m-b-small f-b-primary f-p-t-medium f-p-b-medium f-bg-light f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-up f-fc-swatchfive">12,345</div>
+          <div class="f-m-b-small f-b-swatchtwo f-p-t-medium f-p-b-medium f-bg-medium f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-left f-fc-swatchfive">12,345</div>
+          <div class="f-m-b-small f-b-swatchone f-p-t-medium f-p-b-medium f-bg-dark f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-right-large f-fc-xlight">12,345</div>
+          <div class="f-m-b-small f-b-primary f-p-t-medium f-p-b-medium f-bg-black f-m-b-medium f-tc f-fw-bold f-fs-xlarge f-font-condensed f-arrow-down f-fc-white">12,345</div>
         </div>
 
         <h3 class="f-m-t-large">Content Section</h3>
@@ -1233,7 +1269,7 @@
         background-color: {{primaryColor}};
         color: {{primaryColorTextColor}};
       }
-      .f-appribbon {
+      .f-app-ribbon {
         background: {{appRibbonColor}};
         color: {{appRibbonTextColor}};
       }

@@ -1,0 +1,40 @@
+// Phone
+@media (max-width: $f-screen-phone){
+  .f-page-container.responsive {
+    width: 100%;
+  }
+  .f-r-phone-show {
+    display: block !important;
+  }
+  .f-r-phone-hide {
+    display: none !important;
+  }
+}
+
+
+// Tablet
+@media (min-width: ($f-screen-phone + 1)) and (max-width: $f-screen-tablet) {
+  .f-page-container.responsive {
+    width: 100%;
+  }
+  .f-r-tablet-show {
+    display: block !important;
+  }
+  .f-r-tablet-hide {
+    display: none !important;
+  }
+}
+
+
+// Desktop
+@media (min-width: ($f-screen-tablet + 1)) {
+  .f-container.responsive {
+    width: $f-page-container-width;
+  }
+  .f-r-desktop-show {
+    display: block !important;
+  }
+  .f-r-desktop-hide {
+    display: none !important;
+  }
+}

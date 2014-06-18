@@ -135,10 +135,12 @@ li {
   }
 
   &.vertical-fill {
-    height: 100%;
+    display: flex;
+    align-self: stretch;
 
     li {
-      height: 100%;
+      display: flex;
+      align-items: center;
     }
   }
 }

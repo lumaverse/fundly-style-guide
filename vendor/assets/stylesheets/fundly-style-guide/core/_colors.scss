@@ -51,7 +51,7 @@ a {
     background-color: rgba($color, $f-opacity-xdark);
     color: color-invert($color);
   }
-  .f-b-#{$key}, [class*="f-b-#{$key}"], .f-hr-#{$key} {
+  .f-b-#{$key}, .f-b-hover-#{$key}, [class*="f-b-#{$key}"], .f-hr-#{$key} {
     border-color: $color;
   }
 }
