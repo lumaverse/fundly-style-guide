@@ -3000,7 +3000,7 @@ iframe {
 .f-maxheight-100 {
   max-height: 100%; }
 
-.f-ilb {
+.f-ilb, .f-app-ribbon .middle {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -4049,8 +4049,8 @@ iframe {
   -ms-flex-pack: justify;
   justify-content: space-between;
   text-align: center;
-  height: 70px;
-  padding: 15px 0;
+  height: 60px;
+  padding: 10px 0;
   -webkit-box-sizing: padding-box;
   -moz-box-sizing: padding-box;
   box-sizing: padding-box; }
@@ -4079,9 +4079,10 @@ iframe {
     -ms-flex-align: center;
     align-items: center; }
   .f-app-ribbon .collapse-icon {
-    float: left;
     display: none;
-    height: 40px; }
+    position: absolute;
+    height: 40px;
+    line-height: 40px; }
   .f-app-ribbon .brand {
     float: left;
     text-align: left; }
@@ -4090,7 +4091,11 @@ iframe {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    text-align: center; }
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .f-app-ribbon .right {
     float: right;
     text-align: right; }
@@ -4108,10 +4113,7 @@ iframe {
       display: block;
       text-align: center; }
     .f-app-ribbon .collapse-icon {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
+      display: block; }
     .f-app-ribbon .brand {
       margin: auto;
       display: inline-block;
@@ -4131,7 +4133,7 @@ iframe {
 
 .f-app-ribbon-spacer {
   width: 100%;
-  height: 70px; }
+  height: 60px; }
 
 /*
 Avatars: come in 5 sizes and can be decorated with a range of social badges
