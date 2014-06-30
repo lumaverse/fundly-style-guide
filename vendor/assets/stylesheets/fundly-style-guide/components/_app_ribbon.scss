@@ -35,9 +35,10 @@
   }
 
   .collapse-icon {
-    float: left;
     display: none;
+    position: absolute;
     height: $f-appribbon-content;
+    line-height: $f-appribbon-content;
   }
 
   .brand {
@@ -73,7 +74,7 @@
 
     // show the collapse hamburger icon
     .collapse-icon {
-      display: flex;
+      display: block;
     }
     // move the brand section to the middle
     .brand {
