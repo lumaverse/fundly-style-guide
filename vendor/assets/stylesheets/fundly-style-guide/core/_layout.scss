@@ -34,6 +34,14 @@ iframe { border: none; }
   .f-m-#{$set} {
     margin: $dimension;
   }
+  .f-m-x-#{$set} {
+    margin-left: $dimension;
+    margin-right: $dimension;
+  }
+  .f-m-y-#{$set} {
+    margin-top: $dimension;
+    margin-bottom: $dimension;
+  }
   .f-m-l-#{$set} {
     margin-left: $dimension;
   }
@@ -48,6 +56,14 @@ iframe { border: none; }
   }
   .f-p-#{$set} {
     padding: $dimension;
+  }
+  .f-p-x-#{$set} {
+    padding-left: $dimension;
+    padding-right: $dimension;
+  }
+  .f-p-y-#{$set} {
+    padding-top: $dimension;
+    padding-bottom: $dimension;
   }
   .f-p-l-#{$set} {
     padding-left: $dimension;
