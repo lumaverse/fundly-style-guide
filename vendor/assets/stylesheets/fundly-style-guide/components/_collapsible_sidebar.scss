@@ -37,6 +37,10 @@
     width: 100%;
     float: none;
     transition: transform 0.5s;
+
+    &:after {
+      transition: opacity 0.5s, height 0.1s 0.5s, width 0.1s 0.5s;
+    }
   }
 
   .open {
