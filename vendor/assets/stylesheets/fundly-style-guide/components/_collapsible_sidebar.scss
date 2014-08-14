@@ -18,10 +18,11 @@
       width: 0; height: 0;
       opacity: 0;
       content: '';
-      background-color: rgba(0,0,0,0.65);
+      background-color: rgba(0,0,0,0.45);
     }
   }
 }
+
 @media (max-width: $f-screen-phone){
   .f-collapsible-menu {
     float: none;

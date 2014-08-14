@@ -91,3 +91,27 @@
   }
 }
 @include make-spaced-grid-set(12);
+
+
+// Added ability to stack grids via media queries
+@media (max-width: $f-screen-phone){
+  .f-grid-row.stacked-phone {
+    display: block;
+
+    & > [class*='f-grid-'] {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+@media (min-width: ($f-screen-phone + 1)) and (max-width: $f-screen-tablet) {
+  .f-grid-row.stacked-tablet {
+    display: block;
+
+    & > [class*='f-grid-'] {
+      width: 100%;
+      float: none;
+    }
+  }
+}
