@@ -1,7 +1,7 @@
 module Fundly
   module Style
     module Guide
-      VERSION = "0.23.2"
+      VERSION = "0.23.3"
     end
   end
 end
