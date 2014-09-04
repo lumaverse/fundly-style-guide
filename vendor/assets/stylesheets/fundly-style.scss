@@ -5,7 +5,7 @@ Fundly Style Guide ready for use in Rails projects.
 
 
 // Load font libraries via their gem implementations
-$fa-font-path: "/assets/fonts";
+$fa-font-path: "/assets/fonts/";
 @import "font-awesome";
 @import "fundly-icon-font";
 
