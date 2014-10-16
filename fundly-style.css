@@ -15,24 +15,23 @@ Fundly Style Guide compiled for use in front-end contexts.
   - build script will move fonts to the correct location
 */
 /*!
- *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('./fonts/fontawesome-webfont.eot?v=4.0.3');
-  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('./fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('./fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('./fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  src: url('./fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('./fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('./fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('./fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 
 .fa, .f-gallery-leftarea, .f-gallery-rightarea {
   display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -91,24 +90,19 @@ Fundly Style Guide compiled for use in front-end contexts.
   margin-left: 0.3em; }
 
 .fa-spin {
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear; }
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear; }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
 
   100% {
-    -webkit-transform: rotate(359deg); } }
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
 
-@-ms-keyframes spin {
-  0% {
-    -ms-transform: rotate(0deg); }
-
-  100% {
-    -ms-transform: rotate(359deg); } }
-
-@keyframes spin {
+@keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -120,34 +114,38 @@ Fundly Style Guide compiled for use in front-end contexts.
     transform: rotate(359deg); } }
 
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
+
+:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-flip-horizontal, :root .fa-flip-vertical {
+  -webkit-filter: none;
+  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -213,7 +211,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-check:before {
   content: "\f00c"; }
 
-.fa-times:before {
+.fa-remove:before, .fa-close:before, .fa-times:before {
   content: "\f00d"; }
 
 .fa-search-plus:before {
@@ -351,7 +349,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-video-camera:before {
   content: "\f03d"; }
 
-.fa-picture-o:before {
+.fa-photo:before, .fa-image:before, .fa-picture-o:before {
   content: "\f03e"; }
 
 .fa-pencil:before {
@@ -534,7 +532,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-arrows-h:before {
   content: "\f07e"; }
 
-.fa-bar-chart-o:before {
+.fa-bar-chart-o:before, .fa-bar-chart:before {
   content: "\f080"; }
 
 .fa-twitter-square:before {
@@ -705,7 +703,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-square:before {
   content: "\f0c8"; }
 
-.fa-bars:before {
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
   content: "\f0c9"; }
 
 .fa-list-ul:before {
@@ -762,10 +760,10 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-unsorted:before, .fa-sort:before {
   content: "\f0dc"; }
 
-.fa-sort-down:before, .fa-sort-asc:before {
+.fa-sort-down:before, .fa-sort-desc:before {
   content: "\f0dd"; }
 
-.fa-sort-up:before, .fa-sort-desc:before {
+.fa-sort-up:before, .fa-sort-asc:before {
   content: "\f0de"; }
 
 .fa-envelope:before {
@@ -948,10 +946,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-code:before {
   content: "\f121"; }
 
-.fa-reply-all:before {
-  content: "\f122"; }
-
-.fa-mail-reply-all:before {
+.fa-mail-reply-all:before, .fa-reply-all:before {
   content: "\f122"; }
 
 .fa-star-half-empty:before, .fa-star-half-full:before, .fa-star-half-o:before {
@@ -1281,6 +1276,339 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-plus-square-o:before {
   content: "\f196"; }
 
+.fa-space-shuttle:before {
+  content: "\f197"; }
+
+.fa-slack:before {
+  content: "\f198"; }
+
+.fa-envelope-square:before {
+  content: "\f199"; }
+
+.fa-wordpress:before {
+  content: "\f19a"; }
+
+.fa-openid:before {
+  content: "\f19b"; }
+
+.fa-institution:before, .fa-bank:before, .fa-university:before {
+  content: "\f19c"; }
+
+.fa-mortar-board:before, .fa-graduation-cap:before {
+  content: "\f19d"; }
+
+.fa-yahoo:before {
+  content: "\f19e"; }
+
+.fa-google:before {
+  content: "\f1a0"; }
+
+.fa-reddit:before {
+  content: "\f1a1"; }
+
+.fa-reddit-square:before {
+  content: "\f1a2"; }
+
+.fa-stumbleupon-circle:before {
+  content: "\f1a3"; }
+
+.fa-stumbleupon:before {
+  content: "\f1a4"; }
+
+.fa-delicious:before {
+  content: "\f1a5"; }
+
+.fa-digg:before {
+  content: "\f1a6"; }
+
+.fa-pied-piper:before {
+  content: "\f1a7"; }
+
+.fa-pied-piper-alt:before {
+  content: "\f1a8"; }
+
+.fa-drupal:before {
+  content: "\f1a9"; }
+
+.fa-joomla:before {
+  content: "\f1aa"; }
+
+.fa-language:before {
+  content: "\f1ab"; }
+
+.fa-fax:before {
+  content: "\f1ac"; }
+
+.fa-building:before {
+  content: "\f1ad"; }
+
+.fa-child:before {
+  content: "\f1ae"; }
+
+.fa-paw:before {
+  content: "\f1b0"; }
+
+.fa-spoon:before {
+  content: "\f1b1"; }
+
+.fa-cube:before {
+  content: "\f1b2"; }
+
+.fa-cubes:before {
+  content: "\f1b3"; }
+
+.fa-behance:before {
+  content: "\f1b4"; }
+
+.fa-behance-square:before {
+  content: "\f1b5"; }
+
+.fa-steam:before {
+  content: "\f1b6"; }
+
+.fa-steam-square:before {
+  content: "\f1b7"; }
+
+.fa-recycle:before {
+  content: "\f1b8"; }
+
+.fa-automobile:before, .fa-car:before {
+  content: "\f1b9"; }
+
+.fa-cab:before, .fa-taxi:before {
+  content: "\f1ba"; }
+
+.fa-tree:before {
+  content: "\f1bb"; }
+
+.fa-spotify:before {
+  content: "\f1bc"; }
+
+.fa-deviantart:before {
+  content: "\f1bd"; }
+
+.fa-soundcloud:before {
+  content: "\f1be"; }
+
+.fa-database:before {
+  content: "\f1c0"; }
+
+.fa-file-pdf-o:before {
+  content: "\f1c1"; }
+
+.fa-file-word-o:before {
+  content: "\f1c2"; }
+
+.fa-file-excel-o:before {
+  content: "\f1c3"; }
+
+.fa-file-powerpoint-o:before {
+  content: "\f1c4"; }
+
+.fa-file-photo-o:before, .fa-file-picture-o:before, .fa-file-image-o:before {
+  content: "\f1c5"; }
+
+.fa-file-zip-o:before, .fa-file-archive-o:before {
+  content: "\f1c6"; }
+
+.fa-file-sound-o:before, .fa-file-audio-o:before {
+  content: "\f1c7"; }
+
+.fa-file-movie-o:before, .fa-file-video-o:before {
+  content: "\f1c8"; }
+
+.fa-file-code-o:before {
+  content: "\f1c9"; }
+
+.fa-vine:before {
+  content: "\f1ca"; }
+
+.fa-codepen:before {
+  content: "\f1cb"; }
+
+.fa-jsfiddle:before {
+  content: "\f1cc"; }
+
+.fa-life-bouy:before, .fa-life-buoy:before, .fa-life-saver:before, .fa-support:before, .fa-life-ring:before {
+  content: "\f1cd"; }
+
+.fa-circle-o-notch:before {
+  content: "\f1ce"; }
+
+.fa-ra:before, .fa-rebel:before {
+  content: "\f1d0"; }
+
+.fa-ge:before, .fa-empire:before {
+  content: "\f1d1"; }
+
+.fa-git-square:before {
+  content: "\f1d2"; }
+
+.fa-git:before {
+  content: "\f1d3"; }
+
+.fa-hacker-news:before {
+  content: "\f1d4"; }
+
+.fa-tencent-weibo:before {
+  content: "\f1d5"; }
+
+.fa-qq:before {
+  content: "\f1d6"; }
+
+.fa-wechat:before, .fa-weixin:before {
+  content: "\f1d7"; }
+
+.fa-send:before, .fa-paper-plane:before {
+  content: "\f1d8"; }
+
+.fa-send-o:before, .fa-paper-plane-o:before {
+  content: "\f1d9"; }
+
+.fa-history:before {
+  content: "\f1da"; }
+
+.fa-circle-thin:before {
+  content: "\f1db"; }
+
+.fa-header:before {
+  content: "\f1dc"; }
+
+.fa-paragraph:before {
+  content: "\f1dd"; }
+
+.fa-sliders:before {
+  content: "\f1de"; }
+
+.fa-share-alt:before {
+  content: "\f1e0"; }
+
+.fa-share-alt-square:before {
+  content: "\f1e1"; }
+
+.fa-bomb:before {
+  content: "\f1e2"; }
+
+.fa-soccer-ball-o:before, .fa-futbol-o:before {
+  content: "\f1e3"; }
+
+.fa-tty:before {
+  content: "\f1e4"; }
+
+.fa-binoculars:before {
+  content: "\f1e5"; }
+
+.fa-plug:before {
+  content: "\f1e6"; }
+
+.fa-slideshare:before {
+  content: "\f1e7"; }
+
+.fa-twitch:before {
+  content: "\f1e8"; }
+
+.fa-yelp:before {
+  content: "\f1e9"; }
+
+.fa-newspaper-o:before {
+  content: "\f1ea"; }
+
+.fa-wifi:before {
+  content: "\f1eb"; }
+
+.fa-calculator:before {
+  content: "\f1ec"; }
+
+.fa-paypal:before {
+  content: "\f1ed"; }
+
+.fa-google-wallet:before {
+  content: "\f1ee"; }
+
+.fa-cc-visa:before {
+  content: "\f1f0"; }
+
+.fa-cc-mastercard:before {
+  content: "\f1f1"; }
+
+.fa-cc-discover:before {
+  content: "\f1f2"; }
+
+.fa-cc-amex:before {
+  content: "\f1f3"; }
+
+.fa-cc-paypal:before {
+  content: "\f1f4"; }
+
+.fa-cc-stripe:before {
+  content: "\f1f5"; }
+
+.fa-bell-slash:before {
+  content: "\f1f6"; }
+
+.fa-bell-slash-o:before {
+  content: "\f1f7"; }
+
+.fa-trash:before {
+  content: "\f1f8"; }
+
+.fa-copyright:before {
+  content: "\f1f9"; }
+
+.fa-at:before {
+  content: "\f1fa"; }
+
+.fa-eyedropper:before {
+  content: "\f1fb"; }
+
+.fa-paint-brush:before {
+  content: "\f1fc"; }
+
+.fa-birthday-cake:before {
+  content: "\f1fd"; }
+
+.fa-area-chart:before {
+  content: "\f1fe"; }
+
+.fa-pie-chart:before {
+  content: "\f200"; }
+
+.fa-line-chart:before {
+  content: "\f201"; }
+
+.fa-lastfm:before {
+  content: "\f202"; }
+
+.fa-lastfm-square:before {
+  content: "\f203"; }
+
+.fa-toggle-off:before {
+  content: "\f204"; }
+
+.fa-toggle-on:before {
+  content: "\f205"; }
+
+.fa-bicycle:before {
+  content: "\f206"; }
+
+.fa-bus:before {
+  content: "\f207"; }
+
+.fa-ioxhost:before {
+  content: "\f208"; }
+
+.fa-angellist:before {
+  content: "\f209"; }
+
+.fa-cc:before {
+  content: "\f20a"; }
+
+.fa-shekel:before, .fa-sheqel:before, .fa-ils:before {
+  content: "\f20b"; }
+
+.fa-meanpath:before {
+  content: "\f20c"; }
+
 @font-face {
   font-family: 'FundlyIcons';
   src: url('./fonts/fundly-icons.eot?v=0.3.1');
@@ -1299,62 +1627,65 @@ Fundly Style Guide compiled for use in front-end contexts.
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.f-icon-trips:before {
+.f-icon-animal:before {
   content: "\e600"; }
 
-.f-icon-sports:before {
+.f-icon-arts:before {
   content: "\e601"; }
 
-.f-icon-run-walk-ride:before {
+.f-icon-children:before {
   content: "\e602"; }
 
-.f-icon-political:before {
+.f-icon-church:before {
   content: "\e603"; }
 
-.f-icon-other:before {
+.f-icon-community:before {
   content: "\e604"; }
 
-.f-icon-non-profit:before {
+.f-icon-education:before {
   content: "\e605"; }
 
-.f-icon-memorial:before {
+.f-icon-greek:before {
   content: "\e606"; }
 
-.f-icon-logo-knockout:before {
+.f-icon-health:before {
   content: "\e607"; }
 
-.f-icon-logo-heart:before {
+.f-icon-location:before {
   content: "\e608"; }
 
-.f-icon-location:before {
+.f-icon-logo-heart:before {
   content: "\e609"; }
 
-.f-icon-health:before {
+.f-icon-logo-knockout:before {
   content: "\e60a"; }
 
-.f-icon-greek:before {
+.f-icon-memorial:before {
   content: "\e60b"; }
 
-.f-icon-education:before {
+.f-icon-military:before {
   content: "\e60c"; }
 
-.f-icon-community:before {
+.f-icon-non-profit:before {
   content: "\e60d"; }
 
-.f-icon-church:before {
+.f-icon-other:before {
   content: "\e60e"; }
 
-.f-icon-children:before {
+.f-icon-political:before {
   content: "\e60f"; }
 
-.f-icon-arts:before {
+.f-icon-run-walk-ride:before {
   content: "\e610"; }
 
-.f-icon-animal:before {
+.f-icon-sports:before {
   content: "\e611"; }
 
-.f-icon-whats-app:before {
+.f-icon-trips:before {
   content: "\e612"; }
+
+.f-icon-whats-app:before {
+  content: "\e613"; }
 
 .f-icon-lg {
   font-size: 1.33333em;
@@ -1603,6 +1934,9 @@ a {
 .f-b-primary, .f-b-hover-primary, [class*="f-b-primary"], .f-hr-primary {
   border-color: #FF8B5D; }
 
+.f-list li:hover .primary {
+  color: #FF8B5D; }
+
 .f-fc-white, .f-fc-hover-white:hover {
   color: white; }
 
@@ -1632,6 +1966,9 @@ a {
 
 .f-b-white, .f-b-hover-white, [class*="f-b-white"], .f-hr-white {
   border-color: white; }
+
+.f-list li:hover .white {
+  color: white; }
 
 .f-fc-xlight, .f-fc-hover-xlight:hover {
   color: #e7eaed; }
@@ -1663,6 +2000,9 @@ a {
 .f-b-xlight, .f-b-hover-xlight, [class*="f-b-xlight"], .f-hr-xlight {
   border-color: #e7eaed; }
 
+.f-list li:hover .xlight {
+  color: #e7eaed; }
+
 .f-fc-light, .f-fc-hover-light:hover {
   color: #cfd2d5; }
 
@@ -1692,6 +2032,9 @@ a {
 
 .f-b-light, .f-b-hover-light, [class*="f-b-light"], .f-hr-light {
   border-color: #cfd2d5; }
+
+.f-list li:hover .light {
+  color: #cfd2d5; }
 
 .f-fc-medium, .f-fc-hover-medium:hover {
   color: #b8bbbd; }
@@ -1723,6 +2066,9 @@ a {
 .f-b-medium, .f-b-hover-medium, [class*="f-b-medium"], .f-hr-medium {
   border-color: #b8bbbd; }
 
+.f-list li:hover .medium {
+  color: #b8bbbd; }
+
 .f-fc-dark, .f-fc-hover-dark:hover {
   color: #8a8c8e; }
 
@@ -1752,6 +2098,9 @@ a {
 
 .f-b-dark, .f-b-hover-dark, [class*="f-b-dark"], .f-hr-dark {
   border-color: #8a8c8e; }
+
+.f-list li:hover .dark {
+  color: #8a8c8e; }
 
 .f-fc-xdark, .f-fc-hover-xdark:hover {
   color: #5c5d5e; }
@@ -1783,6 +2132,9 @@ a {
 .f-b-xdark, .f-b-hover-xdark, [class*="f-b-xdark"], .f-hr-xdark {
   border-color: #5c5d5e; }
 
+.f-list li:hover .xdark {
+  color: #5c5d5e; }
+
 .f-fc-black, .f-fc-hover-black:hover {
   color: black; }
 
@@ -1812,6 +2164,9 @@ a {
 
 .f-b-black, .f-b-hover-black, [class*="f-b-black"], .f-hr-black {
   border-color: black; }
+
+.f-list li:hover .black {
+  color: black; }
 
 .f-fc-swatchone, .f-fc-hover-swatchone:hover {
   color: #59CAE9; }
@@ -1843,6 +2198,9 @@ a {
 .f-b-swatchone, .f-b-hover-swatchone, [class*="f-b-swatchone"], .f-hr-swatchone {
   border-color: #59CAE9; }
 
+.f-list li:hover .swatchone {
+  color: #59CAE9; }
+
 .f-fc-swatchtwo, .f-fc-hover-swatchtwo:hover {
   color: #CEE8C5; }
 
@@ -1872,6 +2230,9 @@ a {
 
 .f-b-swatchtwo, .f-b-hover-swatchtwo, [class*="f-b-swatchtwo"], .f-hr-swatchtwo {
   border-color: #CEE8C5; }
+
+.f-list li:hover .swatchtwo {
+  color: #CEE8C5; }
 
 .f-fc-swatchthree, .f-fc-hover-swatchthree:hover {
   color: #FF9666; }
@@ -1903,6 +2264,9 @@ a {
 .f-b-swatchthree, .f-b-hover-swatchthree, [class*="f-b-swatchthree"], .f-hr-swatchthree {
   border-color: #FF9666; }
 
+.f-list li:hover .swatchthree {
+  color: #FF9666; }
+
 .f-fc-swatchfour, .f-fc-hover-swatchfour:hover {
   color: #777F83; }
 
@@ -1932,6 +2296,9 @@ a {
 
 .f-b-swatchfour, .f-b-hover-swatchfour, [class*="f-b-swatchfour"], .f-hr-swatchfour {
   border-color: #777F83; }
+
+.f-list li:hover .swatchfour {
+  color: #777F83; }
 
 .f-fc-swatchfive, .f-fc-hover-swatchfive:hover {
   color: #2B2B3F; }
@@ -1963,6 +2330,9 @@ a {
 .f-b-swatchfive, .f-b-hover-swatchfive, [class*="f-b-swatchfive"], .f-hr-swatchfive {
   border-color: #2B2B3F; }
 
+.f-list li:hover .swatchfive {
+  color: #2B2B3F; }
+
 .f-fc-facebook, .f-fc-hover-facebook:hover {
   color: #395b98; }
 
@@ -1992,6 +2362,9 @@ a {
 
 .f-b-facebook, .f-b-hover-facebook, [class*="f-b-facebook"], .f-hr-facebook {
   border-color: #395b98; }
+
+.f-list li:hover .facebook {
+  color: #395b98; }
 
 .f-fc-twitter, .f-fc-hover-twitter:hover {
   color: #1ba5e2; }
@@ -2023,6 +2396,9 @@ a {
 .f-b-twitter, .f-b-hover-twitter, [class*="f-b-twitter"], .f-hr-twitter {
   border-color: #1ba5e2; }
 
+.f-list li:hover .twitter {
+  color: #1ba5e2; }
+
 .f-fc-google, .f-fc-hover-google:hover {
   color: #ff0000; }
 
@@ -2052,6 +2428,9 @@ a {
 
 .f-b-google, .f-b-hover-google, [class*="f-b-google"], .f-hr-google {
   border-color: #ff0000; }
+
+.f-list li:hover .google {
+  color: #ff0000; }
 
 .f-fc-linkedin, .f-fc-hover-linkedin:hover {
   color: #1d87bd; }
@@ -2083,6 +2462,9 @@ a {
 .f-b-linkedin, .f-b-hover-linkedin, [class*="f-b-linkedin"], .f-hr-linkedin {
   border-color: #1d87bd; }
 
+.f-list li:hover .linkedin {
+  color: #1d87bd; }
+
 .f-fc-pinterest, .f-fc-hover-pinterest:hover {
   color: #cb2027; }
 
@@ -2112,6 +2494,9 @@ a {
 
 .f-b-pinterest, .f-b-hover-pinterest, [class*="f-b-pinterest"], .f-hr-pinterest {
   border-color: #cb2027; }
+
+.f-list li:hover .pinterest {
+  color: #cb2027; }
 
 .f-fc-whats-app, .f-fc-hover-whats-app:hover {
   color: #60B82D; }
@@ -2143,6 +2528,9 @@ a {
 .f-b-whats-app, .f-b-hover-whats-app, [class*="f-b-whats-app"], .f-hr-whats-app {
   border-color: #60B82D; }
 
+.f-list li:hover .whats-app {
+  color: #60B82D; }
+
 .f-fc-success, .f-fc-hover-success:hover {
   color: green; }
 
@@ -2173,6 +2561,9 @@ a {
 .f-b-success, .f-b-hover-success, [class*="f-b-success"], .f-hr-success {
   border-color: green; }
 
+.f-list li:hover .success {
+  color: green; }
+
 .f-fc-error, .f-fc-hover-error:hover {
   color: red; }
 
@@ -2202,6 +2593,9 @@ a {
 
 .f-b-error, .f-b-hover-error, [class*="f-b-error"], .f-hr-error {
   border-color: red; }
+
+.f-list li:hover .error {
+  color: red; }
 
 [class*='f-bg-hover-'] {
   -webkit-transition: background-color 150ms ease-in-out;
@@ -4543,7 +4937,7 @@ li {
     color: white; }
     .f-button.whats-app:before {
       font-family: FundlyIcons;
-      content: "\e612"; }
+      content: "\e613"; }
 
 .f-popup {
   position: absolute;
