@@ -54,6 +54,9 @@ a {
   .f-b-#{$key}, .f-b-hover-#{$key}, [class*="f-b-#{$key}"], .f-hr-#{$key} {
     border-color: $color;
   }
+  .f-list li:hover .#{$key} {
+    color: $color;
+  }
 }
 
 
