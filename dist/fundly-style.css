@@ -1907,6 +1907,9 @@ a {
 .f-fc-primary, .f-fc-hover-primary:hover {
   color: #FF8B5D; }
 
+.f-list li:hover .f-list-primary, .f-selectable:hover .f-selectable-primary {
+  color: #FF8B5D; }
+
 .f-bg-primary, .f-bg-hover-primary:hover {
   background-color: #FF8B5D;
   color: #e7eaed; }
@@ -1934,10 +1937,10 @@ a {
 .f-b-primary, .f-b-hover-primary, [class*="f-b-primary"], .f-hr-primary {
   border-color: #FF8B5D; }
 
-.f-list li:hover .primary {
-  color: #FF8B5D; }
-
 .f-fc-white, .f-fc-hover-white:hover {
+  color: white; }
+
+.f-list li:hover .f-list-white, .f-selectable:hover .f-selectable-white {
   color: white; }
 
 .f-bg-white, .f-bg-hover-white:hover {
@@ -1967,10 +1970,10 @@ a {
 .f-b-white, .f-b-hover-white, [class*="f-b-white"], .f-hr-white {
   border-color: white; }
 
-.f-list li:hover .white {
-  color: white; }
-
 .f-fc-xlight, .f-fc-hover-xlight:hover {
+  color: #e7eaed; }
+
+.f-list li:hover .f-list-xlight, .f-selectable:hover .f-selectable-xlight {
   color: #e7eaed; }
 
 .f-bg-xlight, .f-bg-hover-xlight:hover {
@@ -2000,10 +2003,10 @@ a {
 .f-b-xlight, .f-b-hover-xlight, [class*="f-b-xlight"], .f-hr-xlight {
   border-color: #e7eaed; }
 
-.f-list li:hover .xlight {
-  color: #e7eaed; }
-
 .f-fc-light, .f-fc-hover-light:hover {
+  color: #cfd2d5; }
+
+.f-list li:hover .f-list-light, .f-selectable:hover .f-selectable-light {
   color: #cfd2d5; }
 
 .f-bg-light, .f-bg-hover-light:hover {
@@ -2033,10 +2036,10 @@ a {
 .f-b-light, .f-b-hover-light, [class*="f-b-light"], .f-hr-light {
   border-color: #cfd2d5; }
 
-.f-list li:hover .light {
-  color: #cfd2d5; }
-
 .f-fc-medium, .f-fc-hover-medium:hover {
+  color: #b8bbbd; }
+
+.f-list li:hover .f-list-medium, .f-selectable:hover .f-selectable-medium {
   color: #b8bbbd; }
 
 .f-bg-medium, .f-bg-hover-medium:hover {
@@ -2066,10 +2069,10 @@ a {
 .f-b-medium, .f-b-hover-medium, [class*="f-b-medium"], .f-hr-medium {
   border-color: #b8bbbd; }
 
-.f-list li:hover .medium {
-  color: #b8bbbd; }
-
 .f-fc-dark, .f-fc-hover-dark:hover {
+  color: #8a8c8e; }
+
+.f-list li:hover .f-list-dark, .f-selectable:hover .f-selectable-dark {
   color: #8a8c8e; }
 
 .f-bg-dark, .f-bg-hover-dark:hover {
@@ -2099,10 +2102,10 @@ a {
 .f-b-dark, .f-b-hover-dark, [class*="f-b-dark"], .f-hr-dark {
   border-color: #8a8c8e; }
 
-.f-list li:hover .dark {
-  color: #8a8c8e; }
-
 .f-fc-xdark, .f-fc-hover-xdark:hover {
+  color: #5c5d5e; }
+
+.f-list li:hover .f-list-xdark, .f-selectable:hover .f-selectable-xdark {
   color: #5c5d5e; }
 
 .f-bg-xdark, .f-bg-hover-xdark:hover {
@@ -2132,10 +2135,10 @@ a {
 .f-b-xdark, .f-b-hover-xdark, [class*="f-b-xdark"], .f-hr-xdark {
   border-color: #5c5d5e; }
 
-.f-list li:hover .xdark {
-  color: #5c5d5e; }
-
 .f-fc-black, .f-fc-hover-black:hover {
+  color: black; }
+
+.f-list li:hover .f-list-black, .f-selectable:hover .f-selectable-black {
   color: black; }
 
 .f-bg-black, .f-bg-hover-black:hover {
@@ -2165,10 +2168,10 @@ a {
 .f-b-black, .f-b-hover-black, [class*="f-b-black"], .f-hr-black {
   border-color: black; }
 
-.f-list li:hover .black {
-  color: black; }
-
 .f-fc-swatchone, .f-fc-hover-swatchone:hover {
+  color: #59CAE9; }
+
+.f-list li:hover .f-list-swatchone, .f-selectable:hover .f-selectable-swatchone {
   color: #59CAE9; }
 
 .f-bg-swatchone, .f-bg-hover-swatchone:hover {
@@ -2198,10 +2201,10 @@ a {
 .f-b-swatchone, .f-b-hover-swatchone, [class*="f-b-swatchone"], .f-hr-swatchone {
   border-color: #59CAE9; }
 
-.f-list li:hover .swatchone {
-  color: #59CAE9; }
-
 .f-fc-swatchtwo, .f-fc-hover-swatchtwo:hover {
+  color: #CEE8C5; }
+
+.f-list li:hover .f-list-swatchtwo, .f-selectable:hover .f-selectable-swatchtwo {
   color: #CEE8C5; }
 
 .f-bg-swatchtwo, .f-bg-hover-swatchtwo:hover {
@@ -2231,10 +2234,10 @@ a {
 .f-b-swatchtwo, .f-b-hover-swatchtwo, [class*="f-b-swatchtwo"], .f-hr-swatchtwo {
   border-color: #CEE8C5; }
 
-.f-list li:hover .swatchtwo {
-  color: #CEE8C5; }
-
 .f-fc-swatchthree, .f-fc-hover-swatchthree:hover {
+  color: #FF9666; }
+
+.f-list li:hover .f-list-swatchthree, .f-selectable:hover .f-selectable-swatchthree {
   color: #FF9666; }
 
 .f-bg-swatchthree, .f-bg-hover-swatchthree:hover {
@@ -2264,10 +2267,10 @@ a {
 .f-b-swatchthree, .f-b-hover-swatchthree, [class*="f-b-swatchthree"], .f-hr-swatchthree {
   border-color: #FF9666; }
 
-.f-list li:hover .swatchthree {
-  color: #FF9666; }
-
 .f-fc-swatchfour, .f-fc-hover-swatchfour:hover {
+  color: #777F83; }
+
+.f-list li:hover .f-list-swatchfour, .f-selectable:hover .f-selectable-swatchfour {
   color: #777F83; }
 
 .f-bg-swatchfour, .f-bg-hover-swatchfour:hover {
@@ -2297,10 +2300,10 @@ a {
 .f-b-swatchfour, .f-b-hover-swatchfour, [class*="f-b-swatchfour"], .f-hr-swatchfour {
   border-color: #777F83; }
 
-.f-list li:hover .swatchfour {
-  color: #777F83; }
-
 .f-fc-swatchfive, .f-fc-hover-swatchfive:hover {
+  color: #2B2B3F; }
+
+.f-list li:hover .f-list-swatchfive, .f-selectable:hover .f-selectable-swatchfive {
   color: #2B2B3F; }
 
 .f-bg-swatchfive, .f-bg-hover-swatchfive:hover {
@@ -2330,10 +2333,10 @@ a {
 .f-b-swatchfive, .f-b-hover-swatchfive, [class*="f-b-swatchfive"], .f-hr-swatchfive {
   border-color: #2B2B3F; }
 
-.f-list li:hover .swatchfive {
-  color: #2B2B3F; }
-
 .f-fc-facebook, .f-fc-hover-facebook:hover {
+  color: #395b98; }
+
+.f-list li:hover .f-list-facebook, .f-selectable:hover .f-selectable-facebook {
   color: #395b98; }
 
 .f-bg-facebook, .f-bg-hover-facebook:hover {
@@ -2363,10 +2366,10 @@ a {
 .f-b-facebook, .f-b-hover-facebook, [class*="f-b-facebook"], .f-hr-facebook {
   border-color: #395b98; }
 
-.f-list li:hover .facebook {
-  color: #395b98; }
-
 .f-fc-twitter, .f-fc-hover-twitter:hover {
+  color: #1ba5e2; }
+
+.f-list li:hover .f-list-twitter, .f-selectable:hover .f-selectable-twitter {
   color: #1ba5e2; }
 
 .f-bg-twitter, .f-bg-hover-twitter:hover {
@@ -2396,10 +2399,10 @@ a {
 .f-b-twitter, .f-b-hover-twitter, [class*="f-b-twitter"], .f-hr-twitter {
   border-color: #1ba5e2; }
 
-.f-list li:hover .twitter {
-  color: #1ba5e2; }
-
 .f-fc-google, .f-fc-hover-google:hover {
+  color: #ff0000; }
+
+.f-list li:hover .f-list-google, .f-selectable:hover .f-selectable-google {
   color: #ff0000; }
 
 .f-bg-google, .f-bg-hover-google:hover {
@@ -2429,10 +2432,10 @@ a {
 .f-b-google, .f-b-hover-google, [class*="f-b-google"], .f-hr-google {
   border-color: #ff0000; }
 
-.f-list li:hover .google {
-  color: #ff0000; }
-
 .f-fc-linkedin, .f-fc-hover-linkedin:hover {
+  color: #1d87bd; }
+
+.f-list li:hover .f-list-linkedin, .f-selectable:hover .f-selectable-linkedin {
   color: #1d87bd; }
 
 .f-bg-linkedin, .f-bg-hover-linkedin:hover {
@@ -2462,10 +2465,10 @@ a {
 .f-b-linkedin, .f-b-hover-linkedin, [class*="f-b-linkedin"], .f-hr-linkedin {
   border-color: #1d87bd; }
 
-.f-list li:hover .linkedin {
-  color: #1d87bd; }
-
 .f-fc-pinterest, .f-fc-hover-pinterest:hover {
+  color: #cb2027; }
+
+.f-list li:hover .f-list-pinterest, .f-selectable:hover .f-selectable-pinterest {
   color: #cb2027; }
 
 .f-bg-pinterest, .f-bg-hover-pinterest:hover {
@@ -2495,10 +2498,10 @@ a {
 .f-b-pinterest, .f-b-hover-pinterest, [class*="f-b-pinterest"], .f-hr-pinterest {
   border-color: #cb2027; }
 
-.f-list li:hover .pinterest {
-  color: #cb2027; }
-
 .f-fc-whats-app, .f-fc-hover-whats-app:hover {
+  color: #60B82D; }
+
+.f-list li:hover .f-list-whats-app, .f-selectable:hover .f-selectable-whats-app {
   color: #60B82D; }
 
 .f-bg-whats-app, .f-bg-hover-whats-app:hover {
@@ -2528,10 +2531,10 @@ a {
 .f-b-whats-app, .f-b-hover-whats-app, [class*="f-b-whats-app"], .f-hr-whats-app {
   border-color: #60B82D; }
 
-.f-list li:hover .whats-app {
-  color: #60B82D; }
-
 .f-fc-success, .f-fc-hover-success:hover {
+  color: green; }
+
+.f-list li:hover .f-list-success, .f-selectable:hover .f-selectable-success {
   color: green; }
 
 .f-bg-success, .f-bg-hover-success:hover {
@@ -2561,10 +2564,10 @@ a {
 .f-b-success, .f-b-hover-success, [class*="f-b-success"], .f-hr-success {
   border-color: green; }
 
-.f-list li:hover .success {
-  color: green; }
-
 .f-fc-error, .f-fc-hover-error:hover {
+  color: red; }
+
+.f-list li:hover .f-list-error, .f-selectable:hover .f-selectable-error {
   color: red; }
 
 .f-bg-error, .f-bg-hover-error:hover {
@@ -2593,9 +2596,6 @@ a {
 
 .f-b-error, .f-b-hover-error, [class*="f-b-error"], .f-hr-error {
   border-color: red; }
-
-.f-list li:hover .error {
-  color: red; }
 
 [class*='f-bg-hover-'] {
   -webkit-transition: background-color 150ms ease-in-out;
@@ -4053,6 +4053,14 @@ iframe {
 
 .f-invisible {
   visibility: hidden !important; }
+
+.f-selectable:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.05)));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)); }
+.f-selectable:active {
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4); }
 
 @-webkit-keyframes f-kf-fadein {
   0% {
