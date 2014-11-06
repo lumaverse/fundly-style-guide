@@ -23,6 +23,22 @@ $f-anim-easing: ease-in-out !default;
 }
 // End FadeIn
 
+// FadeOut
+@keyframes f-kf-fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.f-anim-fadeout-fast {
+  animation: f-kf-fadeout #{$f-anim-fast} #{$f-anim-easing};
+}
+.f-anim-fadeout-medium {
+  animation: f-kf-fadeout #{$f-anim-medium} #{$f-anim-easing};
+}
+.f-anim-fadeout-slow {
+  animation: f-kf-fadeout #{$f-anim-slow} #{$f-anim-easing};
+}
+// End FadeOut
+
 
 // FadeInUp
 @keyframes f-kf-fadeinup {
