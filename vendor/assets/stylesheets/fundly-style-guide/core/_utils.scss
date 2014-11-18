@@ -47,16 +47,16 @@
   border-radius: 0;
 }
 .f-br-xsmall {
-  border-radius: 2px;
+  border-radius: $f-br-xsmall;
 }
 .f-br-small {
-  border-radius: 3px;
+  border-radius: $f-br-small;
 }
 .f-br-medium {
-  border-radius: 6px;
+  border-radius: $f-br-medium;
 }
 .f-br-large {
-  border-radius: 10px;
+  border-radius: $f-br-large;
 }
 .f-br-circle {
   border-radius: 100%;
