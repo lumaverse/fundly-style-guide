@@ -137,7 +137,7 @@ h6, .h6 {
 
 
 // Links
-a {
+a, .f-anchor {
   text-decoration: none;
 
   &:hover, &:focus {
@@ -147,6 +147,11 @@ a {
   &:focus {
     @include tab-focus();
   }
+}
+
+.f-anchor {
+  color: $f-color-swatchone;
+  font-weight: bold;
 }
 
 
