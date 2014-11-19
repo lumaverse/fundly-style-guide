@@ -15,23 +15,24 @@ Fundly Style Guide compiled for use in front-end contexts.
   - build script will move fonts to the correct location
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('./fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('./fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('./fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('./fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('./fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('./fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('./fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('./fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 
 .fa, .f-gallery-leftarea, .f-gallery-rightarea {
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -84,25 +85,30 @@ Fundly Style Guide compiled for use in front-end contexts.
 .pull-left {
   float: left; }
 
-.fa.pull-left {
+.fa.pull-left, .pull-left.f-gallery-leftarea, .pull-left.f-gallery-rightarea {
   margin-right: 0.3em; }
-.fa.pull-right {
+.fa.pull-right, .pull-right.f-gallery-leftarea, .pull-right.f-gallery-rightarea {
   margin-left: 0.3em; }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
-  animation: fa-spin 2s infinite linear; }
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
 
-@-webkit-keyframes fa-spin {
+@-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg); }
 
   100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
+    -webkit-transform: rotate(359deg); } }
 
-@keyframes fa-spin {
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg); }
+
+  100% {
+    -ms-transform: rotate(359deg); } }
+
+@keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -114,38 +120,34 @@ Fundly Style Guide compiled for use in front-end contexts.
     transform: rotate(359deg); } }
 
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
-
-:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-flip-horizontal, :root .fa-flip-vertical {
-  -webkit-filter: none;
-  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -211,7 +213,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-check:before {
   content: "\f00c"; }
 
-.fa-remove:before, .fa-close:before, .fa-times:before {
+.fa-times:before {
   content: "\f00d"; }
 
 .fa-search-plus:before {
@@ -349,7 +351,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-video-camera:before {
   content: "\f03d"; }
 
-.fa-photo:before, .fa-image:before, .fa-picture-o:before {
+.fa-picture-o:before {
   content: "\f03e"; }
 
 .fa-pencil:before {
@@ -532,7 +534,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-arrows-h:before {
   content: "\f07e"; }
 
-.fa-bar-chart-o:before, .fa-bar-chart:before {
+.fa-bar-chart-o:before {
   content: "\f080"; }
 
 .fa-twitter-square:before {
@@ -703,7 +705,7 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-square:before {
   content: "\f0c8"; }
 
-.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+.fa-bars:before {
   content: "\f0c9"; }
 
 .fa-list-ul:before {
@@ -760,10 +762,10 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-unsorted:before, .fa-sort:before {
   content: "\f0dc"; }
 
-.fa-sort-down:before, .fa-sort-desc:before {
+.fa-sort-down:before, .fa-sort-asc:before {
   content: "\f0dd"; }
 
-.fa-sort-up:before, .fa-sort-asc:before {
+.fa-sort-up:before, .fa-sort-desc:before {
   content: "\f0de"; }
 
 .fa-envelope:before {
@@ -868,10 +870,10 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-angle-double-down:before {
   content: "\f103"; }
 
-.fa-angle-left:before {
+.fa-angle-left:before, .f-gallery-leftarea:before {
   content: "\f104"; }
 
-.fa-angle-right:before {
+.fa-angle-right:before, .f-gallery-rightarea:before {
   content: "\f105"; }
 
 .fa-angle-up:before {
@@ -946,7 +948,10 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-code:before {
   content: "\f121"; }
 
-.fa-mail-reply-all:before, .fa-reply-all:before {
+.fa-reply-all:before {
+  content: "\f122"; }
+
+.fa-mail-reply-all:before {
   content: "\f122"; }
 
 .fa-star-half-empty:before, .fa-star-half-full:before, .fa-star-half-o:before {
@@ -1276,339 +1281,6 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-plus-square-o:before {
   content: "\f196"; }
 
-.fa-space-shuttle:before {
-  content: "\f197"; }
-
-.fa-slack:before {
-  content: "\f198"; }
-
-.fa-envelope-square:before {
-  content: "\f199"; }
-
-.fa-wordpress:before {
-  content: "\f19a"; }
-
-.fa-openid:before {
-  content: "\f19b"; }
-
-.fa-institution:before, .fa-bank:before, .fa-university:before {
-  content: "\f19c"; }
-
-.fa-mortar-board:before, .fa-graduation-cap:before {
-  content: "\f19d"; }
-
-.fa-yahoo:before {
-  content: "\f19e"; }
-
-.fa-google:before {
-  content: "\f1a0"; }
-
-.fa-reddit:before {
-  content: "\f1a1"; }
-
-.fa-reddit-square:before {
-  content: "\f1a2"; }
-
-.fa-stumbleupon-circle:before {
-  content: "\f1a3"; }
-
-.fa-stumbleupon:before {
-  content: "\f1a4"; }
-
-.fa-delicious:before {
-  content: "\f1a5"; }
-
-.fa-digg:before {
-  content: "\f1a6"; }
-
-.fa-pied-piper:before {
-  content: "\f1a7"; }
-
-.fa-pied-piper-alt:before {
-  content: "\f1a8"; }
-
-.fa-drupal:before {
-  content: "\f1a9"; }
-
-.fa-joomla:before {
-  content: "\f1aa"; }
-
-.fa-language:before {
-  content: "\f1ab"; }
-
-.fa-fax:before {
-  content: "\f1ac"; }
-
-.fa-building:before {
-  content: "\f1ad"; }
-
-.fa-child:before {
-  content: "\f1ae"; }
-
-.fa-paw:before {
-  content: "\f1b0"; }
-
-.fa-spoon:before {
-  content: "\f1b1"; }
-
-.fa-cube:before {
-  content: "\f1b2"; }
-
-.fa-cubes:before {
-  content: "\f1b3"; }
-
-.fa-behance:before {
-  content: "\f1b4"; }
-
-.fa-behance-square:before {
-  content: "\f1b5"; }
-
-.fa-steam:before {
-  content: "\f1b6"; }
-
-.fa-steam-square:before {
-  content: "\f1b7"; }
-
-.fa-recycle:before {
-  content: "\f1b8"; }
-
-.fa-automobile:before, .fa-car:before {
-  content: "\f1b9"; }
-
-.fa-cab:before, .fa-taxi:before {
-  content: "\f1ba"; }
-
-.fa-tree:before {
-  content: "\f1bb"; }
-
-.fa-spotify:before {
-  content: "\f1bc"; }
-
-.fa-deviantart:before {
-  content: "\f1bd"; }
-
-.fa-soundcloud:before {
-  content: "\f1be"; }
-
-.fa-database:before {
-  content: "\f1c0"; }
-
-.fa-file-pdf-o:before {
-  content: "\f1c1"; }
-
-.fa-file-word-o:before {
-  content: "\f1c2"; }
-
-.fa-file-excel-o:before {
-  content: "\f1c3"; }
-
-.fa-file-powerpoint-o:before {
-  content: "\f1c4"; }
-
-.fa-file-photo-o:before, .fa-file-picture-o:before, .fa-file-image-o:before {
-  content: "\f1c5"; }
-
-.fa-file-zip-o:before, .fa-file-archive-o:before {
-  content: "\f1c6"; }
-
-.fa-file-sound-o:before, .fa-file-audio-o:before {
-  content: "\f1c7"; }
-
-.fa-file-movie-o:before, .fa-file-video-o:before {
-  content: "\f1c8"; }
-
-.fa-file-code-o:before {
-  content: "\f1c9"; }
-
-.fa-vine:before {
-  content: "\f1ca"; }
-
-.fa-codepen:before {
-  content: "\f1cb"; }
-
-.fa-jsfiddle:before {
-  content: "\f1cc"; }
-
-.fa-life-bouy:before, .fa-life-buoy:before, .fa-life-saver:before, .fa-support:before, .fa-life-ring:before {
-  content: "\f1cd"; }
-
-.fa-circle-o-notch:before {
-  content: "\f1ce"; }
-
-.fa-ra:before, .fa-rebel:before {
-  content: "\f1d0"; }
-
-.fa-ge:before, .fa-empire:before {
-  content: "\f1d1"; }
-
-.fa-git-square:before {
-  content: "\f1d2"; }
-
-.fa-git:before {
-  content: "\f1d3"; }
-
-.fa-hacker-news:before {
-  content: "\f1d4"; }
-
-.fa-tencent-weibo:before {
-  content: "\f1d5"; }
-
-.fa-qq:before {
-  content: "\f1d6"; }
-
-.fa-wechat:before, .fa-weixin:before {
-  content: "\f1d7"; }
-
-.fa-send:before, .fa-paper-plane:before {
-  content: "\f1d8"; }
-
-.fa-send-o:before, .fa-paper-plane-o:before {
-  content: "\f1d9"; }
-
-.fa-history:before {
-  content: "\f1da"; }
-
-.fa-circle-thin:before {
-  content: "\f1db"; }
-
-.fa-header:before {
-  content: "\f1dc"; }
-
-.fa-paragraph:before {
-  content: "\f1dd"; }
-
-.fa-sliders:before {
-  content: "\f1de"; }
-
-.fa-share-alt:before {
-  content: "\f1e0"; }
-
-.fa-share-alt-square:before {
-  content: "\f1e1"; }
-
-.fa-bomb:before {
-  content: "\f1e2"; }
-
-.fa-soccer-ball-o:before, .fa-futbol-o:before {
-  content: "\f1e3"; }
-
-.fa-tty:before {
-  content: "\f1e4"; }
-
-.fa-binoculars:before {
-  content: "\f1e5"; }
-
-.fa-plug:before {
-  content: "\f1e6"; }
-
-.fa-slideshare:before {
-  content: "\f1e7"; }
-
-.fa-twitch:before {
-  content: "\f1e8"; }
-
-.fa-yelp:before {
-  content: "\f1e9"; }
-
-.fa-newspaper-o:before {
-  content: "\f1ea"; }
-
-.fa-wifi:before {
-  content: "\f1eb"; }
-
-.fa-calculator:before {
-  content: "\f1ec"; }
-
-.fa-paypal:before {
-  content: "\f1ed"; }
-
-.fa-google-wallet:before {
-  content: "\f1ee"; }
-
-.fa-cc-visa:before {
-  content: "\f1f0"; }
-
-.fa-cc-mastercard:before {
-  content: "\f1f1"; }
-
-.fa-cc-discover:before {
-  content: "\f1f2"; }
-
-.fa-cc-amex:before {
-  content: "\f1f3"; }
-
-.fa-cc-paypal:before {
-  content: "\f1f4"; }
-
-.fa-cc-stripe:before {
-  content: "\f1f5"; }
-
-.fa-bell-slash:before {
-  content: "\f1f6"; }
-
-.fa-bell-slash-o:before {
-  content: "\f1f7"; }
-
-.fa-trash:before {
-  content: "\f1f8"; }
-
-.fa-copyright:before {
-  content: "\f1f9"; }
-
-.fa-at:before {
-  content: "\f1fa"; }
-
-.fa-eyedropper:before {
-  content: "\f1fb"; }
-
-.fa-paint-brush:before {
-  content: "\f1fc"; }
-
-.fa-birthday-cake:before {
-  content: "\f1fd"; }
-
-.fa-area-chart:before {
-  content: "\f1fe"; }
-
-.fa-pie-chart:before {
-  content: "\f200"; }
-
-.fa-line-chart:before {
-  content: "\f201"; }
-
-.fa-lastfm:before {
-  content: "\f202"; }
-
-.fa-lastfm-square:before {
-  content: "\f203"; }
-
-.fa-toggle-off:before {
-  content: "\f204"; }
-
-.fa-toggle-on:before {
-  content: "\f205"; }
-
-.fa-bicycle:before {
-  content: "\f206"; }
-
-.fa-bus:before {
-  content: "\f207"; }
-
-.fa-ioxhost:before {
-  content: "\f208"; }
-
-.fa-angellist:before {
-  content: "\f209"; }
-
-.fa-cc:before {
-  content: "\f20a"; }
-
-.fa-shekel:before, .fa-sheqel:before, .fa-ils:before {
-  content: "\f20b"; }
-
-.fa-meanpath:before {
-  content: "\f20c"; }
-
 @font-face {
   font-family: 'FundlyIcons';
   src: url('./fonts/fundly-icons.eot?v=0.3.1');
@@ -1627,65 +1299,62 @@ Fundly Style Guide compiled for use in front-end contexts.
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.f-icon-animal:before {
+.f-icon-trips:before {
   content: "\e600"; }
 
-.f-icon-arts:before {
+.f-icon-sports:before {
   content: "\e601"; }
 
-.f-icon-children:before {
+.f-icon-run-walk-ride:before {
   content: "\e602"; }
 
-.f-icon-church:before {
+.f-icon-political:before {
   content: "\e603"; }
 
-.f-icon-community:before {
+.f-icon-other:before {
   content: "\e604"; }
 
-.f-icon-education:before {
+.f-icon-non-profit:before {
   content: "\e605"; }
 
-.f-icon-greek:before {
+.f-icon-memorial:before {
   content: "\e606"; }
 
-.f-icon-health:before {
+.f-icon-logo-knockout:before {
   content: "\e607"; }
 
-.f-icon-location:before {
+.f-icon-logo-heart:before {
   content: "\e608"; }
 
-.f-icon-logo-heart:before {
+.f-icon-location:before {
   content: "\e609"; }
 
-.f-icon-logo-knockout:before {
+.f-icon-health:before {
   content: "\e60a"; }
 
-.f-icon-memorial:before {
+.f-icon-greek:before {
   content: "\e60b"; }
 
-.f-icon-military:before {
+.f-icon-education:before {
   content: "\e60c"; }
 
-.f-icon-non-profit:before {
+.f-icon-community:before {
   content: "\e60d"; }
 
-.f-icon-other:before {
+.f-icon-church:before {
   content: "\e60e"; }
 
-.f-icon-political:before {
+.f-icon-children:before {
   content: "\e60f"; }
 
-.f-icon-run-walk-ride:before {
+.f-icon-arts:before {
   content: "\e610"; }
 
-.f-icon-sports:before {
+.f-icon-animal:before {
   content: "\e611"; }
 
-.f-icon-trips:before {
-  content: "\e612"; }
-
 .f-icon-whats-app:before {
-  content: "\e613"; }
+  content: "\e612"; }
 
 .f-icon-lg {
   font-size: 1.33333em;
@@ -2757,14 +2426,18 @@ h6, .h6 {
 .f-lh-xxlarge {
   line-height: 2.5; }
 
-a {
+a, .f-anchor {
   text-decoration: none; }
-  a:hover, a:focus {
+  a:hover, a:focus, .f-anchor:hover, .f-anchor:focus {
     text-decoration: underline; }
-  a:focus {
+  a:focus, .f-anchor:focus {
     outline: thin dotted #333;
     outline: 5px auto-webkit-focus-ring-color;
     outline-offset: -2px; }
+
+.f-anchor {
+  color: #59CAE9;
+  font-weight: bold; }
 
 .f-text-truncate {
   max-width: 100%;
@@ -2799,6 +2472,9 @@ a {
 
 .f-no-underline, a.f-no-underline, a.f-no-underline:hover {
   text-decoration: none; }
+
+.f-underline, a.f-underline {
+  text-decoration: underline; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -4062,6 +3738,11 @@ iframe {
   -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4); }
 
+.f-selectable-dark:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); }
+
 @-webkit-keyframes f-kf-fadein {
   0% {
     opacity: 0; }
@@ -4087,6 +3768,32 @@ iframe {
 .f-anim-fadein-slow {
   -webkit-animation: f-kf-fadein 1s ease-in-out;
   animation: f-kf-fadein 1s ease-in-out; }
+
+@-webkit-keyframes f-kf-fadeout {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes f-kf-fadeout {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+.f-anim-fadeout-fast {
+  -webkit-animation: f-kf-fadeout 300ms ease-in-out;
+  animation: f-kf-fadeout 300ms ease-in-out; }
+
+.f-anim-fadeout-medium {
+  -webkit-animation: f-kf-fadeout 750ms ease-in-out;
+  animation: f-kf-fadeout 750ms ease-in-out; }
+
+.f-anim-fadeout-slow {
+  -webkit-animation: f-kf-fadeout 1s ease-in-out;
+  animation: f-kf-fadeout 1s ease-in-out; }
 
 @-webkit-keyframes f-kf-fadeinup {
   0% {
@@ -4945,7 +4652,7 @@ li {
     color: white; }
     .f-button.whats-app:before {
       font-family: FundlyIcons;
-      content: "\e613"; }
+      content: "\e612"; }
 
 .f-popup {
   position: absolute;
@@ -5604,7 +5311,7 @@ li {
 /**
  * set default color for tooltip arrows
  */
-.hint--top:before {
+.hint--top:before, .hint--top--right:before {
   border-top-color: #383838; }
 
 .hint--bottom:before {
@@ -5619,14 +5326,14 @@ li {
 /**
  * top tooltip
  */
-.hint--top:before {
+.hint--top:before, .hint--top--right:before {
   margin-bottom: -12px; }
-.hint--top:after {
+.hint--top:after, .hint--top--right:after {
   margin-left: -18px; }
-.hint--top:before, .hint--top:after {
+.hint--top:before, .hint--top--right:before, .hint--top:after, .hint--top--right:after {
   bottom: 100%;
   left: 50%; }
-.hint--top:hover:after, .hint--top:hover:before, .hint--top:focus:after, .hint--top:focus:before {
+.hint--top:hover:after, .hint--top--right:hover:after, .hint--top:hover:before, .hint--top--right:hover:before, .hint--top:focus:after, .hint--top--right:focus:after, .hint--top:focus:before, .hint--top--right:focus:before {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px); }
@@ -5696,7 +5403,7 @@ li {
 .hint--error:after {
   background-color: #b34e4d;
   text-shadow: 0 -1px 0px #592626; }
-.hint--error.hint--top:before {
+.hint--error.hint--top:before, .hint--error.hint--top--right:before {
   border-top-color: #b34e4d; }
 .hint--error.hint--bottom:before {
   border-bottom-color: #b34e4d; }
@@ -5711,7 +5418,7 @@ li {
 .hint--warning:after {
   background-color: #c09854;
   text-shadow: 0 -1px 0px #6c5228; }
-.hint--warning.hint--top:before {
+.hint--warning.hint--top:before, .hint--warning.hint--top--right:before {
   border-top-color: #c09854; }
 .hint--warning.hint--bottom:before {
   border-bottom-color: #c09854; }
@@ -5726,7 +5433,7 @@ li {
 .hint--info:after {
   background-color: #3986ac;
   text-shadow: 0 -1px 0px #193b4d; }
-.hint--info.hint--top:before {
+.hint--info.hint--top:before, .hint--info.hint--top--right:before {
   border-top-color: #3986ac; }
 .hint--info.hint--bottom:before {
   border-bottom-color: #3986ac; }
@@ -5741,7 +5448,7 @@ li {
 .hint--success:after {
   background-color: #458746;
   text-shadow: 0 -1px 0px #1a321a; }
-.hint--success.hint--top:before {
+.hint--success.hint--top:before, .hint--success.hint--top--right:before {
   border-top-color: #458746; }
 .hint--success.hint--bottom:before {
   border-bottom-color: #458746; }
@@ -5762,7 +5469,7 @@ li {
 .hint--always:after, .hint--always:before {
   opacity: 1;
   visibility: visible; }
-.hint--always.hint--top:after, .hint--always.hint--top:before {
+.hint--always.hint--top:after, .hint--always.hint--top--right:after, .hint--always.hint--top:before, .hint--always.hint--top--right:before {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px); }
@@ -5809,7 +5516,7 @@ li {
   font-weight: 500;
   background: black; }
 
-.hint--top:before {
+.hint--top:before, .hint--top--right:before {
   border-top-color: black; }
 
 .hint--bottom:before {
