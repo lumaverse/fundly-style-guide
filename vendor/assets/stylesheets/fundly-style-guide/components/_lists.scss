@@ -24,10 +24,6 @@ li {
     background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
   }
 
-  li > a {
-    color: inherit;
-  }
-
   li.active {
     background-color: $f-color-primary;
   }
