@@ -1,9 +1,9 @@
 module Fundly
   module Style
     module Guide
+      require 'font-awesome-rails'
       require "fundly/style/guide/engine"
       require "fundly/style/guide/version"
-      require 'font-awesome-sass'
     end
   end
 end
