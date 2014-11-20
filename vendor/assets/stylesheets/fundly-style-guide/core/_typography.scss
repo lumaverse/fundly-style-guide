@@ -7,6 +7,21 @@ p {
 }
 
 
+// Links
+a, .f-anchor {
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    @include tab-focus();
+  }
+}
+
+
+
 // Font Families
 .f-font-main {
   font-family: $f-font-base;
@@ -133,25 +148,6 @@ h6, .h6 {
 }
 .f-lh-xxlarge {
   line-height: 2.5;
-}
-
-
-// Links
-a, .f-anchor {
-  text-decoration: none;
-
-  &:hover, &:focus {
-    text-decoration: underline;
-  }
-
-  &:focus {
-    @include tab-focus();
-  }
-}
-
-.f-anchor {
-  color: $f-color-swatch-one;
-  font-weight: bold;
 }
 
 
