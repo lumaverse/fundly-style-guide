@@ -1,16 +1,28 @@
 // Color reset
 body {
   color: $f-color-xdark;
-
 }
-a {
-  color: $f-color-link;
+
+a, .f-anchor {
   weight: 500;
   transition: color 150ms ease-in-out;
 
   &:hover, &:focus {
     color: $f-color-link-hover;
   }
+}
+
+a {
+  // TODO: previously, the f-color link was set to #252b2c. As we transition away from the previous color,
+  // we still want to keep existing anchor tags the same. Thus new anchor tags must be opted
+  // in with .f-anchor class instead
+  /*color: $f-color-link;*/
+  color: #252b2c;
+}
+
+.f-anchor {
+  color: $f-color-link;
+  font-weight: bold;
 }
 
 
