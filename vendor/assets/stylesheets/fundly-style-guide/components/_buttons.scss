@@ -11,9 +11,9 @@
     width: 1px;
     style: solid;
     color: black;
-    color: rgba(0,0,0,0.25);
+    color: rgba(0,0,0,0.15);
   }
-  border-radius: 3px;
+  border-radius: 4px;
   transition: all 150ms ease-in-out;
   cursor: pointer;
 
@@ -111,7 +111,7 @@
     background-color: $f-color-facebook;
     color: $f-color-white;
     &:before {
-      content: $fa-var-facebook-square;
+      content: $fa-var-facebook;
     }
   }
   &.twitter {

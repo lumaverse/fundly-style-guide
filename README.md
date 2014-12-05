@@ -37,8 +37,8 @@ Run this command to kick off the development server which has livereload running
 
 
 ## Releasing a new version
-
 Both the bower package and the rails gem rely on semver versioning. There are a couple of `gulp` tasks that ease the pain of fiddling with the various files that need a version number:
+
 
     gulp bump:patch
     gulp bump:minor
