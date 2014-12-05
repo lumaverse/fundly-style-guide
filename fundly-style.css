@@ -2176,37 +2176,37 @@ a {
   border-color: black; }
 
 .f-fc-swatchone, .f-fc-hover-swatchone:hover {
-  color: #59CAE9; }
+  color: #2996BC; }
 
 .f-list li:hover .f-list-swatchone, .f-selectable:hover .f-selectable-swatchone {
-  color: #59CAE9; }
+  color: #2996BC; }
 
 .f-bg-swatchone, .f-bg-hover-swatchone:hover {
-  background-color: #59CAE9;
+  background-color: #2996BC;
   color: #e7eaed; }
 
 .f-bg-swatchone-o-xlight {
-  background-color: rgba(89, 202, 233, 0.25);
+  background-color: rgba(41, 150, 188, 0.25);
   color: #e7eaed; }
 
 .f-bg-swatchone-o-light {
-  background-color: rgba(89, 202, 233, 0.5);
+  background-color: rgba(41, 150, 188, 0.5);
   color: #e7eaed; }
 
 .f-bg-swatchone-o-medium {
-  background-color: rgba(89, 202, 233, 0.75);
+  background-color: rgba(41, 150, 188, 0.75);
   color: #e7eaed; }
 
 .f-bg-swatchone-o-dark {
-  background-color: rgba(89, 202, 233, 0.85);
+  background-color: rgba(41, 150, 188, 0.85);
   color: #e7eaed; }
 
 .f-bg-swatchone-o-xdark {
-  background-color: rgba(89, 202, 233, 0.95);
+  background-color: rgba(41, 150, 188, 0.95);
   color: #e7eaed; }
 
 .f-b-swatchone, .f-b-hover-swatchone, [class*="f-b-swatchone"], .f-hr-swatchone {
-  border-color: #59CAE9; }
+  border-color: #2996BC; }
 
 .f-fc-swatchtwo, .f-fc-hover-swatchtwo:hover {
   color: #CEE8C5; }
@@ -4881,8 +4881,8 @@ li {
   border-width: 1px;
   border-style: solid;
   border-color: black;
-  border-color: rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   cursor: pointer; }
@@ -4925,7 +4925,7 @@ li {
     background-color: black;
     color: white; }
   .f-button.swatchone {
-    background-color: #59CAE9;
+    background-color: #2996BC;
     color: white; }
   .f-button.swatchtwo {
     background-color: #CEE8C5;
@@ -4951,7 +4951,7 @@ li {
     background-color: #395b98;
     color: white; }
     .f-button.facebook:before {
-      content: "\f082"; }
+      content: "\f09a"; }
   .f-button.twitter {
     background-color: #1ba5e2;
     color: white; }
@@ -5312,7 +5312,7 @@ li {
 [class*='f-arrow-down'].f-bg-black:after {
   border-top-color: black; }
 [class*='f-arrow-down'].f-bg-swatchone:after {
-  border-top-color: #59CAE9; }
+  border-top-color: #2996BC; }
 [class*='f-arrow-down'].f-bg-swatchtwo:after {
   border-top-color: #CEE8C5; }
 [class*='f-arrow-down'].f-bg-swatchthree:after {
@@ -5337,7 +5337,7 @@ li {
 [class*='f-arrow-up'].f-bg-black:after {
   border-bottom-color: black; }
 [class*='f-arrow-up'].f-bg-swatchone:after {
-  border-bottom-color: #59CAE9; }
+  border-bottom-color: #2996BC; }
 [class*='f-arrow-up'].f-bg-swatchtwo:after {
   border-bottom-color: #CEE8C5; }
 [class*='f-arrow-up'].f-bg-swatchthree:after {
@@ -5362,7 +5362,7 @@ li {
 [class*='f-arrow-left'].f-bg-black:after {
   border-right-color: black; }
 [class*='f-arrow-left'].f-bg-swatchone:after {
-  border-right-color: #59CAE9; }
+  border-right-color: #2996BC; }
 [class*='f-arrow-left'].f-bg-swatchtwo:after {
   border-right-color: #CEE8C5; }
 [class*='f-arrow-left'].f-bg-swatchthree:after {
@@ -5387,7 +5387,7 @@ li {
 [class*='f-arrow-right'].f-bg-black:after {
   border-left-color: black; }
 [class*='f-arrow-right'].f-bg-swatchone:after {
-  border-left-color: #59CAE9; }
+  border-left-color: #2996BC; }
 [class*='f-arrow-right'].f-bg-swatchtwo:after {
   border-left-color: #CEE8C5; }
 [class*='f-arrow-right'].f-bg-swatchthree:after {
@@ -5484,6 +5484,8 @@ li {
     padding-left: 36px; }
   .f-content-section p, .f-content-section ul {
     margin-top: 20px; }
+  .f-content-section img {
+    max-width: 100%; }
   .f-content-section p, .f-content-section li {
     line-height: 1.35em;
     font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
@@ -5493,7 +5495,7 @@ li {
     list-style: disc; }
   .f-content-section a {
     font-weight: 300;
-    color: #59CAE9; }
+    color: #2996BC; }
   .f-content-section a:hover {
     text-decoration: underline; }
   .f-content-section strong, .f-content-section b {
