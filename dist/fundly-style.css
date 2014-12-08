@@ -4943,8 +4943,8 @@ li {
   .f-button.facebook:before, .f-button.twitter:before, .f-button.google:before, .f-button.linkedin:before, .f-button.pinterest:before, .f-button.email:before, .f-button.youtube:before, .f-button.whats-app:before {
     font-family: FontAwesome;
     font-size: 1.2em;
-    margin-right: 0.5em;
-    line-height: normal; }
+    float: left;
+    line-height: inherit; }
   .f-button.facebook:empty:before, .f-button.twitter:empty:before, .f-button.google:empty:before, .f-button.linkedin:empty:before, .f-button.pinterest:empty:before, .f-button.email:empty:before, .f-button.youtube:empty:before, .f-button.whats-app:empty:before {
     margin-right: 0; }
   .f-button.facebook {

@@ -97,11 +97,8 @@
         family: FontAwesome;
         size: 1.20em;
       }
-      margin-right: 0.5em;
-      // Setting the line-height fixes a Chrome issue when it's being wrapped
-      // within the .f-decorator class. Without the line-height, it
-      // adds a pixel to the height of the button
-      line-height: normal;
+      float: left;
+      line-height: inherit;
     }
     &:empty:before {
       margin-right: 0;
