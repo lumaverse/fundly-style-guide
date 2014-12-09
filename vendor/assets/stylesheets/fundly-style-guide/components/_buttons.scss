@@ -92,6 +92,7 @@
 
   &.facebook, &.twitter, &.google, &.linkedin,
   &.pinterest, &.email, &.youtube, &.whats-app {
+    padding: 0 1.25em 0 0.75em;
     &:before {
       font: {
         family: FontAwesome;
