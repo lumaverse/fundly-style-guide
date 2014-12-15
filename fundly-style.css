@@ -84,9 +84,9 @@ Fundly Style Guide compiled for use in front-end contexts.
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.f-gallery-leftarea, .pull-left.f-gallery-rightarea {
+.fa.pull-left {
   margin-right: 0.3em; }
-.fa.pull-right, .pull-right.f-gallery-leftarea, .pull-right.f-gallery-rightarea {
+.fa.pull-right {
   margin-left: 0.3em; }
 
 .fa-spin {
@@ -868,10 +868,10 @@ Fundly Style Guide compiled for use in front-end contexts.
 .fa-angle-double-down:before {
   content: "\f103"; }
 
-.fa-angle-left:before, .f-gallery-leftarea:before {
+.fa-angle-left:before {
   content: "\f104"; }
 
-.fa-angle-right:before, .f-gallery-rightarea:before {
+.fa-angle-right:before {
   content: "\f105"; }
 
 .fa-angle-up:before {
@@ -4524,35 +4524,56 @@ Avatars: come in 5 sizes and can be decorated with a range of social badges
     content: "\f0d2";
     background: #cb2027; }
 
-.f-avatar-xlarge {
+[class*='f-avatar-square-'] {
+  border-radius: 0; }
+
+.f-avatar-xlarge, .f-avatar-square-xlarge {
   width: 200px;
   height: 200px;
   font-size: 12px; }
 
-.f-avatar-large {
+.f-avatar-square-xlarge {
+  border-radius: 8px; }
+
+.f-avatar-large, .f-avatar-square-large {
   width: 150px;
   height: 150px;
   font-size: 10px; }
 
-.f-avatar-medium {
+.f-avatar-square-large {
+  border-radius: 6px; }
+
+.f-avatar-medium, .f-avatar-square-medium {
   width: 100px;
   height: 100px;
   font-size: 8px; }
 
-.f-avatar-small {
+.f-avatar-square-medium {
+  border-radius: 4px; }
+
+.f-avatar-small, .f-avatar-square-small {
   width: 60px;
   height: 60px;
   font-size: 5px; }
 
-.f-avatar-xsmall {
+.f-avatar-square-small {
+  border-radius: 2px; }
+
+.f-avatar-xsmall, .f-avatar-square-xsmall {
   width: 40px;
   height: 40px;
   font-size: 4px; }
 
-.f-avatar-xxsmall {
+.f-avatar-square-xsmall {
+  border-radius: 2px; }
+
+.f-avatar-xxsmall, .f-avatar-square-xxsmall {
   width: 25px;
   height: 25px;
   font-size: 2px; }
+
+.f-avatar-square-xxsmall {
+  border-radius: 1px; }
 
 .f-avatar-fill {
   width: 100%;
@@ -5648,7 +5669,7 @@ li {
 /**
  * set default color for tooltip arrows
  */
-.hint--top:before, .hint--top--right:before {
+.hint--top:before {
   border-top-color: #383838; }
 
 .hint--bottom:before {
@@ -5663,14 +5684,14 @@ li {
 /**
  * top tooltip
  */
-.hint--top:before, .hint--top--right:before {
+.hint--top:before {
   margin-bottom: -12px; }
-.hint--top:after, .hint--top--right:after {
+.hint--top:after {
   margin-left: -18px; }
-.hint--top:before, .hint--top--right:before, .hint--top:after, .hint--top--right:after {
+.hint--top:before, .hint--top:after {
   bottom: 100%;
   left: 50%; }
-.hint--top:hover:after, .hint--top--right:hover:after, .hint--top:hover:before, .hint--top--right:hover:before, .hint--top:focus:after, .hint--top--right:focus:after, .hint--top:focus:before, .hint--top--right:focus:before {
+.hint--top:hover:after, .hint--top:hover:before, .hint--top:focus:after, .hint--top:focus:before {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px); }
@@ -5740,7 +5761,7 @@ li {
 .hint--error:after {
   background-color: #b34e4d;
   text-shadow: 0 -1px 0px #592626; }
-.hint--error.hint--top:before, .hint--error.hint--top--right:before {
+.hint--error.hint--top:before {
   border-top-color: #b34e4d; }
 .hint--error.hint--bottom:before {
   border-bottom-color: #b34e4d; }
@@ -5755,7 +5776,7 @@ li {
 .hint--warning:after {
   background-color: #c09854;
   text-shadow: 0 -1px 0px #6c5228; }
-.hint--warning.hint--top:before, .hint--warning.hint--top--right:before {
+.hint--warning.hint--top:before {
   border-top-color: #c09854; }
 .hint--warning.hint--bottom:before {
   border-bottom-color: #c09854; }
@@ -5770,7 +5791,7 @@ li {
 .hint--info:after {
   background-color: #3986ac;
   text-shadow: 0 -1px 0px #193b4d; }
-.hint--info.hint--top:before, .hint--info.hint--top--right:before {
+.hint--info.hint--top:before {
   border-top-color: #3986ac; }
 .hint--info.hint--bottom:before {
   border-bottom-color: #3986ac; }
@@ -5785,7 +5806,7 @@ li {
 .hint--success:after {
   background-color: #458746;
   text-shadow: 0 -1px 0px #1a321a; }
-.hint--success.hint--top:before, .hint--success.hint--top--right:before {
+.hint--success.hint--top:before {
   border-top-color: #458746; }
 .hint--success.hint--bottom:before {
   border-bottom-color: #458746; }
@@ -5806,7 +5827,7 @@ li {
 .hint--always:after, .hint--always:before {
   opacity: 1;
   visibility: visible; }
-.hint--always.hint--top:after, .hint--always.hint--top--right:after, .hint--always.hint--top:before, .hint--always.hint--top--right:before {
+.hint--always.hint--top:after, .hint--always.hint--top:before {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px); }
@@ -5853,7 +5874,7 @@ li {
   font-weight: 500;
   background: black; }
 
-.hint--top:before, .hint--top--right:before {
+.hint--top:before {
   border-top-color: black; }
 
 .hint--bottom:before {
