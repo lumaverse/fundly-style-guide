@@ -17,8 +17,9 @@ Fundly Style Guide ready for use in Rails projects.
 
 
 // Install the core and component files
-@import "fundly-style-guide/core/index";
+@import "fundly-style-guide/core/variables";
 @import "fundly-style-guide/components/index";
+@import "fundly-style-guide/core/index";
 
 
 // Install the plugins
