@@ -3905,11 +3905,16 @@ body {
   font-size: 14px;
   line-height: 1.42857; }
 
+/*
+ * Since we're loading the components before the core,
+ * the reset here is unnecessary
+
 input, button, select, textarea {
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit; }
-
+  line-height: inherit;
+}
+*/
 .f-fs-xsmall {
   font-size: 10px; }
 
