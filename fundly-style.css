@@ -1923,6 +1923,13 @@ table {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+  .f-app-ribbon .middle {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
   .f-app-ribbon .brand, .f-app-ribbon .middle, .f-app-ribbon .right, .f-app-ribbon .collapse-icon {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4500,7 +4507,7 @@ iframe {
 .f-maxheight-100 {
   max-height: 100%; }
 
-.f-ilb, .f-app-ribbon .middle {
+.f-ilb {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
