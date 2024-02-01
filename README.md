@@ -55,7 +55,7 @@ Following a version bump use the following commands, replacing the version numbe
 
 ## Push the Style Guide App to Github Pages
 
-To push the style guide as a web app to Github run the following commands. The updates will be accessible at: [fundly.github.io/style-guide](http://fundly.github.io/style-guide)
+To push the style guide as a web app to Github run the following commands. The updates will be accessible at: [lumaverse.github.io/fundly-style-guide](https://lumaverse.github.io/fundly-style-guide/)
 
     gulp build
     git commit -am"Distribution build"

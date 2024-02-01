@@ -2,15 +2,15 @@
   "name": "fundly-style-guide",
   "version": "0.30.2",
   "description": "Core styles and documentation for Fundly platform",
-  "homepage": "http://fundly.github.io/style-guide/",
+  "homepage": "https://lumaverse.github.io/fundly-style-guide/",
   "repository": {
     "type": "git",
-    "url": "git@github.com:fundly/style-guide.git"
+    "url": "git@github.com:lumaverse/fundly-style-guide.git"
   },
   "author": "James Nicol <james@fundly.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fundly/style-guide/issues"
+    "url": "https://github.com/lumaverse/fundly-style-guide/issues"
   },
   "dependencies": {},
   "devDependencies": {

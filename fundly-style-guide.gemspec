@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["james@fundly.com"]
   spec.description   = "Atomic CSS style framework for Fundly.com"
   spec.summary       = "Atomic CSS"
-  spec.homepage      = "https://github.com/fundly/style-guide"
+  spec.homepage      = "https://github.com/lumaverse/fundly-style-guide"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
