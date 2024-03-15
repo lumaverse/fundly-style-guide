@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "railties", "~> 3.1"
-  spec.add_dependency "autoprefixer-rails", "~> 1.0"
+  spec.add_dependency "railties", '~> 4.1', '>= 4.1.16'
+  spec.add_dependency "autoprefixer-rails", '~> 9.8', '>= 9.8.6'
   spec.add_dependency "font-awesome-rails", "~> 4.2.0.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
